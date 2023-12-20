@@ -12,12 +12,14 @@ class Group(BaseModel):
 
 
 def main():
-    environment = Environment(loader=FileSystemLoader("templates"))
+    root = Path(__file__).parent.parent
+    environment = Environment(loader=FileSystemLoader(root / "templates"))
     print("Generating content to `out` directory")
-    out = Path("out")
+    out = root / "out"
     out.mkdir(exist_ok=True)
 
     render_groups(environment, out)
+    print("Done")
 
 
 def render_groups(environment, out):
@@ -32,6 +34,7 @@ def render_groups(environment, out):
 
 
 def render_group(environment, group, groups_dir):
+    print(f"Rendering group: {group.name}")
     group_dir = groups_dir / group.slug
     group_dir.mkdir(exist_ok=True)
 

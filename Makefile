@@ -1,5 +1,16 @@
+run:
+	venv/bin/honcho start
+
 build:
-	@venv/bin/python build.py
+	@venv/bin/python community/build.py
+
+watcher:
+	venv/bin/watchmedo shell-command \
+		--pattern='*.py;*.html' \
+		--recursive \
+		--command='make build' \
+		--drop \
+		community templates
 
 serve:
 	venv/bin/python -m http.server --directory out
