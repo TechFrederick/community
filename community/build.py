@@ -41,6 +41,10 @@ def render_groups(out):
             description="A Meetup group that discusses the Python programming language",
         ),
     ]
+
+    print("Rendering groups index")
+    render("groups.html", {"groups": groups}, groups_dir / "index.html")
+
     for group in groups:
         render_group(group, groups_dir)
 
