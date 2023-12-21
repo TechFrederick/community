@@ -12,6 +12,7 @@ class Group(BaseModel):
 
     name: str
     slug: str
+    description: str
 
 
 def main():
@@ -34,7 +35,11 @@ def render_groups(out):
     groups_dir.mkdir(exist_ok=True)
 
     groups = [
-        Group(name="Python Frederick", slug="python-frederick"),
+        Group(
+            name="Python Frederick",
+            slug="python-frederick",
+            description="A Meetup group that discusses the Python programming language",
+        ),
     ]
     for group in groups:
         render_group(group, groups_dir)
@@ -45,7 +50,7 @@ def render_group(group, groups_dir):
     group_dir = groups_dir / group.slug
     group_dir.mkdir(exist_ok=True)
 
-    render("group.html", {"group": group}, groups_dir / "index.html")
+    render("group.html", {"group": group}, group_dir / "index.html")
 
 
 def render(template_name, context, out_path):
