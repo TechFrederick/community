@@ -13,7 +13,7 @@ watcher:
 		community templates
 
 serve:
-	venv/bin/python -m http.server --directory out
+	venv/bin/python -m http.server --directory out 8000
 
 bootstrap:
 	test -d venv || python3 -m venv venv
