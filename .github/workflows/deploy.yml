@@ -25,9 +25,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
       # Python action setup
-      # Node action setup
+
       # - name: Detect package manager
       #   id: detect-package-manager
       #   run: |
@@ -45,11 +46,13 @@ jobs:
       #       echo "Unable to determine package manager"
       #       exit 1
       #     fi
-      # - name: Setup Node
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: "lts/*"
-      #     cache: ${{ steps.detect-package-manager.outputs.manager }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: npm
+
       # - name: Setup Pages
       #   uses: actions/configure-pages@v3
       # - name: Restore cache
