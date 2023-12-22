@@ -1,0 +1,4 @@
+honcho
+Jinja2
+pydantic
+watchdog[watchmedo]
