@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}techfrederick Community{% endblock %}</title>
     <link href="/site.css" rel="stylesheet">
   </head>
-  <body>
-    {% block content %}{% endblock %}
+  <body class="antialiased min-h-screen flex flex-col">
+    <nav class="flex flex-col sm:flex-row justify-center items-center bg-tfgreen text-white text-lg tracking-wider font-light">
+      <a class="py-4 px-2 mr-8 text-tfdarkblue font-semibold border-b-4 border-tfgreen hover:border-tfdarkblue" href="/"><span class="text-tflightblue">tech</span>frederick Community</a>
+      <a class="py-4 px-2 border-b-4 border-tfgreen hover:border-tfdarkblue" href="/events/">Events</a>
+      <a class="py-4 px-2 border-b-4 border-tfgreen hover:border-tfdarkblue" href="/groups/">Groups</a>
+      <a class="py-4 px-2 border-b-4 border-tfgreen hover:border-tfdarkblue" href="/hackathons/">Hackathons</a>
+      <a class="py-4 px-2 border-b-4 border-tfgreen hover:border-tfdarkblue" href="https://techfrederick.org">Organization</a>
+    </nav>
+    <main class="grow">
+      <div class="container mx-auto">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+    <footer class="py-4 px-2 bg-tfdarkblue text-white">
+      The footer
+    </footer>
   </body>
 </html>
