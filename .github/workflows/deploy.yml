@@ -49,7 +49,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build HTML files
-        run: python community/build.py
+        run: python -m community
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
