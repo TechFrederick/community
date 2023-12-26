@@ -3,7 +3,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
-from .models import Group
+from .repositories import GroupRepository
 
 root = Path(__file__).parent.parent
 environment = Environment(loader=FileSystemLoader(root / "templates"))
@@ -16,7 +16,8 @@ def main():
     out.mkdir(exist_ok=True)
 
     render_index(out)
-    render_groups(out)
+    group_repo = GroupRepository()
+    render_groups(group_repo, out)
     end = datetime.datetime.now()
     delta = end - start
     print(f"Done in {delta.total_seconds()} seconds")
@@ -27,18 +28,11 @@ def render_index(out):
     render("index.html", {}, out / "index.html")
 
 
-def render_groups(out):
+def render_groups(group_repo: GroupRepository, out):
     groups_dir = out / "groups"
     groups_dir.mkdir(exist_ok=True)
 
-    groups = [
-        Group(
-            name="Python Frederick",
-            slug="python-frederick",
-            description="A Meetup group that discusses the Python programming language",
-        ),
-    ]
-
+    groups = group_repo.all()
     print("Rendering groups index")
     render("groups.html", {"groups": groups}, groups_dir / "index.html")
 
