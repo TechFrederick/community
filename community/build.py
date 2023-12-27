@@ -15,28 +15,24 @@ def main():
     out = root / "out"
     out.mkdir(exist_ok=True)
 
-    render_index(out)
     group_repo = GroupRepository()
+    render_index(group_repo, out)
     render_groups(group_repo, out)
     end = datetime.datetime.now()
     delta = end - start
     print(f"Done in {delta.total_seconds()} seconds")
 
 
-def render_index(out):
+def render_index(group_repo, out):
     print("Rendering index")
-    render("index.html", {}, out / "index.html")
+    render("index.html", {"groups": group_repo.all()}, out / "index.html")
 
 
 def render_groups(group_repo: GroupRepository, out):
     groups_dir = out / "groups"
     groups_dir.mkdir(exist_ok=True)
 
-    groups = group_repo.all()
-    print("Rendering groups index")
-    render("groups.html", {"groups": groups}, groups_dir / "index.html")
-
-    for group in groups:
+    for group in group_repo.all():
         render_group(group, groups_dir)
 
 

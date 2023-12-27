@@ -7,3 +7,4 @@ class Group(BaseModel):
     name: str
     slug: str
     description: str
+    teaser: str
