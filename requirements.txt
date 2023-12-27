@@ -1,4 +1,5 @@
 honcho
 Jinja2
 pydantic
+PyYAML
 watchdog[watchmedo]

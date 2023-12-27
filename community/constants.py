@@ -1,5 +1,6 @@
 from pathlib import Path
 
 root = Path(__file__).parent.parent
-public = root / "public"
+data_path = root / "data"
 out = root / "out"
+public = root / "public"

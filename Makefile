@@ -6,11 +6,11 @@ build:
 
 watcher:
 	venv/bin/watchmedo shell-command \
-		--pattern='*.py;*.html' \
+		--pattern='*.html;*.md;*.py' \
 		--recursive \
 		--command='make build' \
 		--drop \
-		community templates
+		community data templates
 
 serve:
 	venv/bin/python -m http.server --directory out 8000
