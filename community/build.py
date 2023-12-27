@@ -1,4 +1,6 @@
 import datetime
+import os
+import shutil
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
@@ -6,6 +8,7 @@ from jinja2 import Environment, FileSystemLoader
 from .repositories import GroupRepository
 
 root = Path(__file__).parent.parent
+public = root / "public"
 environment = Environment(loader=FileSystemLoader(root / "templates"))
 
 
@@ -18,6 +21,9 @@ def main():
     group_repo = GroupRepository()
     render_index(group_repo, out)
     render_groups(group_repo, out)
+
+    copy_static(out)
+
     end = datetime.datetime.now()
     delta = end - start
     print(f"Done in {delta.total_seconds()} seconds")
@@ -48,3 +54,16 @@ def render(template_name, context, out_path):
     template = environment.get_template(template_name)
     with open(out_path, "w") as f:
         f.write(template.render(**context))
+
+
+def copy_static(out):
+    print("Copying static files from `public` to `out`")
+    for dirpath, _, filenames in os.walk(public):
+        path = Path(dirpath)
+        relpath = path.relative_to(public)
+        outpath = out / relpath
+        outpath.mkdir(exist_ok=True)
+
+        for filename in filenames:
+            filepath = os.path.join(dirpath, filename)
+            shutil.copyfile(filepath, outpath / filename)
