@@ -6,35 +6,33 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 from .repositories import GroupRepository
+from .constants import out, public, root
 
-root = Path(__file__).parent.parent
-public = root / "public"
 environment = Environment(loader=FileSystemLoader(root / "templates"))
 
 
 def main():
     start = datetime.datetime.now()
     print("Generating content to `out` directory")
-    out = root / "out"
     out.mkdir(exist_ok=True)
 
     group_repo = GroupRepository()
-    render_index(group_repo, out)
-    render_groups(group_repo, out)
+    render_index(group_repo)
+    render_groups(group_repo)
 
-    copy_static(out)
+    copy_static()
 
     end = datetime.datetime.now()
     delta = end - start
     print(f"Done in {delta.total_seconds()} seconds")
 
 
-def render_index(group_repo, out):
+def render_index(group_repo):
     print("Rendering index")
     render("index.html", {"groups": group_repo.all()}, out / "index.html")
 
 
-def render_groups(group_repo: GroupRepository, out):
+def render_groups(group_repo: GroupRepository):
     groups_dir = out / "groups"
     groups_dir.mkdir(exist_ok=True)
 
@@ -56,7 +54,7 @@ def render(template_name, context, out_path):
         f.write(template.render(**context))
 
 
-def copy_static(out):
+def copy_static():
     print("Copying static files from `public` to `out`")
     for dirpath, _, filenames in os.walk(public):
         path = Path(dirpath)
