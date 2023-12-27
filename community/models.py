@@ -8,3 +8,4 @@ class Group(BaseModel):
     slug: str
     description: str
     teaser: str
+    card_image: str
