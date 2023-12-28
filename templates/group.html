@@ -3,6 +3,10 @@
 {% block title %}{{ group.name }} - techfrederick Community{% endblock %}
 
 {% block content %}
-  <h1 class="text-xl">{{ group.name }}</h1>
-  <p>{{ group.description }}</p>
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-2xl sm:text-5xl text-center text-slate-700 font-extralight tracking-widest leading-relaxed py-8">{{ group.name }}</h1>
+    <div class="px-4 sm:px-0">
+      {{ group.description }}
+    </div>
+  </div>
 {% endblock %}

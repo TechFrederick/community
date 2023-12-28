@@ -1,5 +1,6 @@
 honcho
 Jinja2
+Markdown
 pydantic
-PyYAML
+python-frontmatter
 watchdog[watchmedo]

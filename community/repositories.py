@@ -1,9 +1,11 @@
 """A reposiory handles loading and accessing model data"""
 
 
-import yaml
+import frontmatter
+import markdown
 
 from .constants import data_path
+from .extensions import TailwindExtension
 from .models import Group
 
 
@@ -17,11 +19,13 @@ class GroupRepository:
 
         for filepath in sorted(groups_path.glob("*")):
             with open(filepath, "r") as f:
-                documents = list(yaml.load_all(f, yaml.CLoader))
-            frontmatter = documents[0]
-            # TODO: transform description from Markdown into suitable HTML
-            frontmatter["description"] = documents[1]
-            groups.append(Group(**frontmatter))
+                metadata, description = frontmatter.parse(f.read())
+            description = markdown.markdown(
+                description,
+                extensions=[TailwindExtension()],
+            )
+            metadata["description"] = description
+            groups.append(Group(**metadata))
 
         return groups
 

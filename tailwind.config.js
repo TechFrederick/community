@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./templates/**/*.html"],
+  content: [
+    "./templates/**/*.html",
+    // There are some Tailwind classes embedded in the Markdown extension.
+    "./community/extensions.py",
+  ],
   theme: {
     extend: {
       colors: {
