@@ -6,6 +6,7 @@ class Group(BaseModel):
 
     name: str
     slug: str
+    url: str
     description: str
     teaser: str
     card_image: str

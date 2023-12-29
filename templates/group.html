@@ -5,8 +5,11 @@
 {% block content %}
   <div class="max-w-3xl mx-auto">
     <h1 class="text-2xl sm:text-5xl text-center text-slate-700 font-extralight tracking-widest leading-relaxed py-8">{{ group.name }}</h1>
-    <div class="px-4 sm:px-0">
+    <div class="px-4 pb-4 sm:px-0">
       {{ group.description }}
+    </div>
+    <div class="p-4 bg-tfgreen text-lg font-light text-white border-b-2 border-tfdarkblue">
+      Visit the <a class="underline hover:text-tflightblue" href="{{ group.url }}" target="_blank">{{ group.name }} website</a> for all the latest news and information.
     </div>
   </div>
 {% endblock %}
