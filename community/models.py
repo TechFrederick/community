@@ -10,3 +10,4 @@ class Group(BaseModel):
     description: str
     teaser: str
     card_image: str
+    hero_image: str
