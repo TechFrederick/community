@@ -6,4 +6,8 @@ teaser: Open Source software is the name of the game for this meetup. Formerly k
 card_image: /images/group-card/frederick-open-source.png
 hero_image: /images/group-hero/frederick-open-source.png
 ---
-A Meetup group that looks into open source software
+Frederick Open Source is all about modern open source software and concepts. We welcome professionals in the field, enthusiasts, and beginners alike.
+
+Meeting topics cover a range of experience levels from beginner through advanced professional.
+
+Frederick Open Source is proudly sponsored by Red Hat and Frederick CoWork.

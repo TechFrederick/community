@@ -6,4 +6,4 @@ teaser: AWS Frederick covers all things Amazon. The cloud is vast and so are Ama
 card_image: /images/group-card/aws-frederick.png
 hero_image: /images/group-hero/aws-frederick.png
 ---
-A Meetup group that discusses Amazon Web Services
+This is an Amazon Web Services users group in Frederick, MD. We look to provide a forum for users to share experiences, best practices, and lessons learned from using AWS. Developers, Admins, Project Managers, etc are all welcome.
