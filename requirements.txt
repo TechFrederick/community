@@ -2,5 +2,7 @@ honcho
 Jinja2
 Markdown
 pydantic
+python-dotenv
 python-frontmatter
+requests
 watchdog[watchmedo]

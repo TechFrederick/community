@@ -11,7 +11,7 @@ from .constants import out, public, root
 environment = Environment(loader=FileSystemLoader(root / "templates"))
 
 
-def main():
+def build():
     start = datetime.datetime.now()
     print("Generating content to `out` directory")
     out.mkdir(exist_ok=True)
