@@ -3,10 +3,11 @@
 
 import frontmatter
 import markdown
+import yaml
 
 from .constants import data_path
 from .extensions import TailwindExtension
-from .models import Group
+from .models import Event, Group
 
 
 class GroupRepository:
@@ -31,3 +32,21 @@ class GroupRepository:
 
     def all(self):
         return self._groups
+
+
+class EventRepository:
+    def __init__(self):
+        self.events_path = data_path / "events"
+
+    def create(self, group: Group, event_data: dict) -> Event:
+        """Create an event and persist it."""
+        event = Event(**event_data)
+
+        group_events = self.events_path / group.slug
+        group_events.mkdir(exist_ok=True)
+
+        event_dict = event.model_dump()
+        with open(group_events / f"{event.id}.yaml", "w") as f:
+            f.write(yaml.dump(event_dict, sort_keys=True))
+
+        return event
