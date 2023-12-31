@@ -5,7 +5,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
-from .repositories import GroupRepository
+from .repositories import EventRepository, GroupRepository
 from .constants import out, public, root
 
 environment = Environment(loader=FileSystemLoader(root / "templates"))
@@ -16,6 +16,7 @@ def build():
     print("Generating content to `out` directory")
     out.mkdir(exist_ok=True)
 
+    event_repo = EventRepository()
     group_repo = GroupRepository()
     render_index(group_repo)
     render_groups(group_repo)

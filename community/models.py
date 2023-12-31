@@ -30,6 +30,7 @@ class Event(BaseModel):
     """An event happening in town"""
 
     id: str
+    group_slug: str
     name: str
     link: str
     description: str
