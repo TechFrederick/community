@@ -11,5 +11,7 @@ if operation == "build":
     build()
 elif operation == "events":
     fetch()
+elif operation == "events-cached":
+    fetch(refresh=False)
 else:
     sys.exit(f"{operation} is an invalid option.")
