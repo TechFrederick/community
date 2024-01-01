@@ -9,6 +9,11 @@ description: "<p>Do you want to work on technology with other tech people in the
   ll join in.</p> "
 group_slug: frederick-web-tech
 id: gzdxbtygcmbcc
+joint_with:
+- ctjjctygcmbcc
+- czdxbtygcmbcc
+- jzdxbtygcmbcc
+- mcxhctygcmbcc
 link: https://www.meetup.com/fredwebtech/events/gzdxbtygcmbcc/
 name: Frederick Tech Open Workshop - 3rd Saturday
 time: 1726927200000

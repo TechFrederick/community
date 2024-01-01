@@ -25,6 +25,18 @@ class Venue(BaseModel):
     lat: float
     lon: float
 
+    def __eq__(self, other):
+        """Are the venues the same?
+
+        Since this community is almost exclusively for events in the county,
+        it should be sufficient (and fastest) to just compare the street address.
+
+        Meetup is a dump and includes multiple addresses for the same place,
+        differentiated by only punctuation. This will try to normalize
+        by removing the punctuation.
+        """
+        return self.address_1.replace(".", "") == other.address_1.replace(".", "")
+
 
 class Event(BaseModel):
     """An event happening in town"""
@@ -38,3 +50,15 @@ class Event(BaseModel):
     time: int
     utc_offset: int
     venue: Venue
+    joint_with: list[str] = []
+
+    def __eq__(self, other):
+        """When an event is at the same time and place, it is the same event."""
+        return self.time == other.time and self.venue == other.venue
+
+    def __hash__(self):
+        """Generate a hash for this instance.
+
+        Hashing is needed to make the set indices of the repository work.
+        """
+        return hash(self.id)

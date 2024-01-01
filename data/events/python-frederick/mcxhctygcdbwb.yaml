@@ -20,6 +20,11 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ class=\"linkified\">https://www.meetup.com/wordpress-frederick/events/cghvxsyfcdbxb/](https://www.meetup.com/wordpress-frederick/events/cghvxsyfcdbxb/</a>)</p> "
 group_slug: python-frederick
 id: mcxhctygcdbwb
+joint_with:
+- ctjjctygcdbwb
+- czdxbtygcdbwb
+- gzdxbtygcdbwb
+- jzdxbtygcdbwb
 link: https://www.meetup.com/python-frederick/events/mcxhctygcdbwb/
 name: Frederick Tech Open Workshop - 3rd Saturday
 time: 1708182000000
