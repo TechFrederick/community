@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 from pydantic import BaseModel
 
@@ -52,6 +52,7 @@ class Event(BaseModel):
     # The times are provided in ms instead of seconds.
     time: int
     utc_offset: int
+    duration: int
     venue: Venue
     joint_with: list[str] = []
 
@@ -69,5 +70,6 @@ class Event(BaseModel):
     @property
     def when(self):
         """Get the time in the form of a more flexible datetime for formatting."""
-        dt = datetime.fromtimestamp(self.time / 1000)
+        tz = timezone(timedelta(milliseconds=self.utc_offset))
+        dt = datetime.fromtimestamp(self.time / 1000, tz=tz)
         return dt
