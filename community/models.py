@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel
 
 
@@ -47,6 +49,7 @@ class Event(BaseModel):
     link: str
     description: str
     # Meetup provides the time in terms of Unix timestamps and a UTC offset
+    # The times are provided in ms instead of seconds.
     time: int
     utc_offset: int
     venue: Venue
@@ -62,3 +65,9 @@ class Event(BaseModel):
         Hashing is needed to make the set indices of the repository work.
         """
         return hash(self.id)
+
+    @property
+    def when(self):
+        """Get the time in the form of a more flexible datetime for formatting."""
+        dt = datetime.fromtimestamp(self.time / 1000)
+        return dt

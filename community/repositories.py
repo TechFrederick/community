@@ -1,6 +1,7 @@
 """A reposiory handles loading and accessing model data"""
 
 
+from datetime import datetime, timedelta
 import frontmatter
 import markdown
 import yaml
@@ -110,3 +111,35 @@ class EventRepository:
         event_dict = event.model_dump()
         with open(outpath / f"{event.id}.yaml", "w") as f:
             f.write(yaml.dump(event_dict, sort_keys=True))
+
+    def filter_around(
+        self,
+        when: datetime,
+        future: timedelta = timedelta(days=45),
+        past: timedelta = timedelta(days=30),
+    ) -> list[Event]:
+        """Get a filtered list of events near the provided datetime.
+
+        Joint events are collapsed to the first joint event found.
+        """
+        filtered_events = []
+        future_timestamp = (when + future).timestamp() * 1000  # Need ms
+        past_timestamp = (when - past).timestamp() * 1000  # Need ms
+
+        ignored_joint_ids = set()
+        for timestamp, events in sorted(self.events_by_time.items()):
+            if timestamp > future_timestamp or timestamp < past_timestamp:
+                continue
+
+            for event in sorted(events, key=lambda e: e.id):
+                if event.id in ignored_joint_ids:
+                    continue
+
+                filtered_events.append(event)
+
+                if event.joint_with:
+                    for joint_id in event.joint_with:
+                        ignored_joint_ids.add(joint_id)
+
+        filtered_events.sort(key=lambda e: e.time, reverse=True)
+        return filtered_events
