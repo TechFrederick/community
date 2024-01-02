@@ -1,4 +1,3 @@
-feedparser
 honcho
 Jinja2
 Markdown
