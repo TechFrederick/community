@@ -14,6 +14,7 @@ from .models import Event, Group
 
 class GroupRepository:
     def __init__(self):
+        self._groups_by_slug: dict[str, Group] = {}
         self._groups = self._load_groups()
 
     def _load_groups(self):
@@ -28,12 +29,21 @@ class GroupRepository:
                 extensions=[TailwindExtension()],
             )
             metadata["description"] = description
-            groups.append(Group(**metadata))
+            group = Group(**metadata)
+            groups.append(group)
+            self._groups_by_slug[group.slug] = group
 
         return groups
 
     def all(self):
         return self._groups
+
+    def find_by(self, slug: str) -> Group:
+        """Find a group from its slug name.
+
+        Invalid slugs are designed to fail so that bad data gets corrected.
+        """
+        return self._groups_by_slug[slug]
 
 
 class EventRepository:

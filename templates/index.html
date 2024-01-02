@@ -19,8 +19,8 @@
     </div>
 
     <div class="grid grid-col-1 sm:grid-cols-3 gap-4">
-      {% for event in events %}
-        <div>{{ event.name }}, {{ event.when.strftime('%Y-%m-%d %-I%p').lower() }}</div>
+      {% for event, group in events_with_group %}
+        {% include "event_card.html" %}
       {% endfor %}
     </div>
   </div>

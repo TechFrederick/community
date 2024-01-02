@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import datetime
 import os
 import shutil
@@ -5,8 +7,9 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
+from .constants import out, public, templates
 from .repositories import EventRepository, GroupRepository
-from .constants import data_path, out, public, templates
+from .models import Event, Group
 
 environment = Environment(loader=FileSystemLoader(templates))
 
@@ -35,8 +38,16 @@ def render_index(
     group_repo: GroupRepository,
 ) -> None:
     print("Rendering index")
+
+    events_with_group: list[tuple[Event, Group | None]] = []
+    for event in event_repo.filter_around(now):
+        if event.joint_with:
+            events_with_group.append((event, None))
+        else:
+            events_with_group.append((event, group_repo.find_by(event.group_slug)))
+
     context = {
-        "events": event_repo.filter_around(now),
+        "events_with_group": events_with_group,
         "groups": group_repo.all(),
     }
     render("index.html", context, out / "index.html")
