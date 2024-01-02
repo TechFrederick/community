@@ -6,9 +6,9 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 from .repositories import EventRepository, GroupRepository
-from .constants import out, public, root
+from .constants import data_path, out, public, templates
 
-environment = Environment(loader=FileSystemLoader(root / "templates"))
+environment = Environment(loader=FileSystemLoader(templates))
 
 
 def build():
@@ -23,6 +23,7 @@ def build():
 
     copy_static()
 
+    render_palette(group_repo)
     end = datetime.datetime.now()
     delta = end - now
     print(f"Done in {delta.total_seconds()} seconds")
@@ -74,3 +75,15 @@ def copy_static():
         for filename in filenames:
             filepath = os.path.join(dirpath, filename)
             shutil.copyfile(filepath, outpath / filename)
+
+
+def render_palette(group_repo: GroupRepository) -> None:
+    """Render the palette that Tailwind can pull from.
+
+    This is a crud hack so that the Tailwind detection can find all the colors
+    needed by different groups. Since all color usage is dynamic, there needs
+    to be at least one output location that is controlled in the *source*
+    that contains any color attributes that we want to use.
+    """
+    groups = group_repo.all()
+    render("palette.html", {"groups": groups}, templates / "palette-rendered.html")

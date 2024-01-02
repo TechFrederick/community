@@ -15,6 +15,9 @@ class Group(BaseModel):
     teaser: str
     card_image: str
     hero_image: str
+    # A brand color to associate with the group for accenting
+    # The color should match an available color from Tailwind
+    color: str
 
 
 class Venue(BaseModel):

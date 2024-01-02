@@ -1,6 +1,6 @@
 <div class="min-h-48 bg-slate-50 border-t border-b sm:border border-tfgreen hover:brightness-105 hover:saturate-150 hover:transition-all">
   <div class="p-2 border-b-2 border-tfgreen bg-white text-xl text-tfdarkblue font-light">{{ group.name }}</div>
-  <div class="bg-white">
+  <div class="bg-white border-b-4 border-{{ group.color }}">
     <img class="w-full h-48 object-scale-down object-center" src="{{ group.card_image }}">
   </div>
   <div class="p-2 text-slate-700">{{ group.teaser }}</div>
