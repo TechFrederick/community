@@ -13,7 +13,7 @@ class TailwindTreeProcessor(Treeprocessor):
     """Walk the root node and modify any discovered tag with the desired CSS classes"""
 
     classes = {
-        "a": "underline text-tfgreen hover:text-tflightblue",
+        "a": "underline text-tflightblue hover:text-tfdarkblue",
         "p": "pb-4 text-normal",
         # TODO: Fix the heading styles when a group uses that in the description.
         "h1": "text-lg",
