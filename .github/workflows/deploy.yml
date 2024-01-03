@@ -65,9 +65,9 @@ jobs:
         with:
           path: ./out
 
-      # - uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #     commit_message: "Adding new event(s)"
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Adding new event(s)"
 
   deploy:
     needs: build
