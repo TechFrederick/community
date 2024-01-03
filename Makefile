@@ -2,7 +2,7 @@ run:
 	venv/bin/honcho start
 
 build:
-	@venv/bin/python -m community
+	@venv/bin/python -m community build
 
 watcher:
 	venv/bin/watchmedo shell-command \

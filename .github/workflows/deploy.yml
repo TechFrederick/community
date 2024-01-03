@@ -3,14 +3,17 @@ name: Deploy site to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    # branches: ["main"]
+  # Run daily to check for new events
+  schedule:
+    - cron: '0 13 * * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# and new content from fetched events
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -48,13 +51,23 @@ jobs:
       - name: Install packages
         run: pip install -r requirements.txt
 
+      - name: Fetch any new events
+        run: python -m community events
+
+      # TODO: remove once verification of newly created events happens.
+      - run: git status && git diff
+
       - name: Build HTML files
-        run: python -m community
+        run: python -m community build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+
+      # - uses: stefanzweifel/git-auto-commit-action@v5
+      #   with:
+      #     commit_message: "Adding new event(s)"
 
   deploy:
     needs: build
