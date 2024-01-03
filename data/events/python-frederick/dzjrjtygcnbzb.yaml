@@ -6,23 +6,26 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ work on a common project selected for the day or bring your own project and enlist\
   \ the help of others. The goal is to have fun with other tech people in the area.\
   \ Bring your laptop or just bring yourself! We have a blast and we hope you\u2019\
-  ll join in.</p> "
+  ll join in.</p> <p>You'll also find this event listed with other local meetups.\
+  \ Here are all the groups that are participating:</p> <p>* AWS Frederick<br/>* Frederick\
+  \ Open Source (FOS)<br/>* Frederick WebTech<br/>* Python Frederick<br/>* WordPress\
+  \ Frederick</p> "
 duration: 7200000
-group_slug: aws-frederick
-id: czdxbtygcmbcc
+group_slug: python-frederick
+id: dzjrjtygcnbzb
 joint_with:
-- ctjjctygcmbcc
-- dzjrjtygcmbcc
-- gzdxbtygcmbcc
-- jzdxbtygcmbcc
-link: https://www.meetup.com/awsfrederick/events/czdxbtygcmbcc/
+- ctjjctygcnbzb
+- czdxbtygcnbzb
+- gzdxbtygcnbzb
+- jzdxbtygcnbzb
+link: https://www.meetup.com/python-frederick/events/dzjrjtygcnbzb/
 name: Frederick Tech Open Workshop - 3rd Saturday
-time: 1726927200000
+time: 1729346400000
 utc_offset: -14400000
 venue:
-  address_1: 118 N. Market St.
+  address_1: 118 N Market St
   city: Frederick
-  lat: 39.41582107543945
-  lon: -77.41043853759766
+  lat: 39.415828704833984
+  lon: -77.41044616699219
   state: MD
-  zip: ''
+  zip: '21701'
