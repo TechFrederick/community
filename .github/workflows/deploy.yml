@@ -54,9 +54,6 @@ jobs:
       - name: Fetch any new events
         run: python -m community events
 
-      # TODO: remove once verification of newly created events happens.
-      - run: git status && git diff
-
       - name: Build HTML files
         run: python -m community build
 
