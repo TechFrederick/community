@@ -76,3 +76,7 @@ class Event(BaseModel):
         tz = timezone(timedelta(milliseconds=self.utc_offset))
         dt = datetime.fromtimestamp(self.time / 1000, tz=tz)
         return dt
+
+    @property
+    def end(self):
+        return self.when + timedelta(milliseconds=self.duration)

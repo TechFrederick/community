@@ -8,8 +8,9 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 from .constants import out, public, templates
-from .repositories import EventRepository, GroupRepository
+from .frontend import tailwindify_html
 from .models import Event, Group
+from .repositories import EventRepository, GroupRepository
 
 environment = Environment(loader=FileSystemLoader(templates))
 
@@ -22,6 +23,7 @@ def build():
     event_repo = EventRepository()
     group_repo = GroupRepository()
     render_index(now, event_repo, group_repo)
+    render_events(event_repo, group_repo)
     render_groups(group_repo)
 
     copy_static()
@@ -51,6 +53,26 @@ def render_index(
         "groups": group_repo.all(),
     }
     render("index.html", context, out / "index.html")
+
+
+def render_events(
+    event_repo: EventRepository,
+    group_repo: GroupRepository,
+) -> None:
+    print("Rendering events")
+    events_dir = out / "events"
+    events_dir.mkdir(exist_ok=True)
+
+    for event in event_repo.all():
+        event_dir = events_dir / event.id
+        event_dir.mkdir(exist_ok=True)
+        context = {
+            # Wrap in a div because a root node is expected to format properly.
+            "description": tailwindify_html(f"<div>{event.description}</div>"),
+            "event": event,
+            "group": group_repo.find_by(event.group_slug),
+        }
+        render("event.html", context, event_dir / "index.html")
 
 
 def render_groups(group_repo: GroupRepository):

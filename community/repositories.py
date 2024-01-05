@@ -153,3 +153,8 @@ class EventRepository:
 
         filtered_events.sort(key=lambda e: e.time, reverse=True)
         return filtered_events
+
+    def all(self):
+        for _, events in sorted(self.events_by_time.items()):
+            for event in sorted(events, key=lambda e: e.id):
+                yield event

@@ -2,8 +2,8 @@
 module.exports = {
   content: [
     "./templates/**/*.html",
-    // There are some Tailwind classes embedded in the Markdown extension.
-    "./community/extensions.py",
+    // There are some Tailwind classes embedded in the frontend Python module.
+    "./community/frontend.py",
   ],
   theme: {
     extend: {
