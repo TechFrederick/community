@@ -6,6 +6,7 @@ import frontmatter
 import markdown
 import yaml
 from collections import defaultdict
+from typing import DefaultDict
 
 from .constants import data_path
 from .extensions import TailwindExtension
@@ -35,7 +36,7 @@ class GroupRepository:
 
         return groups
 
-    def all(self):
+    def all(self) -> list[Group]:
         return self._groups
 
     def find_by(self, slug: str) -> Group:
@@ -51,7 +52,7 @@ class EventRepository:
         self.events_path = data_path / "events"
 
         # Indices
-        self.events_by_group = defaultdict(set)
+        self.events_by_group: DefaultDict[str, set[Event]] = defaultdict(set)
         self.events_by_time = defaultdict(set)  # For joint event detection
 
         self._load_events()
@@ -152,7 +153,29 @@ class EventRepository:
                         ignored_joint_ids.add(joint_id)
 
         filtered_events.sort(key=lambda e: e.time, reverse=True)
+
         return filtered_events
+
+    def filter_group(
+        self,
+        group_slug: str,
+        when: datetime,
+        future: timedelta = timedelta(days=45),
+        past: timedelta = timedelta(days=30),
+    ) -> list[Event]:
+        """Filter to a specific group.
+
+        This isn't combined with `filter_around` because that method does extra
+        handling for joint events that complicates group processing.
+        """
+        future_timestamp = (when + future).timestamp() * 1000  # Need ms
+        past_timestamp = (when - past).timestamp() * 1000  # Need ms
+        events = self.events_by_group[group_slug]
+        return [
+            event
+            for event in sorted(events, key=lambda e: e.time, reverse=True)
+            if past_timestamp <= event.time <= future_timestamp
+        ]
 
     def all(self):
         for _, events in sorted(self.events_by_time.items()):

@@ -24,7 +24,7 @@ def build():
     group_repo = GroupRepository()
     render_index(now, event_repo, group_repo)
     render_events(event_repo, group_repo)
-    render_groups(group_repo)
+    render_groups(now, group_repo, event_repo)
 
     copy_static()
 
@@ -75,20 +75,29 @@ def render_events(
         render("event.html", context, event_dir / "index.html")
 
 
-def render_groups(group_repo: GroupRepository):
+def render_groups(
+    now: datetime.datetime,
+    group_repo: GroupRepository,
+    event_repo: EventRepository,
+):
     groups_dir = out / "groups"
     groups_dir.mkdir(exist_ok=True)
 
     for group in group_repo.all():
-        render_group(group, groups_dir)
+        events = event_repo.filter_group(group.slug, now)
+        render_group(group, events, groups_dir)
 
 
-def render_group(group, groups_dir):
+def render_group(group, events, groups_dir):
     print(f"Rendering group: {group.name}")
     group_dir = groups_dir / group.slug
     group_dir.mkdir(exist_ok=True)
 
-    render("group.html", {"group": group}, group_dir / "index.html")
+    context = {
+        "events": events,
+        "group": group,
+    }
+    render("group.html", context, group_dir / "index.html")
 
 
 def render(template_name, context, out_path):
