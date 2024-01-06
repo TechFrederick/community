@@ -6,4 +6,5 @@ python-dotenv
 python-frontmatter
 PyYAML
 requests
+scrapy
 watchdog[watchmedo]
