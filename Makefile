@@ -29,4 +29,9 @@ fetch-cached:
 	@venv/bin/python -m community events-cached
 
 check:
-	venv/bin/scrapy crawl crawler
+	venv/bin/scrapy crawl --overwrite-output checker.jsonl --nolog crawler
+
+test-ci:
+	honcho -f Procfile.checker start
+	cat checker.jsonl
+	test ! -s checker.jsonl

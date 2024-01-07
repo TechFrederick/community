@@ -19,8 +19,8 @@ Who is this meetup group for?
 We're a part of the larger Code & Coffee community. Come learn more about us here and see what we're all about.
 
 🧑‍🤝‍🧑 **Join our Online Community:**<br>
-[www.codeandcoffee.org](www.codeandcoffee.org)<br>
-Discord: [codeandcoffee.chat](codeandcoffee.chat)
+[www.codeandcoffee.org](https://www.codeandcoffee.org)<br>
+Discord: [codeandcoffee.chat](https://codeandcoffee.chat)
 
 **What do we do at these events?**<br>
 💬 **Discussion.** Many attendees come with questions, ideas, or strategies to discuss.<br>

@@ -1,18 +1,16 @@
-import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 
 
-class CrawlerSpider(CrawlSpider):
+class Spider(CrawlSpider):
     name = "crawler"
-    allowed_domains = ["localhost:8000"]
+    allowed_domains = ["localhost"]
     start_urls = ["http://localhost:8000"]
+    # Opt-in to 404 errors
+    handle_httpstatus_list = [404]
 
-    rules = (Rule(LinkExtractor(allow=r"Items/"), callback="parse_item", follow=True),)
+    rules = [Rule(LinkExtractor(), callback="parse")]
 
-    def parse_item(self, response):
-        item = {}
-        #item["domain_id"] = response.xpath('//input[@id="sid"]/@value').get()
-        #item["name"] = response.xpath('//div[@id="name"]').get()
-        #item["description"] = response.xpath('//div[@id="description"]').get()
-        return item
+    def parse(self, response):
+        if response.status == 404:
+            yield {"url": response.url}
