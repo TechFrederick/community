@@ -1,6 +1,11 @@
 run:
 	venv/bin/honcho start
 
+bootstrap:
+	test -d venv || python3 -m venv venv
+	venv/bin/pip install -r requirements.txt
+	npm install
+
 build:
 	@venv/bin/python -m community build
 
@@ -23,7 +28,10 @@ fetch:
 fetch-cached:
 	@venv/bin/python -m community events-cached
 
-bootstrap:
-	test -d venv || python3 -m venv venv
-	venv/bin/pip install -r requirements.txt
-	npm install
+check:
+	venv/bin/scrapy crawl --overwrite-output checker.jsonl --nolog crawler
+
+test-ci:
+	honcho -f Procfile.checker start
+	cat checker.jsonl
+	test ! -s checker.jsonl

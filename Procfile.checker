@@ -1,0 +1,2 @@
+web: python -m http.server --directory out 8000
+checker: scrapy crawl --overwrite-output checker.jsonl --nolog crawler

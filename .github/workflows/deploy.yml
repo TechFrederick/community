@@ -57,6 +57,9 @@ jobs:
       - name: Build HTML files
         run: python -m community build
 
+      - name: Test internal links
+        run: make test-ci
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
