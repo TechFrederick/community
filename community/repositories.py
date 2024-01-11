@@ -88,14 +88,15 @@ class EventRepository:
         If this is not updated, then weird conditions can happen with other checking
         (e.g., adding multiple new events at once may have a mismatched `joint_with` set).
         """
-        old_event = self.events_by_id[event.id]
+        old_event = self.events_by_id.get(event.id)
         self.events_by_id[event.id] = event
 
         self.events_by_group[group.slug].add(event)
-        # There is a case where the event can change time and needs to move
-        # to a different time set. Thus, we need to remove before adding,
-        # which may look weird, but it's actually important.
-        self.events_by_time[old_event.time].remove(old_event)
+        if old_event:
+            # There is a case where the event can change time and needs to move
+            # to a different time set. Thus, we need to remove before adding,
+            # which may look weird, but it's actually important.
+            self.events_by_time[old_event.time].remove(old_event)
         self.events_by_time[event.time].add(event)
 
     def _check_joint_events(self, event):
