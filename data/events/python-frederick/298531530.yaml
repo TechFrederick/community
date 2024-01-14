@@ -1,0 +1,19 @@
+description: '<p>We will have a guest presenter from Endor Labs. Details will be updated
+  on this event as we get closer.</p> <p>Also, we''re going to have another "after
+  hour." After the presentation is over, anyone who wants to stay and do a bit of
+  coding or chatting is welcome to hang out. Think of it like a mini open workshop.</p> '
+duration: 7200000
+group_slug: python-frederick
+id: '298531530'
+joint_with: []
+link: https://www.meetup.com/python-frederick/events/298531530/
+name: Endor Labs (2nd Wed Talk)
+time: 1718233200000
+utc_offset: -14400000
+venue:
+  address_1: 321 Ballenger Center Dr
+  city: Frederick
+  lat: 39.396602630615234
+  lon: -77.43460845947266
+  state: MD
+  zip: '21703'
