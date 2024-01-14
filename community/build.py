@@ -16,7 +16,7 @@ environment = Environment(loader=FileSystemLoader(templates))
 
 
 def build():
-    now = datetime.datetime.now()
+    now = datetime.datetime.now(tz=datetime.timezone.utc)
     print("Generating content to `out` directory")
     out.mkdir(exist_ok=True)
 
@@ -29,7 +29,7 @@ def build():
     copy_static()
 
     render_palette(group_repo)
-    end = datetime.datetime.now()
+    end = datetime.datetime.now(tz=datetime.timezone.utc)
     delta = end - now
     print(f"Done in {delta.total_seconds()} seconds")
 
@@ -51,6 +51,7 @@ def render_index(
     context = {
         "events_with_group": events_with_group,
         "groups": group_repo.all(),
+        "now": now,
     }
     render("index.html", context, out / "index.html")
 
@@ -85,10 +86,10 @@ def render_groups(
 
     for group in group_repo.all():
         events = event_repo.filter_group(group.slug, now)
-        render_group(group, events, groups_dir)
+        render_group(now, group, events, groups_dir)
 
 
-def render_group(group, events, groups_dir):
+def render_group(now, group, events, groups_dir):
     print(f"Rendering group: {group.name}")
     group_dir = groups_dir / group.slug
     group_dir.mkdir(exist_ok=True)
@@ -96,6 +97,7 @@ def render_group(group, events, groups_dir):
     context = {
         "events": events,
         "group": group,
+        "now": now,
     }
     render("group.html", context, group_dir / "index.html")
 
