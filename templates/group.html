@@ -22,6 +22,9 @@
         {% for event in events %}
           {% include "group_event_card.html" %}
         {% endfor %}
+        <div>
+          <a href="/groups/{{ group.slug }}/events/" class="underline text-tflightblue hover:text-tfdarkblue">See all events</a>
+        </div>
       </div>
     </div>
     <div class="p-4 mb-8 bg-tfgreen text-lg font-normal text-white border-b-2 border-tfdarkblue">

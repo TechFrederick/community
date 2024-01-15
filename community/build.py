@@ -13,6 +13,9 @@ from .models import Event, Group
 from .repositories import EventRepository, GroupRepository
 
 environment = Environment(loader=FileSystemLoader(templates))
+# If this code is still in operation in 50 years, that would be shocking.
+# We need a time delta that can stand in for the distant past to pull all events.
+old_delta = datetime.timedelta(days=50 * 365)
 
 
 def build():
@@ -87,6 +90,8 @@ def render_groups(
     for group in group_repo.all():
         events = event_repo.filter_group(group.slug, now)
         render_group(now, group, events, groups_dir)
+        all_events = event_repo.filter_group(group.slug, now, past=old_delta)
+        render_group_events(group, all_events, groups_dir)
 
 
 def render_group(now, group, events, groups_dir):
@@ -100,6 +105,18 @@ def render_group(now, group, events, groups_dir):
         "now": now,
     }
     render("group.html", context, group_dir / "index.html")
+
+
+def render_group_events(group, events, groups_dir):
+    print(f"Rendering group events: {group.name}")
+    events_dir = groups_dir / group.slug / "events"
+    events_dir.mkdir(exist_ok=True)
+
+    context = {
+        "events": events,
+        "group": group,
+    }
+    render("group_events.html", context, events_dir / "index.html")
 
 
 def render(template_name, context, out_path):
