@@ -4,7 +4,8 @@ description: '<p>Come meet up for dinner and drinks at JoJo''s in downtown Frede
 duration: 7200000
 group_slug: frederick-web-tech
 id: '298576953'
-joint_with: []
+joint_with:
+- '298585615'
 link: https://www.meetup.com/fredwebtech/events/298576953/
 name: Web Tech Social
 time: 1706140800000
