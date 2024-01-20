@@ -1,11 +1,18 @@
-{% extends "base.html" %}
-
-{% block content %}
-
+<!DOCTYPE html>
+<html>
+<body>
   <h1>Color palettes</h1>
 
+  <h2>Groups</h2>
   {% for group in groups %}
-    <h1>{{ group.name }}</h2>
+    <h3>{{ group.name }}</h3>
     <div>border-{{ group.color }}</div>
-  {%- endfor -%}
-{% endblock %}
+  {%- endfor %}
+
+  <h2>Hackathons</h2>
+  {% for hackathon in hackathons %}
+    <h3>{{ hackathon.name }}</h3>
+    <div>border-{{ hackathon.color }}</div>
+  {%- endfor %}
+</body>
+</html>

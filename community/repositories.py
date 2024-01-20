@@ -10,7 +10,7 @@ from typing import DefaultDict
 
 from .constants import data_path
 from .extensions import TailwindExtension
-from .models import Event, Group
+from .models import Event, Group, Hackathon
 
 
 class GroupRepository:
@@ -30,7 +30,7 @@ class GroupRepository:
                 extensions=[TailwindExtension()],
             )
             metadata["description"] = description
-            group = Group(**metadata)
+            group = Group(**metadata)  # type: ignore
             groups.append(group)
             self._groups_by_slug[group.slug] = group
 
@@ -191,3 +191,20 @@ class EventRepository:
         for _, events in sorted(self.events_by_time.items()):
             for event in sorted(events, key=lambda e: e.id):
                 yield event
+
+
+class HackathonRepository:
+    def __init__(self):
+        self.hackathons_path = data_path / "hackathons"
+        self._hackathons: list[Hackathon] = [
+            Hackathon(
+                slug="2016",
+                name="2016",
+                color="violet-500",
+                teaser="The 2016 hackathon was the OG hackathon in Frederick. Local tech meetups came together to bring a tutorial format event that taught people about APIs and SMS notifications.",
+                description="testing",
+            )
+        ]
+
+    def all(self):
+        return self._hackathons

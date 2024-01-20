@@ -10,7 +10,7 @@ from jinja2 import Environment, FileSystemLoader
 from .constants import out, public, templates
 from .frontend import tailwindify_html
 from .models import Event, Group
-from .repositories import EventRepository, GroupRepository
+from .repositories import EventRepository, GroupRepository, HackathonRepository
 
 environment = Environment(loader=FileSystemLoader(templates))
 # If this code is still in operation in 50 years, that would be shocking.
@@ -25,13 +25,14 @@ def build():
 
     event_repo = EventRepository()
     group_repo = GroupRepository()
-    render_index(now, event_repo, group_repo)
+    hackathon_repo = HackathonRepository()
+    render_index(now, event_repo, group_repo, hackathon_repo)
     render_events(event_repo, group_repo)
     render_groups(now, group_repo, event_repo)
 
     copy_static()
 
-    render_palette(group_repo)
+    render_palette(group_repo, hackathon_repo)
     end = datetime.datetime.now(tz=datetime.timezone.utc)
     delta = end - now
     print(f"Done in {delta.total_seconds()} seconds")
@@ -41,6 +42,7 @@ def render_index(
     now: datetime.datetime,
     event_repo: EventRepository,
     group_repo: GroupRepository,
+    hackathon_repo: HackathonRepository,
 ) -> None:
     print("Rendering index")
 
@@ -54,6 +56,7 @@ def render_index(
     context = {
         "events_with_group": events_with_group,
         "groups": group_repo.all(),
+        "hackathons": hackathon_repo.all(),
         "now": now,
     }
     render("index.html", context, out / "index.html")
@@ -138,7 +141,7 @@ def copy_static():
             shutil.copyfile(filepath, outpath / filename)
 
 
-def render_palette(group_repo: GroupRepository) -> None:
+def render_palette(group_repo: GroupRepository, hackathon_repo: HackathonRepository) -> None:
     """Render the palette that Tailwind can pull from.
 
     This is a crud hack so that the Tailwind detection can find all the colors
@@ -146,5 +149,7 @@ def render_palette(group_repo: GroupRepository) -> None:
     to be at least one output location that is controlled in the *source*
     that contains any color attributes that we want to use.
     """
-    groups = group_repo.all()
-    render("palette.html", {"groups": groups}, templates / "palette-rendered.html")
+    render("palette.html", {
+        "groups": group_repo.all(),
+        "hackathons": hackathon_repo.all(),
+    }, templates / "palette-rendered.html")

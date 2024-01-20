@@ -80,3 +80,13 @@ class Event(BaseModel):
     @property
     def end(self):
         return self.when + timedelta(milliseconds=self.duration)
+
+
+class Hackathon(BaseModel):
+    """A hackathon event in town"""
+
+    slug: str
+    name: str
+    color: str
+    teaser: str
+    description: str

@@ -52,7 +52,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="mb-8">
     <a name="hackathons"></a>
     <h2 class="text-4xl text-tfdarkblue font-light mb-4 px-2 sm:px-0 py-4 border-b-4 border-tfdarkblue w-full sm:w-1/3 flex flex-row items-center">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
@@ -60,6 +60,20 @@
       </svg>
       <span class="ml-2">Hackathons</span>
     </h2>
-    Hackathons content here
+
+    <div class="max-w-3xl sm:mx-auto px-2 sm:px-0 sm:text-lg text-slate-700 sm:font-light pt-4 pb-8">
+      <p>
+        Hackathons are special events where developers of all experience levels get together
+        to build software projects quickly.
+        Hackathons come in many forms and can be collaborative, competitive,
+        or just great opportunities to learn new technology!
+      </p>
+    </div>
+
+    <div class="grid grid-col-1 sm:grid-cols-3 gap-4">
+      {% for hackathon in hackathons %}
+        {% include "hackathon_card.html" %}
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}
