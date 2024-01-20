@@ -7,4 +7,5 @@ python-frontmatter
 PyYAML
 requests
 scrapy
+urllib3
 watchdog[watchmedo]

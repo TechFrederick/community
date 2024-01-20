@@ -2,6 +2,8 @@ import json
 
 import requests
 from dotenv import load_dotenv
+from requests.adapters import HTTPAdapter
+from urllib3.util import Retry
 
 from .constants import cache
 from .repositories import EventRepository, GroupRepository
@@ -25,11 +27,19 @@ def fetch(refresh=True):
 
 def fetch_to_cache(group_repo):
     """Fetch the data from Meetup for each group and store it in the local cache."""
+    retries = Retry(
+        total=3,
+        allowed_methods={"GET"},
+        status_forcelist=[502, 503, 504],
+        backoff_factor=0.1,
+    )
     session = requests.Session()
+    session.mount("https://", HTTPAdapter(max_retries=retries))
 
     for group in group_repo.all():
         response = session.get(
-            f"https://api.meetup.com/{group.meetup_group_slug}/events"
+            f"https://api.meetup.com/{group.meetup_group_slug}/events",
+            timeout=5,
         )
         response.raise_for_status()
         with open(cache / f"{group.slug}-events.json", "wb") as f:
