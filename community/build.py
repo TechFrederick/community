@@ -29,6 +29,7 @@ def build():
     render_index(now, event_repo, group_repo, hackathon_repo)
     render_events(event_repo, group_repo)
     render_groups(now, group_repo, event_repo)
+    render_hackathons(hackathon_repo)
 
     copy_static()
 
@@ -122,6 +123,25 @@ def render_group_events(group, events, groups_dir):
     render("group_events.html", context, events_dir / "index.html")
 
 
+def render_hackathons(hackathon_repo: HackathonRepository):
+    hackathons_dir = out / "hackathons"
+    hackathons_dir.mkdir(exist_ok=True)
+
+    for hackathon in hackathon_repo.all():
+        render_hackathon(hackathon, hackathons_dir)
+
+
+def render_hackathon(hackathon, hackathons_dir):
+    print(f"Rendering hackathon: {hackathon.name}")
+    hackathon_dir = hackathons_dir / hackathon.slug
+    hackathon_dir.mkdir(exist_ok=True)
+
+    context = {
+        "hackathon": hackathon,
+    }
+    render("hackathon.html", context, hackathon_dir / "index.html")
+
+
 def render(template_name, context, out_path):
     template = environment.get_template(template_name)
     with open(out_path, "w") as f:
@@ -141,7 +161,9 @@ def copy_static():
             shutil.copyfile(filepath, outpath / filename)
 
 
-def render_palette(group_repo: GroupRepository, hackathon_repo: HackathonRepository) -> None:
+def render_palette(
+    group_repo: GroupRepository, hackathon_repo: HackathonRepository
+) -> None:
     """Render the palette that Tailwind can pull from.
 
     This is a crud hack so that the Tailwind detection can find all the colors
@@ -149,7 +171,11 @@ def render_palette(group_repo: GroupRepository, hackathon_repo: HackathonReposit
     to be at least one output location that is controlled in the *source*
     that contains any color attributes that we want to use.
     """
-    render("palette.html", {
-        "groups": group_repo.all(),
-        "hackathons": hackathon_repo.all(),
-    }, templates / "palette-rendered.html")
+    render(
+        "palette.html",
+        {
+            "groups": group_repo.all(),
+            "hackathons": hackathon_repo.all(),
+        },
+        templates / "palette-rendered.html",
+    )

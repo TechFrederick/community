@@ -196,15 +196,24 @@ class EventRepository:
 class HackathonRepository:
     def __init__(self):
         self.hackathons_path = data_path / "hackathons"
-        self._hackathons: list[Hackathon] = [
-            Hackathon(
-                slug="2016",
-                name="2016",
-                color="violet-500",
-                teaser="The 2016 hackathon was the OG hackathon in Frederick. Local tech meetups came together to bring a tutorial format event that taught people about APIs and SMS notifications.",
-                description="testing",
+        self._hackathons = self._load_hackathons()
+
+    def _load_hackathons(self):
+        hackathons = []
+        hackathons_path = data_path / "hackathons"
+
+        for filepath in sorted(hackathons_path.glob("*")):
+            with open(filepath, "r") as f:
+                metadata, description = frontmatter.parse(f.read())
+            description = markdown.markdown(
+                description,
+                extensions=[TailwindExtension()],
             )
-        ]
+            metadata["description"] = description
+            hackathon = Hackathon(**metadata)  # type: ignore
+            hackathons.append(hackathon)
+
+        return hackathons
 
     def all(self):
         return self._hackathons
