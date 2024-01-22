@@ -225,3 +225,16 @@ This event is a recurring event that is done in partnership
 with the other local meetups.
 Before modifying the event, consult with the other organizers
 in #meetup-organizers on Discord.
+
+Pre-event:
+
+* At least two weeks before the event, the event needs to be "announced" on Meetup.
+  When the event is announced through the Meetup UI, a message about the upcoming event
+  will be sent to all members.
+
+During event:
+
+* Let attendees know about ways to get connected (like the Discord).
+  For many attendees, this will be there first event.
+  If we don't try to connect them to other things, it may be their only event.
+  Try to make a good first impression.
