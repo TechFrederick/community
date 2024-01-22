@@ -19,7 +19,8 @@ to ensure that Python Frederick functions well.
   at python-frederick-announce@messages.meetup.com
   that notify about upcoming events.
   * A reminder email about all upcoming Python Frederick and other local meetup events
-  * A set of short reminders about the event for the month on `Wednesday - 1 week`
+  * A set of short reminders about the event for the month
+    on `Wednesday - 1 week before event`
     and `Monday before Wednesday event`.
 
 ```
