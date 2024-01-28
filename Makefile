@@ -7,7 +7,7 @@ bootstrap:
 	npm install
 
 build:
-	@venv/bin/python -m community build
+	@venv/bin/python -m techcity build
 
 watcher:
 	venv/bin/watchmedo shell-command \
@@ -15,18 +15,18 @@ watcher:
 		--recursive \
 		--command='make build' \
 		--drop \
-		community data templates
+		techcity data templates
 
 serve:
 	venv/bin/python -m http.server --directory out 8000
 
 fetch:
-	@venv/bin/python -m community events
+	@venv/bin/python -m techcity events
 
 # This is mostly for the scenario where the output data files need to be manipulated
 # and reformatted and we don't want to keep hitting the Meetup APIs slowly.
 fetch-cached:
-	@venv/bin/python -m community events-cached
+	@venv/bin/python -m techcity events-cached
 
 check:
 	venv/bin/scrapy crawl --overwrite-output checker.jsonl --nolog crawler
