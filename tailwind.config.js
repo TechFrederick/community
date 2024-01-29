@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./templates/**/*.html",
     // There are some Tailwind classes embedded in the frontend Python module.
-    "./community/frontend.py",
+    "./techcity/frontend.py",
   ],
   theme: {
     extend: {
