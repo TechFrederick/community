@@ -1,5 +1,20 @@
 [project]
+name = "techcity"
+version = "2024.02"
 requires-python = ">=3.12"
+dependencies = [
+    "Jinja2",
+    "Markdown",
+    "PyYAML",
+    "pydantic",
+    "python-dotenv",
+    "python-frontmatter",
+    "requests",
+    "urllib3",
+]
+
+[project.scripts]
+techcity = "techcity.cli:main"
 
 [tool.ruff.lint]
 select = [
@@ -24,3 +39,6 @@ ignore = [
     "S101",
 ]
 
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

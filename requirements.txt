@@ -1,11 +1,4 @@
+-e .
 honcho
-Jinja2
-Markdown
-pydantic
-python-dotenv
-python-frontmatter
-PyYAML
-requests
 scrapy
-urllib3
 watchdog[watchmedo]
