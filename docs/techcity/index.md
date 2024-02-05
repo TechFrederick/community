@@ -45,4 +45,4 @@ with the GitHub Actions Continuous Integration system.
 
 ## Commands
 
-Refer to the [Commands](docs/techcity/commands.md) documentation.
+Refer to the [Commands](commands.md) documentation.
