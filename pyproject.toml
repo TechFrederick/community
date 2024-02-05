@@ -10,11 +10,12 @@ dependencies = [
     "python-dotenv",
     "python-frontmatter",
     "requests",
+    "typer[all]",
     "urllib3",
 ]
 
 [project.scripts]
-techcity = "techcity.cli:main"
+techcity = "techcity.cli:app"
 
 [tool.ruff.lint]
 select = [

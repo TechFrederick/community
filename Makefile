@@ -21,12 +21,12 @@ serve:
 	venv/bin/python -m http.server --directory out 8000
 
 fetch:
-	@venv/bin/techcity events
+	@venv/bin/techcity fetch
 
 # This is mostly for the scenario where the output data files need to be manipulated
 # and reformatted and we don't want to keep hitting the Meetup APIs slowly.
 fetch-cached:
-	@venv/bin/techcity events-cached
+	@venv/bin/techcity fetch --cached
 
 check:
 	venv/bin/scrapy crawl --overwrite-output checker.jsonl --nolog crawler

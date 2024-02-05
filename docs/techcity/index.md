@@ -28,7 +28,7 @@ The model is:
 
 ```mermaid
 flowchart LR
-    Fetch --> Normalize --> Publish
+    Fetch --> Normalize --> Build --> Publish
 ```
 
 The batch processing aspect is that this cycle happens nightly
@@ -37,5 +37,12 @@ with the GitHub Actions Continuous Integration system.
 1. *Fetch* - This stage pulls data from various APIs to look for updates.
 2. *Normalize* - The data is processed and stored into data models
    that are a standardized representation.
-3. *Publish* - All data is rendered into output that is published
+3. *Build* - All data is rendered into static output files for publication.
+4. *Publish* - The output files are published
    to GitHub Pages to be exposed as the web-accessible UI.
+   This phase currently happens as a step during the GitHub Actions execution.
+   There is no techcity code that does publishing.
+
+## Commands
+
+Refer to the [Commands](docs/techcity/commands.md) documentation.

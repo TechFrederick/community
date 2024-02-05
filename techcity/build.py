@@ -18,7 +18,8 @@ environment = Environment(loader=FileSystemLoader(templates))
 old_delta = datetime.timedelta(days=50 * 365)
 
 
-def build():
+def build() -> None:
+    """Build the web UI by rendering all available content."""
     now = datetime.datetime.now(tz=datetime.timezone.utc)
     print("Generating content to `out` directory")
     out.mkdir(exist_ok=True)

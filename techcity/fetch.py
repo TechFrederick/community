@@ -1,15 +1,23 @@
 import json
 
 import requests
+import typer
 from dotenv import load_dotenv
 from requests.adapters import HTTPAdapter
+from typing_extensions import Annotated
 from urllib3.util import Retry
 
 from .constants import cache
 from .repositories import EventRepository, GroupRepository
 
 
-def fetch(refresh=True):
+def fetch(
+    cached: Annotated[
+        bool,
+        typer.Option(help="Use cached response data instead of fetching from sources"),
+    ] = False
+) -> None:
+    """Fetch data from API connections, normalize, and store in data directory."""
     load_dotenv()
     event_repo = EventRepository()
     group_repo = GroupRepository()
@@ -17,10 +25,10 @@ def fetch(refresh=True):
     cache.mkdir(exist_ok=True)
 
     print("Fetching events...")
-    if refresh:
-        fetch_to_cache(group_repo)
-    else:
+    if cached:
         print("Using cached data...")
+    else:
+        fetch_to_cache(group_repo)
 
     generate_events(event_repo, group_repo)
 
