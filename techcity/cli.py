@@ -1,7 +1,7 @@
 import typer
 
 from .build import build
-from .fetch import fetch
+from .services.fetcher.commands import fetch
 
 
 app = typer.Typer(context_settings={"help_option_names": ["-h", "--help"]})

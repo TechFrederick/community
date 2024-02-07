@@ -7,8 +7,8 @@ from requests.adapters import HTTPAdapter
 from typing_extensions import Annotated
 from urllib3.util import Retry
 
-from .constants import cache
-from .repositories import EventRepository, GroupRepository
+from techcity.constants import cache
+from techcity.repositories import EventRepository, GroupRepository
 
 
 def fetch(
