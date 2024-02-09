@@ -18,7 +18,10 @@ description: "<p>Do you want to work on technology with other tech people in the
 duration: 7200000
 group_slug: wordpress-frederick
 id: ctjjctygcdbwb
-joint_with: []
+joint_with:
+- '299093646'
+- dzjrjtygcdbwb
+- gzdxbtygcdbwb
 link: https://www.meetup.com/wordpress-frederick/events/ctjjctygcdbwb/
 name: Frederick Tech Open Workshop - 3rd Saturday
 time: 1708189200000

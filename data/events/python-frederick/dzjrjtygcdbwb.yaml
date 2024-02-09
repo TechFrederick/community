@@ -14,18 +14,17 @@ duration: 7200000
 group_slug: python-frederick
 id: dzjrjtygcdbwb
 joint_with:
+- '299093646'
 - ctjjctygcdbwb
-- czdxbtygcdbwb
 - gzdxbtygcdbwb
-- jzdxbtygcdbwb
 link: https://www.meetup.com/python-frederick/events/dzjrjtygcdbwb/
 name: Frederick Tech Open Workshop - 3rd Saturday
-time: 1708182000000
+time: 1708189200000
 utc_offset: -18000000
 venue:
-  address_1: 118 N Market St
+  address_1: 50 Citizen's Way
   city: Frederick
-  lat: 39.415828704833984
-  lon: -77.41044616699219
+  lat: 39.4128532409668
+  lon: -77.4121322631836
   state: MD
   zip: '21701'
