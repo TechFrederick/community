@@ -7,7 +7,7 @@ Stated explicitly,
 services should only interact with each other through one of:
 
 * Event messages via [publish/subscribe](pubsub.md)
-* Well-defined public APIs
+* Well-defined public APIs via [gateways](gatways.md)
 
 The goal of dividing the system this way is to create a clear software architecture,
 while gaining the benefits of speed that come

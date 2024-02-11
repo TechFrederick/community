@@ -6,9 +6,10 @@ from urllib3.util import Retry
 
 from techcity.constants import cache
 from techcity.repositories import EventRepository, GroupRepository
+from techcity.services.groups.gateway import GroupsGateway
 
 
-def fetch(cached: bool) -> None:
+def fetch(cached: bool, groups_gateway: GroupsGateway) -> None:
     """Fetch data from API connections, normalize, and store in data directory."""
     event_repo = EventRepository()
     group_repo = GroupRepository()
