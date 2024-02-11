@@ -8,14 +8,14 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ Bring your laptop or just bring yourself! We have a blast and we hope you\u2019\
   ll join in.</p> "
 duration: 7200000
-group_slug: frederick-web-tech
-id: gzdxbtygcdbwb
+group_slug: aws-frederick
+id: '299093646'
 joint_with:
-- '299093646'
 - ctjjctygcdbwb
 - dzjrjtygcdbwb
+- gzdxbtygcdbwb
 - jzdxbtygcdbwb
-link: https://www.meetup.com/fredwebtech/events/gzdxbtygcdbwb/
+link: https://www.meetup.com/awsfrederick/events/299093646/
 name: Frederick Tech Open Workshop - 3rd Saturday
 time: 1708189200000
 utc_offset: -18000000
