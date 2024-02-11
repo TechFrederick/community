@@ -6,7 +6,7 @@ that interact with each other through very specific interfaces.
 Stated explicitly,
 services should only interact with each other through one of:
 
-* Event messages
+* Event messages via [publish/subscribe](pubsub.md)
 * Well-defined public APIs
 
 The goal of dividing the system this way is to create a clear software architecture,

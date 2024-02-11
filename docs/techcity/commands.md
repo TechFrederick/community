@@ -1,5 +1,7 @@
 # Commands
 
+Commands are handled by the techcity [CLI](cli.md).
+
 ## fetch
 
 ```bash
