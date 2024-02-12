@@ -46,3 +46,7 @@ with the GitHub Actions Continuous Integration system.
 ## Commands
 
 Refer to the [Commands](commands.md) documentation.
+
+## Services
+
+Refer to the [Services](services.md) documentation.

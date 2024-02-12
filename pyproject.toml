@@ -7,7 +7,6 @@ dependencies = [
     "Markdown",
     "PyYAML",
     "pydantic",
-    "python-dotenv",
     "python-frontmatter",
     "requests",
     "typer[all]",
