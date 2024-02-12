@@ -5,6 +5,7 @@ import markdown
 
 from .constants import data_path
 from .extensions import TailwindExtension
+from .models import Hackathon
 
 
 class HackathonRepository:
