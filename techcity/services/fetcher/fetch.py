@@ -36,8 +36,11 @@ def fetch_to_cache(groups_gateway: GroupsGateway):
     session.mount("https://", HTTPAdapter(max_retries=retries))
 
     for group in groups_gateway.all():
+        if group.extensions is None or group.extensions.meetup is None:
+            continue
+
         response = session.get(
-            f"https://api.meetup.com/{group.meetup_group_slug}/events",
+            f"https://api.meetup.com/{group.extensions.meetup.slug}/events",
             timeout=5,
         )
         response.raise_for_status()

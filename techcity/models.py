@@ -3,13 +3,24 @@ from datetime import datetime, timedelta, timezone
 from pydantic import BaseModel
 
 
+class MeetupGroupExtension(BaseModel):
+    """Extension data for groups listed on Meetup"""
+
+    # The group slug used on meetup.com
+    slug: str
+
+
+class GroupExtensions(BaseModel):
+    """Extension data that may exist for a group"""
+
+    meetup: MeetupGroupExtension | None = None
+
+
 class Group(BaseModel):
     """A representation of a group that meets in town"""
 
     name: str
     slug: str
-    # Meetup has different slugs from what the community site uses.
-    meetup_group_slug: str
     url: str
     description: str
     teaser: str
@@ -18,6 +29,7 @@ class Group(BaseModel):
     # A brand color to associate with the group for accenting
     # The color should match an available color from Tailwind
     color: str
+    extensions: GroupExtensions | None = None
 
 
 class Venue(BaseModel):
