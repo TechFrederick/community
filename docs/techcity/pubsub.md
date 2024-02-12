@@ -13,7 +13,7 @@ that event data*.
 On the flip side,
 consumers can register for an event type via a subscription.
 Whenever a new event of that type occurs,
-the pubsub will notify the subscriber of the new event
+the pubsub system will notify the subscriber of the new event
 and the consumer can do whatever it needs with that data.
 The subscriber *doesn't care who published the event data*.
 
