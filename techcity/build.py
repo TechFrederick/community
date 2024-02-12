@@ -10,7 +10,8 @@ from jinja2 import Environment, FileSystemLoader
 from .constants import out, public, templates
 from .frontend import tailwindify_html
 from .models import Event, Group
-from .repositories import EventRepository, GroupRepository, HackathonRepository
+from .repositories import EventRepository, HackathonRepository
+from .services.groups.repository import GroupRepository
 
 environment = Environment(loader=FileSystemLoader(templates))
 # If this code is still in operation in 50 years, that would be shocking.
@@ -25,6 +26,7 @@ def build() -> None:
     out.mkdir(exist_ok=True)
 
     event_repo = EventRepository()
+    # FIMXE: This should be replaced by the gateway in a future change.
     group_repo = GroupRepository()
     hackathon_repo = HackathonRepository()
     render_index(now, event_repo, group_repo, hackathon_repo)

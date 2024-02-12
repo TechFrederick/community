@@ -5,14 +5,13 @@ from requests.adapters import HTTPAdapter
 from urllib3.util import Retry
 
 from techcity.constants import cache
-from techcity.repositories import EventRepository, GroupRepository
+from techcity.repositories import EventRepository
 from techcity.services.groups.gateway import GroupsGateway
 
 
 def fetch(cached: bool, groups_gateway: GroupsGateway) -> None:
     """Fetch data from API connections, normalize, and store in data directory."""
     event_repo = EventRepository()
-    group_repo = GroupRepository()
 
     cache.mkdir(exist_ok=True)
 
@@ -20,12 +19,12 @@ def fetch(cached: bool, groups_gateway: GroupsGateway) -> None:
     if cached:
         print("Using cached data...")
     else:
-        fetch_to_cache(group_repo)
+        fetch_to_cache(groups_gateway)
 
-    generate_events(event_repo, group_repo)
+    generate_events(event_repo, groups_gateway)
 
 
-def fetch_to_cache(group_repo):
+def fetch_to_cache(groups_gateway: GroupsGateway):
     """Fetch the data from Meetup for each group and store it in the local cache."""
     retries = Retry(
         total=3,
@@ -36,7 +35,7 @@ def fetch_to_cache(group_repo):
     session = requests.Session()
     session.mount("https://", HTTPAdapter(max_retries=retries))
 
-    for group in group_repo.all():
+    for group in groups_gateway.all():
         response = session.get(
             f"https://api.meetup.com/{group.meetup_group_slug}/events",
             timeout=5,
@@ -46,10 +45,10 @@ def fetch_to_cache(group_repo):
             f.write(response.content)
 
 
-def generate_events(event_repo: EventRepository, group_repo: GroupRepository) -> None:
+def generate_events(event_repo: EventRepository, groups_gateway: GroupsGateway) -> None:
     """Generate any events found in API data."""
     print("Scanning API response for events...")
-    for group in group_repo.all():
+    for group in groups_gateway.all():
         print(f"Parsing {group.name} events...")
         with open(cache / f"{group.slug}-events.json", "r") as f:
             event_data = json.load(f)
