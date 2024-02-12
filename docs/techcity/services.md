@@ -27,6 +27,13 @@ on this page.
 As the system grows,
 we may wish to split the catalog up.
 
+### Events Service
+
+The events service is a data service that handles functionality
+related to the management of events.
+These events are referring to in-person, physical events for humans,
+not the kind of events that are happening in an event-based software system.
+
 ### Fetcher
 
 The fetcher service is responsible for handling the fetch command trigger.
@@ -34,3 +41,8 @@ When triggered,
 the service executes each configured connector
 to make the desired outbound API calls.
 The connectors process API data and emit any relevant system events.
+
+### Groups Service
+
+The groups service is a data service that handles functionality
+related to the management of groups.

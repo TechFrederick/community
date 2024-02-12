@@ -2,6 +2,7 @@ import typer
 
 from .build import build
 from .pubsub import subscribe
+from .services.events.service import EventsService
 from .services.fetcher.commands import fetch
 from .services.fetcher.service import Fetcher
 from .services.groups.gateway import GroupsGateway
@@ -14,10 +15,10 @@ def initialize():
 
     groups_gateway = GroupsGateway()
 
-    fetcher = Fetcher(groups_gateway)
     groups_service = GroupsService()
     services = [
-        fetcher,
+        EventsService(),
+        Fetcher(groups_gateway),
         groups_service,
     ]
 

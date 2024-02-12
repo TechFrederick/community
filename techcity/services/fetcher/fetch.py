@@ -5,13 +5,13 @@ from requests.adapters import HTTPAdapter
 from urllib3.util import Retry
 
 from techcity.constants import cache
-from techcity.repositories import EventRepository
+from techcity.events import EventPublished
+from techcity.pubsub import publish
 from techcity.services.groups.gateway import GroupsGateway
 
 
 def fetch(cached: bool, groups_gateway: GroupsGateway) -> None:
     """Fetch data from API connections, normalize, and store in data directory."""
-    event_repo = EventRepository()
 
     cache.mkdir(exist_ok=True)
 
@@ -21,7 +21,7 @@ def fetch(cached: bool, groups_gateway: GroupsGateway) -> None:
     else:
         fetch_to_cache(groups_gateway)
 
-    generate_events(event_repo, groups_gateway)
+    generate_events(groups_gateway)
 
 
 def fetch_to_cache(groups_gateway: GroupsGateway):
@@ -45,7 +45,7 @@ def fetch_to_cache(groups_gateway: GroupsGateway):
             f.write(response.content)
 
 
-def generate_events(event_repo: EventRepository, groups_gateway: GroupsGateway) -> None:
+def generate_events(groups_gateway: GroupsGateway) -> None:
     """Generate any events found in API data."""
     print("Scanning API response for events...")
     for group in groups_gateway.all():
@@ -54,4 +54,4 @@ def generate_events(event_repo: EventRepository, groups_gateway: GroupsGateway) 
             event_data = json.load(f)
 
         for event in event_data:
-            event_repo.create(group, event)
+            publish(EventPublished(group=group, event=event))

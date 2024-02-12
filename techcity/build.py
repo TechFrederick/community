@@ -10,7 +10,8 @@ from jinja2 import Environment, FileSystemLoader
 from .constants import out, public, templates
 from .frontend import tailwindify_html
 from .models import Event, Group
-from .repositories import EventRepository, HackathonRepository
+from .repositories import HackathonRepository
+from .services.events.repository import EventRepository
 from .services.groups.repository import GroupRepository
 
 environment = Environment(loader=FileSystemLoader(templates))
@@ -25,6 +26,7 @@ def build() -> None:
     print("Generating content to `out` directory")
     out.mkdir(exist_ok=True)
 
+    # FIMXE: This should be replaced by the gateway in a future change.
     event_repo = EventRepository()
     # FIMXE: This should be replaced by the gateway in a future change.
     group_repo = GroupRepository()
