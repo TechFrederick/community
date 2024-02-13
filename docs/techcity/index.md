@@ -43,6 +43,11 @@ with the GitHub Actions Continuous Integration system.
    This phase currently happens as a step during the GitHub Actions execution.
    There is no techcity code that does publishing.
 
+## Configuration
+
+The platform is configured with a `techcity.toml` configuration file.
+See the [configuration](config.md) docs for details on the options.
+
 ## Commands
 
 Refer to the [Commands](commands.md) documentation.

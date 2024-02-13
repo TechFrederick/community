@@ -1,6 +1,8 @@
 import typer
+from rich import print
 
 from .build import build
+from .configuration import ConfigError, load_config
 from .pubsub import subscribe
 from .services.events.service import EventsService
 from .services.fetcher.commands import fetch
@@ -12,6 +14,11 @@ from .services.groups.service import GroupsService
 def initialize():
     # Initialize the services and event bus.
     # Don't use a docstring here or else it will show in the CLI help text.
+    try:
+        load_config()
+    except ConfigError as ex:
+        print(f"[red]{ex}[/red]")
+        raise typer.Exit(code=1)
 
     groups_gateway = GroupsGateway()
 
