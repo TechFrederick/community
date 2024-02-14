@@ -3,14 +3,13 @@ description: '<p>Let''s meet to chat and work on WordPress projects! If you''re 
   <p>We''re meeting at Orases in Frederick. Parking is available in front of the building
   and you''ll see the conference room straight ahead on your way in the front door.</p>
   <p>[<a href="https://orases.com](https://orases.com" class="linkified">https://orases.com](https://orases.com</a>)</p> '
-duration: 7200000
+end_at: 2024-06-08 16:00:00+00:00
 group_slug: wordpress-frederick
 id: dkhzgtygcjblb
 joint_with: []
 link: https://www.meetup.com/wordpress-frederick/events/dkhzgtygcjblb/
 name: WordPress Casual Discussion and Troubleshooting
-time: 1717855200000
-utc_offset: -14400000
+start_at: 2024-06-08 14:00:00+00:00
 venue:
   address_1: 5728 Industry Ln
   city: Frederick

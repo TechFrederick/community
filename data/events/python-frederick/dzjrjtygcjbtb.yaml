@@ -10,7 +10,7 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ Here are all the groups that are participating:</p> <p>* AWS Frederick<br/>* Frederick\
   \ Open Source (FOS)<br/>* Frederick WebTech<br/>* Python Frederick<br/>* WordPress\
   \ Frederick</p> "
-duration: 7200000
+end_at: 2024-06-15 16:00:00+00:00
 group_slug: python-frederick
 id: dzjrjtygcjbtb
 joint_with:
@@ -20,8 +20,7 @@ joint_with:
 - jzdxbtygcjbtb
 link: https://www.meetup.com/python-frederick/events/dzjrjtygcjbtb/
 name: Frederick Tech Open Workshop - 3rd Saturday
-time: 1718460000000
-utc_offset: -14400000
+start_at: 2024-06-15 14:00:00+00:00
 venue:
   address_1: 118 N Market St
   city: Frederick

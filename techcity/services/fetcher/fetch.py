@@ -1,3 +1,4 @@
+import datetime
 import json
 
 import requests
@@ -57,4 +58,13 @@ def generate_events(groups_gateway: GroupsGateway) -> None:
             event_data = json.load(f)
 
         for event in event_data:
+            # Meetup provides the time in terms of Unix timestamps and a UTC offset
+            # The times are provided in ms instead of seconds.
+            start_at = datetime.datetime.fromtimestamp(
+                event["time"] / 1000, tz=datetime.UTC
+            )
+            event["start_at"] = start_at
+            event["end_at"] = start_at + datetime.timedelta(
+                milliseconds=event["duration"]
+            )
             publish(EventPublished(group=group, event=event))

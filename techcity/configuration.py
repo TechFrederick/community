@@ -1,3 +1,4 @@
+import zoneinfo
 import tomllib
 from pathlib import Path
 
@@ -8,7 +9,21 @@ class ConfigError(Exception):
 
 class Config:
     def __init__(self):
-        self.timezone = ""
+        self._timezone = ""
+        self._tz = zoneinfo.ZoneInfo("UTC")
+
+    @property
+    def timezone(self) -> str:
+        return self._timezone
+
+    @timezone.setter
+    def timezone(self, value: str) -> None:
+        self._timezone = value
+        self._tz = zoneinfo.ZoneInfo(value)
+
+    @property
+    def tz(self) -> zoneinfo.ZoneInfo:
+        return self._tz
 
 
 config = Config()

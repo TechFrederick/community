@@ -15,7 +15,7 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ [Python Frederick](<a href=\"https://www.meetup.com/python-frederick\" class=\"\
   linkified\">https://www.meetup.com/python-frederick</a>)<br/>* [WordPress Frederick](<a\
   \ href=\"https://www.meetup.com/wordpress-frederick\" class=\"linkified\">https://www.meetup.com/wordpress-frederick</a>)</p> "
-duration: 7200000
+end_at: 2024-06-15 16:00:00+00:00
 group_slug: wordpress-frederick
 id: ctjjctygcjbtb
 joint_with:
@@ -25,8 +25,7 @@ joint_with:
 - jzdxbtygcjbtb
 link: https://www.meetup.com/wordpress-frederick/events/ctjjctygcjbtb/
 name: Frederick Tech Open Workshop - 3rd Saturday
-time: 1718460000000
-utc_offset: -14400000
+start_at: 2024-06-15 14:00:00+00:00
 venue:
   address_1: 118 N Market St
   city: Frederick

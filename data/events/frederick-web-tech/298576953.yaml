@@ -1,15 +1,14 @@
 description: '<p>Come meet up for dinner and drinks at JoJo''s in downtown Frederick
   as we kick off a new year of Web Tech events!</p> <p>This event will be co-hosted
   by the Frederick AWS Meetup.</p> '
-duration: 7200000
+end_at: 2024-01-25 02:00:00+00:00
 group_slug: frederick-web-tech
 id: '298576953'
 joint_with:
 - '298585615'
 link: https://www.meetup.com/fredwebtech/events/298576953/
 name: Web Tech Social
-time: 1706140800000
-utc_offset: -18000000
+start_at: 2024-01-25 00:00:00+00:00
 venue:
   address_1: 16-18 E Patrick St
   city: Frederick

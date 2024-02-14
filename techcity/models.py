@@ -2,6 +2,8 @@ from datetime import datetime, timedelta, timezone
 
 from pydantic import BaseModel
 
+from techcity.configuration import config
+
 
 class MeetupGroupExtension(BaseModel):
     """Extension data for groups listed on Meetup"""
@@ -63,17 +65,14 @@ class Event(BaseModel):
     name: str
     link: str
     description: str
-    # Meetup provides the time in terms of Unix timestamps and a UTC offset
-    # The times are provided in ms instead of seconds.
-    time: int
-    utc_offset: int
-    duration: int
+    start_at: datetime  # in UTC
+    end_at: datetime  # in UTC
     venue: Venue
     joint_with: list[str] = []
 
     def __eq__(self, other):
         """When an event is at the same time and place, it is the same event."""
-        return self.time == other.time and self.venue == other.venue
+        return self.start_at == other.start_at and self.venue == other.venue
 
     def __hash__(self):
         """Generate a hash for this instance.
@@ -83,15 +82,13 @@ class Event(BaseModel):
         return hash(self.id)
 
     @property
-    def when(self):
-        """Get the time in the form of a more flexible datetime for formatting."""
-        tz = timezone(timedelta(milliseconds=self.utc_offset))
-        dt = datetime.fromtimestamp(self.time / 1000, tz=tz)
-        return dt
+    def when(self) -> datetime:
+        """Get the time in the localized form."""
+        return self.start_at.astimezone(config.tz)
 
     @property
     def end(self):
-        return self.when + timedelta(milliseconds=self.duration)
+        return self.end_at.astimezone(config.tz)
 
 
 class Hackathon(BaseModel):

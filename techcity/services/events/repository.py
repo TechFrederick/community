@@ -29,7 +29,7 @@ class EventRepository:
 
                 self.events_by_id[event.id] = event
                 self.events_by_group[group_slug].add(event)
-                self.events_by_time[event.time].add(event)
+                self.events_by_time[event.start_at].add(event)
 
     def create(self, group: Group, event_data: dict) -> Event:
         """Create an event and persist it."""
@@ -57,15 +57,15 @@ class EventRepository:
             # There is a case where the event can change time and needs to move
             # to a different time set. Thus, we need to remove before adding,
             # which may look weird, but it's actually important.
-            self.events_by_time[old_event.time].remove(old_event)
-        self.events_by_time[event.time].add(event)
+            self.events_by_time[old_event.start_at].remove(old_event)
+        self.events_by_time[event.start_at].add(event)
 
     def _check_joint_events(self, event):
         """Check if the event is a joint event with other groups.
 
         When a joint event is found, update linkages.
         """
-        events = self.events_by_time[event.time]
+        events = self.events_by_time[event.start_at]
         if len(events) <= 1:
             return
 
@@ -105,12 +105,12 @@ class EventRepository:
         Joint events are collapsed to the first joint event found.
         """
         filtered_events = []
-        future_timestamp = (when + future).timestamp() * 1000  # Need ms
-        past_timestamp = (when - past).timestamp() * 1000  # Need ms
+        future_dt = when + future
+        past_dt = when - past
 
         ignored_joint_ids = set()
-        for timestamp, events in sorted(self.events_by_time.items()):
-            if timestamp > future_timestamp or timestamp < past_timestamp:
+        for start_at, events in sorted(self.events_by_time.items()):
+            if start_at > future_dt or start_at < past_dt:
                 continue
 
             for event in sorted(events, key=lambda e: e.id):
@@ -123,7 +123,7 @@ class EventRepository:
                     for joint_id in event.joint_with:
                         ignored_joint_ids.add(joint_id)
 
-        filtered_events.sort(key=lambda e: e.time, reverse=True)
+        filtered_events.sort(key=lambda e: e.start_at, reverse=True)
 
         return filtered_events
 
@@ -139,13 +139,13 @@ class EventRepository:
         This isn't combined with `filter_around` because that method does extra
         handling for joint events that complicates group processing.
         """
-        future_timestamp = (when + future).timestamp() * 1000  # Need ms
-        past_timestamp = (when - past).timestamp() * 1000  # Need ms
+        future_dt = when + future
+        past_dt = when - past
         events = self.events_by_group[group_slug]
         return [
             event
-            for event in sorted(events, key=lambda e: e.time, reverse=True)
-            if past_timestamp <= event.time <= future_timestamp
+            for event in sorted(events, key=lambda e: e.start_at, reverse=True)
+            if past_dt <= event.start_at <= future_dt
         ]
 
     def all(self):

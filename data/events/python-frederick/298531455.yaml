@@ -2,14 +2,13 @@ description: '<p>We''re still working on the topic, but you can pencil in the da
   for this next Python Frederick presentation.</p> <p>Also, we''re going to have another
   "after hour." After the presentation is over, anyone who wants to stay and do a
   bit of coding or chatting is welcome to hang out. Think of it like a mini open workshop.</p> '
-duration: 7200000
+end_at: 2024-04-11 01:00:00+00:00
 group_slug: python-frederick
 id: '298531455'
 joint_with: []
 link: https://www.meetup.com/python-frederick/events/298531455/
 name: Topic Pending (2nd Wed Talk)
-time: 1712790000000
-utc_offset: -14400000
+start_at: 2024-04-10 23:00:00+00:00
 venue:
   address_1: 321 Ballenger Center Dr
   city: Frederick

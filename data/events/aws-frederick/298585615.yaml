@@ -10,15 +10,14 @@ description: '<p>Join us for a relaxed and enjoyable evening of networking at Jo
   Parking (No meter cost after 5 PM)</p> <p>We hope to see you there! If you have
   any questions or ideas for future meetups, please feel free to contact us through
   [Discord](<a href="https://discord.gg/9Ne7Bar2CB" class="linkified">https://discord.gg/9Ne7Bar2CB</a>)</p> '
-duration: 7200000
+end_at: 2024-01-25 02:00:00+00:00
 group_slug: aws-frederick
 id: '298585615'
 joint_with:
 - '298576953'
 link: https://www.meetup.com/awsfrederick/events/298585615/
 name: 'AWS Social: Co-Host with Webtech at JoJo''s'
-time: 1706140800000
-utc_offset: -18000000
+start_at: 2024-01-25 00:00:00+00:00
 venue:
   address_1: 16-18 E Patrick St
   city: Frederick

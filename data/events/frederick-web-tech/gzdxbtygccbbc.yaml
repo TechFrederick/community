@@ -7,7 +7,7 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ the help of others. The goal is to have fun with other tech people in the area.\
   \ Bring your laptop or just bring yourself! We have a blast and we hope you\u2019\
   ll join in.</p> "
-duration: 7200000
+end_at: 2024-01-20 19:00:00+00:00
 group_slug: frederick-web-tech
 id: gzdxbtygccbbc
 joint_with:
@@ -17,8 +17,7 @@ joint_with:
 - jzdxbtygccbbc
 link: https://www.meetup.com/fredwebtech/events/gzdxbtygccbbc/
 name: Frederick Tech Open Workshop - 3rd Saturday
-time: 1705770000000
-utc_offset: -18000000
+start_at: 2024-01-20 17:00:00+00:00
 venue:
   address_1: 50 Citizen's Way
   city: Frederick
