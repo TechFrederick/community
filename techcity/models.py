@@ -1,4 +1,6 @@
-from datetime import datetime, timedelta, timezone
+from __future__ import annotations
+
+from datetime import datetime
 
 from pydantic import BaseModel
 
@@ -57,6 +59,19 @@ class Venue(BaseModel):
         return self.address_1.replace(".", "") == other.address_1.replace(".", "")
 
 
+class MeetupEventExtension(BaseModel):
+    """Extension data for an event originating from Meetup"""
+
+    # The id used on meetup.com
+    id: str
+
+
+class EventExtensions(BaseModel):
+    """Extension data that may exist for an event"""
+
+    meetup: MeetupEventExtension | None = None
+
+
 class Event(BaseModel):
     """An event happening in town"""
 
@@ -67,8 +82,9 @@ class Event(BaseModel):
     description: str
     start_at: datetime  # in UTC
     end_at: datetime  # in UTC
-    venue: Venue
+    venue: Venue | None = None
     joint_with: list[str] = []
+    extensions: EventExtensions | None = None
 
     def __eq__(self, other):
         """When an event is at the same time and place, it is the same event."""

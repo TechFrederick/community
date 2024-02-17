@@ -1,0 +1,38 @@
+description: "<p>Do you want to work on technology with other tech people in the Frederick\
+  \ area? Do you have questions and need some help from experts? Do you want to get\
+  \ to know more techie folks in the area to forge friendships or grow your network?\
+  \ Then you should come to this monthly workshop.</p> <p>The tech meetups of Frederick\
+  \ organize an open workshop every 3rd Saturday of each month.</p> <p>You can either\
+  \ work on a common project selected for the day or bring your own project and enlist\
+  \ the help of others. The goal is to have fun with other tech people in the area.\
+  \ Bring your laptop or just bring yourself! We have a blast and we hope you\u2019\
+  ll join in.</p> <p>You'll also find this event listed with other local meetups.\
+  \ Here are all the groups that are participating:</p> <p>* [AWS Frederick](<a href=\"\
+  https://www.meetup.com/aws-frederick-meetup\" class=\"linkified\">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*\
+  \ [Frederick Open Source (FOS)](<a href=\"https://www.meetup.com/frederickopensource\"\
+  \ class=\"linkified\">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick\
+  \ WebTech](<a href=\"https://www.meetup.com/fredwebtech\" class=\"linkified\">https://www.meetup.com/fredwebtech</a>)<br/>*\
+  \ [Python Frederick](<a href=\"https://www.meetup.com/python-frederick\" class=\"\
+  linkified\">https://www.meetup.com/python-frederick</a>)<br/>* [WordPress Frederick](<a\
+  \ href=\"https://www.meetup.com/wordpress-frederick\" class=\"linkified\">https://www.meetup.com/wordpress-frederick</a>)</p> "
+end_at: 2024-01-20 19:00:00+00:00
+extensions:
+  meetup:
+    id: ctjjctygccbbc
+group_slug: wordpress-frederick
+id: VhI3jM6J
+joint_with:
+- 06UXUxtM
+- X0JfhXYN
+- scg7OUWx
+- wVDvWMKY
+link: https://www.meetup.com/wordpress-frederick/events/ctjjctygccbbc/
+name: Frederick Tech Open Workshop - 3rd Saturday
+start_at: 2024-01-20 17:00:00+00:00
+venue:
+  address_1: 50 Citizen's Way
+  city: Frederick
+  lat: 39.4128532409668
+  lon: -77.4121322631836
+  state: MD
+  zip: '21701'

@@ -7,6 +7,7 @@ from urllib3.util import Retry
 
 from techcity.constants import cache
 from techcity.events import EventPublished
+from techcity.ids import generate_id
 from techcity.pubsub import publish
 from techcity.services.groups.gateway import GroupsGateway
 
@@ -58,6 +59,11 @@ def generate_events(groups_gateway: GroupsGateway) -> None:
             event_data = json.load(f)
 
         for event in event_data:
+            # Generate an internal ID based off the Meetup ID.
+            meetup_id = event["id"]
+            event["id"] = generate_id(meetup_id, "meetup")
+            event["extensions"] = {"meetup": {"id": meetup_id}}
+
             # Meetup provides the time in terms of Unix timestamps and a UTC offset
             # The times are provided in ms instead of seconds.
             start_at = datetime.datetime.fromtimestamp(

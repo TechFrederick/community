@@ -1,0 +1,23 @@
+description: "<p>In this talk we\u2019re going to start from nothing and build out\
+  \ our own tools for making art in Python, no AI needed! We\u2019ll show how Python\u2019\
+  s expressiveness allows us to describe graphics elegantly and use that to make some\
+  \ unique art programmatically.</p> <p>Also, we're going to have another \"after\
+  \ hour.\" After the presentation is over, anyone who wants to stay and do a bit\
+  \ of coding or chatting is welcome to hang out. Think of it like a mini open workshop.</p> "
+end_at: 2024-02-15 02:00:00+00:00
+extensions:
+  meetup:
+    id: '298531232'
+group_slug: python-frederick
+id: DoYCf7xM
+joint_with: []
+link: https://www.meetup.com/python-frederick/events/298531232/
+name: Algorithmic Art with Python (2nd Wed Talk)
+start_at: 2024-02-15 00:00:00+00:00
+venue:
+  address_1: 122 E Patrick St
+  city: Frederick
+  lat: 39.41377639770508
+  lon: -77.40791320800781
+  state: MD
+  zip: '21701'

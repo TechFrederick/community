@@ -1,0 +1,21 @@
+description: '<p>We''re going to get together, share a meal, and talk some Python
+  (and whatever other topics you''re interested in).</p> <p>Come on out for some fun
+  and food. This is a great chance to chat about Python with other people interested
+  in the language.</p> <p>Next month we''ll have another Python presentation in store.</p> '
+end_at: 2024-03-14 00:30:00+00:00
+extensions:
+  meetup:
+    id: '298531432'
+group_slug: python-frederick
+id: xKTVZzYR
+joint_with: []
+link: https://www.meetup.com/python-frederick/events/298531432/
+name: Sabor de Cuba (2nd Wed Dinner)
+start_at: 2024-03-13 22:30:00+00:00
+venue:
+  address_1: 9 E Patrick St
+  city: Frederick
+  lat: 39.414306640625
+  lon: -77.41045379638672
+  state: MD
+  zip: '21701'

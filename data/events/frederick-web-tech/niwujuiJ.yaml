@@ -1,0 +1,21 @@
+description: "<p>In this talk, we'll look at the capabilities of the Web Audio API.\
+  \ This modular API can string together different nodes to create, transform, and\
+  \ control all different kinds of sounds, directly within the browser!</p> <p>NOTE:\
+  \ The event location hasn't been finalized yet, but will be in or near downtown\
+  \ Frederick.</p> <p>**Speaker: Chip Bell**<br/>Hi! My name is Chip and I\u2019m\
+  \ a developer in the Frederick area with a background in game development, music,\
+  \ and applied math. I\u2019ve built everything from arcade games to ETL pipelines\
+  \ to accounting software to simulations, and even ETL pipelines for arcade games\u2026\
+  \ I\u2019m currently a freelance developer/composer/artist/everything else for Minerva\
+  \ Digital, my wife\u2019s and my creative agency.</p> "
+end_at: 2024-02-29 02:00:00+00:00
+extensions:
+  meetup:
+    id: '299241180'
+group_slug: frederick-web-tech
+id: niwujuiJ
+joint_with: []
+link: https://www.meetup.com/fredwebtech/events/299241180/
+name: 'Web Audio API: Let''s Make Some Noise!'
+start_at: 2024-02-29 00:00:00+00:00
+venue: null

@@ -1,0 +1,30 @@
+description: "<p>Do you want to work on technology with other tech people in the Frederick\
+  \ area? Do you have questions and need some help from experts? Do you want to get\
+  \ to know more techie folks in the area to forge friendships or grow your network?\
+  \ Then you should come to this monthly workshop.</p> <p>The tech meetups of Frederick\
+  \ organize an open workshop every 3rd Saturday of each month.</p> <p>You can either\
+  \ work on a common project selected for the day or bring your own project and enlist\
+  \ the help of others. The goal is to have fun with other tech people in the area.\
+  \ Bring your laptop or just bring yourself! We have a blast and we hope you\u2019\
+  ll join in.</p> "
+end_at: 2024-12-21 17:00:00+00:00
+extensions:
+  meetup:
+    id: jzdxbtygcqbcc
+group_slug: frederick-open-source
+id: aB31juNO
+joint_with:
+- 179t4Myc
+- k3RNXfig
+- q8YL5Qbe
+- zFgywz4w
+link: https://www.meetup.com/frederickopensource/events/jzdxbtygcqbcc/
+name: Frederick Tech Open Workshop - 3rd Saturday
+start_at: 2024-12-21 15:00:00+00:00
+venue:
+  address_1: 118 N Market St
+  city: Frederick
+  lat: 39.415828704833984
+  lon: -77.41044616699219
+  state: MD
+  zip: '21701'
