@@ -1,0 +1,17 @@
+description: '<p>NATS is an awesome open source technology to help connect code together
+  over a network. Whether you''re build a distributed microservice architecture or
+  connecting IoT devices, NATS provides the tools you need to do that easily. In this
+  talk, you''ll learn about NATS via a presentation with plenty of live coding examples.
+  And if you bring your laptop, we may even be able to get your computer participating
+  in the examples!</p> '
+end_at: 2024-03-06 02:00:00+00:00
+extensions:
+  meetup:
+    id: '299259520'
+group_slug: frederick-open-source
+id: aZzDKZh9
+joint_with: []
+link: https://www.meetup.com/frederickopensource/events/299259520/
+name: 'NATS: Connecting Apps Over a Network Easily'
+start_at: 2024-03-06 00:00:00+00:00
+venue: null
