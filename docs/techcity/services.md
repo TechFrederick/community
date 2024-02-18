@@ -42,6 +42,8 @@ the service executes each configured connector
 to make the desired outbound API calls.
 The connectors process API data and emit any relevant system events.
 
+See [connectors](connectors.md) for more details about available connectors.
+
 ### Groups Service
 
 The groups service is a data service that handles functionality
