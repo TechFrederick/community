@@ -5,7 +5,7 @@ import os
 
 import yaml
 
-from techcity.ids import generate_id
+from techcity.core.ids import generate_id
 
 for dirpath, _, filenames in os.walk("data/events"):
     for filename in filenames:

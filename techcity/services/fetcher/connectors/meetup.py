@@ -6,8 +6,8 @@ from requests.adapters import HTTPAdapter
 from urllib3.util import Retry
 
 from techcity.constants import cache
+from techcity.core.ids import generate_id
 from techcity.events import EventPublished
-from techcity.ids import generate_id
 from techcity.models import Event, Group
 from techcity.pubsub import publish
 

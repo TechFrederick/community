@@ -4,6 +4,7 @@
 venv
 __pycache__
 cache
+.coverage
 
 .env
 *.jsonl

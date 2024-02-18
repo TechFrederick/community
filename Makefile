@@ -31,7 +31,10 @@ fetch-cached:
 check:
 	venv/bin/scrapy crawl --overwrite-output checker.jsonl --nolog crawler
 
-test-ci:
+test-ci: test
 	honcho -f Procfile.checker start
 	cat checker.jsonl
 	test ! -s checker.jsonl
+
+test:
+	pytest --cov techcity

@@ -16,6 +16,15 @@ dependencies = [
 [project.scripts]
 techcity = "techcity.cli:app"
 
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+
+[tool.pytest.ini_options]
+testpaths = [
+    "techcity",
+]
+
 [tool.ruff.lint]
 select = [
     # pycodestyle

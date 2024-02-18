@@ -1,4 +1,6 @@
 -e .
 honcho
+pytest
+pytest-cov
 scrapy
 watchdog[watchmedo]
