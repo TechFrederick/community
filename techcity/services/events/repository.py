@@ -31,19 +31,19 @@ class EventRepository:
                 self.events_by_group[group_slug].add(event)
                 self.events_by_time[event.start_at].add(event)
 
-    def create(self, group: Group, event_data: dict) -> Event:
+    def create(self, event_data: dict) -> Event:
         """Create an event and persist it."""
-        event = Event(group_slug=group.slug, **event_data)
+        event = Event(**event_data)
 
-        group_events = self.events_path / group.slug
+        group_events = self.events_path / event.group_slug
         group_events.mkdir(exist_ok=True)
 
-        self._update_indices(group, event)
+        self._update_indices(event)
         self._check_joint_events(event)
         self._save(group_events, event)
         return event
 
-    def _update_indices(self, group, event):
+    def _update_indices(self, event: Event):
         """Update the indices of the repository.
 
         If this is not updated, then weird conditions can happen with other checking
@@ -52,7 +52,7 @@ class EventRepository:
         old_event = self.events_by_id.get(event.id)
         self.events_by_id[event.id] = event
 
-        self.events_by_group[group.slug].add(event)
+        self.events_by_group[event.group_slug].add(event)
         if old_event:
             # There is a case where the event can change time and needs to move
             # to a different time set. Thus, we need to remove before adding,

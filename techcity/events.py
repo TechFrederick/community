@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-from techcity.models import Group
+from techcity.models import Event, Group
 
 # Commands
 
@@ -17,7 +17,4 @@ class FetchTriggered(BaseModel):
 class EventPublished(BaseModel):
     """An event emitted when a physical event is published"""
 
-    group: Group
-    # FIXME: This raw data is a poor thing to pass around and will be refined
-    # in a future change when a more normalized definition is created.
-    event: dict
+    event: Event

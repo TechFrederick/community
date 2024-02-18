@@ -8,6 +8,7 @@ from urllib3.util import Retry
 from techcity.constants import cache
 from techcity.events import EventPublished
 from techcity.ids import generate_id
+from techcity.models import Event
 from techcity.pubsub import publish
 from techcity.services.groups.gateway import GroupsGateway
 
@@ -79,4 +80,6 @@ def generate_events(groups_gateway: GroupsGateway) -> None:
                 event["venue"]["address"] = event["venue"]["address_1"]
                 del event["venue"]["address_1"]
 
-            publish(EventPublished(group=group, event=event))
+            event["group_slug"] = group.slug
+            event_model = Event(**event)
+            publish(EventPublished(event=event_model))
