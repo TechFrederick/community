@@ -39,7 +39,7 @@ class Group(BaseModel):
 class Venue(BaseModel):
     """The location of an event"""
 
-    address_1: str
+    address: str
     city: str
     state: str
     zip: str
@@ -49,14 +49,14 @@ class Venue(BaseModel):
     def __eq__(self, other):
         """Are the venues the same?
 
-        Since this community is almost exclusively for events in the county,
-        it should be sufficient (and fastest) to just compare the street address.
-
-        Meetup is a dump and includes multiple addresses for the same place,
-        differentiated by only punctuation. This will try to normalize
-        by removing the punctuation.
+        Since a community is almost exclusively for events locally,
+        it should be sufficient (and fastest) to just compare the street address
+        and city.
         """
-        return self.address_1.replace(".", "") == other.address_1.replace(".", "")
+        return (
+            self.address.replace(".", "") == other.address.replace(".", "")
+            and self.city == other.city
+        )
 
 
 class MeetupEventExtension(BaseModel):

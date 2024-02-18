@@ -31,7 +31,7 @@
       </svg>
       <div>
         {% if event.venue %}
-          At <span class="font-medium">{{ event.venue.address_1 }}, {{ event.venue.city }}, {{ event.venue.state }} {{ event.venue.zip }}</span>
+          At <span class="font-medium">{{ event.venue.address }}, {{ event.venue.city }}, {{ event.venue.state }} {{ event.venue.zip }}</span>
         {% else %}
           Needs location
         {% endif %}

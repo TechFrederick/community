@@ -73,4 +73,10 @@ def generate_events(groups_gateway: GroupsGateway) -> None:
             event["end_at"] = start_at + datetime.timedelta(
                 milliseconds=event["duration"]
             )
+
+            # Normalize the address in the venue.
+            if "venue" in event and event["venue"] is not None:
+                event["venue"]["address"] = event["venue"]["address_1"]
+                del event["venue"]["address_1"]
+
             publish(EventPublished(group=group, event=event))
