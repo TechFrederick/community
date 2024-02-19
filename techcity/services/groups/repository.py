@@ -2,7 +2,7 @@ import frontmatter
 import markdown
 
 from techcity.constants import data_path
-from techcity.extensions import TailwindExtension
+from techcity.core.markdown_extensions import TailwindExtension
 from techcity.models import Group
 
 

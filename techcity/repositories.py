@@ -4,7 +4,7 @@ import frontmatter
 import markdown
 
 from .constants import data_path
-from .extensions import TailwindExtension
+from .core.markdown_extensions import TailwindExtension
 from .models import Hackathon
 
 

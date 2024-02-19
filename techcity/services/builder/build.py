@@ -8,7 +8,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 from techcity.constants import out, public, templates
-from techcity.frontend import tailwindify_html
+from techcity.core.frontend import tailwindify_html
 from techcity.models import Event, Group
 from techcity.repositories import HackathonRepository
 from techcity.services.events.repository import EventRepository
