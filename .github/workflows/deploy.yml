@@ -58,7 +58,7 @@ jobs:
       - name: Build HTML files
         run: techcity build
 
-      - name: Test internal links
+      - name: Run tests
         run: make test-ci
 
       - name: Upload artifact
