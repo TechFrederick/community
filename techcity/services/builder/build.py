@@ -52,15 +52,20 @@ def render_index(
 ) -> None:
     print("Rendering index")
 
-    events_with_group: list[tuple[Event, Group | None]] = []
+    upcoming_events_with_group: list[tuple[Event, Group | None]] = []
+    recent_events_with_group: list[tuple[Event, Group | None]] = []
+    events_with_group = upcoming_events_with_group
     for event in event_repo.filter_around(now):
+        if event.when < now:
+            events_with_group = recent_events_with_group
         if event.joint_with:
             events_with_group.append((event, None))
         else:
             events_with_group.append((event, group_repo.find_by(event.group_slug)))
 
     context = {
-        "events_with_group": events_with_group,
+        "upcoming_events_with_group": reversed(upcoming_events_with_group),
+        "recent_events_with_group": recent_events_with_group,
         "groups": group_repo.all(),
         "hackathons": hackathon_repo.all(),
         "now": now,
