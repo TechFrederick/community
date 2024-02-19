@@ -5,7 +5,7 @@ from typing import DefaultDict
 import yaml
 
 from techcity.constants import data_path
-from techcity.models import Event, Group
+from techcity.models import Event
 
 
 class EventRepository:

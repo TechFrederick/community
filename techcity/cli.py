@@ -1,9 +1,10 @@
 import typer
 from rich import print
 
-from .build import build
 from .configuration import ConfigError, load_config
 from .pubsub import subscribe
+from .services.builder.commands import build
+from .services.builder.service import Builder
 from .services.events.service import EventsService
 from .services.fetcher.commands import fetch
 from .services.fetcher.service import Fetcher
@@ -24,6 +25,7 @@ def initialize():
 
     groups_service = GroupsService()
     services = [
+        Builder(),
         EventsService(),
         Fetcher(groups_gateway),
         groups_service,

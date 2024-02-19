@@ -11,5 +11,5 @@ def fetch(
         typer.Option(help="Use cached response data instead of fetching from sources"),
     ] = False
 ) -> None:
-    """Trigger a fetch operation."""
+    """Fetch data from API connections, normalize, and store in data directory."""
     publish(FetchTriggered(cached=cached))

@@ -27,6 +27,13 @@ on this page.
 As the system grows,
 we may wish to split the catalog up.
 
+### Builder
+
+The builder service builds the content of the site.
+The service aggregates content from other services
+and renders all the pages that will be published to the output directory
+for publishing by GitHub Actions.
+
 ### Events Service
 
 The events service is a data service that handles functionality

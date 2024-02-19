@@ -1,8 +1,12 @@
 from pydantic import BaseModel
 
-from techcity.models import Event, Group
+from techcity.models import Event
 
 # Commands
+
+
+class BuildTriggered(BaseModel):
+    """An event emitted when an operator requests a build"""
 
 
 class FetchTriggered(BaseModel):
