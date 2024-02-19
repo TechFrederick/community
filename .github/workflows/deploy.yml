@@ -37,10 +37,10 @@ jobs:
           cache: npm
 
       - name: Install Node dependencies
-        run: npm ci
+        run: npm --prefix techcity/services/builder ci
 
       - name: Build CSS file
-        run: npm run css
+        run: npm --prefix techcity/services/builder run css
 
       - name: Set up Python
         uses: actions/setup-python@v5

@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./techcity/services/builder/templates/**/*.html",
+    "./templates/**/*.html",
     // There are some Tailwind classes embedded in the frontend Python module.
-    "./techcity/core/frontend.py",
+    "../../core/frontend.py",
   ],
   theme: {
     extend: {

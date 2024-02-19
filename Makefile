@@ -4,7 +4,7 @@ run:
 bootstrap:
 	test -d venv || python3 -m venv venv
 	venv/bin/pip install -r requirements.txt
-	npm install
+	npm --prefix techcity/services/builder install
 
 build:
 	@venv/bin/techcity build
@@ -15,10 +15,13 @@ watcher:
 		--recursive \
 		--command='make build' \
 		--drop \
-		techcity data templates
+		techcity data
 
 serve:
 	venv/bin/python -m http.server --directory out 8000
+
+frontend:
+	npm --prefix techcity/services/builder run tailwind
 
 fetch:
 	@venv/bin/techcity fetch
