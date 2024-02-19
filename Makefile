@@ -35,7 +35,7 @@ check:
 	venv/bin/scrapy crawl --overwrite-output checker.jsonl --nolog crawler
 
 test-ci: test
-	honcho -f Procfile.checker start
+	honcho -f checker/Procfile.checker start
 	cat checker.jsonl
 	test ! -s checker.jsonl
 
