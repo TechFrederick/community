@@ -1,5 +1,5 @@
-import zoneinfo
 import tomllib
+import zoneinfo
 from pathlib import Path
 
 
@@ -39,7 +39,7 @@ def load_config():
         try:
             config_data = tomllib.load(f)
         except tomllib.TOMLDecodeError as ex:
-            raise ConfigError(f"Failed to load config file: {ex}")
+            raise ConfigError(f"Failed to load config file: {ex}") from ex
 
     if "timezone" not in config_data:
         raise ConfigError("Missing required config setting: timezone")

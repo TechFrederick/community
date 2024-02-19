@@ -18,7 +18,7 @@ class HackathonRepository:
         hackathons_path = data_path / "hackathons"
 
         for filepath in sorted(hackathons_path.glob("*")):
-            with open(filepath, "r") as f:
+            with open(filepath) as f:
                 metadata, description = frontmatter.parse(f.read())
             description = markdown.markdown(
                 description,

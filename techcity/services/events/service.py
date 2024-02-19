@@ -19,5 +19,5 @@ class EventsService(Service):
 
     def dispatch(self, event) -> None:
         match event:
-            case EventPublished:
+            case EventPublished():
                 self.repo.create(event.event.model_dump())

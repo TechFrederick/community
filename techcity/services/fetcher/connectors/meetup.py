@@ -62,7 +62,7 @@ def generate_events(meetup_groups: list[Group]) -> None:
     print("Scanning API response for events...")
     for group in meetup_groups:
         print(f"Parsing {group.name} events...")
-        with open(cache / f"{group.slug}-events.json", "r") as f:
+        with open(cache / f"{group.slug}-events.json") as f:
             event_data = json.load(f)
 
         for event in event_data:

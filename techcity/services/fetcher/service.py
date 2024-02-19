@@ -16,7 +16,7 @@ class Fetcher(Service):
 
     def dispatch(self, event) -> None:
         match event:
-            case FetchTriggered:
+            case FetchTriggered():
                 self.handle_fetch_triggered(event)
 
     def handle_fetch_triggered(self, event: FetchTriggered) -> None:

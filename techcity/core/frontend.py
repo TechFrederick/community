@@ -12,15 +12,18 @@ classes = {
 def tailwindify_html(html: str) -> str:
     """Given HTML, tranform all applicable nodes to have Tailwind classes.
 
-    The provided HTML must have a root element or else ElementTree won't parse correctly.
+    The provided HTML must have a root element or else ElementTree won't
+    parse correctly.
     """
-    root = ElementTree.fromstring(html)
+    # The HTML input is trusted from techcity's own build process.
+    # There should be no need for defusedxml.
+    root = ElementTree.fromstring(html)  # noqa: S314
     tailwindify(root)
     return ElementTree.tostring(root).decode()
 
 
 def tailwindify(root):
-    """Given an XML element tree, tranform all applicable nodes to have Tailwind classes."""
+    """Given an XML etree, tranform all applicable nodes to have Tailwind classes."""
     for node in root.iter():
         tag_classes = classes.get(node.tag)
         if tag_classes:

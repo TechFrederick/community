@@ -14,7 +14,7 @@ from techcity.repositories import HackathonRepository
 from techcity.services.events.repository import EventRepository
 from techcity.services.groups.repository import GroupRepository
 
-environment = Environment(loader=FileSystemLoader(templates))
+environment = Environment(loader=FileSystemLoader(templates), autoescape=True)
 # If this code is still in operation in 50 years, that would be shocking.
 # We need a time delta that can stand in for the distant past to pull all events.
 old_delta = datetime.timedelta(days=50 * 365)
@@ -22,7 +22,7 @@ old_delta = datetime.timedelta(days=50 * 365)
 
 def build() -> None:
     """Build the web UI by rendering all available content."""
-    now = datetime.datetime.now(tz=datetime.timezone.utc)
+    now = datetime.datetime.now(tz=datetime.UTC)
     print("Generating content to `out` directory")
     out.mkdir(exist_ok=True)
 
@@ -39,7 +39,7 @@ def build() -> None:
     copy_static()
 
     render_palette(group_repo, hackathon_repo)
-    end = datetime.datetime.now(tz=datetime.timezone.utc)
+    end = datetime.datetime.now(tz=datetime.UTC)
     delta = end - now
     print(f"Done in {delta.total_seconds()} seconds")
 

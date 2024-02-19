@@ -9,7 +9,7 @@ class Builder(Service):
 
     def dispatch(self, event) -> None:
         match event:
-            case BuildTriggered:
+            case BuildTriggered():
                 self.handle_build_triggered()
 
     def handle_build_triggered(self) -> None:

@@ -1,6 +1,5 @@
 from collections import defaultdict
 from datetime import datetime, timedelta
-from typing import DefaultDict
 
 import yaml
 
@@ -14,7 +13,7 @@ class EventRepository:
 
         # Indices
         self.events_by_id: dict[str, Event] = {}
-        self.events_by_group: DefaultDict[str, set[Event]] = defaultdict(set)
+        self.events_by_group: defaultdict[str, set[Event]] = defaultdict(set)
         self.events_by_time = defaultdict(set)  # For joint event detection
 
         self._load_events()
@@ -24,7 +23,7 @@ class EventRepository:
         for dir in sorted(self.events_path.glob("*")):
             group_slug = dir.name
             for event_filename in sorted(dir.glob("*")):
-                with open(event_filename, "r") as f:
+                with open(event_filename) as f:
                     event = Event(**yaml.safe_load(f))
 
                 self.events_by_id[event.id] = event
@@ -46,8 +45,9 @@ class EventRepository:
     def _update_indices(self, event: Event):
         """Update the indices of the repository.
 
-        If this is not updated, then weird conditions can happen with other checking
-        (e.g., adding multiple new events at once may have a mismatched `joint_with` set).
+        If this is not updated, then weird conditions can happen with other
+        checking (e.g., adding multiple new events at once may have a mismatched
+        `joint_with` set).
         """
         old_event = self.events_by_id.get(event.id)
         self.events_by_id[event.id] = event
@@ -69,7 +69,8 @@ class EventRepository:
         if len(events) <= 1:
             return
 
-        # A joint event occurs when the two events are equal, but have different identities.
+        # A joint event occurs when the two events are equal,
+        # but have different identities.
         joint_events = [event]
         for same_time_event in events:
             if event.id != same_time_event.id and event == same_time_event:
@@ -150,5 +151,4 @@ class EventRepository:
 
     def all(self):
         for _, events in sorted(self.events_by_time.items()):
-            for event in sorted(events, key=lambda e: e.id):
-                yield event
+            yield from sorted(events, key=lambda e: e.id)

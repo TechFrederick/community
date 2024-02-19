@@ -10,7 +10,7 @@ from techcity.core.ids import generate_id
 for dirpath, _, filenames in os.walk("data/events"):
     for filename in filenames:
         event_filename = os.path.join(dirpath, filename)
-        with open(event_filename, "r") as f:
+        with open(event_filename) as f:
             event_data = yaml.safe_load(f)
 
         print(event_filename)

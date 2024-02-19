@@ -16,7 +16,7 @@ class GroupRepository:
         groups_path = data_path / "groups"
 
         for filepath in sorted(groups_path.glob("*")):
-            with open(filepath, "r") as f:
+            with open(filepath) as f:
                 metadata, description = frontmatter.parse(f.read())
             description = markdown.markdown(
                 description,

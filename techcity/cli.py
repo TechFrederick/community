@@ -19,7 +19,7 @@ def initialize():
         load_config()
     except ConfigError as ex:
         print(f"[red]{ex}[/red]")
-        raise typer.Exit(code=1)
+        raise typer.Exit(code=1) from ex
 
     groups_gateway = GroupsGateway()
 
