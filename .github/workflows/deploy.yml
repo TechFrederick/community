@@ -35,6 +35,7 @@ jobs:
         with:
           node-version: "lts/*"
           cache: npm
+          cache-dependency-path: techcity/services/builder/package-lock.json
 
       - name: Install Node dependencies
         run: npm --prefix techcity/services/builder ci
