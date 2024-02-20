@@ -12,17 +12,17 @@ from techcity.core.frontend import tailwindify_html
 from techcity.models import Event, Group, Hackathon
 from techcity.repositories import HackathonRepository
 from techcity.services.events.repository import EventRepository
-from techcity.services.groups.repository import GroupRepository
+from techcity.services.groups.gateway import GroupsGateway
 
 # If this code is still in operation in 50 years, that would be shocking.
 # We need a time delta that can stand in for the distant past to pull all events.
 old_delta = datetime.timedelta(days=50 * 365)
 
 
-def build() -> None:
+def build(groups_gateway: GroupsGateway) -> None:
     """Build the web UI by rendering all available content."""
     now = datetime.datetime.now(tz=datetime.UTC)
-    builder = SiteBuilder(now, out)
+    builder = SiteBuilder(groups_gateway, now, out)
     builder.build()
 
 
@@ -31,9 +31,11 @@ class SiteBuilder:
 
     def __init__(
         self,
+        groups_gateway: GroupsGateway,
         now: datetime.datetime,
         out: Path,
     ):
+        self.groups_gateway = groups_gateway
         self.now = now
         self.out = out
         service_path = Path(__file__).parent
@@ -49,15 +51,13 @@ class SiteBuilder:
 
         # FIMXE: This should be replaced by the gateway in a future change.
         event_repo = EventRepository()
-        # FIMXE: This should be replaced by the gateway in a future change.
-        group_repo = GroupRepository()
         hackathon_repo = HackathonRepository()
 
-        self.render_index(event_repo, group_repo, hackathon_repo)
-        self.render_events(event_repo, group_repo)
-        self.render_groups(group_repo, event_repo)
+        self.render_index(event_repo, hackathon_repo)
+        self.render_events(event_repo)
+        self.render_groups(event_repo)
         self.render_hackathons(hackathon_repo)
-        self.render_palette(group_repo, hackathon_repo)
+        self.render_palette(hackathon_repo)
 
         self.copy_static()
 
@@ -85,7 +85,6 @@ class SiteBuilder:
     def render_index(
         self,
         event_repo: EventRepository,
-        group_repo: GroupRepository,
         hackathon_repo: HackathonRepository,
     ) -> None:
         print("Rendering index")
@@ -99,12 +98,13 @@ class SiteBuilder:
             if event.joint_with:
                 events_with_group.append((event, None))
             else:
-                events_with_group.append((event, group_repo.find_by(event.group_slug)))
+                group = self.groups_gateway.retrieve(event.group_slug)
+                events_with_group.append((event, group))
 
         context = {
             "upcoming_events_with_group": reversed(upcoming_events_with_group),
             "recent_events_with_group": recent_events_with_group,
-            "groups": group_repo.all(),
+            "groups": self.groups_gateway.all(),
             "hackathons": hackathon_repo.all(),
             "now": self.now,
         }
@@ -113,7 +113,6 @@ class SiteBuilder:
     def render_events(
         self,
         event_repo: EventRepository,
-        group_repo: GroupRepository,
     ) -> None:
         print("Rendering events")
         events_dir = self.out / "events"
@@ -126,19 +125,18 @@ class SiteBuilder:
                 # Wrap in a div because a root node is expected to format properly.
                 "description": tailwindify_html(f"<div>{event.description}</div>"),
                 "event": event,
-                "group": group_repo.find_by(event.group_slug),
+                "group": self.groups_gateway.retrieve(event.group_slug),
             }
             self.render("event.html", context, event_dir / "index.html")
 
     def render_groups(
         self,
-        group_repo: GroupRepository,
         event_repo: EventRepository,
     ):
         groups_dir = self.out / "groups"
         groups_dir.mkdir(exist_ok=True)
 
-        for group in group_repo.all():
+        for group in self.groups_gateway.all():
             events = event_repo.filter_group(group.slug, self.now)
             self.render_group(group, events, groups_dir)
             all_events = event_repo.filter_group(group.slug, self.now, past=old_delta)
@@ -200,7 +198,6 @@ class SiteBuilder:
 
     def render_palette(
         self,
-        group_repo: GroupRepository,
         hackathon_repo: HackathonRepository,
     ) -> None:
         """Render the palette that Tailwind can pull from.
@@ -213,7 +210,7 @@ class SiteBuilder:
         self.render(
             "palette.html",
             {
-                "groups": group_repo.all(),
+                "groups": self.groups_gateway.all(),
                 "hackathons": hackathon_repo.all(),
             },
             self.templates / "palette-rendered.html",

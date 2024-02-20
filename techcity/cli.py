@@ -25,7 +25,7 @@ def initialize():
 
     groups_service = GroupsService()
     services = [
-        Builder(),
+        Builder(groups_gateway),
         EventsService(),
         Fetcher(groups_gateway),
         groups_service,

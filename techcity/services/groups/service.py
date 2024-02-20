@@ -15,3 +15,6 @@ class GroupsService(Service):
 
     def all(self) -> list[Group]:
         return self.repo.all()
+
+    def retrieve(self, slug: str) -> Group:
+        return self.repo.find_by(slug)

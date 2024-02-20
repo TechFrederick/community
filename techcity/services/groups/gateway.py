@@ -16,4 +16,11 @@ class GroupsGateway:
         self._service = service
 
     def all(self) -> list[Group]:
+        if self._service is None:
+            return []
         return self._service.all()
+
+    def retrieve(self, slug: str) -> Group | None:
+        if self._service is None:
+            return None
+        return self._service.retrieve(slug)
