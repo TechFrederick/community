@@ -16,5 +16,5 @@
       ]
     }
   },
-  "postCreateCommand": "make bootstrap && make run"
+  "postCreateCommand": "make bootstrap"
 }
