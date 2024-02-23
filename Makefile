@@ -1,4 +1,6 @@
-run:
+.PHONY = build
+
+run: build
 	venv/bin/honcho start
 
 bootstrap:
