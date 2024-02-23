@@ -54,7 +54,8 @@ class Venue(BaseModel):
         and city.
         """
         return (
-            self.address.replace(".", "") == other.address.replace(".", "")
+            other
+            and self.address.replace(".", "") == other.address.replace(".", "")
             and self.city == other.city
         )
 
