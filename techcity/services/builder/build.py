@@ -57,7 +57,7 @@ class SiteBuilder:
         hackathon_repo = HackathonRepository()
 
         self.render_index(event_repo, hackathon_repo)
-        self.render_events(event_repo)
+        self.render_events()
         self.render_groups(event_repo)
         self.render_hackathons(hackathon_repo)
         self.render_palette(hackathon_repo)
@@ -115,13 +115,12 @@ class SiteBuilder:
 
     def render_events(
         self,
-        event_repo: EventRepository,
     ) -> None:
         print("Rendering events")
         events_dir = self.out / "events"
         events_dir.mkdir(exist_ok=True)
 
-        for event in event_repo.all():
+        for event in self.events_gateway.all():
             event_dir = events_dir / event.id
             event_dir.mkdir(exist_ok=True)
             context = {

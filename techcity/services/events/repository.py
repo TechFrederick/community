@@ -149,6 +149,7 @@ class EventRepository:
             if past_dt <= event.start_at <= future_dt
         ]
 
-    def all(self):
+    def list(self):
+        """Get a list of events."""
         for _, events in sorted(self.events_by_time.items()):
             yield from sorted(events, key=lambda e: e.id)

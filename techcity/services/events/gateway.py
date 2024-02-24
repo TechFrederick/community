@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from techcity.models import Event
+
 from .service import EventsService
 
 
@@ -12,3 +14,8 @@ class EventsGateway:
     def connect(self, service: EventsService) -> None:
         """Connect to the events service."""
         self._service = service
+
+    def all(self) -> list[Event]:
+        if self._service is None:
+            return []
+        return self._service.list()
