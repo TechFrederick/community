@@ -12,7 +12,6 @@ from techcity.core.frontend import tailwindify_html
 from techcity.models import Event, Group, Hackathon
 from techcity.repositories import HackathonRepository
 from techcity.services.events.gateway import EventsGateway
-from techcity.services.events.repository import EventRepository
 from techcity.services.groups.gateway import GroupsGateway
 
 # If this code is still in operation in 50 years, that would be shocking.
@@ -52,13 +51,12 @@ class SiteBuilder:
         print("Generating content to `out` directory")
         self.out.mkdir(exist_ok=True)
 
-        # FIMXE: This should be replaced by the gateway in a future change.
-        event_repo = EventRepository()
+        # FIXME: This should be replaced by the gateway in a future change.
         hackathon_repo = HackathonRepository()
 
         self.render_index(hackathon_repo)
         self.render_events()
-        self.render_groups(event_repo)
+        self.render_groups()
         self.render_hackathons(hackathon_repo)
         self.render_palette(hackathon_repo)
 
@@ -130,17 +128,18 @@ class SiteBuilder:
             }
             self.render("event.html", context, event_dir / "index.html")
 
-    def render_groups(
-        self,
-        event_repo: EventRepository,
-    ):
+    def render_groups(self):
         groups_dir = self.out / "groups"
         groups_dir.mkdir(exist_ok=True)
 
+        old_dt = self.now - old_delta
+        from_dt = self.now - datetime.timedelta(days=30)
+        to_dt = self.now + datetime.timedelta(days=45)
         for group in self.groups_gateway.all():
-            events = event_repo.filter_group(group.slug, self.now)
+            slug = group.slug
+            events = self.events_gateway.filter_group(slug, from_dt, to_dt)
             self.render_group(group, events, groups_dir)
-            all_events = event_repo.filter_group(group.slug, self.now, past=old_delta)
+            all_events = self.events_gateway.filter_group(slug, old_dt, to_dt)
             self.render_group_events(group, all_events, groups_dir)
 
     def render_group(

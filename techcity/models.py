@@ -113,6 +113,7 @@ class EventListFilterOptions(BaseModel):
 
     from_datetime: datetime | None = None
     to_datetime: datetime | None = None
+    group_slug: str | None = None
 
 
 class Hackathon(BaseModel):

@@ -30,3 +30,15 @@ class EventsGateway:
             to_datetime=when + timedelta(days=45),
         )
         return self._service.list(options)
+
+    def filter_group(
+        self, group_slug: str, from_datetime: datetime, to_datetime: datetime
+    ):
+        if self._service is None:
+            return []
+        options = EventListFilterOptions(
+            from_datetime=from_datetime,
+            to_datetime=to_datetime,
+            group_slug=group_slug,
+        )
+        return self._service.list(options)

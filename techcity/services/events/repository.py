@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 from collections.abc import Iterable
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import yaml
 
@@ -100,7 +100,13 @@ class EventRepository:
 
     def list(self, options: EventListFilterOptions) -> Iterable[Event]:
         """Get a list of events."""
-        if options.from_datetime or options.to_datetime:
+        if options.group_slug:
+            return self._filter_group(
+                options.group_slug,
+                options.from_datetime,
+                options.to_datetime,
+            )
+        elif options.from_datetime or options.to_datetime:
             return self._filter_in(options.from_datetime, options.to_datetime)
         else:
             return self._all()
@@ -141,23 +147,25 @@ class EventRepository:
 
         return filtered_events
 
-    def filter_group(
+    def _filter_group(
         self,
         group_slug: str,
-        when: datetime,
-        future: timedelta = timedelta(days=45),
-        past: timedelta = timedelta(days=30),
-    ) -> list[Event]:
+        from_datetime: datetime | None,
+        to_datetime: datetime | None,
+    ) -> Iterable[Event]:
         """Filter to a specific group.
 
         This isn't combined with `_filter_in` because that method does extra
         handling for joint events that complicates group processing.
         """
-        future_dt = when + future
-        past_dt = when - past
         events = self.events_by_group[group_slug]
-        return [
-            event
-            for event in sorted(events, key=lambda e: e.start_at, reverse=True)
-            if past_dt <= event.start_at <= future_dt
-        ]
+        filtered_events: list[Event] = []
+        for event in events:
+            if (to_datetime and event.start_at > to_datetime) or (
+                from_datetime and event.start_at < from_datetime
+            ):
+                continue
+
+            filtered_events.append(event)
+
+        return sorted(filtered_events, key=lambda e: e.start_at, reverse=True)
