@@ -31,6 +31,12 @@ on the technology usage within their city.
 
 ### Getting Started
 
+<a href="https://codespaces.new/TechFrederick/community/">
+  <img src="https://github.com/codespaces/badge.svg" alt="Open in GitHub Codespaces" style="max-width: 100%;">
+</a>
+
+#### Local
+
 * Install Python
 * Install Node.js
 
