@@ -11,6 +11,7 @@ from techcity.constants import out
 from techcity.core.frontend import tailwindify_html
 from techcity.models import Event, Group, Hackathon
 from techcity.repositories import HackathonRepository
+from techcity.services.events.gateway import EventsGateway
 from techcity.services.events.repository import EventRepository
 from techcity.services.groups.gateway import GroupsGateway
 
@@ -19,10 +20,10 @@ from techcity.services.groups.gateway import GroupsGateway
 old_delta = datetime.timedelta(days=50 * 365)
 
 
-def build(groups_gateway: GroupsGateway) -> None:
+def build(events_gateway: EventsGateway, groups_gateway: GroupsGateway) -> None:
     """Build the web UI by rendering all available content."""
     now = datetime.datetime.now(tz=datetime.UTC)
-    builder = SiteBuilder(groups_gateway, now, out)
+    builder = SiteBuilder(events_gateway, groups_gateway, now, out)
     builder.build()
 
 
@@ -31,10 +32,12 @@ class SiteBuilder:
 
     def __init__(
         self,
+        events_gateway: EventsGateway,
         groups_gateway: GroupsGateway,
         now: datetime.datetime,
         out: Path,
     ):
+        self.events_gateway = events_gateway
         self.groups_gateway = groups_gateway
         self.now = now
         self.out = out
