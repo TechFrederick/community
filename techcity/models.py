@@ -108,6 +108,13 @@ class Event(BaseModel):
         return self.end_at.astimezone(config.tz)
 
 
+class EventListFilterOptions(BaseModel):
+    """Options to use as filters when listing events"""
+
+    from_datetime: datetime | None = None
+    to_datetime: datetime | None = None
+
+
 class Hackathon(BaseModel):
     """A hackathon event in town"""
 

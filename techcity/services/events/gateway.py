@@ -1,6 +1,8 @@
 from __future__ import annotations
 
-from techcity.models import Event
+from datetime import datetime, timedelta
+
+from techcity.models import Event, EventListFilterOptions
 
 from .service import EventsService
 
@@ -18,4 +20,13 @@ class EventsGateway:
     def all(self) -> list[Event]:
         if self._service is None:
             return []
-        return self._service.list()
+        return self._service.list(EventListFilterOptions())
+
+    def filter_around(self, when: datetime) -> list[Event]:
+        if self._service is None:
+            return []
+        options = EventListFilterOptions(
+            from_datetime=when - timedelta(days=30),
+            to_datetime=when + timedelta(days=45),
+        )
+        return self._service.list(options)

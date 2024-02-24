@@ -1,10 +1,13 @@
+from __future__ import annotations
+
 from collections import defaultdict
+from collections.abc import Iterable
 from datetime import datetime, timedelta
 
 import yaml
 
 from techcity.constants import data_path
-from techcity.models import Event
+from techcity.models import Event, EventListFilterOptions
 
 
 class EventRepository:
@@ -95,23 +98,33 @@ class EventRepository:
         with open(outpath / f"{event.id}.yaml", "w") as f:
             f.write(yaml.dump(event_dict, sort_keys=True))
 
-    def filter_around(
+    def list(self, options: EventListFilterOptions) -> Iterable[Event]:
+        """Get a list of events."""
+        if options.from_datetime or options.to_datetime:
+            return self._filter_in(options.from_datetime, options.to_datetime)
+        else:
+            return self._all()
+
+    def _all(self):
+        for _, events in sorted(self.events_by_time.items()):
+            yield from sorted(events, key=lambda e: e.id)
+
+    def _filter_in(
         self,
-        when: datetime,
-        future: timedelta = timedelta(days=45),
-        past: timedelta = timedelta(days=30),
+        from_datetime: datetime | None,
+        to_datetime: datetime | None,
     ) -> list[Event]:
         """Get a filtered list of events near the provided datetime.
 
         Joint events are collapsed to the first joint event found.
         """
         filtered_events = []
-        future_dt = when + future
-        past_dt = when - past
 
         ignored_joint_ids = set()
         for start_at, events in sorted(self.events_by_time.items()):
-            if start_at > future_dt or start_at < past_dt:
+            if (to_datetime and start_at > to_datetime) or (
+                from_datetime and start_at < from_datetime
+            ):
                 continue
 
             for event in sorted(events, key=lambda e: e.id):
@@ -137,7 +150,7 @@ class EventRepository:
     ) -> list[Event]:
         """Filter to a specific group.
 
-        This isn't combined with `filter_around` because that method does extra
+        This isn't combined with `_filter_in` because that method does extra
         handling for joint events that complicates group processing.
         """
         future_dt = when + future
@@ -148,8 +161,3 @@ class EventRepository:
             for event in sorted(events, key=lambda e: e.start_at, reverse=True)
             if past_dt <= event.start_at <= future_dt
         ]
-
-    def list(self):
-        """Get a list of events."""
-        for _, events in sorted(self.events_by_time.items()):
-            yield from sorted(events, key=lambda e: e.id)

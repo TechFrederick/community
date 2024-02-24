@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from techcity.events import EventPublished
-from techcity.models import Event
+from techcity.models import Event, EventListFilterOptions
 from techcity.service import Service
 
 from .repository import EventRepository
@@ -23,6 +23,6 @@ class EventsService(Service):
             case EventPublished():
                 self.repo.create(event.event.model_dump())
 
-    def list(self) -> list[Event]:
+    def list(self, options: EventListFilterOptions) -> list[Event]:
         """Get a list of events."""
-        return list(self.repo.list())
+        return list(self.repo.list(options))

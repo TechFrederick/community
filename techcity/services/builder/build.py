@@ -56,7 +56,7 @@ class SiteBuilder:
         event_repo = EventRepository()
         hackathon_repo = HackathonRepository()
 
-        self.render_index(event_repo, hackathon_repo)
+        self.render_index(hackathon_repo)
         self.render_events()
         self.render_groups(event_repo)
         self.render_hackathons(hackathon_repo)
@@ -87,7 +87,6 @@ class SiteBuilder:
 
     def render_index(
         self,
-        event_repo: EventRepository,
         hackathon_repo: HackathonRepository,
     ) -> None:
         print("Rendering index")
@@ -95,7 +94,7 @@ class SiteBuilder:
         upcoming_events_with_group: list[tuple[Event, Group | None]] = []
         recent_events_with_group: list[tuple[Event, Group | None]] = []
         events_with_group = upcoming_events_with_group
-        for event in event_repo.filter_around(self.now):
+        for event in self.events_gateway.filter_around(self.now):
             if event.when < self.now:
                 events_with_group = recent_events_with_group
             if event.joint_with:
