@@ -14,6 +14,8 @@ extensions:
 group_slug: frederick-web-tech
 id: niwujuiJ
 joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
 link: https://www.meetup.com/fredwebtech/events/299241180/
 name: 'Web Audio API: Let''s Make Some Noise!'
 start_at: 2024-02-29 00:00:00+00:00

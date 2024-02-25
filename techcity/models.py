@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import enum
 from datetime import datetime
 
 from pydantic import BaseModel
@@ -60,23 +61,16 @@ class Venue(BaseModel):
         )
 
 
-class MeetupEventExtension(BaseModel):
-    """Extension data for an event originating from Meetup"""
-
-    # The id used on meetup.com
-    id: str
-
-
-class EventExtensions(BaseModel):
-    """Extension data that may exist for an event"""
-
-    meetup: MeetupEventExtension | None = None
+class EventKind(str, enum.Enum):
+    unspecified = "unspecified"
+    hackathon = "hackathon"
 
 
 class Event(BaseModel):
     """An event happening in town"""
 
     id: str
+    kind: EventKind = EventKind.unspecified
     group_slug: str
     name: str
     link: str
@@ -106,6 +100,19 @@ class Event(BaseModel):
     @property
     def end(self):
         return self.end_at.astimezone(config.tz)
+
+
+class EventExtensions(BaseModel):
+    """Extension data that may exist for an event"""
+
+    meetup: MeetupEventExtension | None = None
+
+
+class MeetupEventExtension(BaseModel):
+    """Extension data for an event originating from Meetup"""
+
+    # The id used on meetup.com
+    id: str
 
 
 class EventListFilterOptions(BaseModel):

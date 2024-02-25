@@ -27,7 +27,7 @@ class EventRepository:
             group_slug = dir.name
             for event_filename in sorted(dir.glob("*")):
                 with open(event_filename) as f:
-                    event = Event(**yaml.safe_load(f))
+                    event = Event(**yaml.load(f, Loader=yaml.Loader))  # noqa: S506
 
                 self.events_by_id[event.id] = event
                 self.events_by_group[group_slug].add(event)

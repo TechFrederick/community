@@ -10,6 +10,8 @@ extensions:
 group_slug: wordpress-frederick
 id: 0HKun1MQ
 joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
 link: https://www.meetup.com/wordpress-frederick/events/dkhzgtygckbrb/
 name: WordPress Casual Discussion and Troubleshooting
 start_at: 2024-07-13 14:00:00+00:00
