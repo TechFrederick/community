@@ -7,7 +7,7 @@ from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader
 
-from techcity.constants import out
+from techcity.constants import data_path, out
 from techcity.core.frontend import tailwindify_html
 from techcity.models import Event, Group, Hackathon
 from techcity.repositories import HackathonRepository
@@ -73,9 +73,15 @@ class SiteBuilder:
 
     def copy_static(self):
         print("Copying static files from `public` to `out`")
-        for dirpath, _, filenames in os.walk(self.public):
+        self.copy_dir(self.public)
+        data_public = data_path / "public"
+        if data_public.exists():
+            self.copy_dir(data_public)
+
+    def copy_dir(self, direcectory):
+        for dirpath, _, filenames in os.walk(direcectory):
             path = Path(dirpath)
-            relpath = path.relative_to(self.public)
+            relpath = path.relative_to(direcectory)
             outpath = self.out / relpath
             outpath.mkdir(exist_ok=True)
 
