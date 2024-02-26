@@ -128,7 +128,7 @@ class SiteBuilder:
             event_dir.mkdir(exist_ok=True)
             context = {
                 # Wrap in a div because a root node is expected to format properly.
-                "description": tailwindify_html(f"<div>{event.description}</div>"),
+                "description": tailwindify_html(f"<div>{event.html_description}</div>"),
                 "event": event,
                 "group": self.groups_gateway.retrieve(event.group_slug),
             }

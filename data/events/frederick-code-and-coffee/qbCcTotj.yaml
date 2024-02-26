@@ -5,6 +5,8 @@ description: '<p>I''m late! I''m late! Come join us for some afternoon networkin
   headed back to Gravel &amp; Grind this month. It''s been a really great location
   for us, and I always love coming back here. We may move to FITCI in the future as
   our cohort grows, but this is a good fit for us right now.</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
 end_at: 2024-03-24 20:00:00+00:00
 extensions:
   meetup:

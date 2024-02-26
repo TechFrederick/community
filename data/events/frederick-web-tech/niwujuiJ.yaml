@@ -7,6 +7,8 @@ description: "<p>In this talk, we'll look at the capabilities of the Web Audio A
   \ simulations, and even ETL pipelines for arcade games\u2026 I\u2019m currently\
   \ a freelance developer/composer/artist/everything else for Minerva Digital, my\
   \ wife\u2019s and my creative agency.</p> "
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
 end_at: 2024-02-29 02:00:00+00:00
 extensions:
   meetup:

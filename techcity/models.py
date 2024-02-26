@@ -3,9 +3,11 @@ from __future__ import annotations
 import enum
 from datetime import datetime
 
+import markdown
 from pydantic import BaseModel
 
 from techcity.configuration import config
+from techcity.core.markdown_extensions import TailwindExtension
 
 
 class MeetupGroupExtension(BaseModel):
@@ -66,6 +68,11 @@ class EventKind(str, enum.Enum):
     hackathon = "hackathon"
 
 
+class EventDescriptionType(str, enum.Enum):
+    html = "html"
+    markdown = "markdown"
+
+
 class Event(BaseModel):
     """An event happening in town"""
 
@@ -75,6 +82,7 @@ class Event(BaseModel):
     name: str
     link: str
     description: str
+    description_type: EventDescriptionType = EventDescriptionType.html
     start_at: datetime  # in UTC
     end_at: datetime  # in UTC
     venue: Venue | None = None
@@ -100,6 +108,14 @@ class Event(BaseModel):
     @property
     def end(self):
         return self.end_at.astimezone(config.tz)
+
+    @property
+    def html_description(self):
+        if self.description_type == EventDescriptionType.html:
+            return self.description
+        elif self.description_type == EventDescriptionType.markdown:
+            return markdown.markdown(self.description, extensions=[TailwindExtension()])
+        return self.description
 
 
 class EventExtensions(BaseModel):

@@ -4,6 +4,8 @@ description: '<p>NATS is an awesome open source technology to help connect code 
   talk, you''ll learn about NATS via a presentation with plenty of live coding examples.
   And if you bring your laptop, we may even be able to get your computer participating
   in the examples!</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
 end_at: 2024-03-06 02:00:00+00:00
 extensions:
   meetup:

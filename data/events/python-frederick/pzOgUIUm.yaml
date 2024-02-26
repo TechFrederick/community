@@ -2,6 +2,8 @@ description: '<p>We''re still working on the topic, but you can pencil in the da
   for this next Python Frederick presentation.</p> <p>Also, we''re going to have another
   "after hour." After the presentation is over, anyone who wants to stay and do a
   bit of coding or chatting is welcome to hang out. Think of it like a mini open workshop.</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
 end_at: 2024-04-11 01:00:00+00:00
 extensions:
   meetup:

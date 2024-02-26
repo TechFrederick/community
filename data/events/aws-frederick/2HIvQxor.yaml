@@ -7,6 +7,8 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ the help of others. The goal is to have fun with other tech people in the area.\
   \ Bring your laptop or just bring yourself! We have a blast and we hope you\u2019\
   ll join in.</p> "
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
 end_at: 2024-08-17 16:00:00+00:00
 extensions:
   meetup:

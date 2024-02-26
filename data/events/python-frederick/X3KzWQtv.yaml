@@ -30,6 +30,8 @@ description: |-
   to show the pretty version of the website,
   you can still view all the project code and instructions
   on the [hackfrederick GitHub repository](https://github.com/hackfrederick/hackathon2016).
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- markdown
 end_at: 2016-10-08 21:00:00+00:00
 group_slug: python-frederick
 id: X3KzWQtv
