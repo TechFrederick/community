@@ -9,6 +9,8 @@ group_slug: frederick-web-tech
 id: Ub4afitF
 joint_with:
 - bAca3UI7
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
 link: https://www.meetup.com/fredwebtech/events/298576953/
 name: Web Tech Social
 start_at: 2024-01-25 00:00:00+00:00

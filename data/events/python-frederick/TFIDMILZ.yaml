@@ -9,6 +9,8 @@ extensions:
 group_slug: python-frederick
 id: TFIDMILZ
 joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
 link: https://www.meetup.com/python-frederick/events/298211582/
 name: 2nd Wednesday Dinner - Black Hog BBQ
 start_at: 2024-01-11 00:00:00+00:00

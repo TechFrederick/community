@@ -18,6 +18,8 @@ joint_with:
 - 5Eou0qIr
 - wipC4fFM
 - yr7rcU3H
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
 link: https://www.meetup.com/awsfrederick/events/299093646/
 name: Frederick Tech Open Workshop - 3rd Saturday
 start_at: 2024-02-17 17:00:00+00:00

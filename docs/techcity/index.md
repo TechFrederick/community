@@ -48,6 +48,11 @@ with the GitHub Actions Continuous Integration system.
 The platform is configured with a `techcity.toml` configuration file.
 See the [configuration](config.md) docs for details on the options.
 
+At this stage of development,
+any data not generated automatically via the "Fetch" phase
+must be created by hand.
+See [Content Creation](content.md) for information on how to create new data.
+
 ## Commands
 
 Refer to the [Commands](commands.md) documentation.

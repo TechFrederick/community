@@ -11,6 +11,8 @@ extensions:
 group_slug: python-frederick
 id: DoYCf7xM
 joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
 link: https://www.meetup.com/python-frederick/events/298531232/
 name: Algorithmic Art with Python (2nd Wed Talk)
 start_at: 2024-02-15 00:00:00+00:00

@@ -18,6 +18,8 @@ group_slug: aws-frederick
 id: bAca3UI7
 joint_with:
 - Ub4afitF
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
 link: https://www.meetup.com/awsfrederick/events/298585615/
 name: 'AWS Social: Co-Host with Webtech at JoJo''s'
 start_at: 2024-01-25 00:00:00+00:00
