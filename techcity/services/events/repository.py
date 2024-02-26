@@ -100,6 +100,14 @@ class EventRepository:
 
     def list(self, options: EventListFilterOptions) -> Iterable[Event]:
         """Get a list of events."""
+        if options.kind:
+            return [
+                event
+                for event in self._filter_in(
+                    from_datetime=options.from_datetime, to_datetime=options.to_datetime
+                )
+                if event.kind == options.kind
+            ]
         if options.group_slug:
             return self._filter_group(
                 options.group_slug,

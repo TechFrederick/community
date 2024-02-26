@@ -8,9 +8,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 
 from techcity.constants import data_path, out
-from techcity.core.frontend import tailwindify_html
-from techcity.models import Event, Group, Hackathon
-from techcity.repositories import HackathonRepository
+from techcity.models import Event, EventKind, Group
 from techcity.services.events.gateway import EventsGateway
 from techcity.services.groups.gateway import GroupsGateway
 
@@ -51,14 +49,11 @@ class SiteBuilder:
         print("Generating content to `out` directory")
         self.out.mkdir(exist_ok=True)
 
-        # FIXME: This should be replaced by the gateway in a future change.
-        hackathon_repo = HackathonRepository()
-
-        self.render_index(hackathon_repo)
+        self.render_index()
         self.render_events()
         self.render_groups()
-        self.render_hackathons(hackathon_repo)
-        self.render_palette(hackathon_repo)
+        self.render_hackathons()
+        self.render_palette()
 
         self.copy_static()
 
@@ -89,10 +84,7 @@ class SiteBuilder:
                 filepath = os.path.join(dirpath, filename)
                 shutil.copyfile(filepath, outpath / filename)
 
-    def render_index(
-        self,
-        hackathon_repo: HackathonRepository,
-    ) -> None:
+    def render_index(self) -> None:
         print("Rendering index")
 
         upcoming_events_with_group: list[tuple[Event, Group | None]] = []
@@ -111,7 +103,7 @@ class SiteBuilder:
             "upcoming_events_with_group": reversed(upcoming_events_with_group),
             "recent_events_with_group": recent_events_with_group,
             "groups": self.groups_gateway.all(),
-            "hackathons": hackathon_repo.all(),
+            "hackathons": self.events_gateway.filter_kind(EventKind.hackathon),
             "now": self.now,
         }
         self.render("index.html", context, self.out / "index.html")
@@ -127,8 +119,6 @@ class SiteBuilder:
             event_dir = events_dir / event.id
             event_dir.mkdir(exist_ok=True)
             context = {
-                # Wrap in a div because a root node is expected to format properly.
-                "description": tailwindify_html(f"<div>{event.html_description}</div>"),
                 "event": event,
                 "group": self.groups_gateway.retrieve(event.group_slug),
             }
@@ -181,31 +171,29 @@ class SiteBuilder:
         }
         self.render("group_events.html", context, events_dir / "index.html")
 
-    def render_hackathons(self, hackathon_repo: HackathonRepository):
+    def render_hackathons(self):
         hackathons_dir = self.out / "hackathons"
         hackathons_dir.mkdir(exist_ok=True)
 
-        for hackathon in hackathon_repo.all():
-            self.render_hackathon(hackathon, hackathons_dir)
+        for event in self.events_gateway.filter_kind(EventKind.hackathon):
+            self.render_hackathon(event, hackathons_dir)
 
     def render_hackathon(
         self,
-        hackathon: Hackathon,
+        event: Event,
         hackathons_dir: Path,
     ) -> None:
-        print(f"Rendering hackathon: {hackathon.name}")
-        hackathon_dir = hackathons_dir / hackathon.slug
+        print(f"Rendering hackathon: {event.name}")
+        hackathon_dir = hackathons_dir / event.id
         hackathon_dir.mkdir(exist_ok=True)
 
         context = {
-            "hackathon": hackathon,
+            "event": event,
+            "group": self.groups_gateway.retrieve(event.group_slug),
         }
-        self.render("hackathon.html", context, hackathon_dir / "index.html")
+        self.render("event.html", context, hackathon_dir / "index.html")
 
-    def render_palette(
-        self,
-        hackathon_repo: HackathonRepository,
-    ) -> None:
+    def render_palette(self) -> None:
         """Render the palette that Tailwind can pull from.
 
         This is a crud hack so that the Tailwind detection can find all the colors
@@ -217,7 +205,6 @@ class SiteBuilder:
             "palette.html",
             {
                 "groups": self.groups_gateway.all(),
-                "hackathons": hackathon_repo.all(),
             },
             self.templates / "palette-rendered.html",
         )

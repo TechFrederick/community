@@ -7,6 +7,7 @@ import markdown
 from pydantic import BaseModel
 
 from techcity.configuration import config
+from techcity.core.frontend import tailwindify_html
 from techcity.core.markdown_extensions import TailwindExtension
 
 
@@ -83,6 +84,7 @@ class Event(BaseModel):
     link: str
     description: str
     description_type: EventDescriptionType = EventDescriptionType.html
+    teaser: str | None = None
     start_at: datetime  # in UTC
     end_at: datetime  # in UTC
     venue: Venue | None = None
@@ -112,7 +114,8 @@ class Event(BaseModel):
     @property
     def html_description(self):
         if self.description_type == EventDescriptionType.html:
-            return self.description
+            # Wrap in a div because a root node is expected to format properly.
+            return tailwindify_html(f"<div>{self.description}</div>")
         elif self.description_type == EventDescriptionType.markdown:
             return markdown.markdown(self.description, extensions=[TailwindExtension()])
         return self.description
@@ -134,16 +137,7 @@ class MeetupEventExtension(BaseModel):
 class EventListFilterOptions(BaseModel):
     """Options to use as filters when listing events"""
 
+    kind: EventKind | None = None
     from_datetime: datetime | None = None
     to_datetime: datetime | None = None
     group_slug: str | None = None
-
-
-class Hackathon(BaseModel):
-    """A hackathon event in town"""
-
-    slug: str
-    name: str
-    color: str
-    teaser: str
-    description: str

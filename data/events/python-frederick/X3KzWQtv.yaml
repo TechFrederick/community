@@ -41,6 +41,7 @@ kind: !!python/object/apply:techcity.models.EventKind
 link: https://github.com/hackfrederick/hackathon2016
 name: 2016 Hackathon
 start_at: 2016-10-08 13:00:00+00:00
+teaser: The 2016 hackathon was the OG hackathon in Frederick. Local tech meetups came together to bring a tutorial format event that taught people about APIs and SMS notifications.
 venue:
   address: 650 Blazer Trail
   city: Frederick
