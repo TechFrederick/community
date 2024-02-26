@@ -2,6 +2,8 @@ description: '<p>We''re going to get together, share a meal, and talk some Pytho
   (and whatever other topics you''re interested in).</p> <p>Come on out for some fun
   and food. This is a great chance to chat about Python with other people interested
   in the language.</p> <p>Next month we''ll have another Python presentation in store.</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
 end_at: 2024-01-11 02:00:00+00:00
 extensions:
   meetup:
@@ -14,6 +16,7 @@ kind: !!python/object/apply:techcity.models.EventKind
 link: https://www.meetup.com/python-frederick/events/298211582/
 name: 2nd Wednesday Dinner - Black Hog BBQ
 start_at: 2024-01-11 00:00:00+00:00
+teaser: null
 venue:
   address: 221 Shorebird St
   city: Frederick
