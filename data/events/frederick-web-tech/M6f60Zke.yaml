@@ -7,6 +7,8 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ the help of others. The goal is to have fun with other tech people in the area.\
   \ Bring your laptop or just bring yourself! We have a blast and we hope you\u2019\
   ll join in.</p> "
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
 end_at: 2024-07-20 16:00:00+00:00
 extensions:
   meetup:
@@ -23,6 +25,7 @@ kind: !!python/object/apply:techcity.models.EventKind
 link: https://www.meetup.com/fredwebtech/events/gzdxbtygckbbc/
 name: Frederick Tech Open Workshop - 3rd Saturday
 start_at: 2024-07-20 14:00:00+00:00
+teaser: null
 venue:
   address: 118 N. Market St.
   city: Frederick

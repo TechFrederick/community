@@ -10,6 +10,8 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ Here are all the groups that are participating:</p> <p>* AWS Frederick<br/>* Frederick\
   \ Open Source (FOS)<br/>* Frederick WebTech<br/>* Python Frederick<br/>* WordPress\
   \ Frederick</p> "
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
 end_at: 2024-06-15 16:00:00+00:00
 extensions:
   meetup:
@@ -26,6 +28,7 @@ kind: !!python/object/apply:techcity.models.EventKind
 link: https://www.meetup.com/python-frederick/events/dzjrjtygcjbtb/
 name: Frederick Tech Open Workshop - 3rd Saturday
 start_at: 2024-06-15 14:00:00+00:00
+teaser: null
 venue:
   address: 118 N Market St
   city: Frederick

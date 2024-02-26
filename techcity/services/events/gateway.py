@@ -1,8 +1,9 @@
 from __future__ import annotations
 
+from collections.abc import Iterable
 from datetime import datetime, timedelta
 
-from techcity.models import Event, EventListFilterOptions
+from techcity.models import Event, EventKind, EventListFilterOptions
 
 from .service import EventsService
 
@@ -41,4 +42,10 @@ class EventsGateway:
             to_datetime=to_datetime,
             group_slug=group_slug,
         )
+        return self._service.list(options)
+
+    def filter_kind(self, kind: EventKind) -> Iterable[Event]:
+        if self._service is None:
+            return []
+        options = EventListFilterOptions(kind=kind)
         return self._service.list(options)

@@ -13,7 +13,7 @@ build:
 
 watcher:
 	venv/bin/watchmedo shell-command \
-		--pattern='*.html;*.md;*.py' \
+		--pattern='*.html;*.md;*.py;*.yaml' \
 		--recursive \
 		--command='make build' \
 		--drop \
