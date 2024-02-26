@@ -33,6 +33,7 @@ kind: !!python/object/apply:techcity.models.EventKind
 link: https://www.meetup.com/wordpress-frederick/events/ctjjctygcfbvb/
 name: Frederick Tech Open Workshop - 3rd Saturday
 start_at: 2024-03-16 14:00:00+00:00
+teaser: null
 venue:
   address: 118 N Market St
   city: Frederick

@@ -19,6 +19,7 @@ kind: !!python/object/apply:techcity.models.EventKind
 link: https://www.meetup.com/frederick-code-and-coffee/events/299259228/
 name: "Frederick Code and Coffee: March Hare \u23F0\uFE0F\U0001F407"
 start_at: 2024-03-24 17:00:00+00:00
+teaser: null
 venue:
   address: 15 E 6th St
   city: Frederick

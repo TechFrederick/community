@@ -17,6 +17,7 @@ kind: !!python/object/apply:techcity.models.EventKind
 link: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhcdblb/
 name: WordPress Casual Discussion and Troubleshooting
 start_at: 2025-02-08 15:00:00+00:00
+teaser: null
 venue:
   address: 5728 Industry Ln
   city: Frederick

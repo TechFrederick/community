@@ -18,4 +18,5 @@ kind: !!python/object/apply:techcity.models.EventKind
 link: https://www.meetup.com/frederickopensource/events/299259520/
 name: 'NATS: Connecting Apps Over a Network Easily'
 start_at: 2024-03-06 00:00:00+00:00
+teaser: null
 venue: null

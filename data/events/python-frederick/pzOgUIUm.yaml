@@ -16,6 +16,7 @@ kind: !!python/object/apply:techcity.models.EventKind
 link: https://www.meetup.com/python-frederick/events/298531455/
 name: Topic Pending (2nd Wed Talk)
 start_at: 2024-04-10 23:00:00+00:00
+teaser: null
 venue:
   address: 321 Ballenger Center Dr
   city: Frederick
