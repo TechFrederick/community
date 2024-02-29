@@ -6,5 +6,8 @@ teaser: techfrederick exists to make sure that there is "more tech in Frederick.
 card_image: /images/group-hero/techfrederick.png
 hero_image: /images/group-hero/techfrederick.png
 color: tfgreen
+extensions:
+  wordpress:
+    fetch_events: true
 ---
 techfrederick’s mission is to connect, educate and empower a strong technology community and its partners by fostering growth, innovation and collaboration for the benefit of all who live and work in our region.

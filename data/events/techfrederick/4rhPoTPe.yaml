@@ -1,0 +1,27 @@
+description: '<p><img loading="lazy" decoding="async" class="alignleft size-medium
+  wp-image-11680" src="https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-300x300.png"
+  alt="" width="300" height="300" srcset="https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-300x300.png
+  300w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-1024x1024.png
+  1024w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-150x150.png
+  150w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-768x768.png
+  768w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-600x600.png
+  600w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-100x100.png
+  100w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials.png
+  1200w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+
+  <p>Register <a href="https://techfrederick.org/bae/" target="_blank" rel="noopener">HERE</a>
+  now!</p>'
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-03-22 03:59:59+00:00
+extensions: null
+group_slug: techfrederick
+id: 4rhPoTPe
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://techfrederick.org/event/business-analysis-essentials-training/
+name: Business Analysis Essentials Training
+start_at: 2024-03-19 04:00:00+00:00
+teaser: null
+venue: null

@@ -53,7 +53,7 @@ def fetch_to_cache(meetup_groups: list[Group]):
             timeout=5,
         )
         response.raise_for_status()
-        with open(cache / f"{group.slug}-events.json", "wb") as f:
+        with open(cache / f"{group.slug}-meetup-events.json", "wb") as f:
             f.write(response.content)
 
 
@@ -62,7 +62,7 @@ def generate_events(meetup_groups: list[Group]) -> None:
     print("Scanning API response for events...")
     for group in meetup_groups:
         print(f"Parsing {group.name} events...")
-        with open(cache / f"{group.slug}-events.json") as f:
+        with open(cache / f"{group.slug}-meetup-events.json") as f:
             event_data = json.load(f)
 
         for event in event_data:

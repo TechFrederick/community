@@ -2,6 +2,7 @@ from techcity.constants import cache
 from techcity.services.groups.gateway import GroupsGateway
 
 from .connectors.meetup import MeetupConnector
+from .connectors.wordpress import WordPressConnector
 
 
 def fetch(cached: bool, groups_gateway: GroupsGateway) -> None:
@@ -10,6 +11,7 @@ def fetch(cached: bool, groups_gateway: GroupsGateway) -> None:
     cache.mkdir(exist_ok=True)
     connectors = [
         MeetupConnector(),
+        WordPressConnector(),
     ]
 
     print("Fetching events...")

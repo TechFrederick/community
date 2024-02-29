@@ -11,19 +11,6 @@ from techcity.core.frontend import tailwindify_html
 from techcity.core.markdown_extensions import TailwindExtension
 
 
-class MeetupGroupExtension(BaseModel):
-    """Extension data for groups listed on Meetup"""
-
-    # The group slug used on meetup.com
-    slug: str
-
-
-class GroupExtensions(BaseModel):
-    """Extension data that may exist for a group"""
-
-    meetup: MeetupGroupExtension | None = None
-
-
 class Group(BaseModel):
     """A representation of a group that meets in town"""
 
@@ -40,6 +27,26 @@ class Group(BaseModel):
     extensions: GroupExtensions | None = None
 
 
+class GroupExtensions(BaseModel):
+    """Extension data that may exist for a group"""
+
+    meetup: MeetupGroupExtension | None = None
+    wordpress: WordPressGroupExtension | None = None
+
+
+class MeetupGroupExtension(BaseModel):
+    """Extension data for groups listed on Meetup"""
+
+    # The group slug used on meetup.com
+    slug: str
+
+
+class WordPressGroupExtension(BaseModel):
+    """Extension data for groups with WordPress sites"""
+
+    fetch_events: bool
+
+
 class Venue(BaseModel):
     """The location of an event"""
 
@@ -47,8 +54,8 @@ class Venue(BaseModel):
     city: str
     state: str
     zip: str
-    lat: float
-    lon: float
+    lat: float | None = None
+    lon: float | None = None
 
     def __eq__(self, other):
         """Are the venues the same?
