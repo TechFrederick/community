@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import enum
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import markdown
 from pydantic import BaseModel
@@ -117,6 +117,11 @@ class Event(BaseModel):
     @property
     def end(self):
         return self.end_at.astimezone(config.tz)
+
+    @property
+    def is_all_day(self):
+        """Anything longer than a work day is considered an all-day event"""
+        return self.end - self.when > timedelta(hours=8)
 
     @property
     def html_description(self):

@@ -1,13 +1,19 @@
 <div class="w-full border-y sm:border border-tflightblue {% if event.when < now %}saturate-50{% endif %} flex flex-col">
-  <div class="flex flex-row text-4xl sm:text-5xl font-extralight tracking-widest uppercase border-b-4
+  <div class="flex flex-row text-4xl sm:text-5xl font-extralight tracking-widest border-b-4
   {% if event.joint_with %}
     border-tfgreen
   {% else %}
     border-{{ group.color }}
   {% endif %}
   ">
-    <div class="p-2 bg-tflightblue basis-1/2 text-center text-white">{{ event.when.strftime('%-d %b') }}</div>
-    <div class="p-2 basis-1/2 text-center bg-slate-50 text-slate-700">{{ event.when.strftime('%-I%p').lower() }}</div>
+    <div class="p-2 bg-tflightblue basis-1/2 text-center text-white uppercase">{{ event.when.strftime('%-d %b') }}</div>
+    <div class="p-2 basis-1/2 text-center bg-slate-50 text-slate-700">
+      {% if event.is_all_day %}
+        All Day
+      {% else %}
+        {{ event.when.strftime('%-I%p').lower() }}
+      {% endif %}
+    </div>
   </div>
   <div class="bg-white text-slate-700 flex-grow">
     <div class="p-2 text-xl font-light bg-slate-100">{{ event.name }}</div>
