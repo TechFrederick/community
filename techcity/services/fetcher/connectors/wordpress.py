@@ -86,7 +86,7 @@ class WordPressConnector:
                     venue = Venue(
                         address=event["venue"]["address"],
                         city=event["venue"]["city"],
-                        state=event["venue"]["province"],
+                        state=event["venue"].get("province", ""),
                         zip=event["venue"]["zip"],
                     )
 

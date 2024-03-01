@@ -1,0 +1,31 @@
+description: '<h5><img loading="lazy" decoding="async" class="alignleft size-medium
+  wp-image-11706" src="https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-300x300.png"
+  alt="" width="300" height="300" srcset="https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-300x300.png
+  300w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-1024x1024.png
+  1024w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-150x150.png
+  150w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-768x768.png
+  768w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-600x600.png
+  600w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-100x100.png
+  100w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast.png
+  1080w" sizes="(max-width: 300px) 100vw, 300px" /> <a href="http://techfrederick.org/breakfast"
+  target="_blank" rel="noopener"><strong>REGISTER HERE</strong></a></h5>'
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-03-21 13:30:00+00:00
+extensions: null
+group_slug: techfrederick
+id: DPdQ4ELI
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://techfrederick.org/event/quarterly-networking-breakfast-9/
+name: Quarterly Networking Breakfast
+start_at: 2024-03-21 12:00:00+00:00
+teaser: null
+venue:
+  address: 40 S. Carroll Street
+  city: Frederick
+  lat: null
+  lon: null
+  state: ''
+  zip: '21701'
