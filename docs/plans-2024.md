@@ -36,10 +36,11 @@ Re-engage Game Dev? Can they get going as a regular group?
 | February | 3rd Saturday | 2/17 | Open Workshop | [event](https://www.meetup.com/python-frederick/events/298841176/) |
 | February | 4th Wednesday | 2/28 | WebTech | [event](https://www.meetup.com/fredwebtech/events/299241180/) |
 | February | 4th Sunday | 2/25 | Code and Coffee | [event](https://www.meetup.com/frederick-code-and-coffee/events/299259197/) |
-| March | 1st Tuesday | 3/5 | FOS | [event](https://www.meetup.com/frederickopensource/events/299259520/) |
+| March | 1st Tuesday | 3/5 | FOS | Rescheduled to April |
 | March | 2nd Wednesday | 3/13 | Python Frederick | [event](https://www.meetup.com/python-frederick/events/298531432/) |
 | March | 2nd Saturday | 3/9 | WordPress Frederick | Event cancelled |
 | March | 3rd Thursday | 3/21 | AWS Frederick | TBD |
 | March | 3rd Saturday | 3/16 | Open Workshop | [event](https://www.meetup.com/python-frederick/events/298841176/) |
 | March | 4th Wednesday | 3/27 | WebTech | TBD |
 | March | 4th Sunday | 3/24 | Code and Coffee | [event](https://www.meetup.com/frederick-code-and-coffee/events/299259228/) |
+| April | 1st Tuesday | 4/2 | FOS | [event](https://www.meetup.com/frederickopensource/events/299259520/) |
