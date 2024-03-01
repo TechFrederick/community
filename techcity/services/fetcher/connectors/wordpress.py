@@ -9,11 +9,14 @@ from techcity.constants import cache
 from techcity.core.ids import generate_id
 from techcity.events import EventPublished
 from techcity.models import Event, Group, Venue
-from techcity.pubsub import publish
+from techcity.pubsub import PubSub
 
 
 class WordPressConnector:
     """A connector to fetch data from a WordPress site"""
+
+    def __init__(self, pubsub: PubSub) -> None:
+        self.pubsub = pubsub
 
     def fetch(self, groups: list[Group], cached: bool) -> None:
         wordpress_groups = [
@@ -105,4 +108,4 @@ class WordPressConnector:
                     end_at=end_at,
                     venue=venue,
                 )
-                publish(EventPublished(event=event_model))
+                self.pubsub.publish(EventPublished(event=event_model))

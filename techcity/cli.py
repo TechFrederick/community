@@ -2,7 +2,7 @@ import typer
 from rich import print
 
 from .configuration import ConfigError, load_config
-from .pubsub import subscribe
+from .pubsub import PubSub
 from .services.builder.commands import build
 from .services.builder.service import Builder
 from .services.events.gateway import EventsGateway
@@ -13,7 +13,7 @@ from .services.groups.gateway import GroupsGateway
 from .services.groups.service import GroupsService
 
 
-def initialize():
+def initialize(ctx: typer.Context):
     # Initialize the services and event bus.
     # Don't use a docstring here or else it will show in the CLI help text.
     try:
@@ -21,6 +21,9 @@ def initialize():
     except ConfigError as ex:
         print(f"[red]{ex}[/red]")
         raise typer.Exit(code=1) from ex
+
+    pubsub = PubSub()
+    ctx.obj = {"pubsub": pubsub}
 
     events_gateway = EventsGateway()
     groups_gateway = GroupsGateway()
@@ -30,7 +33,7 @@ def initialize():
     services = [
         Builder(events_gateway, groups_gateway),
         events_service,
-        Fetcher(groups_gateway),
+        Fetcher(pubsub, groups_gateway),
         groups_service,
     ]
 
@@ -41,7 +44,7 @@ def initialize():
     events_gateway.connect(events_service)
     groups_gateway.connect(groups_service)
 
-    subscribe(services)
+    pubsub.subscribe(services)
 
 
 app = typer.Typer(
