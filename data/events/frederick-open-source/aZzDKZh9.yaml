@@ -6,7 +6,7 @@ description: '<p>NATS is an awesome open source technology to help connect code 
   in the examples!</p> '
 description_type: !!python/object/apply:techcity.models.EventDescriptionType
 - html
-end_at: 2024-03-06 02:00:00+00:00
+end_at: 2024-04-03 01:00:00+00:00
 extensions:
   meetup:
     id: '299259520'
@@ -17,6 +17,6 @@ kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
 link: https://www.meetup.com/frederickopensource/events/299259520/
 name: 'NATS: Connecting Apps Over a Network Easily'
-start_at: 2024-03-06 00:00:00+00:00
+start_at: 2024-04-02 23:00:00+00:00
 teaser: null
 venue: null
