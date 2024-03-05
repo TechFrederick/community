@@ -1,5 +1,6 @@
 -e .
 honcho
+polyfactory
 pytest
 pytest-cov
 scrapy

@@ -81,6 +81,19 @@ class EventDescriptionType(str, enum.Enum):
     markdown = "markdown"
 
 
+class MeetupEventExtension(BaseModel):
+    """Extension data for an event originating from Meetup"""
+
+    # The id used on meetup.com
+    id: str
+
+
+class EventExtensions(BaseModel):
+    """Extension data that may exist for an event"""
+
+    meetup: MeetupEventExtension | None = None
+
+
 class Event(BaseModel):
     """An event happening in town"""
 
@@ -131,19 +144,6 @@ class Event(BaseModel):
         elif self.description_type == EventDescriptionType.markdown:
             return markdown.markdown(self.description, extensions=[TailwindExtension()])
         return self.description
-
-
-class EventExtensions(BaseModel):
-    """Extension data that may exist for an event"""
-
-    meetup: MeetupEventExtension | None = None
-
-
-class MeetupEventExtension(BaseModel):
-    """Extension data for an event originating from Meetup"""
-
-    # The id used on meetup.com
-    id: str
 
 
 class EventListFilterOptions(BaseModel):

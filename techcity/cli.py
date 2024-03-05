@@ -3,6 +3,7 @@ from rich import print
 
 from .configuration import ConfigError, load_config
 from .pubsub import PubSub
+from .services.broadcaster.service import Broadcaster
 from .services.builder.commands import build
 from .services.builder.service import Builder
 from .services.events.gateway import EventsGateway
@@ -31,6 +32,7 @@ def initialize(ctx: typer.Context):
     events_service = EventsService()
     groups_service = GroupsService()
     services = [
+        Broadcaster(),
         Builder(events_gateway, groups_gateway),
         events_service,
         Fetcher(pubsub, groups_gateway),
