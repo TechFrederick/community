@@ -1,7 +1,10 @@
 from __future__ import annotations
 
+import datetime
+from datetime import timedelta
+
 from techcity.events import EventPublished
-from techcity.models import Event
+from techcity.models import Broadcast, BroadcastSchedule, Event
 from techcity.service import Service
 
 from .repository import BroadcastRepository
@@ -25,4 +28,30 @@ class Broadcaster(Service):
 
     def _schedule(self, event: Event) -> None:
         """Set an event's broadcast schedule."""
-        # TODO: create a broadcast schedule.
+        # TODO: check for an existing schedule. Update broadcasts if moved.
+
+        # The broadcast frequency should probably be configurable in the future,
+        # but these time frequencies are reasonable for now.
+        broadcast_offsets = [timedelta(days=14), timedelta(days=7), timedelta(days=1)]
+        broadcasts = [
+            Broadcast(scheduled_for=event.start_at - offset)
+            for offset in broadcast_offsets
+            # Sometimes events are created late. Don't create a broadcast if the
+            # broadcast would be in the past.
+            if event.start_at - offset > datetime.datetime.now(tz=datetime.UTC)
+        ]
+
+        # FIXME: I think it's possible that the broadcasts are not going to fire on the
+        # expected date because the schedule_for is set on a day boundary. For example,
+        # timedelta(days=1) should make an announcement the day before an event.
+        # Since broadcasting in CI is in the very early morning, going 24 hours before
+        # the event may not be early enough to hit the broadcast window. We may be able
+        # get around that by pulling the schedule_for to midnight of that day, but I
+        # want to think through the implications of that before codifying it.
+
+        schedule = BroadcastSchedule(
+            event_id=event.id,
+            event_start_at=event.start_at,
+            broadcasts=broadcasts,
+        )
+        self.repo.create(schedule)

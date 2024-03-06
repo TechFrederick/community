@@ -4,4 +4,5 @@ polyfactory
 pytest
 pytest-cov
 scrapy
+time-machine
 watchdog[watchmedo]

@@ -1,0 +1,11 @@
+broadcasts:
+- scheduled_for: 2024-06-01 14:00:00+00:00
+  sent_on: null
+- scheduled_for: 2024-06-08 14:00:00+00:00
+  sent_on: null
+- scheduled_for: 2024-06-14 14:00:00+00:00
+  sent_on: null
+event_id: CjeMO4Gl
+event_start_at: 2024-06-15 14:00:00+00:00
+status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
+- pending

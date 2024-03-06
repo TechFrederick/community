@@ -1,0 +1,11 @@
+broadcasts:
+- scheduled_for: 2024-07-06 14:00:00+00:00
+  sent_on: null
+- scheduled_for: 2024-07-13 14:00:00+00:00
+  sent_on: null
+- scheduled_for: 2024-07-19 14:00:00+00:00
+  sent_on: null
+event_id: HtqPZA0K
+event_start_at: 2024-07-20 14:00:00+00:00
+status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
+- pending

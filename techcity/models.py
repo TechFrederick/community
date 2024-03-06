@@ -153,3 +153,31 @@ class EventListFilterOptions(BaseModel):
     from_datetime: datetime | None = None
     to_datetime: datetime | None = None
     group_slug: str | None = None
+
+
+class Broadcast(BaseModel):
+    """A broadcast to announcement channels"""
+
+    scheduled_for: datetime
+    sent_on: datetime | None = None
+
+
+class BroadcastScheduleStatus(str, enum.Enum):
+    """The status of a broadcast schedule
+
+    The schedule is done when all the broadcasts have been sent.
+    """
+
+    pending = "pending"
+    done = "done"
+
+
+class BroadcastSchedule(BaseModel):
+    """A schedule of broadcasts to announce"""
+
+    event_id: str
+    status: BroadcastScheduleStatus = BroadcastScheduleStatus.pending
+    # The Event.start_at is kept on the schedule to be able to detect
+    # if an event's schedule time is moved from when the schedule is created.
+    event_start_at: datetime
+    broadcasts: list[Broadcast]

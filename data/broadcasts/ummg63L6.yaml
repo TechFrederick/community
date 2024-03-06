@@ -1,0 +1,11 @@
+broadcasts:
+- scheduled_for: 2024-08-03 14:00:00+00:00
+  sent_on: null
+- scheduled_for: 2024-08-10 14:00:00+00:00
+  sent_on: null
+- scheduled_for: 2024-08-16 14:00:00+00:00
+  sent_on: null
+event_id: ummg63L6
+event_start_at: 2024-08-17 14:00:00+00:00
+status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
+- pending

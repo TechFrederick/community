@@ -1,0 +1,5 @@
+broadcasts: []
+event_id: lIvIL63q
+event_start_at: 2024-03-05 05:00:00+00:00
+status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
+- pending
