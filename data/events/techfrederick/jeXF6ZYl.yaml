@@ -1,0 +1,15 @@
+description: ''
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-05-15 21:00:00+00:00
+extensions: null
+group_slug: techfrederick
+id: jeXF6ZYl
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://techfrederick.org/event/introduction-to-sql/
+name: Introduction to SQL
+start_at: 2024-05-15 13:00:00+00:00
+teaser: null
+venue: null
