@@ -1,0 +1,11 @@
+broadcasts:
+- scheduled_for: 2025-02-22 15:00:00+00:00
+  sent_on: null
+- scheduled_for: 2025-03-01 15:00:00+00:00
+  sent_on: null
+- scheduled_for: 2025-03-07 15:00:00+00:00
+  sent_on: null
+event_id: Y29NiBtG
+event_start_at: 2025-03-08 15:00:00+00:00
+status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
+- pending
