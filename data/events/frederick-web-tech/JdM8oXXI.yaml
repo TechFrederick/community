@@ -9,7 +9,7 @@ description: "<p>Do you want to work on technology with other tech people in the
   ll join in.</p> "
 description_type: !!python/object/apply:techcity.models.EventDescriptionType
 - html
-end_at: 2024-03-16 16:00:00+00:00
+end_at: 2024-03-16 18:00:00+00:00
 extensions:
   meetup:
     id: gzdxbtygcfbvb
@@ -17,18 +17,18 @@ group_slug: frederick-web-tech
 id: JdM8oXXI
 joint_with:
 - M3UctGAY
-- S6fFPiuL
-- jSnulklL
+- fz8G8u1V
+- ljrIqpCl
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
 link: https://www.meetup.com/fredwebtech/events/gzdxbtygcfbvb/
 name: Frederick Tech Open Workshop - 3rd Saturday
-start_at: 2024-03-16 14:00:00+00:00
+start_at: 2024-03-16 16:00:00+00:00
 teaser: null
 venue:
-  address: 118 N. Market St.
+  address: 50 Citizen's Way
   city: Frederick
-  lat: 39.41582107543945
-  lon: -77.41043853759766
+  lat: 39.4128532409668
+  lon: -77.4121322631836
   state: MD
-  zip: ''
+  zip: '21701'

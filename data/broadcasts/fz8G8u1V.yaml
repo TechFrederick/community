@@ -1,7 +1,7 @@
 broadcasts:
 - scheduled_for: 2024-03-15 16:00:00+00:00
   sent_on: null
-event_id: JdM8oXXI
+event_id: fz8G8u1V
 event_start_at: 2024-03-16 16:00:00+00:00
 status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
 - pending

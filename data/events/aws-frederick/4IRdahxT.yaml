@@ -1,0 +1,24 @@
+description: '<p>Join us at Rockwell Riverside with our friends from Code and Coffee
+  to talk about tech!</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-03-22 01:00:00+00:00
+extensions:
+  meetup:
+    id: '299696348'
+group_slug: aws-frederick
+id: 4IRdahxT
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://www.meetup.com/awsfrederick/events/299696348/
+name: 'Joint meetup with Code and Coffee at Rockwell Riverside '
+start_at: 2024-03-21 23:00:00+00:00
+teaser: null
+venue:
+  address: 8411 Broadband Drive k
+  city: Frederick
+  lat: 39.44013595581055
+  lon: -77.38105010986328
+  state: MD
+  zip: '21701'

@@ -18,7 +18,10 @@ extensions:
     id: dzjrjtygcfbvb
 group_slug: python-frederick
 id: ljrIqpCl
-joint_with: []
+joint_with:
+- JdM8oXXI
+- M3UctGAY
+- fz8G8u1V
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
 link: https://www.meetup.com/python-frederick/events/dzjrjtygcfbvb/

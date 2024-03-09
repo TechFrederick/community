@@ -24,8 +24,6 @@ extensions:
 group_slug: wordpress-frederick
 id: jSnulklL
 joint_with:
-- JdM8oXXI
-- M3UctGAY
 - S6fFPiuL
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
