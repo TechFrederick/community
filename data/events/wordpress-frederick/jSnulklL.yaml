@@ -27,7 +27,6 @@ joint_with:
 - JdM8oXXI
 - M3UctGAY
 - S6fFPiuL
-- ljrIqpCl
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
 link: https://www.meetup.com/wordpress-frederick/events/ctjjctygcfbvb/

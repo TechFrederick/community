@@ -19,7 +19,6 @@ joint_with:
 - JdM8oXXI
 - S6fFPiuL
 - jSnulklL
-- ljrIqpCl
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
 link: https://www.meetup.com/frederickopensource/events/jzdxbtygcfbvb/
