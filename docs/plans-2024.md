@@ -39,14 +39,15 @@ Re-engage Game Dev? Can they get going as a regular group?
 | March | 1st Tuesday | 3/5 | FOS | Rescheduled to April |
 | March | 2nd Wednesday | 3/13 | Python Frederick | [event](https://www.meetup.com/python-frederick/events/298531432/) |
 | March | 2nd Saturday | 3/9 | WordPress Frederick | Event cancelled |
-| March | 3rd Thursday | 3/21 | AWS Frederick | TBD |
-| March | 3rd Saturday | 3/16 | Open Workshop | [event](https://www.meetup.com/python-frederick/events/298841176/) |
-| March | 4th Wednesday | 3/27 | WebTech | TBD |
+| March | 3rd Thursday | 3/21 | AWS Frederick | TBD (Joint social with Code & Coffee at Rockwell Brewery, Riverside @ 7) |
+| March | 3rd Saturday | 3/16 | Open Workshop | [event](https://www.meetup.com/python-frederick/events/298841176/) Frederick Social, needs update |
+| March | 4th Wednesday | 3/27 | WebTech | TBD, Social dinner (ping Andrew) |
 | March | 4th Sunday | 3/24 | Code and Coffee | [event](https://www.meetup.com/frederick-code-and-coffee/events/299259228/) |
-| April | 1st Tuesday | 4/2 | FOS | [event](https://www.meetup.com/frederickopensource/events/299259520/) |
-| April | 2nd Wednesday | 4/10 | Python Frederick | TBD |
+| April | 1st Tuesday | 4/2 | FOS | [event](https://www.meetup.com/frederickopensource/events/299259520/) (Cowork) |
+| April | 2nd Wednesday | 4/10 | Python Frederick | TBD (Ricky to plan) |
 | April | 2nd Saturday | 4/13 | WordPress Frederick | [event](https://www.meetup.com/wordpress-frederick/events/dkhzgtygcgbrb/) |
-| April | 3rd Thursday | 4/18 | AWS Frederick | TBD |
-| April | 3rd Saturday | 4/20 | Open Workshop | [event](https://www.meetup.com/python-frederick/events/dzjrjtygcgbbc/) |
+| April | 3rd Thursday | 4/18 | AWS Frederick | TBD (Where is AWS now? Patrick) |
+| April | 3rd Saturday | 4/20 | Open Workshop | [event](https://www.meetup.com/python-frederick/events/dzjrjtygcgbbc/) (should be at FITCI, need to confirm) |
 | April | 4th Wednesday | 4/24 | WebTech | TBD |
 | April | 4th Sunday | 4/28 | Code and Coffee | TBD |
+| May | 1st Tuesday | 5/7 | FOS | TBD (a presentation from Riley?) |
