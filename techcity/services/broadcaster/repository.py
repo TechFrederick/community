@@ -20,7 +20,9 @@ class BroadcastRepository:
         """Scan the data directory to load the schedules in memory."""
         for schedule_filename in sorted(self.broadcasts_path.glob("*")):
             with open(schedule_filename) as f:
-                schedule = BroadcastSchedule(**yaml.load(f, Loader=yaml.Loader))  # noqa: S506
+                schedule = BroadcastSchedule(
+                    **yaml.load(f, Loader=yaml.Loader)  # noqa: S506
+                )
             self.schedules_by_id[schedule.event_id] = schedule
 
     def create(self, schedule: BroadcastSchedule) -> BroadcastSchedule:
@@ -30,3 +32,10 @@ class BroadcastRepository:
         with open(outpath, "w") as f:
             f.write(yaml.dump(schedule_dict, sort_keys=True))
         return schedule
+
+    def get(self, event_id: str) -> BroadcastSchedule | None:
+        """Get a broadcast schedule.
+
+        The event ID serves as the primary key.
+        """
+        return self.schedules_by_id.get(event_id)
