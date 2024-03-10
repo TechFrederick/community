@@ -8,7 +8,8 @@ extensions:
     id: '299696348'
 group_slug: aws-frederick
 id: 4IRdahxT
-joint_with: []
+joint_with:
+- 5MRj8MvC
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
 link: https://www.meetup.com/awsfrederick/events/299696348/
