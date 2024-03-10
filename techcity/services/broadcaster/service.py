@@ -6,6 +6,7 @@ from datetime import timedelta
 from techcity.events import EventPublished
 from techcity.models import Broadcast, BroadcastSchedule, Event
 from techcity.service import Service
+from techcity.services.broadcaster.channel import Channel
 
 from .repository import BroadcastRepository
 
@@ -15,11 +16,20 @@ class Broadcaster(Service):
 
     consumes = [EventPublished]
 
-    def __init__(self, repo: BroadcastRepository | None = None) -> None:
+    def __init__(
+        self,
+        repo: BroadcastRepository | None = None,
+        channels: list[Channel] | None = None,
+    ) -> None:
         if repo is None:
             self.repo = BroadcastRepository()
         else:
             self.repo = repo
+
+        if channels is None:
+            self.channels = []
+        else:
+            self.channels = channels
 
     def dispatch(self, event) -> None:
         match event:

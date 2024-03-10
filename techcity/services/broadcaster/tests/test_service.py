@@ -1,9 +1,11 @@
 import datetime
 from unittest import mock
 
+import pytest
 import time_machine
 
-from techcity.events import EventPublished
+from techcity.events import BroadcastTriggered, EventPublished
+from techcity.services.broadcaster.channels.memory import MemoryChannel
 from techcity.services.broadcaster.service import Broadcaster
 from techcity.testing.factories import BroadScheduleFactory, EventFactory
 
@@ -48,3 +50,19 @@ def test_update_event_changed():
     service.dispatch(event_published)
 
     assert repo.create.called
+
+
+@pytest.mark.xfail
+def test_broadcasts_event():
+    """A pending broadcast is sent on a channel."""
+    # TODO: set up an event and broadcast schedule with an event that needs
+    # to broadcast.
+    repo = mock.Mock()
+    channel = MemoryChannel()
+    service = Broadcaster(repo, channels=[channel])
+    broadcast_triggered = BroadcastTriggered()
+
+    service.dispatch(broadcast_triggered)
+
+    assert len(channel.events_sent) == 1
+    # TODO: assert that it's the event that we expect.
