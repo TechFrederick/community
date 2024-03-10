@@ -22,3 +22,13 @@ techcity build
 
 The `build` command loads data from the storage directory
 and renders the data into output HTML pages using the techcity templates.
+
+## broadcast
+
+```bash
+techcity broadcast
+```
+
+The `broadcast` command loads broadcast schedules,
+scans for pending broadcast messages,
+and sends out any broadcasts to channels if any message is due.

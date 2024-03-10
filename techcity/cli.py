@@ -3,6 +3,7 @@ from rich import print
 
 from .configuration import ConfigError, load_config
 from .pubsub import PubSub
+from .services.broadcaster.commands import broadcast
 from .services.broadcaster.service import Broadcaster
 from .services.builder.commands import build
 from .services.builder.service import Builder
@@ -53,5 +54,6 @@ app = typer.Typer(
     context_settings={"help_option_names": ["-h", "--help"]},
     callback=initialize,
 )
+app.command()(broadcast)
 app.command()(build)
 app.command()(fetch)

@@ -5,6 +5,10 @@ from techcity.models import Event
 # Commands
 
 
+class BroadcastTriggered(BaseModel):
+    """An event emitted when an operator requests a broadcast"""
+
+
 class BuildTriggered(BaseModel):
     """An event emitted when an operator requests a build"""
 

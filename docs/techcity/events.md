@@ -4,6 +4,16 @@ This document lists the public events that services in the system may react to.
 
 ## Command Events
 
+### `BroadcastTriggered`
+
+This event is emitted when an operator requests a broadcast for any event
+that has scheduled broadcast messages that are pending.
+
+### `BuildTriggered`
+
+This event is emitted when an operator requests a build
+of the web user interface content.
+
 ### `FetchTriggered`
 
 This event is emitted when an operator requests a fetch of information
