@@ -3,7 +3,7 @@ from __future__ import annotations
 import datetime
 from datetime import timedelta
 
-from techcity.events import EventPublished
+from techcity.events import BroadcastTriggered, EventPublished
 from techcity.models import Broadcast, BroadcastSchedule, Event
 from techcity.service import Service
 from techcity.services.broadcaster.channel import Channel
@@ -33,8 +33,14 @@ class Broadcaster(Service):
 
     def dispatch(self, event) -> None:
         match event:
+            case BroadcastTriggered():
+                self._broadcast()
             case EventPublished():
                 self._schedule(event.event)
+
+    def _broadcast(self):
+        """Broadcast any pending and due broadcasts to the channels."""
+        # TODO: implement this.
 
     def _schedule(self, event: Event) -> None:
         """Set an event's broadcast schedule."""

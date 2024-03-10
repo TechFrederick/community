@@ -181,3 +181,9 @@ class BroadcastSchedule(BaseModel):
     # if an event's schedule time is moved from when the schedule is created.
     event_start_at: datetime
     broadcasts: list[Broadcast]
+
+
+class BroadcastScheduleListFilterOptions(BaseModel):
+    """Options to use as filters when listing broadcast schedules"""
+
+    status: BroadcastScheduleStatus | None = None
