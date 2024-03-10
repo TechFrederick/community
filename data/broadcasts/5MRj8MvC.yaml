@@ -1,0 +1,9 @@
+broadcasts:
+- scheduled_for: 2024-03-14 23:00:00+00:00
+  sent_on: null
+- scheduled_for: 2024-03-20 23:00:00+00:00
+  sent_on: null
+event_id: 5MRj8MvC
+event_start_at: 2024-03-21 23:00:00+00:00
+status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
+- pending
