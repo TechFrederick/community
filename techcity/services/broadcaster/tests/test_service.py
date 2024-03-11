@@ -1,10 +1,10 @@
 import datetime
 from unittest import mock
 
-import pytest
 import time_machine
 
 from techcity.events import BroadcastTriggered, EventPublished
+from techcity.models import Broadcast, BroadcastScheduleStatus
 from techcity.services.broadcaster.channels.memory import MemoryChannel
 from techcity.services.broadcaster.service import Broadcaster
 from techcity.services.events.gateway import EventsGateway
@@ -56,13 +56,33 @@ def test_update_event_changed():
     assert repo.create.called
 
 
-@pytest.mark.xfail
+@time_machine.travel(datetime.datetime(2024, 3, 6, tzinfo=datetime.UTC))
 def test_broadcasts_event():
     """A pending broadcast is sent on a channel."""
-    events_gateway = EventsGateway()
-    # TODO: set up an event and broadcast schedule with an event that needs
-    # to broadcast.
+    events_gateway = mock.Mock()
     repo = mock.Mock()
+    start_at = datetime.datetime(2024, 3, 9, 21, tzinfo=datetime.UTC)
+    event = EventFactory.build(start_at=start_at)
+    sent_broadcast = Broadcast(
+        scheduled_for=datetime.datetime(2024, 3, 2, 21, tzinfo=datetime.UTC),
+        sent_on=datetime.datetime(2024, 3, 2, 21, tzinfo=datetime.UTC),
+    )
+    broadcast = Broadcast(
+        scheduled_for=datetime.datetime(2024, 3, 5, 21, tzinfo=datetime.UTC),
+        sent_on=None,
+    )
+    future_broadcast = Broadcast(
+        scheduled_for=datetime.datetime(2024, 3, 8, 21, tzinfo=datetime.UTC),
+        sent_on=None,
+    )
+    schedule = BroadScheduleFactory.build(
+        event_id=event.id,
+        event_start_at=start_at,
+        status=BroadcastScheduleStatus.pending,
+        broadcasts=[sent_broadcast, broadcast, future_broadcast],
+    )
+    repo.list.return_value = [schedule]
+    events_gateway.get.return_value = event
     channel = MemoryChannel()
     service = Broadcaster(events_gateway, repo, channels=[channel])
     broadcast_triggered = BroadcastTriggered()
@@ -70,4 +90,37 @@ def test_broadcasts_event():
     service.dispatch(broadcast_triggered)
 
     assert len(channel.events_sent) == 1
-    # TODO: assert that it's the event that we expect.
+    assert channel.events_sent[0] == event
+
+
+@time_machine.travel(datetime.datetime(2024, 3, 6, tzinfo=datetime.UTC))
+def test_schedule_done():
+    """A schedule with all sent broadcasts is set to done."""
+    events_gateway = mock.Mock()
+    repo = mock.Mock()
+    start_at = datetime.datetime(2024, 3, 9, 21, tzinfo=datetime.UTC)
+    event = EventFactory.build(start_at=start_at)
+    sent_broadcast = Broadcast(
+        scheduled_for=datetime.datetime(2024, 3, 2, 21, tzinfo=datetime.UTC),
+        sent_on=datetime.datetime(2024, 3, 2, 21, tzinfo=datetime.UTC),
+    )
+    broadcast = Broadcast(
+        scheduled_for=datetime.datetime(2024, 3, 5, 21, tzinfo=datetime.UTC),
+        sent_on=None,
+    )
+    schedule = BroadScheduleFactory.build(
+        event_id=event.id,
+        event_start_at=start_at,
+        status=BroadcastScheduleStatus.pending,
+        broadcasts=[sent_broadcast, broadcast],
+    )
+    repo.list.return_value = [schedule]
+    events_gateway.get.return_value = event
+    channel = MemoryChannel()
+    service = Broadcaster(events_gateway, repo, channels=[channel])
+    broadcast_triggered = BroadcastTriggered()
+
+    service.dispatch(broadcast_triggered)
+
+    assert schedule.status == BroadcastScheduleStatus.done
+    repo.update.assert_called_once_with(schedule)

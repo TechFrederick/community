@@ -59,3 +59,17 @@ def test_list_status(tmp_path):
     )
 
     assert list(schedules) == [pending_schedule]
+
+
+def test_update_data(tmp_path):
+    """A broadcast schedule is updated to disk and updates the index."""
+    repo = BroadcastRepository(tmp_path)
+    schedule = BroadScheduleFactory.build(status=BroadcastScheduleStatus.pending)
+    repo.create(schedule)
+    schedule.status = BroadcastScheduleStatus.done
+
+    repo.update(schedule)
+
+    updated_schedule = repo.get(schedule.event_id)
+    assert updated_schedule is not None
+    assert updated_schedule.status == BroadcastScheduleStatus.done

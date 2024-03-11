@@ -28,6 +28,9 @@ class BroadcastRepository:
 
     def create(self, schedule: BroadcastSchedule) -> BroadcastSchedule:
         """Persist a broadcast schedule."""
+        return self._save(schedule)
+
+    def _save(self, schedule: BroadcastSchedule) -> BroadcastSchedule:
         schedule_dict = schedule.model_dump()
         outpath = self.broadcasts_path / f"{schedule.event_id}.yaml"
         with open(outpath, "w") as f:
@@ -54,3 +57,11 @@ class BroadcastRepository:
                 if schedule.status == options.status
             ]
         return self.schedules_by_id.values()
+
+    def update(self, schedule: BroadcastSchedule) -> BroadcastSchedule:
+        """Update a broadcast schedule.
+
+        This has the same implementation as `create`, but is kept as a separate
+        method in case needs diverge.
+        """
+        return self._save(schedule)

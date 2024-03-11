@@ -67,7 +67,6 @@ class Broadcaster(Service):
         self, schedule: BroadcastSchedule, now: datetime.datetime
     ) -> None:
         """Scan the schedule for any pending broadcasts and take action."""
-        # TODO: all this behavior is untested.
         changed = False
 
         for broadcast in schedule.broadcasts:
@@ -93,8 +92,7 @@ class Broadcaster(Service):
             changed = True
 
         if changed:
-            pass
-            # TODO: Repo update.
+            self.repo.update(schedule)
 
     def _send_broadcast(self, event: Event) -> None:
         """Send the event broadcast to all the channels."""
