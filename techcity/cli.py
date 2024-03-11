@@ -33,7 +33,7 @@ def initialize(ctx: typer.Context):
     events_service = EventsService()
     groups_service = GroupsService()
     services = [
-        Broadcaster(),
+        Broadcaster(events_gateway),
         Builder(events_gateway, groups_gateway),
         events_service,
         Fetcher(pubsub, groups_gateway),

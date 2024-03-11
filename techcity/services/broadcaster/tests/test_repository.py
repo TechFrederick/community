@@ -12,7 +12,7 @@ def test_ensure_broadcasts_dir(tmp_path):
 
 
 def test_create_stores_data(tmp_path):
-    """A broadcast schedule is persisted to disk and update the index."""
+    """A broadcast schedule is persisted to disk and updates the index."""
     repo = BroadcastRepository(tmp_path)
     schedule = BroadScheduleFactory.build()
 

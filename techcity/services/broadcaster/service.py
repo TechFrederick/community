@@ -13,6 +13,7 @@ from techcity.models import (
 )
 from techcity.service import Service
 from techcity.services.broadcaster.channel import Channel
+from techcity.services.events.gateway import EventsGateway
 
 from .channels.console import ConsoleChannel
 from .repository import BroadcastRepository
@@ -25,9 +26,12 @@ class Broadcaster(Service):
 
     def __init__(
         self,
+        events_gateway: EventsGateway,
         repo: BroadcastRepository | None = None,
         channels: list[Channel] | None = None,
     ) -> None:
+        self.events_gateway = events_gateway
+
         if repo is None:
             self.repo = BroadcastRepository()
         else:
@@ -70,16 +74,16 @@ class Broadcaster(Service):
             if broadcast.scheduled_for > now or broadcast.sent_on is not None:
                 continue
 
-            print(f"Would broadcast {schedule.event_id}")
             # For now, broadcasting is going to punt on complex error handling.
             # This code optimistically assumes that all channel sending succeeds.
             # Eventually, we'll want to answer the question "Is a broadcast
             # successful if one of the channels fails?," but that can be solved
             # in the future.
 
-            # TODO: look up event, this needs an event gateway that is extended
-            # to get events.
-            # self._send_broadcast(event)
+            event = self.events_gateway.get(schedule.event_id)
+            if event:
+                self._send_broadcast(event)
+
             broadcast.sent_on = now
             changed = True
 

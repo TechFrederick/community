@@ -3,16 +3,20 @@ from __future__ import annotations
 from collections import defaultdict
 from collections.abc import Iterable
 from datetime import datetime
+from pathlib import Path
 
 import yaml
 
-from techcity.constants import data_path
+from techcity import constants
 from techcity.models import Event, EventListFilterOptions
 
 
 class EventRepository:
-    def __init__(self):
+    def __init__(self, data_path: Path | None = None) -> None:
+        if data_path is None:
+            data_path = constants.data_path
         self.events_path = data_path / "events"
+        self.events_path.mkdir(exist_ok=True)
 
         # Indices
         self.events_by_id: dict[str, Event] = {}
@@ -97,6 +101,10 @@ class EventRepository:
         event_dict = event.model_dump()
         with open(outpath / f"{event.id}.yaml", "w") as f:
             f.write(yaml.dump(event_dict, sort_keys=True))
+
+    def get(self, event_id: str) -> Event | None:
+        """Get an event."""
+        return self.events_by_id.get(event_id)
 
     def list(self, options: EventListFilterOptions) -> Iterable[Event]:
         """Get a list of events."""
