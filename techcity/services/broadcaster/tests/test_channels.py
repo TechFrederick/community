@@ -1,6 +1,7 @@
 import pytest
 
 from techcity.services.broadcaster.channel import Channel
+from techcity.services.broadcaster.channels.console import ConsoleChannel
 from techcity.services.broadcaster.channels.memory import MemoryChannel
 from techcity.testing.factories import EventFactory
 
@@ -15,7 +16,7 @@ def test_channel_interface():
 
 
 def test_memory_channel():
-    """The in-memory channel captures an sent events."""
+    """The in-memory channel captures any sent events."""
     memory_channel = MemoryChannel()
     event = EventFactory.build()
 
@@ -23,3 +24,13 @@ def test_memory_channel():
 
     assert sent
     assert memory_channel.events_sent[0] == event
+
+
+def test_console_channel():
+    """The console channel successfully 'sends' events."""
+    console_channel = ConsoleChannel()
+    event = EventFactory.build()
+
+    sent = console_channel.send(event)
+
+    assert sent

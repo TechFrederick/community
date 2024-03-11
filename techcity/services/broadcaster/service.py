@@ -4,17 +4,24 @@ import datetime
 from datetime import timedelta
 
 from techcity.events import BroadcastTriggered, EventPublished
-from techcity.models import Broadcast, BroadcastSchedule, Event
+from techcity.models import (
+    Broadcast,
+    BroadcastSchedule,
+    BroadcastScheduleListFilterOptions,
+    BroadcastScheduleStatus,
+    Event,
+)
 from techcity.service import Service
 from techcity.services.broadcaster.channel import Channel
 
+from .channels.console import ConsoleChannel
 from .repository import BroadcastRepository
 
 
 class Broadcaster(Service):
     """A service for broadcasting to social channels like Discord"""
 
-    consumes = [EventPublished]
+    consumes = [BroadcastTriggered, EventPublished]
 
     def __init__(
         self,
@@ -27,7 +34,11 @@ class Broadcaster(Service):
             self.repo = repo
 
         if channels is None:
-            self.channels = []
+            # FIXME: The channels used should be driven by the configuration file.
+            # I'm not solving that in this branch. Instead, we'll hardcode to use
+            # the console channel to get something working.
+            # self.channels = []
+            self.channels = [ConsoleChannel()]
         else:
             self.channels = channels
 
@@ -40,7 +51,51 @@ class Broadcaster(Service):
 
     def _broadcast(self):
         """Broadcast any pending and due broadcasts to the channels."""
-        # TODO: implement this.
+        now = datetime.datetime.now(tz=datetime.UTC)
+        options = BroadcastScheduleListFilterOptions(
+            status=BroadcastScheduleStatus.pending
+        )
+        schedules = self.repo.list(options)
+        for schedule in schedules:
+            self._scan_schedule(schedule, now)
+
+    def _scan_schedule(
+        self, schedule: BroadcastSchedule, now: datetime.datetime
+    ) -> None:
+        """Scan the schedule for any pending broadcasts and take action."""
+        # TODO: all this behavior is untested.
+        changed = False
+
+        for broadcast in schedule.broadcasts:
+            if broadcast.scheduled_for > now or broadcast.sent_on is not None:
+                continue
+
+            print(f"Would broadcast {schedule.event_id}")
+            # For now, broadcasting is going to punt on complex error handling.
+            # This code optimistically assumes that all channel sending succeeds.
+            # Eventually, we'll want to answer the question "Is a broadcast
+            # successful if one of the channels fails?," but that can be solved
+            # in the future.
+
+            # TODO: look up event, this needs an event gateway that is extended
+            # to get events.
+            # self._send_broadcast(event)
+            broadcast.sent_on = now
+            changed = True
+
+        # Finalize a schedule if all broadcasts are done.
+        if all([broadcast.sent_on is not None for broadcast in schedule.broadcasts]):
+            schedule.status = BroadcastScheduleStatus.done
+            changed = True
+
+        if changed:
+            pass
+            # TODO: Repo update.
+
+    def _send_broadcast(self, event: Event) -> None:
+        """Send the event broadcast to all the channels."""
+        for channel in self.channels:
+            channel.send(event)
 
     def _schedule(self, event: Event) -> None:
         """Set an event's broadcast schedule."""
