@@ -18,6 +18,11 @@ class EventsGateway:
         """Connect to the events service."""
         self._service = service
 
+    def get(self, event_id) -> Event | None:
+        if self._service is None:
+            return None
+        return self._service.get(event_id)
+
     def all(self) -> list[Event]:
         if self._service is None:
             return []

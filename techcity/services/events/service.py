@@ -23,6 +23,9 @@ class EventsService(Service):
             case EventPublished():
                 self.repo.create(event.event.model_dump())
 
+    def get(self, event_id: str) -> Event | None:
+        return self.repo.get(event_id)
+
     def list(self, options: EventListFilterOptions) -> list[Event]:
         """Get a list of events."""
         return list(self.repo.list(options))

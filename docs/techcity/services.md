@@ -27,6 +27,27 @@ on this page.
 As the system grows,
 we may wish to split the catalog up.
 
+### Broadcaster
+
+The broadcaster service has the job of sending out information about events
+to configured channels.
+The goal of this service is to raise awareness of events by providing periodic
+reminders to people on a set schedule.
+These regular notifications can be sent to various channels of interest
+like Discord or X.
+
+The broadcaster service builds broadcast schedules based on event publishing events.
+The broadcast schedules are flushed whenever a broadcast trigger is invoked
+by the `techcity broadcast` command.
+When the trigger occurs,
+the broadcaster scans for pending schedules and send events to a channel
+if a broadcast's scheduled time is in the past.
+This command is designed to be incorporated into a cron schedule
+to send out broadcast messages reguarly.
+
+To learn about the available channels and their configuration,
+see the [Channels documentation](channels.md).
+
 ### Builder
 
 The builder service builds the content of the site.
