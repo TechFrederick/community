@@ -1,6 +1,6 @@
 broadcasts:
 - scheduled_for: 2024-03-14 12:00:00+00:00
-  sent_on: null
+  sent_on: 2024-03-14 13:18:19.072045+00:00
 - scheduled_for: 2024-03-20 12:00:00+00:00
   sent_on: null
 event_id: DPdQ4ELI
