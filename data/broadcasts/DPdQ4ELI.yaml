@@ -2,8 +2,8 @@ broadcasts:
 - scheduled_for: 2024-03-14 12:00:00+00:00
   sent_on: 2024-03-14 13:18:19.072045+00:00
 - scheduled_for: 2024-03-20 12:00:00+00:00
-  sent_on: null
+  sent_on: 2024-03-20 13:20:30.144142+00:00
 event_id: DPdQ4ELI
 event_start_at: 2024-03-21 12:00:00+00:00
 status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
-- pending
+- done
