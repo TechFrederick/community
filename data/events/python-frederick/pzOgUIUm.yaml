@@ -1,5 +1,6 @@
-description: '<p>We''re still working on the topic, but you can pencil in the date
-  for this next Python Frederick presentation.</p> <p>Also, we''re going to have another
+description: '<p>Is your data locked up in portable document format (PDFs)? In this
+  talk we''re going to explore methods to extract text and other data from PDFs using
+  readily-available, open-source Python tools.</p> <p>Also, we''re going to have another
   "after hour." After the presentation is over, anyone who wants to stay and do a
   bit of coding or chatting is welcome to hang out. Think of it like a mini open workshop.</p> '
 description_type: !!python/object/apply:techcity.models.EventDescriptionType
@@ -14,7 +15,7 @@ joint_with: []
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
 link: https://www.meetup.com/python-frederick/events/298531455/
-name: Topic Pending (2nd Wed Talk)
+name: PDF Text Extraction (2nd Wed Talk)
 start_at: 2024-04-10 23:00:00+00:00
 teaser: null
 venue:
