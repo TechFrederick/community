@@ -1,0 +1,24 @@
+description: '<p>Come meet up for dinner and drinks at Cugino Forno in Frederick and
+  chat about Web tech!</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-04-04 01:00:00+00:00
+extensions:
+  meetup:
+    id: '299999360'
+group_slug: frederick-web-tech
+id: ozc2vgPo
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://www.meetup.com/fredwebtech/events/299999360/
+name: Web Tech Social
+start_at: 2024-04-03 23:00:00+00:00
+teaser: null
+venue:
+  address: 1705 N Market St Suite 100
+  city: Frederick
+  lat: 39.43614196777344
+  lon: -77.40306854248047
+  state: MD
+  zip: '21701'
