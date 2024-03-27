@@ -2,7 +2,7 @@ broadcasts:
 - scheduled_for: 2024-03-19 23:00:00+00:00
   sent_on: 2024-03-20 13:20:30.144142+00:00
 - scheduled_for: 2024-03-26 23:00:00+00:00
-  sent_on: null
+  sent_on: 2024-03-27 13:17:56.498505+00:00
 - scheduled_for: 2024-04-01 23:00:00+00:00
   sent_on: null
 event_id: aZzDKZh9
