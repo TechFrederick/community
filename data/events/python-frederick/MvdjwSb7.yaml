@@ -1,24 +1,24 @@
-description: '<p>\*The previous talk, PDF Text Extraction, has been postponed until
-  the August meeting date due to scheduling issues with the presenter.\*</p> <p>In
-  this talk we''ll walk through the basics of Scrapy, a web crawling framework, to
-  extract data from publicly accessible internet sources.</p> <p>Also, we''re going
+description: '<p>\*Original Meeting date was April 10 but moved due to scheduling
+  with the speaker.\*</p> <p>Is your data locked up in portable document format (PDFs)?
+  In this talk we''re going to explore methods to extract text and other data from
+  PDFs using readily-available, open-source Python tools.</p> <p>Also, we''re going
   to have another "after hour." After the presentation is over, anyone who wants to
   stay and do a bit of coding or chatting is welcome to hang out. Think of it like
   a mini open workshop.</p> '
 description_type: !!python/object/apply:techcity.models.EventDescriptionType
 - html
-end_at: 2024-04-11 01:00:00+00:00
+end_at: 2024-08-15 01:00:00+00:00
 extensions:
   meetup:
-    id: '298531455'
+    id: '300290614'
 group_slug: python-frederick
-id: pzOgUIUm
+id: MvdjwSb7
 joint_with: []
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
-link: https://www.meetup.com/python-frederick/events/298531455/
-name: '*CHANGED* Intro to Scrapy (2nd Wed Talk)'
-start_at: 2024-04-10 23:00:00+00:00
+link: https://www.meetup.com/python-frederick/events/300290614/
+name: PDF Text Extraction (2nd Wed Talk)
+start_at: 2024-08-14 23:00:00+00:00
 teaser: null
 venue:
   address: 122 E Patrick St
