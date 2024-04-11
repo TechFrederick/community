@@ -2,7 +2,7 @@ broadcasts:
 - scheduled_for: 2024-04-04 13:00:00+00:00
   sent_on: 2024-04-04 13:17:32.945323+00:00
 - scheduled_for: 2024-04-11 13:00:00+00:00
-  sent_on: null
+  sent_on: 2024-04-11 13:18:04.449759+00:00
 - scheduled_for: 2024-04-17 13:00:00+00:00
   sent_on: null
 event_id: kas5LWbq

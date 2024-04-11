@@ -1,0 +1,27 @@
+description: '<p>**Address: 5100 Pegasus Ct., Frederick, MD 21704 (Buckeystown Pike)**</p>
+  <p>We''re going to get together, share a meal, and talk some Python (and whatever
+  other topics you''re interested in).</p> <p>Come on out for some fun and food. This
+  is a great chance to chat about Python with other people interested in the language.</p>
+  <p>Next month we''ll have another Python presentation in store.</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-05-09 01:00:00+00:00
+extensions:
+  meetup:
+    id: '300342725'
+group_slug: python-frederick
+id: JyKgYGYo
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://www.meetup.com/python-frederick/events/300342725/
+name: Chili's (2nd Wed Dinner; Address in Description)
+start_at: 2024-05-08 23:00:00+00:00
+teaser: null
+venue:
+  address: 5100 Pegasus Ct
+  city: Frederick
+  lat: 39.37207794189453
+  lon: -77.41021728515625
+  state: MD
+  zip: '21704'
