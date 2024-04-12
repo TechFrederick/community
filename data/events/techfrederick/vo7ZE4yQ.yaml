@@ -1,0 +1,28 @@
+description: '<h2><a href="https://techfrederick.org/networking/" target="_blank"
+  rel="noopener"><img loading="lazy" decoding="async" class="wp-image-11884 alignleft"
+  src="https://techfrederick.org/wp-content/uploads/2024/04/maynetworking-1.jpg" alt=""
+  width="500" height="419" srcset="https://techfrederick.org/wp-content/uploads/2024/04/maynetworking-1.jpg
+  940w, https://techfrederick.org/wp-content/uploads/2024/04/maynetworking-1-300x251.jpg
+  300w, https://techfrederick.org/wp-content/uploads/2024/04/maynetworking-1-768x644.jpg
+  768w, https://techfrederick.org/wp-content/uploads/2024/04/maynetworking-1-600x503.jpg
+  600w" sizes="(max-width: 500px) 100vw, 500px" />REGISTER HERE</a></h2>'
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-05-08 23:00:00+00:00
+extensions: null
+group_slug: techfrederick
+id: vo7ZE4yQ
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://techfrederick.org/event/quarterly-networking-event-7/
+name: Quarterly Networking Event
+start_at: 2024-05-08 21:00:00+00:00
+teaser: null
+venue:
+  address: 340 East Patrick, Suite 300.
+  city: Frederick
+  lat: null
+  lon: null
+  state: ''
+  zip: '21701'
