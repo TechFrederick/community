@@ -2,7 +2,7 @@ broadcasts:
 - scheduled_for: 2024-04-06 14:00:00+00:00
   sent_on: 2024-04-07 13:18:43.033117+00:00
 - scheduled_for: 2024-04-13 14:00:00+00:00
-  sent_on: null
+  sent_on: 2024-04-14 15:02:49.905102+00:00
 - scheduled_for: 2024-04-19 14:00:00+00:00
   sent_on: null
 event_id: lzxbeCue
