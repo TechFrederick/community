@@ -1,4 +1,11 @@
-description: ''
+description: '<h2><img loading="lazy" decoding="async" class="alignleft wp-image-11865"
+  src="https://techfrederick.org/wp-content/uploads/2024/04/Communicator-class-300x251.png"
+  alt="" width="500" height="419" srcset="https://techfrederick.org/wp-content/uploads/2024/04/Communicator-class-300x251.png
+  300w, https://techfrederick.org/wp-content/uploads/2024/04/Communicator-class-768x644.png
+  768w, https://techfrederick.org/wp-content/uploads/2024/04/Communicator-class-600x503.png
+  600w, https://techfrederick.org/wp-content/uploads/2024/04/Communicator-class.png
+  940w" sizes="(max-width: 500px) 100vw, 500px" /><a href="https://www.techfrederick.org/communicate"
+  target="_blank" rel="noopener">Register Here</a></h2>'
 description_type: !!python/object/apply:techcity.models.EventDescriptionType
 - html
 end_at: 2024-05-09 20:30:00+00:00

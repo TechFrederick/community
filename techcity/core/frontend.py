@@ -17,9 +17,15 @@ def tailwindify_html(html: str) -> str:
     """
     # The HTML input is trusted from techcity's own build process.
     # There should be no need for defusedxml.
-    root = ElementTree.fromstring(html)  # noqa: S314
-    tailwindify(root)
-    return ElementTree.tostring(root).decode()
+    try:
+        root = ElementTree.fromstring(html)  # noqa: S314
+        tailwindify(root)
+        return ElementTree.tostring(root).decode()
+    except ElementTree.ParseError:
+        # TODO: This solution is not great. This is needed because the XML parser
+        # is too strict for the HTML that might come in. A better solution would
+        # be to use BeautifulSoup to parser the HTML better.
+        return "<div>No description available.</div>"
 
 
 def tailwindify(root):
