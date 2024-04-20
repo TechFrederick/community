@@ -52,8 +52,8 @@ class Venue(BaseModel):
 
     address: str
     city: str
-    state: str
-    zip: str
+    state: str | None = ""
+    zip: str | None = ""
     lat: float | None = None
     lon: float | None = None
 
