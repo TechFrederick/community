@@ -27,27 +27,33 @@ Re-engage Game Dev? Can they get going as a regular group?
 
 # Execution
 
-| Month | Day in month | Date | Meetup group | Event |
+| Mon | Week/Day  | Date | Group | Event |
 | ---- | ---- | ---- | ---- | ---- |
-| February | 1st Tuesday | 2/6 | FOS | No event |
-| February | 2nd Wednesday | 2/14 | Python Frederick | [event](https://www.meetup.com/python-frederick/events/298531232/) |
-| February | 2nd Saturday | 2/10 | WordPress Frederick | [event](https://www.meetup.com/wordpress-frederick/events/298243014/) |
-| February | 3rd Thursday | 2/15 | AWS Frederick | No event |
-| February | 3rd Saturday | 2/17 | Open Workshop | [event](https://www.meetup.com/python-frederick/events/298841176/) |
-| February | 4th Wednesday | 2/28 | WebTech | [event](https://www.meetup.com/fredwebtech/events/299241180/) |
-| February | 4th Sunday | 2/25 | Code and Coffee | [event](https://www.meetup.com/frederick-code-and-coffee/events/299259197/) |
-| March | 1st Tuesday | 3/5 | FOS | Rescheduled to April |
-| March | 2nd Wednesday | 3/13 | Python Frederick | [event](https://www.meetup.com/python-frederick/events/298531432/) |
-| March | 2nd Saturday | 3/9 | WordPress Frederick | Event cancelled |
-| March | 3rd Thursday | 3/21 | AWS Frederick | TBD (Joint social with Code & Coffee at Rockwell Brewery, Riverside @ 7) |
-| March | 3rd Saturday | 3/16 | Open Workshop | [event](https://www.meetup.com/python-frederick/events/298841176/) Frederick Social, needs update |
-| March | 4th Wednesday | 3/27 | WebTech | TBD, Social dinner (ping Andrew) |
-| March | 4th Sunday | 3/24 | Code and Coffee | [event](https://www.meetup.com/frederick-code-and-coffee/events/299259228/) |
-| April | 1st Tuesday | 4/2 | FOS | [event](https://www.meetup.com/frederickopensource/events/299259520/) (Cowork) |
-| April | 2nd Wednesday | 4/10 | Python Frederick | TBD (Ricky to plan) |
-| April | 2nd Saturday | 4/13 | WordPress Frederick | [event](https://www.meetup.com/wordpress-frederick/events/dkhzgtygcgbrb/) |
-| April | 3rd Thursday | 4/18 | AWS Frederick | TBD (Where is AWS now? Patrick) |
-| April | 3rd Saturday | 4/20 | Open Workshop | [event](https://www.meetup.com/python-frederick/events/dzjrjtygcgbbc/) (should be at FITCI, need to confirm) |
-| April | 4th Wednesday | 4/24 | WebTech | TBD |
-| April | 4th Sunday | 4/28 | Code and Coffee | TBD |
-| May | 1st Tuesday | 5/7 | FOS | TBD (a presentation from Riley?) |
+| Feb | 1st Tues | 2/6 | FOS | No event |
+| Feb | 2nd Wed | 2/14 | Python | [event](https://www.meetup.com/python-frederick/events/298531232/) |
+| Feb | 2nd Sat | 2/10 | WordPress | [event](https://www.meetup.com/wordpress-frederick/events/298243014/) |
+| Feb | 3rd Thu | 2/15 | AWS | No event |
+| Feb | 3rd Sat | 2/17 | Workshop | [event](https://www.meetup.com/python-frederick/events/298841176/) |
+| Feb | 4th Wed | 2/28 | WebTech | [event](https://www.meetup.com/fredwebtech/events/299241180/) |
+| Feb | 4th Sun | 2/25 | C&C | [event](https://www.meetup.com/frederick-code-and-coffee/events/299259197/) |
+| Mar | 1st Tues | 3/5 | FOS | [event](https://www.meetup.com/frederickopensource/events/299259520/) |
+| Mar | 2nd Wed | 3/13 | Python | [event](https://www.meetup.com/python-frederick/events/298531432/) |
+| Mar | 2nd Sat | 3/9 | WordPress | Event cancelled |
+| Mar | 3rd Thu | 3/21 | AWS | [event](https://www.meetup.com/awsfrederick/events/299696348/) |
+| Mar | 3rd Sat | 3/16 | Workshop | [event](https://www.meetup.com/python-frederick/events/298841176/) |
+| Mar | 4th Wed | 3/27 | WebTech | [event](https://www.meetup.com/fredwebtech/events/299999360/) |
+| Mar | 4th Sun | 3/24 | C&C | [event](https://www.meetup.com/frederick-code-and-coffee/events/299259228/) |
+| April | 1st Tues | 4/2 | FOS | [event](https://www.meetup.com/frederickopensource/events/299259520/) |
+| April | 2nd Wed | 4/10 | Python | [event](https://www.meetup.com/python-frederick/events/298531455/) |
+| April | 2nd Sat | 4/13 | WordPress | [event](https://www.meetup.com/wordpress-frederick/events/dkhzgtygcgbrb/) |
+| April | 3rd Thu | 4/18 | AWS | No event |
+| April | 3rd Sat | 4/20 | Workshop | [event](https://www.meetup.com/python-frederick/events/dzjrjtygcgbbc/) |
+| April | 4th Wed | 4/24 | WebTech | [event](https://www.meetup.com/fredwebtech/events/300357609/) |
+| April | 4th Sun | 4/28 | C&C | [event](https://www.meetup.com/frederick-code-and-coffee/events/299694307/) |
+| May | 1st Tues | 5/7 | FOS | TBD (a presentation from Rich) |
+| May | 2nd Wed | 5/8 | Python | [event](https://www.meetup.com/python-frederick/events/300342725/) |
+| May | 2nd Sat | 5/11 | WordPress | [event](https://www.meetup.com/wordpress-frederick/events/dkhzgtygchbpb/) |
+| May | 3rd Thu | 5/16 | AWS | TBD |
+| May | 3rd Sat | 5/18 | Workshop | [event](https://www.meetup.com/python-frederick/events/300498596/) |
+| May | 4th Wed | 5/22 | WebTech | TBD |
+| May | 4th Sun | 5/26 | C&C | TBD |
