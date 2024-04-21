@@ -1,0 +1,23 @@
+description: '<p>More details to come.</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-05-08 01:00:00+00:00
+extensions:
+  meetup:
+    id: '300536434'
+group_slug: frederick-open-source
+id: pscr7rAP
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://www.meetup.com/frederickopensource/events/300536434/
+name: Bootable Containers
+start_at: 2024-05-07 23:00:00+00:00
+teaser: null
+venue:
+  address: 122 E Patrick St
+  city: Frederick
+  lat: 39.41377639770508
+  lon: -77.40791320800781
+  state: MD
+  zip: '21701'
