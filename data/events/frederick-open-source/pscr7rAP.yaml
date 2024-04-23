@@ -1,4 +1,8 @@
-description: '<p>More details to come.</p> '
+description: '<p>Containers have changed the way we build, distribute, and deploy
+  applications. But managing operating systems within private data centers, the public
+  cloud, and the far edge can still be quite cumbersome. Come get hands-on with bootable
+  containers, a new way to build and manage operating system images as easily as container
+  applications.</p> '
 description_type: !!python/object/apply:techcity.models.EventDescriptionType
 - html
 end_at: 2024-05-08 01:00:00+00:00
@@ -11,7 +15,7 @@ joint_with: []
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
 link: https://www.meetup.com/frederickopensource/events/300536434/
-name: Bootable Containers
+name: 'Hands-on with Bootable Containers: Simplify Managing the Operating System'
 start_at: 2024-05-07 23:00:00+00:00
 teaser: null
 venue:
