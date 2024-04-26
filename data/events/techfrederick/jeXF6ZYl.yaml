@@ -1,4 +1,9 @@
-description: ''
+description: '<p><a href="http://www.techfrederick.org/sql" target="_blank" rel="noopener"><img
+  loading="lazy" decoding="async" class="alignleft wp-image-11939 size-medium" src="https://techfrederick.org/wp-content/uploads/2024/04/SQL-300x251.jpg"
+  alt="" width="300" height="251" srcset="https://techfrederick.org/wp-content/uploads/2024/04/SQL-300x251.jpg
+  300w, https://techfrederick.org/wp-content/uploads/2024/04/SQL-768x644.jpg 768w,
+  https://techfrederick.org/wp-content/uploads/2024/04/SQL-600x503.jpg 600w, https://techfrederick.org/wp-content/uploads/2024/04/SQL.jpg
+  940w" sizes="(max-width: 300px) 100vw, 300px" />REGISTER HERE</a></p>'
 description_type: !!python/object/apply:techcity.models.EventDescriptionType
 - html
 end_at: 2024-05-15 21:00:00+00:00
