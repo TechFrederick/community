@@ -23,6 +23,8 @@ to ensure that Python Frederick functions well.
     on `Wednesday - 1 week before event`
     and `Monday before Wednesday event`.
 
+### Welcome message example.
+
 ```
 Hi there!
 
@@ -32,6 +34,24 @@ If you've got any questions for me, please let me know. You can also join the Te
 
 Regards,
 Matt
+Python Frederick organizer
+```
+
+### Event reminder example
+
+Subject: `Reminder: Python Frederick <presentation|dinner> is in <#> days on <MM/DD>`
+
+Body:
+
+```
+Hey, Python Frederick!
+
+Here is your friendly reminder that we have a <very brief event description> on <MM/DD> at 7pm at <location>.
+
+You can RSVP at <event URL>
+
+Looking forward to seeing you!
+<your name>
 Python Frederick organizer
 ```
 
