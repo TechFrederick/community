@@ -2,7 +2,7 @@ broadcasts:
 - scheduled_for: 2024-05-01 13:00:00+00:00
   sent_on: 2024-05-01 13:17:54.481491+00:00
 - scheduled_for: 2024-05-08 13:00:00+00:00
-  sent_on: null
+  sent_on: 2024-05-08 13:20:09.842737+00:00
 - scheduled_for: 2024-05-14 13:00:00+00:00
   sent_on: null
 event_id: jeXF6ZYl
