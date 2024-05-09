@@ -1,0 +1,15 @@
+description: <p>Registration opening soon</p>
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-06-20 21:00:00+00:00
+extensions: null
+group_slug: techfrederick
+id: tdxCfkCj
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://techfrederick.org/event/introduction-to-docker-training/
+name: Introduction to Docker Training
+start_at: 2024-06-20 13:00:00+00:00
+teaser: null
+venue: null
