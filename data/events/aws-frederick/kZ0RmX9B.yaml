@@ -17,4 +17,10 @@ link: https://www.meetup.com/awsfrederick/events/300825933/
 name: 'Beyond SSH: Exploring Modern Alternatives for Secure Instance Connectivity'
 start_at: 2024-05-23 23:00:00+00:00
 teaser: null
-venue: null
+venue:
+  address: 122 E Patrick St
+  city: Frederick
+  lat: 39.41377639770508
+  lon: -77.40791320800781
+  state: MD
+  zip: '21701'

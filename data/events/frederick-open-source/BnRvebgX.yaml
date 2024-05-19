@@ -1,0 +1,26 @@
+description: '<p>We''ll do a high level overview of what 3D printing is, followed
+  by a deeper dive into the most common consumer type (FDM). We will look at how the
+  tech works, the components of a typical printer, material types and properties,
+  and the methods for turning a model file into a printable gcode script.</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-06-05 01:00:00+00:00
+extensions:
+  meetup:
+    id: '301100189'
+group_slug: frederick-open-source
+id: BnRvebgX
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://www.meetup.com/frederickopensource/events/301100189/
+name: "Crafting the Future: A Beginner\u2019s Guide to 3D Printing"
+start_at: 2024-06-04 23:00:00+00:00
+teaser: null
+venue:
+  address: 122 E Patrick St
+  city: Frederick
+  lat: 39.41377639770508
+  lon: -77.40791320800781
+  state: MD
+  zip: '21701'
