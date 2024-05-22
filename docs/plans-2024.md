@@ -50,10 +50,17 @@ Re-engage Game Dev? Can they get going as a regular group?
 | April | 3rd Sat | 4/20 | Workshop | [event](https://www.meetup.com/python-frederick/events/dzjrjtygcgbbc/) |
 | April | 4th Wed | 4/24 | WebTech | [event](https://www.meetup.com/fredwebtech/events/300357609/) |
 | April | 4th Sun | 4/28 | C&C | [event](https://www.meetup.com/frederick-code-and-coffee/events/299694307/) |
-| May | 1st Tues | 5/7 | FOS | TBD (a presentation from Rich) |
-| May | 2nd Wed | 5/8 | Python | [event](https://www.meetup.com/python-frederick/events/300342725/) |
-| May | 2nd Sat | 5/11 | WordPress | [event](https://www.meetup.com/wordpress-frederick/events/dkhzgtygchbpb/) |
-| May | 3rd Thu | 5/16 | AWS | TBD |
-| May | 3rd Sat | 5/18 | Workshop | [event](https://www.meetup.com/python-frederick/events/300498596/) |
-| May | 4th Wed | 5/22 | WebTech | TBD |
-| May | 4th Sun | 5/26 | C&C | TBD |
+| May   | 1st Tues | 5/7  | FOS       | [event](https://www.meetup.com/frederickopensource/events/300536434/)               |
+| May   | 2nd Wed  | 5/8  | Python    | [event](https://www.meetup.com/python-frederick/events/300342725/)                  |
+| May   | 2nd Sat  | 5/11 | WordPress | [event](https://www.meetup.com/wordpress-frederick/events/dkhzgtygchbpb/)           |
+| May   | 3rd Thu  | 5/23 | AWS       | [event](https://www.meetup.com/awsfrederick/events/300825933/)                      |
+| May   | 3rd Sat  | 5/18 | Workshop  | [event](https://www.meetup.com/python-frederick/events/300498596/)                  |
+| May   | 4th Wed  | 5/22 | WebTech   | No event                                                                            |
+| May   | 4th Sun  | 5/26 | C&C       | [event](https://www.meetup.com/frederick-code-and-coffee/events/300699504/)         |
+| June  | 1st Tues | 6/4  | FOS       | [event](https://www.meetup.com/frederickopensource/events/301100189/)               |
+| June  | 2nd Wed  | 6/12 | Python    | [event](https://www.meetup.com/python-frederick/events/298531530/)                  |
+| June  | 2nd Sat  | 6/8  | WordPress | [event](https://www.meetup.com/wordpress-frederick/events/301117016/)               |
+| June  | 3rd Thu  | 6/20 | AWS       | TBD                                                                                 |
+| June  | 3rd Sat  | 6/15 | Workshop  | [event](https://www.meetup.com/python-frederick/events/rvllltygcjbtb/)              |
+| June  | 4th Wed  | 6/26 | WebTech   | TBD                                                                                 |
+| June  | 4th Sun  | 6/22 | C&C       | TBD                                                                                 |
