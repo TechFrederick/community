@@ -1,0 +1,30 @@
+description: "<div class=\"flex flex-grow flex-col max-w-full\">\n<div class=\"min-h-[20px]\
+  \ text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5\
+  \ juice:w-full juice:items-end overflow-x-auto gap-3\" dir=\"auto\" data-message-author-role=\"\
+  assistant\" data-message-id=\"a1302883-2267-4da5-b9c4-b41b252e11d9\">\n<div class=\"\
+  markdown prose w-full break-words dark:prose-invert light\">\n<p>Dust off your flannel\
+  \ shirts and Doc Martens because the Tech Games \u2013 90\u2019s Style countdown\
+  \ has begun! Join us on October 4th in Baker Park, where you&#8217;ll dive into\
+  \ a full day of team building, groove to 90\u2019s hits, and relive the iconic era\
+  \ with outrageously fun games that will transport you back to the unforgettable\
+  \ 90\u2019s.</p>\n</div>\n</div>\n</div>"
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-10-04 22:00:00+00:00
+extensions: null
+group_slug: techfrederick
+id: y7w7guBt
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://techfrederick.org/event/9th-annual-techfrederick-games/
+name: 9th Annual techfrederick Games
+start_at: 2024-10-04 16:00:00+00:00
+teaser: null
+venue:
+  address: 121 N. Bentz Street
+  city: Frederick
+  lat: null
+  lon: null
+  state: ''
+  zip: '21701'
