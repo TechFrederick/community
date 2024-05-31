@@ -82,7 +82,10 @@ class WordPressConnector:
             events = event_data["events"]
             for event in events:
                 venue = None
-                if event["venue"].get("address"):
+                # Weirdly, when venue is empty, it is an empty list.
+                if not isinstance(event["venue"], list) and event["venue"].get(
+                    "address"
+                ):
                     venue = Venue(
                         address=event["venue"]["address"],
                         city=event["venue"]["city"],

@@ -1,0 +1,34 @@
+description: "<p><img loading=\"lazy\" decoding=\"async\" class=\"alignleft wp-image-11080\
+  \ size-medium\" src=\"https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-300x300.png\"\
+  \ alt=\"\" width=\"300\" height=\"300\" srcset=\"https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-300x300.png\
+  \ 300w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-1024x1024.png\
+  \ 1024w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-150x150.png\
+  \ 150w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-768x768.png\
+  \ 768w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-600x600.png\
+  \ 600w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-100x100.png\
+  \ 100w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388.png\
+  \ 1164w\" sizes=\"(max-width: 300px) 100vw, 300px\" />The Techie Awards are designed\
+  \ to celebrate and honor the unsung heroes, the dedicated individuals who quietly\
+  \ drive innovation and success from the trenches. We recognize the invaluable contributions\
+  \ of the everyday workers who keep the tech industry running smoothly and continuously\
+  \ push the boundaries of what\u2019s possible.</p>"
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-12-05 01:00:00+00:00
+extensions: null
+group_slug: techfrederick
+id: dyG3mdOb
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://techfrederick.org/event/the-techie-awards/
+name: The Techie Awards
+start_at: 2024-12-04 22:00:00+00:00
+teaser: null
+venue:
+  address: 340 E Patrick Street Suite A
+  city: Frederick
+  lat: null
+  lon: null
+  state: ''
+  zip: '21701'
