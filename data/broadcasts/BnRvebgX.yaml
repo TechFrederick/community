@@ -2,7 +2,7 @@ broadcasts:
 - scheduled_for: 2024-05-21 23:00:00+00:00
   sent_on: 2024-05-22 04:47:59.845904+00:00
 - scheduled_for: 2024-05-28 23:00:00+00:00
-  sent_on: null
+  sent_on: 2024-05-31 01:36:08.071024+00:00
 - scheduled_for: 2024-06-03 23:00:00+00:00
   sent_on: null
 event_id: BnRvebgX
