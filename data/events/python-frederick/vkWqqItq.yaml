@@ -1,36 +1,14 @@
-description: "<p>With the rise of AI-fueled by Python-based libraries, it has become\
-  \ of paramount importance to scan Python-based projects and their dependencies for\
-  \ OSS vulnerabilities. Python relies on package managers like pip or conda to manage\
-  \ declared dependencies. Dependencies are declared in manifest files which the package\
-  \ manager uses to install the correct version of the required dependency. However,\
-  \ Python\u2019s dependency management system coupled with its dynamic type nature\
-  \ makes it an especially challenging language to deal with.</p> <p>Of particular\
-  \ focus is the phenomenon of phantom dependencies which are unreported dependencies\
-  \ in a project's manifest profile. These hidden dependencies, which are often provided\
-  \ dependencies (which is especially true for libraries such as tensorflow and pytorch\
-  \ which are essential for AI), challenge software composition analysis (SCA) of\
-  \ Python code, impacting the reliability of vulnerability results.</p> <p>For example,\
-  \ in the case of OpenAI's baseline codebase, there is a dependency on tensorflow\
-  \ that is not explicitly declared and is hence a phantom dependency This can cause\
-  \ unexpected behavior and security vulnerabilities. We show how using type-aware\
-  \ program analysis to create call graphs and perform reachability helps us determine\
-  \ the correct dependency set for a codebase irrespective of what is in the manifest.</p>\
-  \ <p>Program analysis aims to extract information from software programs to enhance\
-  \ reliability, security, and performance. This session explores program analysis,\
-  \ specifically reachability analysis in Python, and delves into phantom dependencies\
-  \ - often overlooked in Python applications.</p> <p>Python's dynamic typing and\
-  \ interpreted nature make it a challenging subject for reachability analysis. The\
-  \ lack of type information makes it hard to precisely determine what dependency/features\
-  \ are used in the code.</p> <p>In summary, program analysis, including Python's\
-  \ unique challenges, is essential in software development. Phantom dependencies\
-  \ in Python underscore the significance of meticulous dependency management for\
-  \ code reliability and security. Understanding these concepts is vital for Python\
-  \ developers aiming to build robust software. This abstract sheds light on program\
-  \ analysis complexities and the pitfalls of phantom dependencies, offering valuable\
-  \ insights into Python development and software reliability.</p> <p>Also, we're\
-  \ going to have another \"after hour.\" After the presentation is over, anyone who\
-  \ wants to stay and do a bit of coding or chatting is welcome to hang out. Think\
-  \ of it like a mini open workshop.</p> "
+description: '<p>In this session, we will explore how to use Python to enhance your
+  AI projects with:</p> <p>* **Click CLI**: Creating command-line interfaces.<br/>*
+  **Jinja2 Templating**: Generating dynamic content.<br/>* **GPT Libraries (gpt4all
+  / OpenAI)**: Integrating language models.</p> <p>We''ll walk through a project that
+  shows these tools in action. By the end of the session, you''ll have the skills
+  to create a functional AI application that uses these technologies for real-world
+  tasks. Join us to see practical demonstrations and get hands-on experience. Connect
+  with other Python developers and expand your AI toolkit.</p> <p>Also, we''re going
+  to have another "after hour." After the presentation is over, anyone who wants to
+  stay and do a bit of coding or chatting is welcome to hang out. Think of it like
+  a mini open workshop.</p> '
 description_type: !!python/object/apply:techcity.models.EventDescriptionType
 - html
 end_at: 2024-06-13 01:00:00+00:00
@@ -43,7 +21,7 @@ joint_with: []
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
 link: https://www.meetup.com/python-frederick/events/298531530/
-name: What's in your AI code? Learn why every SCA tool is wrong and how to deal.
+name: 'Boosting AI with Python: Using Click, Jinja2, and GPT Libraries'
 start_at: 2024-06-12 23:00:00+00:00
 teaser: null
 venue:
