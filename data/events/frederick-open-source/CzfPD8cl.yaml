@@ -1,0 +1,28 @@
+description: '<p>We''re bringing back FOS chill out events! The chill out events are
+  our low key way of getting to know other tech people in Frederick. We talk tech,
+  get to know each other, and do a bit of feedback to figure out what kinds of sessions
+  to have in the future.</p> <p>This chill out will be a casual dinner at Black Hog
+  BBQ. In the spirit of 4th of July week, what''s more American than some BBQ!? Come
+  join in for a good meal and a good chat.</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-07-03 01:00:00+00:00
+extensions:
+  meetup:
+    id: '301741800'
+group_slug: frederick-open-source
+id: CzfPD8cl
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://www.meetup.com/frederickopensource/events/301741800/
+name: July Chill Out - Black Hog BBQ
+start_at: 2024-07-02 23:00:00+00:00
+teaser: null
+venue:
+  address: 221 Shorebird St
+  city: Frederick
+  lat: 39.447696685791016
+  lon: -77.39479064941406
+  state: MD
+  zip: '21701'
