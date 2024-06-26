@@ -1,6 +1,6 @@
 broadcasts:
 - scheduled_for: 2024-06-25 23:00:00+00:00
-  sent_on: null
+  sent_on: 2024-06-26 13:20:04.057787+00:00
 - scheduled_for: 2024-07-01 23:00:00+00:00
   sent_on: null
 event_id: CzfPD8cl
