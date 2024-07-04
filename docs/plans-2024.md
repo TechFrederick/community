@@ -60,7 +60,14 @@ Re-engage Game Dev? Can they get going as a regular group?
 | June  | 1st Tues | 6/4  | FOS       | [event](https://www.meetup.com/frederickopensource/events/301100189/)               |
 | June  | 2nd Wed  | 6/12 | Python    | [event](https://www.meetup.com/python-frederick/events/298531530/)                  |
 | June  | 2nd Sat  | 6/8  | WordPress | [event](https://www.meetup.com/wordpress-frederick/events/301117016/)               |
-| June  | 3rd Thu  | 6/20 | AWS       | TBD                                                                                 |
+| June  | 3rd Thu  | 6/20 | AWS       | No event                                                                            |
 | June  | 3rd Sat  | 6/15 | Workshop  | [event](https://www.meetup.com/python-frederick/events/rvllltygcjbtb/)              |
-| June  | 4th Wed  | 6/26 | WebTech   | TBD                                                                                 |
-| June  | 4th Sun  | 6/22 | C&C       | TBD                                                                                 |
+| June  | 4th Wed  | 6/26 | WebTech   | No event                                                                            |
+| June  | 4th Sun  | 6/22 | C&C       | No event                                                                            |
+| July  | 1st Tues | 7/2  | FOS       | [event](https://www.meetup.com/frederickopensource/events/301741800/)               |
+| July  | 2nd Wed  | 7/10 | Python    | [event](https://www.meetup.com/python-frederick/events/301887500/)                  |
+| July  | 2nd Sat  | 7/13 | WordPress | [event](https://www.meetup.com/wordpress-frederick/events/dkhzgtygckbrb/)           |
+| July  | 3rd Thu  | 7/18 | AWS       | TBD                                                                                 |
+| July  | 3rd Sat  | 7/20 | Workshop  | [event](https://www.meetup.com/python-frederick/events/301260619/)                  |
+| July  | 4th Wed  | 7/24 | WebTech   | TBD                                                                                 |
+| July  | 4th Sun  | 7/28 | C&C       | TBD                                                                                 |
