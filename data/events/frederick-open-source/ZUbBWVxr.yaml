@@ -1,0 +1,29 @@
+description: "<p>CI/CD is a set of practices used by engineering organizations to\
+  \ improve the quality of software they deliver, how fast they deliver that software,\
+  \ and detect issues with that software before they affect end users. Unfortunately,\
+  \ the term can mean a lot of different ideas and approaches. So, in this talk we\u2019\
+  re going to try to unravel some of those ideas to give you some ideas on how you\
+  \ too can deliver software better. I\u2019ll also give you some links to some tooling\
+  \ so you can see how it\u2019s done.</p> "
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-08-07 01:00:00+00:00
+extensions:
+  meetup:
+    id: '302121754'
+group_slug: frederick-open-source
+id: ZUbBWVxr
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://www.meetup.com/frederickopensource/events/302121754/
+name: An Opinionated Introduction to CI/CD
+start_at: 2024-08-06 23:00:00+00:00
+teaser: null
+venue:
+  address: 122 E Patrick St
+  city: Frederick
+  lat: 39.41377639770508
+  lon: -77.40791320800781
+  state: MD
+  zip: '21701'
