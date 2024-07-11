@@ -1,0 +1,24 @@
+description: '<p>Come meet up for dinner and drinks at Brewer''s Alley in Frederick
+  and chat with other folks in Web tech!</p> '
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-07-25 01:00:00+00:00
+extensions:
+  meetup:
+    id: '302170768'
+group_slug: frederick-web-tech
+id: gWe2Mhxi
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://www.meetup.com/fredwebtech/events/302170768/
+name: Web Tech Social
+start_at: 2024-07-24 23:00:00+00:00
+teaser: null
+venue:
+  address: 124 N Market St
+  city: Frederick
+  lat: 39.41560363769531
+  lon: -77.4107666015625
+  state: MD
+  zip: '21701'
