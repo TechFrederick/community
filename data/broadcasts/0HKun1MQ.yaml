@@ -4,8 +4,8 @@ broadcasts:
 - scheduled_for: 2024-07-06 14:00:00+00:00
   sent_on: 2024-07-07 13:18:13.241290+00:00
 - scheduled_for: 2024-07-12 14:00:00+00:00
-  sent_on: null
+  sent_on: 2024-07-13 13:19:02.080442+00:00
 event_id: 0HKun1MQ
 event_start_at: 2024-07-13 14:00:00+00:00
 status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
-- pending
+- done
