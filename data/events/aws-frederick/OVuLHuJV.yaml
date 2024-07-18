@@ -26,8 +26,7 @@ joint_with: []
 kind: !!python/object/apply:techcity.models.EventKind
 - unspecified
 link: https://www.meetup.com/awsfrederick/events/302273224/
-name: 'Unlock the Power of AI: Exploring Machine Learning, Artificial Intelligence,
-  and'
+name: 'Unlock the Power of AI: Exploring Machine Learning and Generative AI on AWS'
 start_at: 2024-08-22 23:00:00+00:00
 teaser: null
 venue:
