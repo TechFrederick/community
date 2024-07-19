@@ -1,0 +1,25 @@
+description: '<h4><a href="http://www.techfrederick.org/unity"><img loading="lazy"
+  decoding="async" class="alignleft wp-image-12229" src="https://techfrederick.org/wp-content/uploads/2024/07/gaming-300x251.jpg"
+  alt="" width="475" height="398" srcset="https://techfrederick.org/wp-content/uploads/2024/07/gaming-300x251.jpg
+  300w, https://techfrederick.org/wp-content/uploads/2024/07/gaming-768x644.jpg 768w,
+  https://techfrederick.org/wp-content/uploads/2024/07/gaming-600x503.jpg 600w, https://techfrederick.org/wp-content/uploads/2024/07/gaming.jpg
+  940w" sizes="(max-width: 475px) 100vw, 475px" /></a><a href="http://www.techfrederick.org/unity"
+  target="_blank" rel="noopener">REGISTER HERE</a></h4>
+
+  <p>This event will be a three-day workshop on August 20th, 22nd and 27th from 4pm
+  &#8211; 8pm.</p>'
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-08-21 00:00:00+00:00
+extensions: null
+group_slug: techfrederick
+id: at0WSVae
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://techfrederick.org/event/introduction-to-business-innovations-with-unity-how-game-design-meets-marketing-and-operations/
+name: 'Introduction to Gaming Business Innovations: How Unity Game Engine Meets Marketing
+  and Operations'
+start_at: 2024-08-20 20:00:00+00:00
+teaser: null
+venue: null

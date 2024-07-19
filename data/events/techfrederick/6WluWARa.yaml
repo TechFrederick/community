@@ -1,0 +1,23 @@
+description: '<p>Check back here soon for registration information</p>
+
+  <p>The boot camp will run from 9am &#8211; 3pm on September 10th &amp; 11th</p>'
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-09-12 03:59:59+00:00
+extensions: null
+group_slug: techfrederick
+id: 6WluWARa
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://techfrederick.org/event/sandler-sales-immersion-boot-camp/
+name: Sandler Sales Immersion Boot Camp
+start_at: 2024-09-10 04:00:00+00:00
+teaser: null
+venue:
+  address: 1750 Monocacy Blvd, Suite B
+  city: Frederick
+  lat: null
+  lon: null
+  state: Maryland
+  zip: '21701'

@@ -1,0 +1,11 @@
+broadcasts:
+- scheduled_for: 2024-08-06 20:00:00+00:00
+  sent_on: null
+- scheduled_for: 2024-08-13 20:00:00+00:00
+  sent_on: null
+- scheduled_for: 2024-08-19 20:00:00+00:00
+  sent_on: null
+event_id: at0WSVae
+event_start_at: 2024-08-20 20:00:00+00:00
+status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
+- pending
