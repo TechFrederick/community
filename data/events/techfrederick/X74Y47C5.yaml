@@ -1,0 +1,21 @@
+description: <p>More information coming soon!</p>
+description_type: !!python/object/apply:techcity.models.EventDescriptionType
+- html
+end_at: 2024-08-28 13:30:00+00:00
+extensions: null
+group_slug: techfrederick
+id: X74Y47C5
+joint_with: []
+kind: !!python/object/apply:techcity.models.EventKind
+- unspecified
+link: https://techfrederick.org/event/quarterly-networking-breakfast-10/
+name: Quarterly Networking Breakfast
+start_at: 2024-08-28 12:00:00+00:00
+teaser: null
+venue:
+  address: 5502 Mussetter Road
+  city: Ijamsville
+  lat: null
+  lon: null
+  state: ''
+  zip: '21754'
