@@ -2,7 +2,7 @@ broadcasts:
 - scheduled_for: 2024-07-31 23:00:00+00:00
   sent_on: 2024-08-01 13:21:09.972691+00:00
 - scheduled_for: 2024-08-07 23:00:00+00:00
-  sent_on: null
+  sent_on: 2024-08-08 13:21:13.370280+00:00
 - scheduled_for: 2024-08-13 23:00:00+00:00
   sent_on: null
 event_id: MvdjwSb7

@@ -1,10 +1,12 @@
 description: '<p>\*Original Meeting date was April 10 but moved due to scheduling
   with the speaker.\*</p> <p>Is your data locked up in portable document format (PDFs)?
   In this talk we''re going to explore methods to extract text and other data from
-  PDFs using readily-available, open-source Python tools.</p> <p>Also, we''re going
-  to have another "after hour." After the presentation is over, anyone who wants to
-  stay and do a bit of coding or chatting is welcome to hang out. Think of it like
-  a mini open workshop.</p> '
+  PDFs using readily-available, open-source Python tools (such as pypdf), as well
+  as techniques such as OCR (optical character recognition) and table extraction.
+  We will also discuss the philosophy of text extraction as a whole.</p> <p>Also,
+  we''re going to have another "after hour." After the presentation is over, anyone
+  who wants to stay and do a bit of coding or chatting is welcome to hang out. Think
+  of it like a mini open workshop.</p> '
 description_type: !!python/object/apply:techcity.models.EventDescriptionType
 - html
 end_at: 2024-08-15 01:00:00+00:00
