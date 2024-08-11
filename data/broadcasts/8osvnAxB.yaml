@@ -2,7 +2,7 @@ broadcasts:
 - scheduled_for: 2024-08-03 14:00:00+00:00
   sent_on: 2024-08-04 13:19:50.135819+00:00
 - scheduled_for: 2024-08-10 14:00:00+00:00
-  sent_on: null
+  sent_on: 2024-08-11 13:19:45.233763+00:00
 - scheduled_for: 2024-08-16 14:00:00+00:00
   sent_on: null
 event_id: 8osvnAxB
