@@ -2,7 +2,7 @@ broadcasts:
 - scheduled_for: 2024-08-27 04:00:00+00:00
   sent_on: 2024-08-27 13:22:05.366427+00:00
 - scheduled_for: 2024-09-03 04:00:00+00:00
-  sent_on: null
+  sent_on: 2024-09-03 13:24:19.690556+00:00
 - scheduled_for: 2024-09-09 04:00:00+00:00
   sent_on: null
 event_id: 6WluWARa
