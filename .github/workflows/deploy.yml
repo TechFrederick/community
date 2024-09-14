@@ -43,20 +43,20 @@ jobs:
       - name: Build CSS file
         run: npm --prefix techcity/services/builder run css
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-          cache: 'pip'
+      - name: Install uv
+        uses: astral-sh/setup-uv@v2
 
-      - name: Install packages
-        run: pip install -r requirements.txt
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install the project
+        run: uv sync
 
       - name: Fetch any new events
-        run: techcity fetch
+        run: uv run techcity fetch
 
       - name: Build HTML files
-        run: techcity build
+        run: uv run techcity build
 
       - name: Run tests
         run: make test-ci
@@ -67,7 +67,7 @@ jobs:
           path: ./out
 
       - name: Broadcast events
-        run: techcity broadcast
+        run: uv run techcity broadcast
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:

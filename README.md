@@ -37,7 +37,7 @@ on the technology usage within their city.
 
 #### Local
 
-* Install Python
+* Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
 * Install Node.js
 
 If you have questions about installing those things,

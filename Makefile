@@ -1,18 +1,17 @@
 .PHONY = build
 
 run: build
-	venv/bin/honcho start
+	@uv run honcho start
 
 bootstrap:
-	test -d venv || python3 -m venv venv
-	venv/bin/pip install -r requirements.txt
+	uv sync
 	npm --prefix techcity/services/builder install
 
 build:
-	@venv/bin/techcity build
+	@uv run techcity build
 
 watcher:
-	venv/bin/watchmedo shell-command \
+	uv run watchmedo shell-command \
 		--pattern='*.html;*.md;*.py;*.yaml' \
 		--recursive \
 		--command='make build' \
@@ -20,26 +19,26 @@ watcher:
 		techcity data
 
 serve:
-	venv/bin/python -m http.server --directory out 8000
+	uv run python -m http.server --directory out 8000
 
 frontend:
 	npm --prefix techcity/services/builder run tailwind
 
 fetch:
-	@venv/bin/techcity fetch
+	@uv run techcity fetch
 
 # This is mostly for the scenario where the output data files need to be manipulated
 # and reformatted and we don't want to keep hitting the Meetup APIs slowly.
 fetch-cached:
-	@venv/bin/techcity fetch --cached
+	@uv run techcity fetch --cached
 
 check:
-	venv/bin/scrapy crawl --overwrite-output checker.jsonl --nolog crawler
+	uv run scrapy crawl --overwrite-output checker.jsonl --nolog crawler
 
 test-ci: test
-	honcho -f checker/Procfile.checker start
+	uv run honcho -f checker/Procfile.checker start
 	cat checker.jsonl
 	test ! -s checker.jsonl
 
 test:
-	pytest --cov techcity
+	uv run pytest --cov techcity
