@@ -1,0 +1,11 @@
+{% load static %}
+<div class="min-h-48 bg-slate-50 border-t border-b sm:border border-tfgreen hover:brightness-105 hover:saturate-150 hover:transition-all">
+  <div class="p-2 border-b-2 border-tfgreen bg-white text-xl text-tfdarkblue font-light">{{ group.name }}</div>
+  <div class="bg-white border-b-4 border-{{ group.color }}">
+    <a href="{% url "groups:detail" group.slug %}">
+      <img class="w-full h-48 object-scale-down object-center" src="{% static group.card_image %}">
+    </a>
+  </div>
+  <div class="p-2 text-slate-700">{{ group.teaser }}</div>
+  <div class="px-2 pb-4"><a class="text-tflightblue hover:text-tfdarkblue underline" href="{% url "groups:detail" group.slug %}">Learn more&hellip;</a></div>
+</div>

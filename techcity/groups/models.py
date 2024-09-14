@@ -23,5 +23,9 @@ class Group(models.Model):
         return self.name
 
     @property
+    def card_image(self):
+        return f"images/group-card/{self.slug}.png"
+
+    @property
     def hero_image(self):
         return f"images/group-hero/{self.slug}.png"
