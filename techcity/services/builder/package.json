@@ -1,8 +1,8 @@
 {
   "name": "techcity",
   "scripts": {
-    "css": "tailwindcss -i ./input.css -o ../../../out/site.css --minify",
-    "tailwind": "tailwindcss -i ./input.css -o ../../../out/site.css --watch"
+    "css": "tailwindcss -i ./input.css -o ../../../data/public/site.css --minify",
+    "tailwind": "tailwindcss -i ./input.css -o ../../../data/public/site.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0"

@@ -1,6 +1,6 @@
 .PHONY = build
 
-run: build
+run:
 	@uv run honcho start
 
 bootstrap:
@@ -19,7 +19,7 @@ watcher:
 		techcity data
 
 serve:
-	uv run python -m http.server --directory out 8000
+	uv run manage.py runserver
 
 frontend:
 	npm --prefix techcity/services/builder run tailwind

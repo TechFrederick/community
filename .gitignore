@@ -9,3 +9,8 @@ cache
 
 .env
 *.jsonl
+db.sqlite3
+# TODO: static files are temporarily sources from data/public.
+# Don't commit the site.css file there.
+data/public/site.css
+staticfiles
