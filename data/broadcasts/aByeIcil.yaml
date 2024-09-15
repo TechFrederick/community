@@ -4,7 +4,7 @@ broadcasts:
 - scheduled_for: 2024-09-07 14:00:00+00:00
   sent_on: 2024-09-08 13:20:45.620639+00:00
 - scheduled_for: 2024-09-13 14:00:00+00:00
-  sent_on: 2024-09-15 04:50:49.108692+00:00
+  sent_on: 2024-09-14 05:13:44.146839+00:00
 event_id: aByeIcil
 event_start_at: 2024-09-14 14:00:00+00:00
 status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
