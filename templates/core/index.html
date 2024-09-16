@@ -26,8 +26,8 @@
       <span class="ml-2">Upcoming Events</span>
     </h3>
     <div class="grid grid-col-1 sm:grid-cols-3 gap-4 mb-8">
-      {% for event, group in upcoming_events_with_group %}
-        {% include "event_card.html" %}
+      {% for event in upcoming_events %}
+        {% include "events/card.html" %}
       {% endfor %}
     </div>
 
@@ -38,8 +38,8 @@
       <span class="ml-2">Recent Events</span>
     </h3>
     <div class="grid grid-col-1 sm:grid-cols-3 gap-4">
-      {% for event, group in recent_events_with_group %}
-        {% include "event_card.html" %}
+      {% for event in recent_events %}
+        {% include "events/card.html" %}
       {% endfor %}
     </div>
   </div>

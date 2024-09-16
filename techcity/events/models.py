@@ -9,7 +9,12 @@ class EventQuerySet(models.QuerySet):
     def filter_around(self, when: datetime) -> EventQuerySet:
         from_datetime = when - timedelta(days=30)
         to_datetime = when + timedelta(days=45)
-        return self.filter(start_at__gt=from_datetime, start_at__lt=to_datetime)
+        return self.filter(
+            start_at__gt=from_datetime, start_at__lt=to_datetime
+        ).order_by("start_at")
+
+
+EventManager = models.Manager.from_queryset(EventQuerySet)
 
 
 class Event(models.Model):
@@ -29,7 +34,10 @@ class Event(models.Model):
     description = models.TextField()
     # TODO: There should be some kind of model that tracks Meetup IDs to events
 
-    objects = models.Manager.from_queryset(EventQuerySet)
+    objects = EventManager()
+
+    def __str__(self):
+        return self.name
 
 
 class Venue(models.Model):

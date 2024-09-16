@@ -5,7 +5,7 @@ from .models import Event, Venue
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    pass
+    list_display = ["name", "group"]
 
 
 @admin.register(Venue)

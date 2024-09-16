@@ -1,13 +1,23 @@
-from django.shortcuts import render
+import bisect
 
+from django.shortcuts import render
+from django.utils import timezone
+
+from techcity.events.models import Event
 from techcity.groups.models import Group
 
 
 def index(request):
+    now = timezone.now()
+    # TODO: handle joint_with replacement
+    # TODO: handle is_all_day
+    # TODO: handle event detail page (link in event card)
+    events = Event.objects.filter_around(now).select_related("group")
+    index = bisect.bisect_left(events, now, key=lambda e: e.start_at)
     context = {
-        # TODO: upcoming events
-        # TODO: recent events
-        # TODO: hackathons
+        "now": now,
+        "upcoming_events": reversed(events[index:]),
+        "recent_events": reversed(events[:index]),
         "groups": Group.objects.all().order_by("name"),
     }
     return render(request, "core/index.html", context)
