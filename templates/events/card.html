@@ -11,7 +11,7 @@
       {% if event.is_all_day %}
         All Day
       {% else %}
-        {{ event.start_at|date:"gA" }}
+        {{ event.start_at|date:"gA"|lower }}
       {% endif %}
     </div>
   </div>
@@ -25,7 +25,7 @@
       {% endif %}
     </div>
     <div class="px-2 pb-4">
-      <a href="/events/{{ event.id }}/" class="underline text-tflightblue hover:text-tfdarkblue">See event details&hellip;</a>
+      <a href="{% url "events:detail" event.sqid %}" class="underline text-tflightblue hover:text-tfdarkblue">See event details&hellip;</a>
       {% if event.start_at < now %}
         <div class="mt-2 flex flex-row items-center text-tflightblue">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

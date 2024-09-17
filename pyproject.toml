@@ -11,6 +11,7 @@ dependencies = [
     "python-frontmatter>=1.1.0",
     "pyyaml>=6.0.2",
     "requests>=2.32.3",
+    "sqids>=0.5.0",
     "techcity",
     "typer>=0.12.5",
     "urllib3>=2.2.3",

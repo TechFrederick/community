@@ -3,6 +3,14 @@ from __future__ import annotations
 from datetime import datetime, timedelta
 
 from django.db import models
+from sqids.sqids import Sqids
+
+from techcity.core.frontend import tailwindify_html
+
+sqids = Sqids(
+    min_length=8,
+    alphabet="ymWpFqX0dzUK1jTM4RZ7sCukLf3bPrQ9ScVa6Y8wHNnhegiAoJ2OBlDvGI5xEt",
+)
 
 
 class EventQuerySet(models.QuerySet):
@@ -12,6 +20,12 @@ class EventQuerySet(models.QuerySet):
         return self.filter(
             start_at__gt=from_datetime, start_at__lt=to_datetime
         ).order_by("start_at")
+
+    def from_sqid(self, sqid: str) -> Event:
+        decoded = sqids.decode(sqid)
+        if not decoded:
+            raise self.model.DoesNotExist()
+        return self.get(id=decoded[0])
 
 
 EventManager = models.Manager.from_queryset(EventQuerySet)
@@ -39,6 +53,20 @@ class Event(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def sqid(self):
+        return sqids.encode([self.id])
+
+    @property
+    def is_all_day(self):
+        """Anything longer than a work day is considered an all-day event"""
+        return self.end_at - self.start_at > timedelta(hours=8)
+
+    @property
+    def html_description(self):
+        # Wrap in a div because a root node is expected to format properly.
+        return tailwindify_html(f"<div>{self.description}</div>")
+
 
 class Venue(models.Model):
     """A physical place to hold an event."""
@@ -49,3 +77,6 @@ class Venue(models.Model):
     zip = models.CharField(max_length=16)
     lat = models.FloatField(blank=True, null=True)
     long = models.FloatField(blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.address}, {self.city}, {self.state}"

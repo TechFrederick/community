@@ -851,6 +851,15 @@ wheels = [
 ]
 
 [[package]]
+name = "sqids"
+version = "0.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/52/ab/1e934252eef4c8583dbe1d5c5c140c382f8e8e6d14ba65ecb7915f508a67/sqids-0.5.0.tar.gz", hash = "sha256:647798e7d5bfeb236e7ac4709cfd4cd808630a6c50f80205df17b4c93e560140", size = 18043 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/00/e6/b324aeb381c3916e7606b73c3c1e98fa889920a0ae75ed460cca512df9bd/sqids-0.5.0-py3-none-any.whl", hash = "sha256:4c2d1eabf4721e6e18001b1ff2bc0b30d059447ef96f1e1d1fb7f56841814154", size = 8820 },
+]
+
+[[package]]
 name = "sqlparse"
 version = "0.5.1"
 source = { registry = "https://pypi.org/simple" }
@@ -872,6 +881,7 @@ dependencies = [
     { name = "python-frontmatter" },
     { name = "pyyaml" },
     { name = "requests" },
+    { name = "sqids" },
     { name = "typer" },
     { name = "urllib3" },
 ]
@@ -897,6 +907,7 @@ requires-dist = [
     { name = "python-frontmatter", specifier = ">=1.1.0" },
     { name = "pyyaml", specifier = ">=6.0.2" },
     { name = "requests", specifier = ">=2.32.3" },
+    { name = "sqids", specifier = ">=0.5.0" },
     { name = "techcity", editable = "." },
     { name = "typer", specifier = ">=0.12.5" },
     { name = "urllib3", specifier = ">=2.2.3" },
