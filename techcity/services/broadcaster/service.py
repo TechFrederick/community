@@ -47,11 +47,16 @@ class Broadcaster(Service):
             self.channels = channels
 
     def dispatch(self, event) -> None:
+        # FIXME Disable broadcast collection and triggering.
+        # I don't think this is likely to continue in this form for long
+        # and these are needlessly junking up the repo for now.
         match event:
             case BroadcastTriggered():
-                self._broadcast()
+                # self._broadcast()
+                pass
             case EventPublished():
-                self._schedule(event.event)
+                # self._schedule(event.event)
+                pass
 
     def _broadcast(self):
         """Broadcast any pending and due broadcasts to the channels."""

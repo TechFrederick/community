@@ -1,6 +1,7 @@
 import datetime
 from unittest import mock
 
+import pytest
 import time_machine
 
 from techcity.events import BroadcastTriggered, EventPublished
@@ -19,6 +20,7 @@ def test_default():
     assert service.repo is not None
 
 
+@pytest.mark.skip(reason="disabled broadcasts")
 @time_machine.travel(datetime.datetime(2024, 3, 6, tzinfo=datetime.UTC))
 def test_event_published_scheduled():
     """EventPublished sets a broadcast schedule."""
@@ -36,6 +38,7 @@ def test_event_published_scheduled():
     assert len(schedule.broadcasts) == 3
 
 
+@pytest.mark.skip(reason="disabled broadcasts")
 @time_machine.travel(datetime.datetime(2024, 3, 6, tzinfo=datetime.UTC))
 def test_update_event_changed():
     """The schedule changes when the event is updated."""
@@ -56,6 +59,7 @@ def test_update_event_changed():
     assert repo.create.called
 
 
+@pytest.mark.skip(reason="disabled broadcasts")
 @time_machine.travel(datetime.datetime(2024, 3, 6, tzinfo=datetime.UTC))
 def test_broadcasts_event():
     """A pending broadcast is sent on a channel."""
@@ -93,6 +97,7 @@ def test_broadcasts_event():
     assert channel.events_sent[0] == event
 
 
+@pytest.mark.skip(reason="disabled broadcasts")
 @time_machine.travel(datetime.datetime(2024, 3, 6, tzinfo=datetime.UTC))
 def test_schedule_done():
     """A schedule with all sent broadcasts is set to done."""
