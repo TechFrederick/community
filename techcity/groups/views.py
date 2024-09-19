@@ -19,8 +19,9 @@ def group_detail(request, slug):
 
 
 def group_events(request, slug):
+    group = get_object_or_404(Group, slug=slug)
     context = {
-        "group": get_object_or_404(Group, slug=slug),
+        "group": group,
+        "events": Event.objects.filter(group=group).order_by("-start_at"),
     }
-    # TODO: use a different template
-    return render(request, "groups/detail.html", context)
+    return render(request, "groups/events.html", context)
