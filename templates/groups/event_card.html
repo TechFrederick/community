@@ -1,4 +1,4 @@
-<div class="w-full border-y sm:border border-tflightblue {% if now and event.start_at < now %}saturate-50{% endif %}">
+<div class="w-full border-y sm:border border-tflightblue">
   <div class="flex flex-row text-3xl sm:text-4xl font-extralight tracking-widest uppercase border-b-4 border-{{ group.color }}">
     <div class="p-2 bg-tflightblue basis-1/2 text-center text-white">{{ event.start_at|date:"j M" }}</div>
     <div class="p-2 basis-1/2 text-center bg-slate-50 text-slate-700">{{ event.start_at|date:"gA"|lower }}</div>
