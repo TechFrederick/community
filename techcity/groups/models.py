@@ -9,6 +9,10 @@ class Group(models.Model):
     This could be a Meetup group, a company, a non-profit, etc.
     """
 
+    class EventSource(models.TextChoices):
+        MEETUP = "meetup"
+        WORDPRESS = "wordpress"
+
     name = models.CharField(max_length=128)
     slug = models.SlugField()
     url = models.URLField(max_length=256)
@@ -20,6 +24,14 @@ class Group(models.Model):
             "A theme color to use for display purposes. "
             "Must be a Tailwind color like `blue-500`."
         ),
+    )
+    event_source = models.CharField(
+        max_length=16,
+        help_text="What is the source of event information for this group",
+    )
+    event_source_id = models.CharField(
+        max_length=32,
+        help_text="An optional ID to use when checking an event source",
     )
 
     def __str__(self):

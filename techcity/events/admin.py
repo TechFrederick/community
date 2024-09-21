@@ -11,4 +11,4 @@ class EventAdmin(admin.ModelAdmin):
 
 @admin.register(Venue)
 class VenueAdmin(admin.ModelAdmin):
-    pass
+    ordering = ["address"]

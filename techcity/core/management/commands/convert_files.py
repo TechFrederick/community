@@ -22,8 +22,6 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         self.stdout.write("Converting data files to database entries...")
-        # TODO: pull meetup info about groups and events
-        # TODO: pull wordpress info out of techfrederick group
         group_repo = GroupRepository()
         groups = {}
         for group in sorted(group_repo.all(), key=lambda g: g.slug):
@@ -35,6 +33,12 @@ class Command(BaseCommand):
                 "teaser": group.teaser,
                 "color": group.color,
             }
+            if group.extensions and group.extensions.meetup:
+                defaults["event_source"] = Group.EventSource.MEETUP
+                defaults["event_source_id"] = group.extensions.meetup.slug
+            elif group.extensions and group.extensions.wordpress:
+                defaults["event_source"] = Group.EventSource.WORDPRESS
+
             db_group, _ = Group.objects.update_or_create(
                 slug=group.slug, defaults=defaults
             )
