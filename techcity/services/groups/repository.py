@@ -2,7 +2,6 @@ import frontmatter
 import markdown
 
 from techcity.constants import data_path
-from techcity.core.markdown_extensions import TailwindExtension
 from techcity.models import Group
 
 
@@ -20,7 +19,9 @@ class GroupRepository:
                 metadata, description = frontmatter.parse(f.read())
             description = markdown.markdown(
                 description,
-                extensions=[TailwindExtension()],
+                # FIXME: If the django branch gets merged to main, but we keep
+                # the static site running, we'll need to bring this back.
+                # extensions=[TailwindExtension()],
             )
             metadata["description"] = description
             group = Group(**metadata)  # type: ignore
