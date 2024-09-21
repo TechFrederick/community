@@ -17,6 +17,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", False)
+DEBUG_TOOLBAR = env.bool("DEBUG_TOOLBAR", False)
 
 ALLOWED_HOSTS = []
 
@@ -44,6 +45,12 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+# Enable the debug toolbar only in DEBUG mode.
+if DEBUG and DEBUG_TOOLBAR:
+    INSTALLED_APPS.append("debug_toolbar")
+    MIDDLEWARE.insert(0, "debug_toolbar.middleware.DebugToolbarMiddleware")
+    INTERNAL_IPS = ["127.0.0.1"]
 
 ROOT_URLCONF = "project.urls"
 
@@ -100,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
-TIME_ZONE = "UTC"
+TIME_ZONE = env.str("TIME_ZONE", "UTC")
 USE_I18N = True
 USE_TZ = True
 
