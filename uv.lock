@@ -884,7 +884,7 @@ wheels = [
 [[package]]
 name = "techcity"
 version = "2024.2"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "django" },
     { name = "django-debug-toolbar" },
@@ -923,7 +923,6 @@ requires-dist = [
     { name = "pyyaml", specifier = ">=6.0.2" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "sqids", specifier = ">=0.5.0" },
-    { name = "techcity", editable = "." },
     { name = "typer", specifier = ">=0.12.5" },
     { name = "urllib3", specifier = ">=2.2.3" },
 ]

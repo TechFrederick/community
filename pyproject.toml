@@ -1,6 +1,6 @@
 [project]
 name = "techcity"
-version = "2024.02"
+version = "2024.09"
 requires-python = ">=3.12"
 dependencies = [
     "django-debug-toolbar>=4.4.6",
@@ -13,13 +13,9 @@ dependencies = [
     "pyyaml>=6.0.2",
     "requests>=2.32.3",
     "sqids>=0.5.0",
-    "techcity",
     "typer>=0.12.5",
     "urllib3>=2.2.3",
 ]
-
-[tool.uv.sources]
-techcity = { workspace = true }
 
 [tool.uv]
 dev-dependencies = [
@@ -31,9 +27,6 @@ dev-dependencies = [
     "time-machine>=2.15.0",
     "watchdog[watchmedo]>=5.0.2",
 ]
-
-[project.scripts]
-techcity = "techcity.cli:app"
 
 [tool.coverage.report]
 show_missing = true
@@ -66,7 +59,3 @@ ignore = [
     # bandit: Use of `assert` detected
     "S101",
 ]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
