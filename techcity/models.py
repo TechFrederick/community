@@ -3,11 +3,7 @@ from __future__ import annotations
 import enum
 from datetime import datetime
 
-import markdown
 from pydantic import BaseModel
-
-from techcity.core.frontend import tailwindify_html
-from techcity.core.markdown_extensions import TailwindExtension
 
 
 class Group(BaseModel):
@@ -121,15 +117,6 @@ class Event(BaseModel):
         """
         return hash(self.id)
 
-    @property
-    def html_description(self):
-        if self.description_type == EventDescriptionType.html:
-            # Wrap in a div because a root node is expected to format properly.
-            return tailwindify_html(f"<div>{self.description}</div>")
-        elif self.description_type == EventDescriptionType.markdown:
-            return markdown.markdown(self.description, extensions=[TailwindExtension()])
-        return self.description
-
 
 class EventListFilterOptions(BaseModel):
     """Options to use as filters when listing events"""
@@ -138,37 +125,3 @@ class EventListFilterOptions(BaseModel):
     from_datetime: datetime | None = None
     to_datetime: datetime | None = None
     group_slug: str | None = None
-
-
-class Broadcast(BaseModel):
-    """A broadcast to announcement channels"""
-
-    scheduled_for: datetime
-    sent_on: datetime | None = None
-
-
-class BroadcastScheduleStatus(str, enum.Enum):
-    """The status of a broadcast schedule
-
-    The schedule is done when all the broadcasts have been sent.
-    """
-
-    pending = "pending"
-    done = "done"
-
-
-class BroadcastSchedule(BaseModel):
-    """A schedule of broadcasts to announce"""
-
-    event_id: str
-    status: BroadcastScheduleStatus = BroadcastScheduleStatus.pending
-    # The Event.start_at is kept on the schedule to be able to detect
-    # if an event's schedule time is moved from when the schedule is created.
-    event_start_at: datetime
-    broadcasts: list[Broadcast]
-
-
-class BroadcastScheduleListFilterOptions(BaseModel):
-    """Options to use as filters when listing broadcast schedules"""
-
-    status: BroadcastScheduleStatus | None = None
