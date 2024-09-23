@@ -19,9 +19,6 @@ class GroupRepository:
                 metadata, description = frontmatter.parse(f.read())
             description = markdown.markdown(
                 description,
-                # FIXME: If the django branch gets merged to main, but we keep
-                # the static site running, we'll need to bring this back.
-                # extensions=[TailwindExtension()],
             )
             metadata["description"] = description
             group = Group(**metadata)  # type: ignore
