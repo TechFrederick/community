@@ -1,6 +1,16 @@
+from __future__ import annotations
+
 from django.db import models
 
 from techcity.core.frontend import tailwindify_html
+
+
+class GroupQuerySet(models.QuerySet):
+    def by_source(self, event_source) -> GroupQuerySet:
+        return self.filter(event_source=event_source).order_by("name")
+
+
+GroupManager = models.Manager.from_queryset(GroupQuerySet)
 
 
 class Group(models.Model):
@@ -33,6 +43,8 @@ class Group(models.Model):
         max_length=32,
         help_text="An optional ID to use when checking an event source",
     )
+
+    objects = GroupManager()
 
     def __str__(self):
         return self.name
