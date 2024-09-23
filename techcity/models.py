@@ -1,12 +1,11 @@
 from __future__ import annotations
 
 import enum
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import markdown
 from pydantic import BaseModel
 
-from techcity.configuration import config
 from techcity.core.frontend import tailwindify_html
 from techcity.core.markdown_extensions import TailwindExtension
 
@@ -121,20 +120,6 @@ class Event(BaseModel):
         Hashing is needed to make the set indices of the repository work.
         """
         return hash(self.id)
-
-    @property
-    def when(self) -> datetime:
-        """Get the time in the localized form."""
-        return self.start_at.astimezone(config.tz)
-
-    @property
-    def end(self):
-        return self.end_at.astimezone(config.tz)
-
-    @property
-    def is_all_day(self):
-        """Anything longer than a work day is considered an all-day event"""
-        return self.end - self.when > timedelta(hours=8)
 
     @property
     def html_description(self):
