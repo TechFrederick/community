@@ -1,9 +1,0 @@
-broadcasts:
-- scheduled_for: 2024-04-17 23:00:00+00:00
-  sent_on: 2024-04-19 02:54:29.142398+00:00
-- scheduled_for: 2024-04-23 23:00:00+00:00
-  sent_on: 2024-04-24 13:22:53.658609+00:00
-event_id: NPh8v9Tb
-event_start_at: 2024-04-24 23:00:00+00:00
-status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
-- done
