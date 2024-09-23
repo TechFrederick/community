@@ -20,4 +20,4 @@ jobs:
         run: uv sync
 
       - name: Run tests
-        run: make test-ci
+        run: make test

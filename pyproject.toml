@@ -25,7 +25,6 @@ dev-dependencies = [
     "pytest-cov>=5.0.0",
     "scrapy>=2.11.2",
     "time-machine>=2.15.0",
-    "watchdog[watchmedo]>=5.0.2",
 ]
 
 [tool.coverage.report]

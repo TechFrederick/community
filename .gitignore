@@ -1,6 +1,5 @@
 .DS_Store
 node_modules
-/out/
 
 venv
 __pycache__
@@ -8,7 +7,6 @@ cache
 .coverage
 
 .env
-*.jsonl
 db.sqlite3
 # TODO: static files are temporarily sources from data/public.
 # Don't commit the site.css file there.
