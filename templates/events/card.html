@@ -18,10 +18,10 @@
   <div class="bg-white text-slate-700 flex-grow">
     <div class="p-2 text-xl font-light bg-slate-100">{{ event.name }}</div>
     <div class="p-2">
-      {% if event.joint_with %}
+      {% if event.is_joint %}
         Hosted jointly by multiple groups
       {% else %}
-      Hosted by <a href="{% url "groups:detail" event.group.slug %}" class="underline text-tflightblue hover:text-tfdarkblue">{{ event.group.name }}</a>
+        Hosted by <a href="{% url "groups:detail" event.group.slug %}" class="underline text-tflightblue hover:text-tfdarkblue">{{ event.group.name }}</a>
       {% endif %}
     </div>
     <div class="px-2 pb-4">

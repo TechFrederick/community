@@ -13,6 +13,24 @@ sqids = Sqids(
 )
 
 
+def combine_joint_events(events):
+    """Combine any joint events as a single event.
+
+    Any event that has the same time and venue as another event is assumed
+    to be a joint event.
+    """
+    seen_events = {}
+    combined_events = []
+    for event in events:
+        key = f"{event.start_at}-{event.venue_id}"
+        if event.venue and key in seen_events:
+            seen_events[key].is_joint = True
+            continue
+        seen_events[key] = event
+        combined_events.append(event)
+    return combined_events
+
+
 class EventQuerySet(models.QuerySet):
     def filter_around(self, when: datetime) -> EventQuerySet:
         from_datetime = when - timedelta(days=30)

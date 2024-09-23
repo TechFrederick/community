@@ -3,8 +3,6 @@ from django.core.management.base import BaseCommand
 from techcity.constants import cache
 from techcity.events.connectors.meetup import MeetupConnector
 
-# from techcity.events.connectors.wordpress import WordPressConnector
-
 
 class Command(BaseCommand):
     help = "Fetch all events from any of the source connectors"

@@ -3,14 +3,15 @@ import bisect
 from django.shortcuts import render
 from django.utils import timezone
 
-from techcity.events.models import Event
+from techcity.events.models import Event, combine_joint_events
 from techcity.groups.models import Group
 
 
 def index(request):
     now = timezone.now()
-    # TODO: handle joint_with replacement
-    events = Event.objects.filter_around(now).select_related("group")
+    events = combine_joint_events(
+        Event.objects.filter_around(now).select_related("group", "venue")
+    )
     index = bisect.bisect_left(events, now, key=lambda e: e.start_at)
     context = {
         "now": now,
