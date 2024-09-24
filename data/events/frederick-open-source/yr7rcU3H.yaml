@@ -7,7 +7,7 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ the help of others. The goal is to have fun with other tech people in the area.\
   \ Bring your laptop or just bring yourself! We have a blast and we hope you\u2019\
   ll join in.</p> "
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-02-17 19:00:00+00:00
 extensions:
@@ -20,7 +20,7 @@ joint_with:
 - 5Eou0qIr
 - eYOjBaPx
 - wipC4fFM
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/frederickopensource/events/jzdxbtygcdbwb/
 name: Frederick Tech Open Workshop - 3rd Saturday

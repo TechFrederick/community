@@ -8,14 +8,14 @@ description: '<h4><a href="http://www.techfrederick.org/unity"><img loading="laz
 
   <p>This event will be a three-day workshop on August 20th, 22nd and 27th from 4pm
   &#8211; 8pm.</p>'
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-08-21 00:00:00+00:00
 extensions: null
 group_slug: techfrederick
 id: at0WSVae
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/introduction-to-business-innovations-with-unity-how-game-design-meets-marketing-and-operations/
 name: 'Introduction to Gaming Business Innovations: How Unity Game Engine Meets Marketing

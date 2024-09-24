@@ -1,3 +1,8 @@
+"""These are the model representations used for the static version of this site.
+
+When `convert_files` has finished serving its purpose, we can remove these too.
+"""
+
 from __future__ import annotations
 
 import enum
@@ -116,12 +121,3 @@ class Event(BaseModel):
         Hashing is needed to make the set indices of the repository work.
         """
         return hash(self.id)
-
-
-class EventListFilterOptions(BaseModel):
-    """Options to use as filters when listing events"""
-
-    kind: EventKind | None = None
-    from_datetime: datetime | None = None
-    to_datetime: datetime | None = None
-    group_slug: str | None = None

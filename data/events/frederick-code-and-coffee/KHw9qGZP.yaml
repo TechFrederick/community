@@ -5,7 +5,7 @@ description: '<p>Happy New Year! Come join us for some afternoon networking. Bri
   back to Gravel &amp; Grind this month. It''s been a really great location for us,
   and I always love coming back here. We may move to FITCI in the future as our cohort
   grows, but this is a good fit for us right now.</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-01-28 21:00:00+00:00
 extensions:
@@ -14,7 +14,7 @@ extensions:
 group_slug: frederick-code-and-coffee
 id: KHw9qGZP
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/frederick-code-and-coffee/events/298329617/
 name: 'Frederick Code and Coffee: A Brand New Year!'

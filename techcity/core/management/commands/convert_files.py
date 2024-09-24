@@ -1,10 +1,68 @@
+from __future__ import annotations
+
+from collections import defaultdict
+from collections.abc import Iterable
+
+import frontmatter
+import markdown
+import yaml
 from django.core.management.base import BaseCommand
 
+from techcity.constants import data_path
 from techcity.events.models import Event, Venue
 from techcity.groups.models import Group
-from techcity.models import EventListFilterOptions
-from techcity.services.events.repository import EventRepository
-from techcity.services.groups.repository import GroupRepository
+
+from . import static_models
+
+
+class EventRepository:
+    def __init__(self) -> None:
+        self.events_path = data_path / "events"
+        self.events_path.mkdir(exist_ok=True)
+
+        self.events_by_time = defaultdict(set)  # For joint event detection
+        self._load_events()
+
+    def _load_events(self):
+        """Scan the events directory to load the events in memory."""
+        for dir in sorted(self.events_path.glob("*")):
+            for event_filename in sorted(dir.glob("*")):
+                with open(event_filename) as f:
+                    event = static_models.Event(**yaml.load(f, Loader=yaml.Loader))  # noqa: S506
+
+                self.events_by_time[event.start_at].add(event)
+
+    def list(self) -> Iterable[static_models.Event]:
+        """Get a list of events."""
+        return self._all()
+
+    def _all(self):
+        for _, events in sorted(self.events_by_time.items()):
+            yield from sorted(events, key=lambda e: e.id)
+
+
+class GroupRepository:
+    def __init__(self):
+        self._groups_by_slug: dict[str, static_models.Group] = {}
+        self._groups = self._load_groups()
+
+    def _load_groups(self):
+        groups = []
+        groups_path = data_path / "groups"
+
+        for filepath in sorted(groups_path.glob("*")):
+            with open(filepath) as f:
+                metadata, description = frontmatter.parse(f.read())
+            description = markdown.markdown(description)
+            metadata["description"] = description
+            group = static_models.Group(**metadata)  # type: ignore
+            groups.append(group)
+            self._groups_by_slug[group.slug] = group
+
+        return groups
+
+    def all(self) -> list[static_models.Group]:
+        return self._groups
 
 
 def clean_address(address):
@@ -46,9 +104,7 @@ class Command(BaseCommand):
 
         event_repo = EventRepository()
         venues = {}
-        for event in sorted(
-            event_repo.list(EventListFilterOptions()), key=lambda e: e.start_at
-        ):
+        for event in sorted(event_repo.list(), key=lambda e: e.start_at):
             if event.venue:
                 cleaned_address = clean_address(event.venue.address)
                 if cleaned_address not in venues:
@@ -64,10 +120,7 @@ class Command(BaseCommand):
                         address=cleaned_address, defaults=defaults
                     )
 
-        event_repo = EventRepository()
-        for event in sorted(
-            event_repo.list(EventListFilterOptions()), key=lambda e: e.start_at
-        ):
+        for event in sorted(event_repo.list(), key=lambda e: e.start_at):
             print(f"Event {event.name}...")
             defaults = {
                 "name": event.name,

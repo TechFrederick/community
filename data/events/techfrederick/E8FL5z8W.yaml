@@ -8,14 +8,14 @@ description: '<p><a href="https://techfrederick.org/networking/" target="_blank"
 
   <h3><a href="https://techfrederick.org/networking/" target="_blank" rel="noopener">REGISTER
   HERE</a></h3>'
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-09-12 23:00:00+00:00
 extensions: null
 group_slug: techfrederick
 id: E8FL5z8W
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/quarterly-networking-event-8/
 name: Quarterly Networking Event

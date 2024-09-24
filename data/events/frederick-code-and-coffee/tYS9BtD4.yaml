@@ -10,7 +10,7 @@ description: '<p>Happy February!</p> <p>.....</p> <p>The host is out of the coun
   &amp; Grind this month. I''m always on the lookout for a local, comfortable place,
   that''s accessible and easy to find. This place really fits the bill. I look forward
   to seeing you all there!</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-02-25 21:00:00+00:00
 extensions:
@@ -19,7 +19,7 @@ extensions:
 group_slug: frederick-code-and-coffee
 id: tYS9BtD4
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/frederick-code-and-coffee/events/299259197/
 name: 'Frederick Code and Coffee: February Edition!'

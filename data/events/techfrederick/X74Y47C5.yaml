@@ -8,14 +8,14 @@ description: '<p><a class="fasc-button fasc-size-large fasc-type-flat fasc-round
   300w, https://techfrederick.org/wp-content/uploads/2018/09/breakfast-2-768x644.jpg
   768w, https://techfrederick.org/wp-content/uploads/2018/09/breakfast-2-600x503.jpg
   600w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>'
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-08-28 13:30:00+00:00
 extensions: null
 group_slug: techfrederick
 id: X74Y47C5
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/quarterly-networking-breakfast-10/
 name: Quarterly Networking Breakfast

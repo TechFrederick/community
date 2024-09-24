@@ -3,7 +3,7 @@ description: '<p>Containers have changed the way we build, distribute, and deplo
   cloud, and the far edge can still be quite cumbersome. Come get hands-on with bootable
   containers, a new way to build and manage operating system images as easily as container
   applications.</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-05-08 01:00:00+00:00
 extensions:
@@ -12,7 +12,7 @@ extensions:
 group_slug: frederick-open-source
 id: pscr7rAP
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/frederickopensource/events/300536434/
 name: 'Hands-on with Bootable Containers: Simplify Managing the Operating System'

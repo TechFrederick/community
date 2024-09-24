@@ -5,14 +5,14 @@ description: '<h3><a href="https://www.techfrederick.org/sales" target="_blank" 
   300w, https://techfrederick.org/wp-content/uploads/2024/08/sandler-class-768x644.jpg
   768w, https://techfrederick.org/wp-content/uploads/2024/08/sandler-class-600x503.jpg
   600w" sizes="(max-width: 500px) 100vw, 500px" />REGISTER HERE</a></h3>'
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-09-12 03:59:59+00:00
 extensions: null
 group_slug: techfrederick
 id: 6WluWARa
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/sandler-sales-immersion-boot-camp/
 name: Sandler Sales Immersion Boot Camp

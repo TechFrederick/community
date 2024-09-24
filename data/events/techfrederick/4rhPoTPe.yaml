@@ -11,14 +11,14 @@ description: '<p><img loading="lazy" decoding="async" class="alignleft size-medi
 
   <p>Register <a href="https://techfrederick.org/bae/" target="_blank" rel="noopener">HERE</a>
   now!</p>'
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-03-22 03:59:59+00:00
 extensions: null
 group_slug: techfrederick
 id: 4rhPoTPe
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/business-analysis-essentials-training/
 name: Business Analysis Essentials Training

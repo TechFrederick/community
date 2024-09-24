@@ -1,6 +1,6 @@
 description: '<p>Come meet up for dinner and drinks at Brewer''s Alley in Frederick
   and chat with other folks in Web tech!</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-07-25 01:00:00+00:00
 extensions:
@@ -9,7 +9,7 @@ extensions:
 group_slug: frederick-web-tech
 id: gWe2Mhxi
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/fredwebtech/events/302170768/
 name: Web Tech Social
