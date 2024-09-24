@@ -1,17 +1,17 @@
-.PHONY = build
+.PHONY: frontend
 
 run:
 	@uv run honcho start
 
 bootstrap:
 	uv sync
-	npm --prefix techcity/services/builder install
+	npm --prefix frontend install
 
 serve:
 	uv run manage.py runserver
 
 frontend:
-	npm --prefix techcity/services/builder run tailwind
+	npm --prefix frontend run tailwind
 
 fetch:
 	@uv run manage.py fetch_events
