@@ -6,25 +6,20 @@ dependencies = [
     "django-debug-toolbar>=4.4.6",
     "django>=5.1.1",
     "environs>=11.0.0",
-    "jinja2>=3.1.4",
     "markdown>=3.7",
     "pydantic>=2.9.1",
     "python-frontmatter>=1.1.0",
     "pyyaml>=6.0.2",
     "requests>=2.32.3",
     "sqids>=0.5.0",
-    "typer>=0.12.5",
     "urllib3>=2.2.3",
 ]
 
 [tool.uv]
 dev-dependencies = [
     "honcho>=1.1.0",
-    "polyfactory>=2.16.2",
     "pytest>=8.3.3",
     "pytest-cov>=5.0.0",
-    "scrapy>=2.11.2",
-    "time-machine>=2.15.0",
 ]
 
 [tool.coverage.report]
