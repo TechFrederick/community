@@ -23,3 +23,7 @@ fetch-cached:
 
 test:
 	uv run pytest --cov techcity
+
+# Test with migrations to make sure they work.
+ci:
+	uv run pytest --cov techcity --migrations

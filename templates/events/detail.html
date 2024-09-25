@@ -11,9 +11,6 @@
       </svg>
       <div>
         Hosted by <a href="{% url "groups:detail" event.group.slug %}" class="underline text-tflightblue hover:text-tfdarkblue">{{ event.group.name }}</a>
-        {% if event.joint_with %}
-          jointly with other groups
-        {% endif %}
       </div>
     </div>
     <div class="px-4 pb-2 sm:px-0 text-base sm:text-lg font-light flex flex-row gap-4 items-center">

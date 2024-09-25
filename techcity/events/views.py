@@ -5,7 +5,6 @@ from .models import Event
 
 
 def event_detail(request, sqid):
-    # TODO: handle joint_with in template
     try:
         event = Event.objects.from_sqid(sqid)
     except Event.DoesNotExist:

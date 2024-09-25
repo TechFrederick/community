@@ -144,6 +144,30 @@ wheels = [
 ]
 
 [[package]]
+name = "factory-boy"
+version = "3.3.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "faker" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/99/3d/8070dde623341401b1c80156583d4c793058fe250450178218bb6e45526c/factory_boy-3.3.1.tar.gz", hash = "sha256:8317aa5289cdfc45f9cae570feb07a6177316c82e34d14df3c2e1f22f26abef0", size = 163924 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/33/cf/44ec67152f3129d0114c1499dd34f0a0a0faf43d9c2af05bc535746ca482/factory_boy-3.3.1-py2.py3-none-any.whl", hash = "sha256:7b1113c49736e1e9995bc2a18f4dbf2c52cf0f841103517010b1d825712ce3ca", size = 36878 },
+]
+
+[[package]]
+name = "faker"
+version = "29.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-dateutil" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7e/5a/5cebcd0483bb7db8e49935960d450a6a6bf284cec2ea2ee26a78dc8cecdc/faker-29.0.0.tar.gz", hash = "sha256:34e89aec594cad9773431ca479ee95c7ce03dd9f22fda2524e2373b880a2fa77", size = 1795098 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/19/48/e8531110e55c96a66b076a7cf71891038790eee22b88ff4d983ed972067a/Faker-29.0.0-py3-none-any.whl", hash = "sha256:32d0ee7d42925ff06e4a7d906ee7efbf34f5052a41a2a1eb8bb174a422a5498f", size = 1834945 },
+]
+
+[[package]]
 name = "honcho"
 version = "1.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -290,6 +314,30 @@ wheels = [
 ]
 
 [[package]]
+name = "pytest-django"
+version = "4.9.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pytest" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/02/c0/43c8b2528c24d7f1a48a47e3f7381f5ab2ae8c64634b0c3f4bd843063955/pytest_django-4.9.0.tar.gz", hash = "sha256:8bf7bc358c9ae6f6fc51b6cebb190fe20212196e6807121f11bd6a3b03428314", size = 84067 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/47/fe/54f387ee1b41c9ad59e48fb8368a361fad0600fe404315e31a12bacaea7d/pytest_django-4.9.0-py3-none-any.whl", hash = "sha256:1d83692cb39188682dbb419ff0393867e9904094a549a7d38a3154d5731b2b99", size = 23723 },
+]
+
+[[package]]
+name = "python-dateutil"
+version = "2.9.0.post0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/66/c0/0c8b6ad9f17a802ee498c46e004a0eb49bc148f2fd230864601a86dcf6db/python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3", size = 342432 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427", size = 229892 },
+]
+
+[[package]]
 name = "python-dotenv"
 version = "1.0.1"
 source = { registry = "https://pypi.org/simple" }
@@ -361,6 +409,15 @@ wheels = [
 ]
 
 [[package]]
+name = "six"
+version = "1.16.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926", size = 34041 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254", size = 11053 },
+]
+
+[[package]]
 name = "sqids"
 version = "0.5.0"
 source = { registry = "https://pypi.org/simple" }
@@ -397,9 +454,11 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "factory-boy" },
     { name = "honcho" },
     { name = "pytest" },
     { name = "pytest-cov" },
+    { name = "pytest-django" },
     { name = "setuptools" },
 ]
 
@@ -419,9 +478,11 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "factory-boy", specifier = ">=3.3.1" },
     { name = "honcho", specifier = ">=1.1.0" },
     { name = "pytest", specifier = ">=8.3.3" },
     { name = "pytest-cov", specifier = ">=5.0.0" },
+    { name = "pytest-django", specifier = ">=4.9.0" },
     { name = "setuptools", specifier = ">=75.1.0" },
 ]
 
