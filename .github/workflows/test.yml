@@ -6,6 +6,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    # Add required configuration with dummy values.
+    env:
+      SECRET_KEY: 'a secret to everybody'
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
