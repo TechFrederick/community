@@ -20,3 +20,8 @@ def index(request):
         "groups": Group.objects.all().order_by("name"),
     }
     return render(request, "core/index.html", context)
+
+
+def up(request):
+    """A healthcheck to show when the app is up and able to respond to requests."""
+    return render(request, "core/up.html", {})
