@@ -27,3 +27,9 @@ test:
 # Test with migrations to make sure they work.
 ci:
 	uv run pytest --cov techcity --migrations
+
+build:
+	docker compose build
+
+shell:
+	docker compose run --rm web bash
