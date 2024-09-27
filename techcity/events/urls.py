@@ -12,5 +12,11 @@ def get_all_events():
 
 app_name = "events"
 urlpatterns = [
-    distill_path("<str:sqid>", event_detail, name="detail", distill_func=get_all_events),
+    distill_path(
+        "<str:sqid>.html",
+        event_detail,
+        name="detail",
+        distill_func=get_all_events,
+        distill_file="events/{sqid}.html",
+    ),
 ]

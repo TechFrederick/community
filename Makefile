@@ -28,13 +28,11 @@ test:
 ci:
 	uv run pytest --cov techcity --migrations
 
-# build:
-# 	docker compose build
-
-# shell:
-# 	docker compose run --rm web bash
-
-# static site generation
-
+# Build the static site
 build:
 	@uv run manage.py distill-local out --force --collectstatic
+
+# Serve the static site locally
+serve-static:
+	@uv run python -m http.server --directory out
+
