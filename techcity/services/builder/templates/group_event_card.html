@@ -1,6 +1,6 @@
 <div class="w-full border-y sm:border border-tflightblue {% if now and event.when < now %}saturate-50{% endif %}">
   <div class="flex flex-row text-3xl sm:text-4xl font-extralight tracking-widest uppercase border-b-4 border-{{ group.color }}">
-    <div class="p-2 bg-tflightblue basis-1/2 text-center text-white">{{ event.when.strftime('%-d %b') }}</div>
+    <div class="p-2 bg-tflightblue basis-1/2 text-center text-white">{{ event.when.strftime('%a, %b %-d') }}</div>
     <div class="p-2 basis-1/2 text-center bg-slate-50 text-slate-700">{{ event.when.strftime('%-I%p').lower() }}</div>
   </div>
   <div class="bg-white text-slate-700">
