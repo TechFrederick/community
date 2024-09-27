@@ -28,8 +28,13 @@ test:
 ci:
 	uv run pytest --cov techcity --migrations
 
-build:
-	docker compose build
+# build:
+# 	docker compose build
 
-shell:
-	docker compose run --rm web bash
+# shell:
+# 	docker compose run --rm web bash
+
+# static site generation
+
+build:
+	@uv run manage.py distill-publish --force --collectstatic

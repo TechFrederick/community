@@ -10,3 +10,5 @@ cache
 db.sqlite3
 static/site.css
 staticfiles
+out/
+
