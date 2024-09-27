@@ -9,6 +9,6 @@ urlpatterns = [
     path("groups/", include("techcity.groups.urls")),
 ]
 
-# # Enable the debug toolbar only in DEBUG mode.
-# if settings.DEBUG and settings.DEBUG_TOOLBAR:
-#     urlpatterns = [path("__debug__/", include("debug_toolbar.urls"))] + urlpatterns
+# Enable the debug toolbar only in DEBUG mode.
+if settings.DEBUG and settings.DEBUG_TOOLBAR:
+    urlpatterns = [path("__debug__/", include("debug_toolbar.urls"))] + urlpatterns

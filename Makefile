@@ -37,4 +37,4 @@ ci:
 # static site generation
 
 build:
-	@uv run manage.py distill-publish --force --collectstatic
+	@uv run manage.py distill-local out --force --collectstatic
