@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     "techcity.core",
     "techcity.events",
     "techcity.groups",
-    'django_distill',
+    "django_distill",
 ]
 
 MIDDLEWARE = [

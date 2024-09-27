@@ -1,8 +1,8 @@
 # from django.urls import path
 from django_distill import distill_path
 
-from .views import event_detail
 from .models import Event
+from .views import event_detail
 
 
 def get_all_events():
