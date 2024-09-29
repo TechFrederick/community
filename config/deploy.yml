@@ -3,8 +3,7 @@ image: mblayman/techfrederick-community
 
 servers:
   web:
-    # FIMXE: replace with IP
-    - 192.168.0.1
+    - 45.55.106.163
 
 # Enable SSL auto certification via Let's Encrypt (and allow for multiple apps on one server).
 # Set ssl: false if using something like Cloudflare to terminate SSL (but keep host!).
