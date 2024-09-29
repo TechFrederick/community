@@ -1,0 +1,39 @@
+service: community
+image: mblayman/techfrederick-community
+
+servers:
+  web:
+    # FIMXE: replace with IP
+    - 192.168.0.1
+
+# Enable SSL auto certification via Let's Encrypt (and allow for multiple apps on one server).
+# Set ssl: false if using something like Cloudflare to terminate SSL (but keep host!).
+# proxy:
+#   ssl: true
+#   host: app.example.com
+
+registry:
+  username: mblayman
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+builder:
+  arch: amd64
+
+env:
+  clear:
+    DB_DIR: /var/db
+    # Make sure we never accidentally set DEBUG to True for production.
+    DEBUG: "False"
+    TIMEZONE: America/New_York
+  secret:
+    - SECRET_KEY
+
+# Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
+# "bin/kamal logs -r job" will tail logs from the first server in the job section.
+#
+# aliases:
+#   shell: app exec --interactive --reuse "bash"
+
+volumes:
+ - "/var/db:/var/db"
