@@ -25,7 +25,9 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 
 COPY --chown=app:app . /app/
 
-RUN python manage.py collectstatic --noinput
+RUN \
+    SECRET_KEY=builder-secret \
+    python manage.py collectstatic --noinput
 
 USER app
 
