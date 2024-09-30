@@ -28,6 +28,7 @@ env:
     DB_DIR: /var/db
     # Make sure we never accidentally set DEBUG to True for production.
     DEBUG: "False"
+    PYTHONUNBUFFERED: "1"
     TIMEZONE: America/New_York
   secret:
     - SECRET_KEY
