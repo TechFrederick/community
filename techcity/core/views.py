@@ -15,7 +15,7 @@ def index(request):
     index = bisect.bisect_left(events, now, key=lambda e: e.start_at)
     context = {
         "now": now,
-        "upcoming_events": reversed(events[index:]),
+        "upcoming_events": events[index:],
         "recent_events": reversed(events[:index]),
         "groups": Group.objects.all().order_by("name"),
     }
