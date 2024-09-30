@@ -28,11 +28,9 @@ env:
   secret:
     - SECRET_KEY
 
-# Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
-# "bin/kamal logs -r job" will tail logs from the first server in the job section.
-#
-# aliases:
-#   shell: app exec --interactive --reuse "bash"
+aliases:
+  shell: app exec --interactive --reuse "bash"
+  ssh: server exec --interactive "bash"
 
 proxy:
   app_port: 8000
