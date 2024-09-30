@@ -5,6 +5,7 @@ requires-python = ">=3.12"
 dependencies = [
     "django-debug-toolbar>=4.4.6",
     "django>=5.1.1",
+    "django-distill>=3.2.7",
     "environs>=11.0.0",
     "gunicorn>=23.0.0",
     "markdown>=3.7",

@@ -1,0 +1,3514 @@
+- model: auth.permission
+  pk: 1
+  fields:
+    name: Can add log entry
+    content_type: 1
+    codename: add_logentry
+- model: auth.permission
+  pk: 2
+  fields:
+    name: Can change log entry
+    content_type: 1
+    codename: change_logentry
+- model: auth.permission
+  pk: 3
+  fields:
+    name: Can delete log entry
+    content_type: 1
+    codename: delete_logentry
+- model: auth.permission
+  pk: 4
+  fields:
+    name: Can view log entry
+    content_type: 1
+    codename: view_logentry
+- model: auth.permission
+  pk: 5
+  fields:
+    name: Can add permission
+    content_type: 2
+    codename: add_permission
+- model: auth.permission
+  pk: 6
+  fields:
+    name: Can change permission
+    content_type: 2
+    codename: change_permission
+- model: auth.permission
+  pk: 7
+  fields:
+    name: Can delete permission
+    content_type: 2
+    codename: delete_permission
+- model: auth.permission
+  pk: 8
+  fields:
+    name: Can view permission
+    content_type: 2
+    codename: view_permission
+- model: auth.permission
+  pk: 9
+  fields:
+    name: Can add group
+    content_type: 3
+    codename: add_group
+- model: auth.permission
+  pk: 10
+  fields:
+    name: Can change group
+    content_type: 3
+    codename: change_group
+- model: auth.permission
+  pk: 11
+  fields:
+    name: Can delete group
+    content_type: 3
+    codename: delete_group
+- model: auth.permission
+  pk: 12
+  fields:
+    name: Can view group
+    content_type: 3
+    codename: view_group
+- model: auth.permission
+  pk: 13
+  fields:
+    name: Can add user
+    content_type: 4
+    codename: add_user
+- model: auth.permission
+  pk: 14
+  fields:
+    name: Can change user
+    content_type: 4
+    codename: change_user
+- model: auth.permission
+  pk: 15
+  fields:
+    name: Can delete user
+    content_type: 4
+    codename: delete_user
+- model: auth.permission
+  pk: 16
+  fields:
+    name: Can view user
+    content_type: 4
+    codename: view_user
+- model: auth.permission
+  pk: 17
+  fields:
+    name: Can add content type
+    content_type: 5
+    codename: add_contenttype
+- model: auth.permission
+  pk: 18
+  fields:
+    name: Can change content type
+    content_type: 5
+    codename: change_contenttype
+- model: auth.permission
+  pk: 19
+  fields:
+    name: Can delete content type
+    content_type: 5
+    codename: delete_contenttype
+- model: auth.permission
+  pk: 20
+  fields:
+    name: Can view content type
+    content_type: 5
+    codename: view_contenttype
+- model: auth.permission
+  pk: 21
+  fields:
+    name: Can add session
+    content_type: 6
+    codename: add_session
+- model: auth.permission
+  pk: 22
+  fields:
+    name: Can change session
+    content_type: 6
+    codename: change_session
+- model: auth.permission
+  pk: 23
+  fields:
+    name: Can delete session
+    content_type: 6
+    codename: delete_session
+- model: auth.permission
+  pk: 24
+  fields:
+    name: Can view session
+    content_type: 6
+    codename: view_session
+- model: auth.permission
+  pk: 25
+  fields:
+    name: Can add venue
+    content_type: 7
+    codename: add_venue
+- model: auth.permission
+  pk: 26
+  fields:
+    name: Can change venue
+    content_type: 7
+    codename: change_venue
+- model: auth.permission
+  pk: 27
+  fields:
+    name: Can delete venue
+    content_type: 7
+    codename: delete_venue
+- model: auth.permission
+  pk: 28
+  fields:
+    name: Can view venue
+    content_type: 7
+    codename: view_venue
+- model: auth.permission
+  pk: 29
+  fields:
+    name: Can add event
+    content_type: 8
+    codename: add_event
+- model: auth.permission
+  pk: 30
+  fields:
+    name: Can change event
+    content_type: 8
+    codename: change_event
+- model: auth.permission
+  pk: 31
+  fields:
+    name: Can delete event
+    content_type: 8
+    codename: delete_event
+- model: auth.permission
+  pk: 32
+  fields:
+    name: Can view event
+    content_type: 8
+    codename: view_event
+- model: auth.permission
+  pk: 33
+  fields:
+    name: Can add group
+    content_type: 9
+    codename: add_group
+- model: auth.permission
+  pk: 34
+  fields:
+    name: Can change group
+    content_type: 9
+    codename: change_group
+- model: auth.permission
+  pk: 35
+  fields:
+    name: Can delete group
+    content_type: 9
+    codename: delete_group
+- model: auth.permission
+  pk: 36
+  fields:
+    name: Can view group
+    content_type: 9
+    codename: view_group
+- model: contenttypes.contenttype
+  pk: 1
+  fields:
+    app_label: admin
+    model: logentry
+- model: contenttypes.contenttype
+  pk: 2
+  fields:
+    app_label: auth
+    model: permission
+- model: contenttypes.contenttype
+  pk: 3
+  fields:
+    app_label: auth
+    model: group
+- model: contenttypes.contenttype
+  pk: 4
+  fields:
+    app_label: auth
+    model: user
+- model: contenttypes.contenttype
+  pk: 5
+  fields:
+    app_label: contenttypes
+    model: contenttype
+- model: contenttypes.contenttype
+  pk: 6
+  fields:
+    app_label: sessions
+    model: session
+- model: contenttypes.contenttype
+  pk: 7
+  fields:
+    app_label: events
+    model: venue
+- model: contenttypes.contenttype
+  pk: 8
+  fields:
+    app_label: events
+    model: event
+- model: contenttypes.contenttype
+  pk: 9
+  fields:
+    app_label: groups
+    model: group
+- model: events.event
+  pk: 1
+  fields:
+    name: 2nd Wednesday Dinner - Black Hog BBQ
+    url: https://www.meetup.com/python-frederick/events/298211582/
+    group: 5
+    start_at: 2024-01-11 00:00:00+00:00
+    end_at: 2024-01-11 02:00:00+00:00
+    venue: 1
+    description: '<p>We''re going to get together, share a meal, and talk some Python
+      (and whatever other topics you''re interested in).</p> <p>Come on out for some
+      fun and food. This is a great chance to chat about Python with other people
+      interested in the language.</p> <p>Next month we''ll have another Python presentation
+      in store.</p> '
+- model: events.event
+  pk: 2
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygccbrb/
+    group: 7
+    start_at: 2024-01-13 15:00:00+00:00
+    end_at: 2024-01-13 17:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 3
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/gzdxbtygccbbc/
+    group: 4
+    start_at: 2024-01-20 17:00:00+00:00
+    end_at: 2024-01-20 19:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 4
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/ctjjctygccbbc/
+    group: 7
+    start_at: 2024-01-20 17:00:00+00:00
+    end_at: 2024-01-20 19:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 5
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/dzjrjtygccbbc/
+    group: 5
+    start_at: 2024-01-20 17:00:00+00:00
+    end_at: 2024-01-20 19:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 6
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/jzdxbtygccbbc/
+    group: 3
+    start_at: 2024-01-20 17:00:00+00:00
+    end_at: 2024-01-20 19:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 7
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/awsfrederick/events/czdxbtygccbbc/
+    group: 1
+    start_at: 2024-01-20 17:00:00+00:00
+    end_at: 2024-01-20 19:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 8
+  fields:
+    name: Web Tech Social
+    url: https://www.meetup.com/fredwebtech/events/298576953/
+    group: 4
+    start_at: 2024-01-25 00:00:00+00:00
+    end_at: 2024-01-25 02:00:00+00:00
+    venue: 4
+    description: '<p>Come meet up for dinner and drinks at JoJo''s in downtown Frederick
+      as we kick off a new year of Web Tech events!</p> <p>This event will be co-hosted
+      by the Frederick AWS Meetup.</p> '
+- model: events.event
+  pk: 9
+  fields:
+    name: 'AWS Social: Co-Host with Webtech at JoJo''s'
+    url: https://www.meetup.com/awsfrederick/events/298585615/
+    group: 1
+    start_at: 2024-01-25 00:00:00+00:00
+    end_at: 2024-01-25 02:00:00+00:00
+    venue: 4
+    description: '<p>Join us for a relaxed and enjoyable evening of networking at
+      JoJo''s, brought to you by our group in collaboration with the Frederick WebTech
+      Meetup. This gathering is a fantastic opportunity to connect with fellow tech
+      enthusiasts, share AWS insights, and stay updated on the latest industry trends.
+      Whether you''re a seasoned AWS expert or just beginning your journey, we welcome
+      you to be part of this social event.</p> <p>**Frederick Webtech:**<br/>This
+      event is a joint effort with the Frederick Webtech meetup group.</p> <p>**Cost
+      / Attendance:**<br/>Attendees must be 21 years or older and will be responsible
+      for the purchase of their food and drinks.</p> <p>**Parking:**</p> <p>* Carroll
+      Creek Garage<br/>* Side Street Parking (No meter cost after 5 PM)</p> <p>We
+      hope to see you there! If you have any questions or ideas for future meetups,
+      please feel free to contact us through [Discord](<a href="https://discord.gg/9Ne7Bar2CB"
+      class="linkified">https://discord.gg/9Ne7Bar2CB</a>)</p> '
+- model: events.event
+  pk: 10
+  fields:
+    name: 'Frederick Code and Coffee: A Brand New Year!'
+    url: https://www.meetup.com/frederick-code-and-coffee/events/298329617/
+    group: 2
+    start_at: 2024-01-28 18:00:00+00:00
+    end_at: 2024-01-28 21:00:00+00:00
+    venue: 5
+    description: '<p>Happy New Year! Come join us for some afternoon networking. Bring
+      your questions, laptops, and enthusiasm!</p> <p>Around the start of the event,
+      we''ll do intros, then break out to do whatever we''d like. This will be an
+      informal event overall, so no worries if you can''t make it right at 1:00.</p>
+      <p>We''re headed back to Gravel &amp; Grind this month. It''s been a really
+      great location for us, and I always love coming back here. We may move to FITCI
+      in the future as our cohort grows, but this is a good fit for us right now.</p> '
+- model: events.event
+  pk: 11
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygcdbnb/
+    group: 7
+    start_at: 2024-02-10 15:00:00+00:00
+    end_at: 2024-02-10 17:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 12
+  fields:
+    name: Algorithmic Art with Python (2nd Wed Talk)
+    url: https://www.meetup.com/python-frederick/events/298531232/
+    group: 5
+    start_at: 2024-02-15 00:00:00+00:00
+    end_at: 2024-02-15 02:00:00+00:00
+    venue: 6
+    description: '<p>In this talk we’re going to start from nothing and build out
+      our own tools for making art in Python, no AI needed! We’ll show how Python’s
+      expressiveness allows us to describe graphics elegantly and use that to make
+      some unique art programmatically.</p> <p>Also, we''re going to have another
+      "after hour." After the presentation is over, anyone who wants to stay and do
+      a bit of coding or chatting is welcome to hang out. Think of it like a mini
+      open workshop.</p> '
+- model: events.event
+  pk: 13
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/gzdxbtygcdbwb/
+    group: 4
+    start_at: 2024-02-17 17:00:00+00:00
+    end_at: 2024-02-17 19:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 14
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/ctjjctygcdbwb/
+    group: 7
+    start_at: 2024-02-17 17:00:00+00:00
+    end_at: 2024-02-17 19:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 15
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/awsfrederick/events/299093646/
+    group: 1
+    start_at: 2024-02-17 17:00:00+00:00
+    end_at: 2024-02-17 19:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 16
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/dzjrjtygcdbwb/
+    group: 5
+    start_at: 2024-02-17 17:00:00+00:00
+    end_at: 2024-02-17 19:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 17
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/jzdxbtygcdbwb/
+    group: 3
+    start_at: 2024-02-17 17:00:00+00:00
+    end_at: 2024-02-17 19:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 18
+  fields:
+    name: 'Frederick Code and Coffee: February Edition!'
+    url: https://www.meetup.com/frederick-code-and-coffee/events/299259197/
+    group: 2
+    start_at: 2024-02-25 18:00:00+00:00
+    end_at: 2024-02-25 21:00:00+00:00
+    venue: 5
+    description: '<p>Happy February!</p> <p>.....</p> <p>The host is out of the country
+      this month. However, as part of a larger push towards getting all of the local
+      tech meetups on a consistent schedule, we''re scheduling this meet-up anyway.
+      It''ll be at the usual place and time. We''re also looking for a co-host that''s
+      interested in taking on hosting duties if there are other times the host can''t
+      make it.</p> <p>.....</p> <p>Come join us for some afternoon networking. Bring
+      your questions, laptops, and enthusiasm!</p> <p>Around the start of the event,
+      we''ll do intros, then break out to do whatever we''d like. This will be an
+      informal event overall, so no worries if you can''t make it right at 2:00.</p>
+      <p>We''re headed to Gravel &amp; Grind this month. I''m always on the lookout
+      for a local, comfortable place, that''s accessible and easy to find. This place
+      really fits the bill. I look forward to seeing you all there!</p> '
+- model: events.event
+  pk: 19
+  fields:
+    name: 'Web Audio API: Let''s Make Some Noise!'
+    url: https://www.meetup.com/fredwebtech/events/299241180/
+    group: 4
+    start_at: 2024-02-29 00:00:00+00:00
+    end_at: 2024-02-29 02:00:00+00:00
+    venue: 6
+    description: '<p>In this talk, we''ll look at the capabilities of the Web Audio
+      API. This modular API can string together different nodes to create, transform,
+      and control all different kinds of sounds, directly within the browser!</p>
+      <p>**Speaker: Chip Bell**<br/>Hi! My name is Chip and I’m a developer in the
+      Frederick area with a background in game development, music, and applied math.
+      I’ve built everything from arcade games to ETL pipelines to accounting software
+      to simulations, and even ETL pipelines for arcade games… I’m currently a freelance
+      developer/composer/artist/everything else for Minerva Digital, my wife’s and
+      my creative agency.</p> '
+- model: events.event
+  pk: 20
+  fields:
+    name: Jumpstart to Using Modern JavaScript
+    url: https://techfrederick.org/event/jumpstart-to-using-modern-javascript/
+    group: 6
+    start_at: 2024-03-05 05:00:00+00:00
+    end_at: 2024-03-08 04:59:59+00:00
+    venue: null
+    description: '<p><img loading="lazy" decoding="async" class="alignleft wp-image-11668
+      size-medium" src="https://techfrederick.org/wp-content/uploads/2024/02/JavaScript-Training-1-300x300.png"
+      alt="" width="300" height="300" srcset="https://techfrederick.org/wp-content/uploads/2024/02/JavaScript-Training-1-300x300.png
+      300w, https://techfrederick.org/wp-content/uploads/2024/02/JavaScript-Training-1-1024x1024.png
+      1024w, https://techfrederick.org/wp-content/uploads/2024/02/JavaScript-Training-1-150x150.png
+      150w, https://techfrederick.org/wp-content/uploads/2024/02/JavaScript-Training-1-768x768.png
+      768w, https://techfrederick.org/wp-content/uploads/2024/02/JavaScript-Training-1-600x600.png
+      600w, https://techfrederick.org/wp-content/uploads/2024/02/JavaScript-Training-1-100x100.png
+      100w, https://techfrederick.org/wp-content/uploads/2024/02/JavaScript-Training-1.png
+      1080w" sizes="(max-width: 300px) 100vw, 300px" /></p>'
+- model: events.event
+  pk: 21
+  fields:
+    name: Sabor de Cuba (2nd Wed Dinner)
+    url: https://www.meetup.com/python-frederick/events/298531432/
+    group: 5
+    start_at: 2024-03-13 22:30:00+00:00
+    end_at: 2024-03-14 00:30:00+00:00
+    venue: 7
+    description: '<p>We''re going to get together, share a meal, and talk some Python
+      (and whatever other topics you''re interested in).</p> <p>Come on out for some
+      fun and food. This is a great chance to chat about Python with other people
+      interested in the language.</p> <p>Next month we''ll have another Python presentation
+      in store.</p> '
+- model: events.event
+  pk: 22
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/gzdxbtygcfbvb/
+    group: 4
+    start_at: 2024-03-16 16:00:00+00:00
+    end_at: 2024-03-16 18:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 23
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/jzdxbtygcfbvb/
+    group: 3
+    start_at: 2024-03-16 16:00:00+00:00
+    end_at: 2024-03-16 18:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 24
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/awsfrederick/events/299696372/
+    group: 1
+    start_at: 2024-03-16 16:00:00+00:00
+    end_at: 2024-03-16 18:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 25
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/ctjjctygcfbvb/
+    group: 7
+    start_at: 2024-03-16 16:00:00+00:00
+    end_at: 2024-03-16 18:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 26
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/dzjrjtygcfbvb/
+    group: 5
+    start_at: 2024-03-16 16:00:00+00:00
+    end_at: 2024-03-16 18:00:00+00:00
+    venue: 3
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 27
+  fields:
+    name: Business Analysis Essentials Training
+    url: https://techfrederick.org/event/business-analysis-essentials-training/
+    group: 6
+    start_at: 2024-03-19 04:00:00+00:00
+    end_at: 2024-03-22 03:59:59+00:00
+    venue: null
+    description: '<p><img loading="lazy" decoding="async" class="alignleft size-medium
+      wp-image-11680" src="https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-300x300.png"
+      alt="" width="300" height="300" srcset="https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-300x300.png
+      300w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-1024x1024.png
+      1024w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-150x150.png
+      150w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-768x768.png
+      768w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-600x600.png
+      600w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials-100x100.png
+      100w, https://techfrederick.org/wp-content/uploads/2024/02/Business-Analysis-Essentials.png
+      1200w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+
+      <p>Register <a href="https://techfrederick.org/bae/" target="_blank" rel="noopener">HERE</a>
+      now!</p>'
+- model: events.event
+  pk: 28
+  fields:
+    name: Quarterly Networking Breakfast
+    url: https://techfrederick.org/event/quarterly-networking-breakfast-9/
+    group: 6
+    start_at: 2024-03-21 12:00:00+00:00
+    end_at: 2024-03-21 13:30:00+00:00
+    venue: 8
+    description: '<h5><img loading="lazy" decoding="async" class="alignleft size-medium
+      wp-image-11706" src="https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-300x300.png"
+      alt="" width="300" height="300" srcset="https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-300x300.png
+      300w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-1024x1024.png
+      1024w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-150x150.png
+      150w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-768x768.png
+      768w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-600x600.png
+      600w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast-100x100.png
+      100w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast.png
+      1080w" sizes="(max-width: 300px) 100vw, 300px" /> <a href="http://techfrederick.org/breakfast"
+      target="_blank" rel="noopener"><strong>REGISTER HERE</strong></a></h5>'
+- model: events.event
+  pk: 29
+  fields:
+    name: 'Joint meetup with Code and Coffee at Rockwell Riverside '
+    url: https://www.meetup.com/awsfrederick/events/299696348/
+    group: 1
+    start_at: 2024-03-21 23:00:00+00:00
+    end_at: 2024-03-22 01:00:00+00:00
+    venue: 9
+    description: '<p>Join us at Rockwell Riverside with our friends from Code and
+      Coffee to talk about tech!</p> '
+- model: events.event
+  pk: 30
+  fields:
+    name: 'Frederick Code and Coffee: After Dark - Featuring AWS Frederick'
+    url: https://www.meetup.com/frederick-code-and-coffee/events/298848273/
+    group: 2
+    start_at: 2024-03-21 23:00:00+00:00
+    end_at: 2024-03-22 01:00:00+00:00
+    venue: 9
+    description: "<p>\U0001F31F Code and Coffee: After Dark \U0001F31F</p> <p>Join
+      us for an evening of talk, networking, and craft beer at a special crossover
+      collaboration with [AWS Frederick](<a href=\"https://www.meetup.com/awsfrederick/\"
+      class=\"linkified\">https://www.meetup.com/awsfrederick/</a>)!</p> <p>Unwind
+      after a long day and delve into discussions about the latest trends, tools,
+      and techniques in software development and cloud computing. Whether you're a
+      seasoned coder, a curious beginner, or simply interested in the tech (or beer)
+      scene, this event offers something for you.</p> "
+- model: events.event
+  pk: 31
+  fields:
+    name: "Frederick Code and Coffee: March Hare ⏰️\U0001F407"
+    url: https://www.meetup.com/frederick-code-and-coffee/events/299259228/
+    group: 2
+    start_at: 2024-03-24 17:00:00+00:00
+    end_at: 2024-03-24 20:00:00+00:00
+    venue: 5
+    description: '<p>I''m late! I''m late! Come join us for some afternoon networking.
+      Bring your questions, laptops, and enthusiasm!</p> <p>Around the start of the
+      event, we''ll do intros, then break out to do whatever we''d like. This will
+      be an informal event overall, so no worries if you can''t make it right at 1:00.</p>
+      <p>We''re headed back to Gravel &amp; Grind this month. It''s been a really
+      great location for us, and I always love coming back here. We may move to FITCI
+      in the future as our cohort grows, but this is a good fit for us right now.</p> '
+- model: events.event
+  pk: 32
+  fields:
+    name: 'NATS: Connecting Apps Over a Network Easily'
+    url: https://www.meetup.com/frederickopensource/events/299259520/
+    group: 3
+    start_at: 2024-04-02 23:00:00+00:00
+    end_at: 2024-04-03 01:00:00+00:00
+    venue: 6
+    description: '<p>NATS is an awesome open source technology to help connect code
+      together over a network. Whether you''re build a distributed microservice architecture
+      or connecting IoT devices, NATS provides the tools you need to do that easily.
+      In this talk, you''ll learn about NATS via a presentation with plenty of live
+      coding examples. And if you bring your laptop, we may even be able to get your
+      computer participating in the examples!</p> '
+- model: events.event
+  pk: 33
+  fields:
+    name: Web Tech Social
+    url: https://www.meetup.com/fredwebtech/events/299999360/
+    group: 4
+    start_at: 2024-04-03 23:00:00+00:00
+    end_at: 2024-04-04 01:00:00+00:00
+    venue: 10
+    description: '<p>Come meet up for dinner and drinks at Cugino Forno in Frederick
+      and chat about Web tech!</p> '
+- model: events.event
+  pk: 34
+  fields:
+    name: '*CHANGED* Intro to Scrapy (2nd Wed Talk)'
+    url: https://www.meetup.com/python-frederick/events/298531455/
+    group: 5
+    start_at: 2024-04-10 23:00:00+00:00
+    end_at: 2024-04-11 01:00:00+00:00
+    venue: 6
+    description: '<p>\*The previous talk, PDF Text Extraction, has been postponed
+      until the August meeting date due to scheduling issues with the presenter.\*</p>
+      <p>In this talk we''ll walk through the basics of Scrapy, a web crawling framework,
+      to extract data from publicly accessible internet sources.</p> <p>Also, we''re
+      going to have another "after hour." After the presentation is over, anyone who
+      wants to stay and do a bit of coding or chatting is welcome to hang out. Think
+      of it like a mini open workshop.</p> '
+- model: events.event
+  pk: 35
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygcgbrb/
+    group: 7
+    start_at: 2024-04-13 14:00:00+00:00
+    end_at: 2024-04-13 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 36
+  fields:
+    name: Microsoft Azure Fundamentals
+    url: https://techfrederick.org/event/microsoft-azure-fundamentals/
+    group: 6
+    start_at: 2024-04-18 13:00:00+00:00
+    end_at: 2024-04-18 21:00:00+00:00
+    venue: null
+    description: ''
+- model: events.event
+  pk: 37
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/awsfrederick/events/300521990/
+    group: 1
+    start_at: 2024-04-20 14:00:00+00:00
+    end_at: 2024-04-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 38
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltygcgbbc/
+    group: 3
+    start_at: 2024-04-20 14:00:00+00:00
+    end_at: 2024-04-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 39
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltygcgbbc/
+    group: 7
+    start_at: 2024-04-20 14:00:00+00:00
+    end_at: 2024-04-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 40
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltygcgbbc/
+    group: 4
+    start_at: 2024-04-20 14:00:00+00:00
+    end_at: 2024-04-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 41
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltygcgbbc/
+    group: 5
+    start_at: 2024-04-20 14:00:00+00:00
+    end_at: 2024-04-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 42
+  fields:
+    name: 'CSS: animation and more'
+    url: https://www.meetup.com/fredwebtech/events/300357609/
+    group: 4
+    start_at: 2024-04-24 23:00:00+00:00
+    end_at: 2024-04-25 01:00:00+00:00
+    venue: 6
+    description: '<p>Once upon a time, CSS was used for styling your website''s colors
+      and fonts. Today, it''s a powerful tool to make animations, control layout flow,
+      and adapt to different screen sizes (all without JavaScript)! We''ll examine
+      simple and complex ways of making CSS animations, CSS media queries, and even
+      make a playable video game, using only CSS.</p> '
+- model: events.event
+  pk: 43
+  fields:
+    name: "Frederick Code and Coffee: April Showers \U0001F326️\U0001F308"
+    url: https://www.meetup.com/frederick-code-and-coffee/events/299694307/
+    group: 2
+    start_at: 2024-04-28 17:00:00+00:00
+    end_at: 2024-04-28 20:00:00+00:00
+    venue: 5
+    description: '<p>Welcome Spring! Come join us for some afternoon networking. Bring
+      your questions, laptops, and enthusiasm!</p> <p>Around the start of the event,
+      we''ll do intros, then break out to do whatever we''d like. This will be an
+      informal event overall, so no worries if you can''t make it right at 1:00.</p>
+      <p>We''re headed back to Gravel &amp; Grind this month. It''s been a really
+      great location for us, and I always love coming back here. We may move to FITCI
+      in the future as our cohort grows, but this is a good fit for us right now.</p> '
+- model: events.event
+  pk: 44
+  fields:
+    name: 'Hands-on with Bootable Containers: Simplify Managing the Operating System'
+    url: https://www.meetup.com/frederickopensource/events/300536434/
+    group: 3
+    start_at: 2024-05-07 23:00:00+00:00
+    end_at: 2024-05-08 01:00:00+00:00
+    venue: 6
+    description: '<p>Containers have changed the way we build, distribute, and deploy
+      applications. But managing operating systems within private data centers, the
+      public cloud, and the far edge can still be quite cumbersome. Come get hands-on
+      with bootable containers, a new way to build and manage operating system images
+      as easily as container applications.</p> '
+- model: events.event
+  pk: 45
+  fields:
+    name: Quarterly Networking Event
+    url: https://techfrederick.org/event/quarterly-networking-event-7/
+    group: 6
+    start_at: 2024-05-08 21:00:00+00:00
+    end_at: 2024-05-08 23:00:00+00:00
+    venue: 12
+    description: '<h2><a href="https://techfrederick.org/networking/" target="_blank"
+      rel="noopener"><img loading="lazy" decoding="async" class="wp-image-11884 alignleft"
+      src="https://techfrederick.org/wp-content/uploads/2024/04/maynetworking-1.jpg"
+      alt="" width="500" height="419" srcset="https://techfrederick.org/wp-content/uploads/2024/04/maynetworking-1.jpg
+      940w, https://techfrederick.org/wp-content/uploads/2024/04/maynetworking-1-300x251.jpg
+      300w, https://techfrederick.org/wp-content/uploads/2024/04/maynetworking-1-768x644.jpg
+      768w, https://techfrederick.org/wp-content/uploads/2024/04/maynetworking-1-600x503.jpg
+      600w" sizes="(max-width: 500px) 100vw, 500px" />REGISTER HERE</a></h2>
+
+      <p>&nbsp;</p>
+
+      <p>Learn more about our sponsor here:<a href="https://bit.ly/49GZMVn" target="_blank"
+      rel="noopener"><img loading="lazy" decoding="async" class="wp-image-1243 alignright"
+      src="https://techfrederick.org/wp-content/uploads/2018/04/Yakabod.png" alt=""
+      width="120" height="118" srcset="https://techfrederick.org/wp-content/uploads/2018/04/Yakabod.png
+      500w, https://techfrederick.org/wp-content/uploads/2018/04/Yakabod-300x296.png
+      300w" sizes="(max-width: 120px) 100vw, 120px" /></a></p>'
+- model: events.event
+  pk: 46
+  fields:
+    name: Chili's (2nd Wed Dinner; Address in Description)
+    url: https://www.meetup.com/python-frederick/events/300342725/
+    group: 5
+    start_at: 2024-05-08 23:00:00+00:00
+    end_at: 2024-05-09 01:00:00+00:00
+    venue: 13
+    description: '<p>**Address: 5100 Pegasus Ct., Frederick, MD 21704 (Buckeystown
+      Pike)**</p> <p>We''re going to get together, share a meal, and talk some Python
+      (and whatever other topics you''re interested in).</p> <p>Come on out for some
+      fun and food. This is a great chance to chat about Python with other people
+      interested in the language.</p> <p>Next month we''ll have another Python presentation
+      in store.</p> '
+- model: events.event
+  pk: 47
+  fields:
+    name: Effective Communicator Training
+    url: https://techfrederick.org/event/effective-communicator-training/
+    group: 6
+    start_at: 2024-05-09 13:00:00+00:00
+    end_at: 2024-05-09 20:30:00+00:00
+    venue: 14
+    description: '<h2><img loading="lazy" decoding="async" class="alignleft wp-image-11865"
+      src="https://techfrederick.org/wp-content/uploads/2024/04/Communicator-class-300x251.png"
+      alt="" width="500" height="419" srcset="https://techfrederick.org/wp-content/uploads/2024/04/Communicator-class-300x251.png
+      300w, https://techfrederick.org/wp-content/uploads/2024/04/Communicator-class-768x644.png
+      768w, https://techfrederick.org/wp-content/uploads/2024/04/Communicator-class-600x503.png
+      600w, https://techfrederick.org/wp-content/uploads/2024/04/Communicator-class.png
+      940w" sizes="(max-width: 500px) 100vw, 500px" />Registration Closed</h2>'
+- model: events.event
+  pk: 48
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygchbpb/
+    group: 7
+    start_at: 2024-05-11 14:00:00+00:00
+    end_at: 2024-05-11 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 49
+  fields:
+    name: Introduction to SQL
+    url: https://techfrederick.org/event/introduction-to-sql/
+    group: 6
+    start_at: 2024-05-15 13:00:00+00:00
+    end_at: 2024-05-15 21:00:00+00:00
+    venue: null
+    description: '<p><a href="http://www.techfrederick.org/sql" target="_blank" rel="noopener"><img
+      loading="lazy" decoding="async" class="alignleft wp-image-11939 size-medium"
+      src="https://techfrederick.org/wp-content/uploads/2024/04/SQL-300x251.jpg" alt=""
+      width="300" height="251" srcset="https://techfrederick.org/wp-content/uploads/2024/04/SQL-300x251.jpg
+      300w, https://techfrederick.org/wp-content/uploads/2024/04/SQL-768x644.jpg 768w,
+      https://techfrederick.org/wp-content/uploads/2024/04/SQL-600x503.jpg 600w, https://techfrederick.org/wp-content/uploads/2024/04/SQL.jpg
+      940w" sizes="(max-width: 300px) 100vw, 300px" />REGISTER HERE</a></p>'
+- model: events.event
+  pk: 50
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltygchbxb/
+    group: 4
+    start_at: 2024-05-18 14:00:00+00:00
+    end_at: 2024-05-18 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 51
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltygchbxb/
+    group: 5
+    start_at: 2024-05-18 14:00:00+00:00
+    end_at: 2024-05-18 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 52
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltygchbxb/
+    group: 3
+    start_at: 2024-05-18 14:00:00+00:00
+    end_at: 2024-05-18 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 53
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltygchbxb/
+    group: 7
+    start_at: 2024-05-18 14:00:00+00:00
+    end_at: 2024-05-18 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 54
+  fields:
+    name: 'Beyond SSH: Exploring Modern Alternatives for Secure Instance Connectivity'
+    url: https://www.meetup.com/awsfrederick/events/300825933/
+    group: 1
+    start_at: 2024-05-23 23:00:00+00:00
+    end_at: 2024-05-24 01:00:00+00:00
+    venue: 6
+    description: '<p>Join us for an insightful discussion on the latest methods and
+      tools for securely connecting to your server instances without relying on traditional
+      SSH. We’ll delve into innovative solutions that enhance security, improve reliability,
+      and simplify the management of remote connections.</p> '
+- model: events.event
+  pk: 55
+  fields:
+    name: "Frederick Code and Coffee: May Flowers \U0001F33C\U0001F33B\U0001F339\U0001F337"
+    url: https://www.meetup.com/frederick-code-and-coffee/events/300699504/
+    group: 2
+    start_at: 2024-05-26 17:00:00+00:00
+    end_at: 2024-05-26 20:00:00+00:00
+    venue: 5
+    description: '<p>It''s getting warmer outside! Come join us for some afternoon
+      networking. Bring your questions, laptops, and enthusiasm!</p> <p>Around the
+      start of the event, we''ll do intros, then break out to do whatever we''d like.
+      This will be an informal event overall, so no worries if you can''t make it
+      right at 1:00.</p> <p>We''re headed back to Gravel &amp; Grind this month. It''s
+      been a really great location for us, and I always love coming back here. We
+      may move to FITCI in the future as our cohort grows, but this is a good fit
+      for us right now.</p> '
+- model: events.event
+  pk: 56
+  fields:
+    name: 'Crafting the Future: A Beginner’s Guide to 3D Printing'
+    url: https://www.meetup.com/frederickopensource/events/301100189/
+    group: 3
+    start_at: 2024-06-04 23:00:00+00:00
+    end_at: 2024-06-05 01:00:00+00:00
+    venue: 6
+    description: '<p>We''ll do a high level overview of what 3D printing is, followed
+      by a deeper dive into the most common consumer type (FDM). We will look at how
+      the tech works, the components of a typical printer, material types and properties,
+      and the methods for turning a model file into a printable gcode script.</p> '
+- model: events.event
+  pk: 57
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygcjblb/
+    group: 7
+    start_at: 2024-06-08 14:00:00+00:00
+    end_at: 2024-06-08 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 58
+  fields:
+    name: 'Boosting AI with Python: Using Click, Jinja2, and GPT Libraries'
+    url: https://www.meetup.com/python-frederick/events/298531530/
+    group: 5
+    start_at: 2024-06-12 23:00:00+00:00
+    end_at: 2024-06-13 01:00:00+00:00
+    venue: 6
+    description: '<p>In this session, we will explore how to use Python to enhance
+      your AI projects with:</p> <p>* **Click CLI**: Creating command-line interfaces.<br/>*
+      **Jinja2 Templating**: Generating dynamic content.<br/>* **GPT Libraries (gpt4all
+      / OpenAI)**: Integrating language models.</p> <p>We''ll walk through a project
+      that shows these tools in action. By the end of the session, you''ll have the
+      skills to create a functional AI application that uses these technologies for
+      real-world tasks. Join us to see practical demonstrations and get hands-on experience.
+      Connect with other Python developers and expand your AI toolkit.</p> <p>Also,
+      we''re going to have another "after hour." After the presentation is over, anyone
+      who wants to stay and do a bit of coding or chatting is welcome to hang out.
+      Think of it like a mini open workshop.</p> '
+- model: events.event
+  pk: 59
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltygcjbtb/
+    group: 7
+    start_at: 2024-06-15 14:00:00+00:00
+    end_at: 2024-06-15 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 60
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltygcjbtb/
+    group: 5
+    start_at: 2024-06-15 14:00:00+00:00
+    end_at: 2024-06-15 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 61
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltygcjbtb/
+    group: 4
+    start_at: 2024-06-15 14:00:00+00:00
+    end_at: 2024-06-15 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 62
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltygcjbtb/
+    group: 3
+    start_at: 2024-06-15 14:00:00+00:00
+    end_at: 2024-06-15 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 63
+  fields:
+    name: Introduction to Docker Training
+    url: https://techfrederick.org/event/introduction-to-docker-training/
+    group: 6
+    start_at: 2024-06-20 13:00:00+00:00
+    end_at: 2024-06-20 21:00:00+00:00
+    venue: null
+    description: '<h4><a href="http://www.techfrederick.org/docker" target="_blank"
+      rel="noopener"><img loading="lazy" decoding="async" class="alignleft wp-image-12109"
+      src="https://techfrederick.org/wp-content/uploads/2024/05/docker.png" alt=""
+      width="450" height="377" srcset="https://techfrederick.org/wp-content/uploads/2024/05/docker.png
+      940w, https://techfrederick.org/wp-content/uploads/2024/05/docker-300x251.png
+      300w, https://techfrederick.org/wp-content/uploads/2024/05/docker-768x644.png
+      768w, https://techfrederick.org/wp-content/uploads/2024/05/docker-600x503.png
+      600w" sizes="(max-width: 450px) 100vw, 450px" />REGISTER HERE</a></h4>'
+- model: events.event
+  pk: 64
+  fields:
+    name: July Chill Out - Black Hog BBQ
+    url: https://www.meetup.com/frederickopensource/events/301741800/
+    group: 3
+    start_at: 2024-07-02 23:00:00+00:00
+    end_at: 2024-07-03 01:00:00+00:00
+    venue: 1
+    description: '<p>We''re bringing back FOS chill out events! The chill out events
+      are our low key way of getting to know other tech people in Frederick. We talk
+      tech, get to know each other, and do a bit of feedback to figure out what kinds
+      of sessions to have in the future.</p> <p>This chill out will be a casual dinner
+      at Black Hog BBQ. In the spirit of 4th of July week, what''s more American than
+      some BBQ!? Come join in for a good meal and a good chat.</p> '
+- model: events.event
+  pk: 65
+  fields:
+    name: Tsunami (2nd Wed Dinner)
+    url: https://www.meetup.com/python-frederick/events/301887500/
+    group: 5
+    start_at: 2024-07-10 23:00:00+00:00
+    end_at: 2024-07-11 01:00:00+00:00
+    venue: 15
+    description: '<p>We''re going to get together, share a meal, and talk some Python
+      (and whatever other topics you''re interested in).</p> <p>Come on out for some
+      fun and food. This is a great chance to chat about Python with other people
+      interested in the language.</p> <p>Next month we''ll have another Python presentation
+      in store.</p> <p>Address: 20 N Market St, Frederick, MD 21701</p> '
+- model: events.event
+  pk: 66
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygckbrb/
+    group: 7
+    start_at: 2024-07-13 14:00:00+00:00
+    end_at: 2024-07-13 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 67
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltygckbbc/
+    group: 4
+    start_at: 2024-07-20 14:00:00+00:00
+    end_at: 2024-07-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 68
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltygckbbc/
+    group: 3
+    start_at: 2024-07-20 14:00:00+00:00
+    end_at: 2024-07-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 69
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltygckbbc/
+    group: 5
+    start_at: 2024-07-20 14:00:00+00:00
+    end_at: 2024-07-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 70
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltygckbbc/
+    group: 7
+    start_at: 2024-07-20 14:00:00+00:00
+    end_at: 2024-07-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 71
+  fields:
+    name: Web Tech Social
+    url: https://www.meetup.com/fredwebtech/events/302170768/
+    group: 4
+    start_at: 2024-07-24 23:00:00+00:00
+    end_at: 2024-07-25 01:00:00+00:00
+    venue: 16
+    description: '<p>Come meet up for dinner and drinks at Brewer''s Alley in Frederick
+      and chat with other folks in Web tech!</p> '
+- model: events.event
+  pk: 72
+  fields:
+    name: "Frederick Code and Coffee: July Sunshine \U0001F31E ☀️ ✨️ "
+    url: https://www.meetup.com/frederick-code-and-coffee/events/302174001/
+    group: 2
+    start_at: 2024-07-28 17:00:00+00:00
+    end_at: 2024-07-28 20:00:00+00:00
+    venue: 5
+    description: '<p>It''s too hot! Come cool off with a cold coffee, and join us
+      for some afternoon networking. Bring your questions, laptops, and enthusiasm!</p>
+      <p>Around the start of the event, we''ll do intros, then break out to do whatever
+      we''d like. This will be an informal event overall, so no worries if you can''t
+      make it right at 1:00.</p> <p>We''re headed back to Gravel &amp; Grind this
+      month. It''s been a really great location for us, and I always love coming back
+      here. We may move to FITCI in the future as our cohort grows, but this is a
+      good fit for us right now.</p> '
+- model: events.event
+  pk: 73
+  fields:
+    name: An Opinionated Introduction to CI/CD
+    url: https://www.meetup.com/frederickopensource/events/302121754/
+    group: 3
+    start_at: 2024-08-06 23:00:00+00:00
+    end_at: 2024-08-07 01:00:00+00:00
+    venue: 6
+    description: '<p>CI/CD is a set of practices used by engineering organizations
+      to improve the quality of software they deliver, how fast they deliver that
+      software, and detect issues with that software before they affect end users.
+      Unfortunately, the term can mean a lot of different ideas and approaches. So,
+      in this talk we’re going to try to unravel some of those ideas to give you some
+      ideas on how you too can deliver software better. I’ll also give you some links
+      to some tooling so you can see how it’s done.</p> '
+- model: events.event
+  pk: 74
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygclbnb/
+    group: 7
+    start_at: 2024-08-10 14:00:00+00:00
+    end_at: 2024-08-10 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 75
+  fields:
+    name: PDF Text Extraction (2nd Wed Talk)
+    url: https://www.meetup.com/python-frederick/events/300290614/
+    group: 5
+    start_at: 2024-08-14 23:00:00+00:00
+    end_at: 2024-08-15 01:00:00+00:00
+    venue: 6
+    description: '<p>\*Original Meeting date was April 10 but moved due to scheduling
+      with the speaker.\*</p> <p>Is your data locked up in portable document format
+      (PDFs)? In this talk we''re going to explore methods to extract text and other
+      data from PDFs using readily-available, open-source Python tools (such as pypdf),
+      as well as techniques such as OCR (optical character recognition) and table
+      extraction. We will also discuss the philosophy of text extraction as a whole.</p>
+      <p>Also, we''re going to have another "after hour." After the presentation is
+      over, anyone who wants to stay and do a bit of coding or chatting is welcome
+      to hang out. Think of it like a mini open workshop.</p> '
+- model: events.event
+  pk: 76
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltygclbwb/
+    group: 5
+    start_at: 2024-08-17 14:00:00+00:00
+    end_at: 2024-08-17 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 77
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltygclbwb/
+    group: 7
+    start_at: 2024-08-17 14:00:00+00:00
+    end_at: 2024-08-17 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 78
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltygclbwb/
+    group: 4
+    start_at: 2024-08-17 14:00:00+00:00
+    end_at: 2024-08-17 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 79
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltygclbwb/
+    group: 3
+    start_at: 2024-08-17 14:00:00+00:00
+    end_at: 2024-08-17 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 80
+  fields:
+    name: 'Introduction to Gaming Business Innovations: How Unity Game Engine Meets
+      Marketing and Operations'
+    url: https://techfrederick.org/event/introduction-to-business-innovations-with-unity-how-game-design-meets-marketing-and-operations/
+    group: 6
+    start_at: 2024-08-20 20:00:00+00:00
+    end_at: 2024-08-21 00:00:00+00:00
+    venue: null
+    description: '<h4><a href="http://www.techfrederick.org/unity"><img loading="lazy"
+      decoding="async" class="alignleft wp-image-12229" src="https://techfrederick.org/wp-content/uploads/2024/07/gaming-300x251.jpg"
+      alt="" width="475" height="398" srcset="https://techfrederick.org/wp-content/uploads/2024/07/gaming-300x251.jpg
+      300w, https://techfrederick.org/wp-content/uploads/2024/07/gaming-768x644.jpg
+      768w, https://techfrederick.org/wp-content/uploads/2024/07/gaming-600x503.jpg
+      600w, https://techfrederick.org/wp-content/uploads/2024/07/gaming.jpg 940w"
+      sizes="(max-width: 475px) 100vw, 475px" /></a><a href="http://www.techfrederick.org/unity"
+      target="_blank" rel="noopener">REGISTER HERE</a></h4>
+
+      <p>This event will be a three-day workshop on August 20th, 22nd and 27th from
+      4pm &#8211; 8pm.</p>'
+- model: events.event
+  pk: 81
+  fields:
+    name: 'Unlock the Power of AI: Exploring Machine Learning and Generative AI on
+      AWS'
+    url: https://www.meetup.com/awsfrederick/events/302273224/
+    group: 1
+    start_at: 2024-08-22 23:00:00+00:00
+    end_at: 2024-08-23 00:30:00+00:00
+    venue: 6
+    description: '<p>Join us for an immersive experience as we delve into the fascinating
+      world of Artificial Intelligence (AI) and Machine Learning (ML) on the AWS platform
+      with Gurpreet Anand, Solutions Architect from AWS! This session is designed
+      to introduce participants to the cutting-edge technologies shaping the future
+      of AI, including the revolutionary Generative AI. In this session, you''ll gain
+      a comprehensive understanding of the fundamentals of ML and AI, and how they
+      are transforming industries across the globe. Our AWS Solutions Architect will
+      guide you through the process of integrating Generative AI with an existing
+      web based application and empowering you to leverage the power of AI in your
+      applications and workflows. Discover how Generative AI models can create text,
+      images, audio, and even code, opening up new realms of creativity and innovation.
+      Whether you''re a seasoned developer, a data scientist, or simply curious about
+      the potential of AI, this workshop is a must-attend event. Don''t miss this
+      opportunity to connect with like-minded individuals, learn from experts, and
+      be part of the AI revolution. Seats are limited, so register now and secure
+      your spot in this exciting journey through the world of Artificial Intelligence
+      and Generative AI on AWS.</p> '
+- model: events.event
+  pk: 82
+  fields:
+    name: Quarterly Networking Breakfast
+    url: https://techfrederick.org/event/quarterly-networking-breakfast-10/
+    group: 6
+    start_at: 2024-08-28 12:00:00+00:00
+    end_at: 2024-08-28 13:30:00+00:00
+    venue: 17
+    description: '<p><a class="fasc-button fasc-size-large fasc-type-flat fasc-rounded-medium
+      fasc-style-bold" style="background-color: #a4d65e; color: #ffffff;" target="_blank"
+      href="https://www.techfrederick.org/breakfast" rel="noopener">REGISTER HERE</a><a
+      href="https://techfrederick.org/breakfast" target="_blank" rel="noopener"><img
+      loading="lazy" decoding="async" class="alignleft wp-image-12257" src="https://techfrederick.org/wp-content/uploads/2018/09/breakfast-2.jpg"
+      alt="" width="600" height="503" srcset="https://techfrederick.org/wp-content/uploads/2018/09/breakfast-2.jpg
+      940w, https://techfrederick.org/wp-content/uploads/2018/09/breakfast-2-300x251.jpg
+      300w, https://techfrederick.org/wp-content/uploads/2018/09/breakfast-2-768x644.jpg
+      768w, https://techfrederick.org/wp-content/uploads/2018/09/breakfast-2-600x503.jpg
+      600w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>'
+- model: events.event
+  pk: 83
+  fields:
+    name: 'No Frills, Just Go: Standard Library Only Web Apps'
+    url: https://www.meetup.com/fredwebtech/events/302609882/
+    group: 4
+    start_at: 2024-08-28 23:00:00+00:00
+    end_at: 2024-08-29 01:00:00+00:00
+    venue: 6
+    description: '<p>How much can you build in Go with **zero** extra packages? What
+      is possible using nothing more than Go''s standard library? In this talk, you''re
+      going to find out!</p> <p>Go is a powerful and fast programming language originating
+      from Google. The language is known for its syntactic simplicity and being a
+      compiled language that lets you avoid memory management. This combination can
+      create a impressive systems.</p> <p>Using only the standard library, we will
+      explore how far you can get with Go for building an app to put on the web.</p> '
+- model: events.event
+  pk: 84
+  fields:
+    name: Sandler Sales Immersion Boot Camp
+    url: https://techfrederick.org/event/sandler-sales-immersion-boot-camp/
+    group: 6
+    start_at: 2024-09-10 04:00:00+00:00
+    end_at: 2024-09-12 03:59:59+00:00
+    venue: 14
+    description: '<h3><a href="https://www.techfrederick.org/sales" target="_blank"
+      rel="noopener"><img loading="lazy" decoding="async" class="alignleft wp-image-12317"
+      src="https://techfrederick.org/wp-content/uploads/2024/08/sandler-class.jpg"
+      alt="" width="500" height="419" srcset="https://techfrederick.org/wp-content/uploads/2024/08/sandler-class.jpg
+      940w, https://techfrederick.org/wp-content/uploads/2024/08/sandler-class-300x251.jpg
+      300w, https://techfrederick.org/wp-content/uploads/2024/08/sandler-class-768x644.jpg
+      768w, https://techfrederick.org/wp-content/uploads/2024/08/sandler-class-600x503.jpg
+      600w" sizes="(max-width: 500px) 100vw, 500px" />REGISTER HERE</a></h3>'
+- model: events.event
+  pk: 85
+  fields:
+    name: 2nd Wednesday Dinner - Pistarro's
+    url: https://www.meetup.com/python-frederick/events/302887535/
+    group: 5
+    start_at: 2024-09-11 23:00:00+00:00
+    end_at: 2024-09-12 01:00:00+00:00
+    venue: 18
+    description: '<p>We''re going to get together, share a meal, and talk some Python
+      (and whatever other topics you''re interested in).</p> <p>Come on out for some
+      fun and food. This is a great chance to chat about Python with other people
+      interested in the language.</p> <p>Next month we''ll have another Python presentation
+      in store.</p> '
+- model: events.event
+  pk: 86
+  fields:
+    name: Quarterly Networking Event
+    url: https://techfrederick.org/event/quarterly-networking-event-8/
+    group: 6
+    start_at: 2024-09-12 21:00:00+00:00
+    end_at: 2024-09-12 23:00:00+00:00
+    venue: 19
+    description: '<p><a href="https://techfrederick.org/networking/" target="_blank"
+      rel="noopener"><img loading="lazy" decoding="async" class="alignleft wp-image-12130"
+      src="https://techfrederick.org/wp-content/uploads/2024/05/Event-template-300x251.png"
+      alt="" width="400" height="335" srcset="https://techfrederick.org/wp-content/uploads/2024/05/Event-template-300x251.png
+      300w, https://techfrederick.org/wp-content/uploads/2024/05/Event-template-768x644.png
+      768w, https://techfrederick.org/wp-content/uploads/2024/05/Event-template-600x503.png
+      600w, https://techfrederick.org/wp-content/uploads/2024/05/Event-template.png
+      940w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
+
+      <h3><a href="https://techfrederick.org/networking/" target="_blank" rel="noopener">REGISTER
+      HERE</a></h3>'
+- model: events.event
+  pk: 87
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygcmbsb/
+    group: 7
+    start_at: 2024-09-14 14:00:00+00:00
+    end_at: 2024-09-14 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 88
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltygcmbcc/
+    group: 4
+    start_at: 2024-09-21 14:00:00+00:00
+    end_at: 2024-09-21 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 89
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/awsfrederick/events/303562089/
+    group: 1
+    start_at: 2024-09-21 14:00:00+00:00
+    end_at: 2024-09-21 16:00:00+00:00
+    venue: 11
+    description: '<p>Come hang out with us</p> '
+- model: events.event
+  pk: 90
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltygcmbcc/
+    group: 5
+    start_at: 2024-09-21 14:00:00+00:00
+    end_at: 2024-09-21 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 91
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltygcmbcc/
+    group: 7
+    start_at: 2024-09-21 14:00:00+00:00
+    end_at: 2024-09-21 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 92
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltygcmbcc/
+    group: 3
+    start_at: 2024-09-21 14:00:00+00:00
+    end_at: 2024-09-21 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 93
+  fields:
+    name: "Frederick Code and Coffee: Do You Remember? \U0001F3B6\U0001F3B8\U0001F57A"
+    url: https://www.meetup.com/frederick-code-and-coffee/events/303353290/
+    group: 2
+    start_at: 2024-09-22 17:00:00+00:00
+    end_at: 2024-09-22 20:00:00+00:00
+    venue: 5
+    description: '<p>The 21st night of September! Well, the 22nd afternoon, anyway!
+      Come join us for some afternoon networking. Bring your questions, laptops, and
+      enthusiasm!</p> <p>Around the start of the event, we''ll do intros, then break
+      out to do whatever we''d like. This will be an informal event overall, so no
+      worries if you can''t make it right at 1:00.</p> <p>We''re headed back to Gravel
+      &amp; Grind this month. It''s been a really great location for us, and I always
+      love coming back here. We may move to FITCI in the future as our cohort grows,
+      but this is a good fit for us right now.</p> '
+- model: events.event
+  pk: 94
+  fields:
+    name: Web Tech Social
+    url: https://www.meetup.com/fredwebtech/events/303431688/
+    group: 4
+    start_at: 2024-09-25 23:00:00+00:00
+    end_at: 2024-09-26 01:00:00+00:00
+    venue: 20
+    description: '<p>Come meet up for dinner and drinks at Coal Fire Pizza in Frederick
+      and chat with other folks in Web tech!</p> <p>(In case Meetup messes up the
+      location, it''s in the shops next to the Wegmans parking lot, next door to the
+      UPS Store.)</p> '
+- model: events.event
+  pk: 95
+  fields:
+    name: 9th Annual techfrederick Games
+    url: https://techfrederick.org/event/9th-annual-techfrederick-games/
+    group: 6
+    start_at: 2024-10-04 16:00:00+00:00
+    end_at: 2024-10-04 22:00:00+00:00
+    venue: 21
+    description: '<div class="flex flex-grow flex-col max-w-full">
+
+      <div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap
+      break-words [.text-message+&amp;]:mt-5 juice:w-full juice:items-end overflow-x-auto
+      gap-3" dir="auto" data-message-author-role="assistant" data-message-id="a1302883-2267-4da5-b9c4-b41b252e11d9">
+
+      <div class="markdown prose w-full break-words dark:prose-invert light">
+
+      <p>Dust off your flannel shirts and Doc Martens because the Tech Games – 90’s
+      Style countdown has begun! Join us on October 4th in Baker Park, where you&#8217;ll
+      dive into a full day of team building, groove to 90’s hits, and relive the iconic
+      era with outrageously fun games that will transport you back to the unforgettable
+      90’s.</p>
+
+      </div>
+
+      </div>
+
+      </div>'
+- model: events.event
+  pk: 96
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygcnbqb/
+    group: 7
+    start_at: 2024-10-12 14:00:00+00:00
+    end_at: 2024-10-12 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 97
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltygcnbzb/
+    group: 7
+    start_at: 2024-10-19 14:00:00+00:00
+    end_at: 2024-10-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 98
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltygcnbzb/
+    group: 4
+    start_at: 2024-10-19 14:00:00+00:00
+    end_at: 2024-10-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 99
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltygcnbzb/
+    group: 5
+    start_at: 2024-10-19 14:00:00+00:00
+    end_at: 2024-10-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 100
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltygcnbzb/
+    group: 3
+    start_at: 2024-10-19 14:00:00+00:00
+    end_at: 2024-10-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 101
+  fields:
+    name: Tech Career Fair
+    url: https://techfrederick.org/event/tech-career-fair/
+    group: 6
+    start_at: 2024-10-24 14:00:00+00:00
+    end_at: 2024-10-24 18:00:00+00:00
+    venue: null
+    description: '<p>Save the date &#8211; details coming soon!</p>
+
+      <p>&nbsp;</p>'
+- model: events.event
+  pk: 102
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygcpbmb/
+    group: 7
+    start_at: 2024-11-09 15:00:00+00:00
+    end_at: 2024-11-09 17:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 103
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltygcpbvb/
+    group: 7
+    start_at: 2024-11-16 15:00:00+00:00
+    end_at: 2024-11-16 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 104
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltygcpbvb/
+    group: 4
+    start_at: 2024-11-16 15:00:00+00:00
+    end_at: 2024-11-16 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 105
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltygcpbvb/
+    group: 5
+    start_at: 2024-11-16 15:00:00+00:00
+    end_at: 2024-11-16 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 106
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltygcpbvb/
+    group: 3
+    start_at: 2024-11-16 15:00:00+00:00
+    end_at: 2024-11-16 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 107
+  fields:
+    name: The Techie Awards
+    url: https://techfrederick.org/event/the-techie-awards/
+    group: 6
+    start_at: 2024-12-04 22:00:00+00:00
+    end_at: 2024-12-05 01:00:00+00:00
+    venue: 22
+    description: '<p><img loading="lazy" decoding="async" class="alignleft wp-image-11080
+      size-medium" src="https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-300x300.png"
+      alt="" width="300" height="300" srcset="https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-300x300.png
+      300w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-1024x1024.png
+      1024w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-150x150.png
+      150w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-768x768.png
+      768w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-600x600.png
+      600w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388-100x100.png
+      100w, https://techfrederick.org/wp-content/uploads/2023/10/TechAwardsLogo-e1698930070388.png
+      1164w" sizes="(max-width: 300px) 100vw, 300px" />The Techie Awards are designed
+      to celebrate and honor the unsung heroes, the dedicated individuals who quietly
+      drive innovation and success from the trenches. We recognize the invaluable
+      contributions of the everyday workers who keep the tech industry running smoothly
+      and continuously push the boundaries of what’s possible.</p>'
+- model: events.event
+  pk: 108
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtygcqbsb/
+    group: 7
+    start_at: 2024-12-14 15:00:00+00:00
+    end_at: 2024-12-14 17:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 109
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltygcqbcc/
+    group: 4
+    start_at: 2024-12-21 15:00:00+00:00
+    end_at: 2024-12-21 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 110
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltygcqbcc/
+    group: 5
+    start_at: 2024-12-21 15:00:00+00:00
+    end_at: 2024-12-21 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 111
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltygcqbcc/
+    group: 7
+    start_at: 2024-12-21 15:00:00+00:00
+    end_at: 2024-12-21 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 112
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltygcqbcc/
+    group: 3
+    start_at: 2024-12-21 15:00:00+00:00
+    end_at: 2024-12-21 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 113
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhccbpb/
+    group: 7
+    start_at: 2025-01-11 15:00:00+00:00
+    end_at: 2025-01-11 17:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 114
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltyhccbxb/
+    group: 4
+    start_at: 2025-01-18 15:00:00+00:00
+    end_at: 2025-01-18 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 115
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltyhccbxb/
+    group: 7
+    start_at: 2025-01-18 15:00:00+00:00
+    end_at: 2025-01-18 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 116
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltyhccbxb/
+    group: 5
+    start_at: 2025-01-18 15:00:00+00:00
+    end_at: 2025-01-18 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 117
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltyhccbxb/
+    group: 3
+    start_at: 2025-01-18 15:00:00+00:00
+    end_at: 2025-01-18 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 118
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhcdblb/
+    group: 7
+    start_at: 2025-02-08 15:00:00+00:00
+    end_at: 2025-02-08 17:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 119
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltyhcdbtb/
+    group: 5
+    start_at: 2025-02-15 15:00:00+00:00
+    end_at: 2025-02-15 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 120
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltyhcdbtb/
+    group: 4
+    start_at: 2025-02-15 15:00:00+00:00
+    end_at: 2025-02-15 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 121
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltyhcdbtb/
+    group: 7
+    start_at: 2025-02-15 15:00:00+00:00
+    end_at: 2025-02-15 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 122
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltyhcdbtb/
+    group: 3
+    start_at: 2025-02-15 15:00:00+00:00
+    end_at: 2025-02-15 17:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 123
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhcfblb/
+    group: 7
+    start_at: 2025-03-08 15:00:00+00:00
+    end_at: 2025-03-08 17:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 124
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltyhcfbtb/
+    group: 5
+    start_at: 2025-03-15 14:00:00+00:00
+    end_at: 2025-03-15 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 125
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltyhcfbtb/
+    group: 4
+    start_at: 2025-03-15 14:00:00+00:00
+    end_at: 2025-03-15 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 126
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltyhcfbtb/
+    group: 7
+    start_at: 2025-03-15 14:00:00+00:00
+    end_at: 2025-03-15 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 127
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltyhcfbtb/
+    group: 3
+    start_at: 2025-03-15 14:00:00+00:00
+    end_at: 2025-03-15 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 128
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhcgbqb/
+    group: 7
+    start_at: 2025-04-12 14:00:00+00:00
+    end_at: 2025-04-12 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 129
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltyhcgbzb/
+    group: 7
+    start_at: 2025-04-19 14:00:00+00:00
+    end_at: 2025-04-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 130
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltyhcgbzb/
+    group: 3
+    start_at: 2025-04-19 14:00:00+00:00
+    end_at: 2025-04-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 131
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltyhcgbzb/
+    group: 5
+    start_at: 2025-04-19 14:00:00+00:00
+    end_at: 2025-04-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 132
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltyhcgbzb/
+    group: 4
+    start_at: 2025-04-19 14:00:00+00:00
+    end_at: 2025-04-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 133
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhchbnb/
+    group: 7
+    start_at: 2025-05-10 14:00:00+00:00
+    end_at: 2025-05-10 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 134
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltyhchbwb/
+    group: 5
+    start_at: 2025-05-17 14:00:00+00:00
+    end_at: 2025-05-17 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 135
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltyhchbwb/
+    group: 3
+    start_at: 2025-05-17 14:00:00+00:00
+    end_at: 2025-05-17 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 136
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltyhchbwb/
+    group: 4
+    start_at: 2025-05-17 14:00:00+00:00
+    end_at: 2025-05-17 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 137
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltyhchbwb/
+    group: 7
+    start_at: 2025-05-17 14:00:00+00:00
+    end_at: 2025-05-17 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 138
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhcjbsb/
+    group: 7
+    start_at: 2025-06-14 14:00:00+00:00
+    end_at: 2025-06-14 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 139
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltyhcjbcc/
+    group: 5
+    start_at: 2025-06-21 14:00:00+00:00
+    end_at: 2025-06-21 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 140
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltyhcjbcc/
+    group: 3
+    start_at: 2025-06-21 14:00:00+00:00
+    end_at: 2025-06-21 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 141
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltyhcjbcc/
+    group: 4
+    start_at: 2025-06-21 14:00:00+00:00
+    end_at: 2025-06-21 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 142
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltyhcjbcc/
+    group: 7
+    start_at: 2025-06-21 14:00:00+00:00
+    end_at: 2025-06-21 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 143
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhckbqb/
+    group: 7
+    start_at: 2025-07-12 14:00:00+00:00
+    end_at: 2025-07-12 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 144
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltyhckbzb/
+    group: 7
+    start_at: 2025-07-19 14:00:00+00:00
+    end_at: 2025-07-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 145
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltyhckbzb/
+    group: 4
+    start_at: 2025-07-19 14:00:00+00:00
+    end_at: 2025-07-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 146
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltyhckbzb/
+    group: 5
+    start_at: 2025-07-19 14:00:00+00:00
+    end_at: 2025-07-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 147
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltyhckbzb/
+    group: 3
+    start_at: 2025-07-19 14:00:00+00:00
+    end_at: 2025-07-19 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 148
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhclbmb/
+    group: 7
+    start_at: 2025-08-09 14:00:00+00:00
+    end_at: 2025-08-09 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 149
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltyhclbvb/
+    group: 7
+    start_at: 2025-08-16 14:00:00+00:00
+    end_at: 2025-08-16 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 150
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltyhclbvb/
+    group: 5
+    start_at: 2025-08-16 14:00:00+00:00
+    end_at: 2025-08-16 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 151
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltyhclbvb/
+    group: 4
+    start_at: 2025-08-16 14:00:00+00:00
+    end_at: 2025-08-16 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 152
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltyhclbvb/
+    group: 3
+    start_at: 2025-08-16 14:00:00+00:00
+    end_at: 2025-08-16 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 153
+  fields:
+    name: WordPress Casual Discussion and Troubleshooting
+    url: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhcmbrb/
+    group: 7
+    start_at: 2025-09-13 14:00:00+00:00
+    end_at: 2025-09-13 16:00:00+00:00
+    venue: 2
+    description: '<p>Let''s meet to chat and work on WordPress projects! If you''re
+      running into problems, bring them and we''ll look for solutions together. All
+      are welcome.</p> <p>We''re meeting at Orases in Frederick. Parking is available
+      in front of the building and you''ll see the conference room straight ahead
+      on your way in the front door.</p> <p>[<a href="https://orases.com](https://orases.com"
+      class="linkified">https://orases.com](https://orases.com</a>)</p> '
+- model: events.event
+  pk: 154
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/wordpress-frederick/events/rtllltyhcmbbc/
+    group: 7
+    start_at: 2025-09-20 14:00:00+00:00
+    end_at: 2025-09-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* [AWS Frederick](<a href="https://www.meetup.com/aws-frederick-meetup" class="linkified">https://www.meetup.com/aws-frederick-meetup</a>)<br/>*
+      [Frederick Open Source (FOS)](<a href="https://www.meetup.com/frederickopensource"
+      class="linkified">https://www.meetup.com/frederickopensource</a>)<br/>* [Frederick
+      WebTech](<a href="https://www.meetup.com/fredwebtech" class="linkified">https://www.meetup.com/fredwebtech</a>)<br/>*
+      [Python Frederick](<a href="https://www.meetup.com/python-frederick" class="linkified">https://www.meetup.com/python-frederick</a>)<br/>*
+      [WordPress Frederick](<a href="https://www.meetup.com/wordpress-frederick" class="linkified">https://www.meetup.com/wordpress-frederick</a>)</p> '
+- model: events.event
+  pk: 155
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/python-frederick/events/rvllltyhcmbbc/
+    group: 5
+    start_at: 2025-09-20 14:00:00+00:00
+    end_at: 2025-09-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> <p>You''ll also find this event listed
+      with other local meetups. Here are all the groups that are participating:</p>
+      <p>* AWS Frederick<br/>* Frederick Open Source (FOS)<br/>* Frederick WebTech<br/>*
+      Python Frederick<br/>* WordPress Frederick</p> '
+- model: events.event
+  pk: 156
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/frederickopensource/events/vvllltyhcmbbc/
+    group: 3
+    start_at: 2025-09-20 14:00:00+00:00
+    end_at: 2025-09-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.event
+  pk: 157
+  fields:
+    name: Frederick Tech Open Workshop - 3rd Saturday
+    url: https://www.meetup.com/fredwebtech/events/ksllltyhcmbbc/
+    group: 4
+    start_at: 2025-09-20 14:00:00+00:00
+    end_at: 2025-09-20 16:00:00+00:00
+    venue: 11
+    description: '<p>Do you want to work on technology with other tech people in the
+      Frederick area? Do you have questions and need some help from experts? Do you
+      want to get to know more techie folks in the area to forge friendships or grow
+      your network? Then you should come to this monthly workshop.</p> <p>The tech
+      meetups of Frederick organize an open workshop every 3rd Saturday of each month.</p>
+      <p>You can either work on a common project selected for the day or bring your
+      own project and enlist the help of others. The goal is to have fun with other
+      tech people in the area. Bring your laptop or just bring yourself! We have a
+      blast and we hope you’ll join in.</p> '
+- model: events.venue
+  pk: 1
+  fields:
+    address: 221 Shorebird St
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.447696685791016
+    long: -77.39479064941406
+- model: events.venue
+  pk: 2
+  fields:
+    address: 5728 Industry Ln
+    city: Frederick
+    state: MD
+    zip: '21704'
+    lat: 39.39235305786133
+    long: -77.41634368896484
+- model: events.venue
+  pk: 3
+  fields:
+    address: 50 Citizen's Way
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.4128532409668
+    long: -77.4121322631836
+- model: events.venue
+  pk: 4
+  fields:
+    address: 16-18 E Patrick St
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.413963317871094
+    long: -77.41017150878906
+- model: events.venue
+  pk: 5
+  fields:
+    address: 15 E 6th St
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.421695709228516
+    long: -77.40921783447266
+- model: events.venue
+  pk: 6
+  fields:
+    address: 122 E Patrick St
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.41377639770508
+    long: -77.40791320800781
+- model: events.venue
+  pk: 7
+  fields:
+    address: 9 E Patrick St
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.414306640625
+    long: -77.41045379638672
+- model: events.venue
+  pk: 8
+  fields:
+    address: 40 S. Carroll Street
+    city: Frederick
+    state: ''
+    zip: '21701'
+    lat: null
+    long: null
+- model: events.venue
+  pk: 9
+  fields:
+    address: 8411 Broadband Drive k
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.44013595581055
+    long: -77.38105010986328
+- model: events.venue
+  pk: 10
+  fields:
+    address: 1705 N Market St Suite 100
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.43614196777344
+    long: -77.40306854248047
+- model: events.venue
+  pk: 11
+  fields:
+    address: 321 Ballenger Center Dr
+    city: Frederick
+    state: MD
+    zip: '21703'
+    lat: 39.396602630615234
+    long: -77.43460845947266
+- model: events.venue
+  pk: 12
+  fields:
+    address: 340 East Patrick, Suite 300.
+    city: Frederick
+    state: ''
+    zip: '21701'
+    lat: null
+    long: null
+- model: events.venue
+  pk: 13
+  fields:
+    address: 5100 Pegasus Ct
+    city: Frederick
+    state: MD
+    zip: '21704'
+    lat: 39.37207794189453
+    long: -77.41021728515625
+- model: events.venue
+  pk: 14
+  fields:
+    address: 1750 Monocacy Blvd, Suite B
+    city: Frederick
+    state: Maryland
+    zip: '21701'
+    lat: null
+    long: null
+- model: events.venue
+  pk: 15
+  fields:
+    address: 20 N Market St
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.4145622253418
+    long: -77.41053009033203
+- model: events.venue
+  pk: 16
+  fields:
+    address: 124 N Market St
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.41560363769531
+    long: -77.4107666015625
+- model: events.venue
+  pk: 17
+  fields:
+    address: 5502 Mussetter Road
+    city: Ijamsville
+    state: ''
+    zip: '21754'
+    lat: null
+    long: null
+- model: events.venue
+  pk: 18
+  fields:
+    address: 221 N East St
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.41701126098633
+    long: -77.40508270263672
+- model: events.venue
+  pk: 19
+  fields:
+    address: 5280 Corporate Drive, Suite C130
+    city: Frederick
+    state: ''
+    zip: '21703'
+    lat: null
+    long: null
+- model: events.venue
+  pk: 20
+  fields:
+    address: 7820 Wormans Mill Road
+    city: Frederick
+    state: MD
+    zip: '21701'
+    lat: 39.44671630859375
+    long: -77.39676666259766
+- model: events.venue
+  pk: 21
+  fields:
+    address: 121 N. Bentz Street
+    city: Frederick
+    state: ''
+    zip: '21701'
+    lat: null
+    long: null
+- model: events.venue
+  pk: 22
+  fields:
+    address: 340 E Patrick Street Suite A
+    city: Frederick
+    state: ''
+    zip: '21701'
+    lat: null
+    long: null
+- model: groups.group
+  pk: 1
+  fields:
+    name: Amazon Web Services - Frederick
+    slug: aws-frederick
+    url: https://www.meetup.com/awsfrederick/
+    description: <p>This is an Amazon Web Services users group in Frederick, MD. We
+      look to provide a forum for users to share experiences, best practices, and
+      lessons learned from using AWS. Developers, Admins, Project Managers, etc are
+      all welcome.</p>
+    teaser: AWS Frederick covers all things Amazon. The cloud is vast and so are Amazon's
+      offerings. This group looks at all the cool tech that Amazon provides to build
+      services for the web.
+    color: orange-400
+    event_source: meetup
+    event_source_id: awsfrederick
+- model: groups.group
+  pk: 2
+  fields:
+    name: Frederick Code and Coffee
+    slug: frederick-code-and-coffee
+    url: https://www.meetup.com/frederick-code-and-coffee/
+    description: "<p>Who is this meetup group for?</p>\n<p>\U0001F9D1‍\U0001F91D‍\U0001F9D1\U0001F9D1‍\U0001F91D‍\U0001F9D1
+      <strong>We’re a Community.</strong> We strive to have our attendees feel like
+      they’re a part of the group. This group is not run by a company - it is run
+      by a group of individual community members. This branch of Code &amp; Coffee
+      specifically is run by one person who wanted to reach out and network with some
+      locals.</p>\n<p>\U0001F4C8\U0001F50D <strong>Of Software Developers,</strong>
+      new and old. Or for people who work with them or want to become one.</p>\n<p>\U0001F423\U0001F413
+      <strong>At Any Level.</strong> Whether you’re aspiring, newer, or more experienced.
+      From seasoned staff engineers to people that just completed their first Hello
+      World, we want you to come out and be a part of our group.</p>\n<p>We're a part
+      of the larger Code &amp; Coffee community. Come learn more about us here and
+      see what we're all about.</p>\n<p>\U0001F9D1‍\U0001F91D‍\U0001F9D1 <strong>Join
+      our Online Community:</strong><br>\n<a href=\"https://www.codeandcoffee.org\">www.codeandcoffee.org</a><br>\nDiscord:
+      <a href=\"https://codeandcoffee.chat\">codeandcoffee.chat</a></p>\n<p><strong>What
+      do we do at these events?</strong><br>\n\U0001F4AC <strong>Discussion.</strong>
+      Many attendees come with questions, ideas, or strategies to discuss.<br>\n\U0001F578
+      <strong>Networking.</strong> Many people come to meet people; that's enough
+      reason on its own.<br>\n<strong>Support.</strong> Many of our attendees in the
+      past have also found mentors, mentees, and peer support. We encourage it!</p>\n<p><strong>How
+      are we planning to expand?</strong><br>\n<strong>Engage with speakers.</strong>
+      We're looking for people who are interested in sharing their skills, knowledge,
+      and even projects.<br>\n<strong>Sponsorship.</strong> We're actively looking
+      for a local sponsor to host this event. Please reach out if you're interested!<br>\n<strong>Grow!</strong>
+      We are excited to see this group grow and attract more attendees.</p>\n<p>We
+      are an open community but do not tolerate bad behavior. We're LGBTQIA+ operated
+      and a safe space for people that need it. Our community centers around three
+      principles: Belonging, Safety, and Trust. Please report harassment over meetup
+      to an organizer or contact email in our <a href=\"https://www.newyorkcodeandcoffee.com/coc.html\">Code
+      of Conduct</a>.</p>"
+    teaser: Frederick Code and Coffee is a local chapter of a nationwide group that
+      aims to bring developers together to grow and make friends. The group meets
+      at local coffee shops.
+    color: fuchsia-600
+    event_source: meetup
+    event_source_id: frederick-code-and-coffee
+- model: groups.group
+  pk: 3
+  fields:
+    name: Frederick Open Source
+    slug: frederick-open-source
+    url: https://www.meetup.com/FrederickOpenSource/
+    description: '<p>Frederick Open Source is all about modern open source software
+      and concepts. We welcome professionals in the field, enthusiasts, and beginners
+      alike.</p>
+
+      <p>Meeting topics cover a range of experience levels from beginner through advanced
+      professional.</p>
+
+      <p>Frederick Open Source is proudly sponsored by Red Hat and Frederick CoWork.</p>'
+    teaser: Open Source software is the name of the game for this meetup. Formerly
+      known as KeyLUG (Linux User Group), Frederick Open Source explores exciting
+      new and free software projects.
+    color: yellow-400
+    event_source: meetup
+    event_source_id: FrederickOpenSource
+- model: groups.group
+  pk: 4
+  fields:
+    name: Frederick Web Technology
+    slug: frederick-web-tech
+    url: https://www.meetup.com/FredWebTech/
+    description: <p>All things web technology from web design using CSS and JS (React,
+      Svelte, etc.) to backend development with PHP, Node.js, Dev practices, IDEs.
+      Come join us!</p>
+    teaser: Frederick Web Technology is Frederick's oldest running tech meetup group.
+      This group digs into the tech and programming languages that make the web work
+      from frontend to backend.
+    color: red-600
+    event_source: meetup
+    event_source_id: FredWebTech
+- model: groups.group
+  pk: 5
+  fields:
+    name: Python Frederick
+    slug: python-frederick
+    url: https://www.meetup.com/python-frederick/
+    description: '<p>Python Frederick is for people interested in learning and using
+      the Python programming language. We want people to discover the awesome things
+      that Python can do. Whether you''re a beginner or a seasoned veteran, join us
+      for some Python inspired fun with like-minded people.</p>
+
+      <p>Python Frederick adheres to the Python Community''s <a href="https://www.python.org/psf/codeofconduct/">Code
+      of Conduct</a>.</p>'
+    teaser: Python Frederick is a meetup group focused on building skills with the
+      Python programming language. The group is the largest and most active Python
+      group in the state of Maryland.
+    color: blue-500
+    event_source: meetup
+    event_source_id: python-frederick
+- model: groups.group
+  pk: 6
+  fields:
+    name: techfrederick
+    slug: techfrederick
+    url: https://techfrederick.org/
+    description: <p>techfrederick’s mission is to connect, educate and empower a strong
+      technology community and its partners by fostering growth, innovation and collaboration
+      for the benefit of all who live and work in our region.</p>
+    teaser: techfrederick exists to make sure that there is "more tech in Frederick."
+      This group brings the public and private sectors together to further technology
+      investments in our community.
+    color: tfgreen
+    event_source: wordpress
+    event_source_id: ''
+- model: groups.group
+  pk: 7
+  fields:
+    name: WordPress Frederick
+    slug: wordpress-frederick
+    url: https://www.meetup.com/wordpress-frederick/
+    description: '<p>We''re a group of local WordPress users who get together to share
+      our knowledge and experience. This meetup is open to site administrators, bloggers,
+      designers, and developers of all skill levels and anyone interested in WordPress.
+      You''re welcome to join us!</p>
+
+      <p>WordPress Global Community Sponsors help fund WordPress Meetup groups and
+      WordCamps around the world. Thank you to WordPress.com, WooCommerce, Jetpack,
+      Nexcess, Bluehost, and Weglot, for their support!</p>'
+    teaser: WordPress runs most of the internet (including techfrederick's organization
+      site). This meetup is exclusively focused on WordPress and is part of the network
+      of worldwide WordPress groups.
+    color: sky-600
+    event_source: meetup
+    event_source_id: wordpress-frederick
