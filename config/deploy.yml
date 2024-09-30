@@ -4,6 +4,11 @@ image: mblayman/techfrederick-community
 servers:
   web:
     - 45.55.106.163
+  cron:
+    hosts:
+      - 45.55.106.163
+    cmd:
+      bash -c "cat config/crontab | crontab - && cron -f"
 
 proxy:
   app_port: 8000
