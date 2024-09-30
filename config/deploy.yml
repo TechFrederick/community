@@ -33,7 +33,7 @@ env:
     # Make sure we never accidentally set DEBUG to True for production.
     DEBUG: "False"
     PYTHONUNBUFFERED: "1"
-    TIMEZONE: America/New_York
+    TIME_ZONE: America/New_York
   secret:
     - SECRET_KEY
 

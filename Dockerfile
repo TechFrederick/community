@@ -20,7 +20,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     UV_PROJECT_ENVIRONMENT=/usr/local
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+    && apt-get install -y \
         cron \
         man \
     && rm -rf /var/lib/apt/lists/*
