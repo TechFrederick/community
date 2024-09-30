@@ -27,7 +27,7 @@ env:
     ALLOWED_HOSTS: '*'
     DB_DIR: /var/db
     # Make sure we never accidentally set DEBUG to True for production.
-    DEBUG: "True"
+    DEBUG: "False"
     PYTHONUNBUFFERED: "1"
     TIMEZONE: America/New_York
   secret:
