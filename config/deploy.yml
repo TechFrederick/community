@@ -5,11 +5,10 @@ servers:
   web:
     - 45.55.106.163
 
-# Enable SSL auto certification via Let's Encrypt (and allow for multiple apps on one server).
-# Set ssl: false if using something like Cloudflare to terminate SSL (but keep host!).
-# proxy:
-#   ssl: true
-#   host: app.example.com
+proxy:
+  app_port: 8000
+  host: community.mattlayman.com
+  ssl: true
 
 registry:
   username: mblayman
@@ -36,9 +35,6 @@ env:
 aliases:
   shell: app exec --interactive --reuse "bash"
   ssh: server exec --interactive "bash"
-
-proxy:
-  app_port: 8000
 
 volumes:
  - "/var/db:/var/db"
