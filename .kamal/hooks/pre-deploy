@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+kamal app exec --version=${KAMAL_VERSION} './manage.py migrate'
