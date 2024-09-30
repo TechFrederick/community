@@ -1,3 +1,18 @@
+FROM node:18 AS nodejs
+
+WORKDIR /app
+
+COPY frontend/package.json frontend/package-lock.json ./
+
+RUN --mount=type=cache,target=/root/.npm \
+    npm install --loglevel verbose
+
+COPY frontend frontend/
+COPY templates templates/
+COPY techcity/core/frontend.py techcity/core/
+
+RUN npm --prefix frontend run css
+
 FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -24,6 +39,8 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev
 
 COPY --chown=app:app . /app/
+
+COPY --from=nodejs /app/static/site.css static/
 
 RUN \
     SECRET_KEY=builder-secret \
