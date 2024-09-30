@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-kamal app exec --version=${KAMAL_VERSION} './manage.py migrate'
+if [ "$KAMAL_ROLE" == "web" ]; then
+    kamal app exec --version=${KAMAL_VERSION} './manage.py migrate'
+fi
