@@ -2,10 +2,6 @@ FROM node:18 AS nodejs
 
 WORKDIR /app
 
-# cron wants to put its PID tracking file in /var/run and it's running
-# under the app user, so the directory must be writeable by that user.
-RUN mkdir -p /var/run && chown app:app /var/run
-
 COPY frontend/package.json frontend/package-lock.json ./
 
 RUN --mount=type=cache,target=/root/.npm \
@@ -34,6 +30,10 @@ WORKDIR /app
 
 RUN addgroup --gid 222 --system app \
     && adduser --uid 222 --system --group app
+
+# cron wants to put its PID tracking file in /var/run and it's running
+# under the app user, so the directory must be writeable by that user.
+RUN mkdir -p /var/run && chown app:app /var/run
 
 RUN mkdir -p /app && chown app:app /app
 
