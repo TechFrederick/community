@@ -212,6 +212,12 @@ wheels = [
 ]
 
 [[package]]
+name = "huey"
+version = "2.5.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/9c/fe/2e063984cdd512aa71e9c9c2a9200b58a830c532d25ca2c6cbc8e44bf7b7/huey-2.5.2.tar.gz", hash = "sha256:df33db474c05414ed40ee2110e9df692369871734da22d74ffb035a4bd74047f", size = 889357 }
+
+[[package]]
 name = "idna"
 version = "3.9"
 source = { registry = "https://pypi.org/simple" }
@@ -476,6 +482,7 @@ dependencies = [
     { name = "django-debug-toolbar" },
     { name = "environs" },
     { name = "gunicorn" },
+    { name = "huey" },
     { name = "markdown" },
     { name = "pydantic" },
     { name = "python-frontmatter" },
@@ -502,6 +509,7 @@ requires-dist = [
     { name = "django-debug-toolbar", specifier = ">=4.4.6" },
     { name = "environs", specifier = ">=11.0.0" },
     { name = "gunicorn", specifier = ">=23.0.0" },
+    { name = "huey", specifier = ">=2.5.2" },
     { name = "markdown", specifier = ">=3.7" },
     { name = "pydantic", specifier = ">=2.9.1" },
     { name = "python-frontmatter", specifier = ">=1.1.0" },

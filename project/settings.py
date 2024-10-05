@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "huey.contrib.djhuey",
     "techcity.core",
     "techcity.events",
     "techcity.groups",
@@ -127,3 +128,12 @@ STORAGES = {
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Third party packages
+
+# Huey - background task processing
+HUEY = {
+    "huey_class": "huey.SqliteHuey",
+    "filename": env.path("DB_DIR", BASE_DIR) / "huey.sqlite3",
+    "immediate": False,
+}

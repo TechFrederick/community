@@ -4,11 +4,11 @@ image: mblayman/techfrederick-community
 servers:
   web:
     - 45.55.106.163
-  # cron:
-  #   hosts:
-  #     - 45.55.106.163
-  #   cmd:
-  #     bash -c "cat config/crontab | crontab - && cron -f"
+  worker:
+    hosts:
+      - 45.55.106.163
+    cmd:
+      python /app/manage.py run_huey
 
 proxy:
   app_port: 8000
