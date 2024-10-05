@@ -19,21 +19,12 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     UV_PROJECT_ENVIRONMENT=/usr/local
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        cron \
-    && rm -rf /var/lib/apt/lists/*
-
 COPY --from=ghcr.io/astral-sh/uv:0.4.7 /uv /bin/uv
 
 WORKDIR /app
 
 RUN addgroup --gid 222 --system app \
     && adduser --uid 222 --system --group app
-
-# cron wants to put its PID tracking file in /var/run and it's running
-# under the app user, so the directory must be writeable by that user.
-RUN mkdir -p /var/run && chown app:app /var/run
 
 RUN mkdir -p /app && chown app:app /app
 
