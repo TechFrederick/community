@@ -72,8 +72,8 @@ class MeetupConnector:
 
                 if event["venue"]:
                     venue_defaults = {
-                        "state": event["venue"]["state"],
-                        "zip": event["venue"]["zip"],
+                        "state": event["venue"].get("state", ""),
+                        "zip": event["venue"].get("zip", ""),
                         "lat": event["venue"]["lat"],
                         "long": event["venue"]["lon"],
                     }
