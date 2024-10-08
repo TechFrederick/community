@@ -12,7 +12,7 @@ servers:
 
 proxy:
   app_port: 8000
-  host: community.mattlayman.com
+  host: community.techfrederick.org
   ssl: true
 
 registry:
