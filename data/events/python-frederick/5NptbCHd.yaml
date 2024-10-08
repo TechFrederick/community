@@ -10,7 +10,7 @@ description: "<p>Do you want to work on technology with other tech people in the
   \ Here are all the groups that are participating:</p> <p>* AWS Frederick<br/>* Frederick\
   \ Open Source (FOS)<br/>* Frederick WebTech<br/>* Python Frederick<br/>* WordPress\
   \ Frederick</p> "
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2025-05-17 16:00:00+00:00
 extensions:
@@ -22,7 +22,7 @@ joint_with:
 - DxyNm6se
 - pjXUzanG
 - uh9dyvbT
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/python-frederick/events/rvllltyhchbwb/
 name: Frederick Tech Open Workshop - 3rd Saturday

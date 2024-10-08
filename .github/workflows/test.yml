@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    # Add required configuration with dummy values.
+    env:
+      SECRET_KEY: 'a secret to everybody'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v2
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install the project
+        run: uv sync
+
+      - name: Run tests
+        run: make ci

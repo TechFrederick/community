@@ -5,7 +5,7 @@ description: "<p>CI/CD is a set of practices used by engineering organizations t
   re going to try to unravel some of those ideas to give you some ideas on how you\
   \ too can deliver software better. I\u2019ll also give you some links to some tooling\
   \ so you can see how it\u2019s done.</p> "
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-08-07 01:00:00+00:00
 extensions:
@@ -14,7 +14,7 @@ extensions:
 group_slug: frederick-open-source
 id: ZUbBWVxr
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/frederickopensource/events/302121754/
 name: An Opinionated Introduction to CI/CD

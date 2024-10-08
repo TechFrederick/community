@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    volumes:
+      - .:/app
+      # Keep this specific volume mount, even if commenting out the rest.
+      - ./db.sqlite3:/app/db.sqlite3
+    ports:
+      - 8000:8000

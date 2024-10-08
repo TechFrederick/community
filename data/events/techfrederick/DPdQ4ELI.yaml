@@ -9,14 +9,14 @@ description: '<h5><img loading="lazy" decoding="async" class="alignleft size-med
   100w, https://techfrederick.org/wp-content/uploads/2024/02/march-2024-breakfast.png
   1080w" sizes="(max-width: 300px) 100vw, 300px" /> <a href="http://techfrederick.org/breakfast"
   target="_blank" rel="noopener"><strong>REGISTER HERE</strong></a></h5>'
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-03-21 13:30:00+00:00
 extensions: null
 group_slug: techfrederick
 id: DPdQ4ELI
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/quarterly-networking-breakfast-9/
 name: Quarterly Networking Breakfast

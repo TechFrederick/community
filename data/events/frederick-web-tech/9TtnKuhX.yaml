@@ -1,7 +1,7 @@
 description: '<p>Come meet up for dinner and drinks at Coal Fire Pizza in Frederick
   and chat with other folks in Web tech!</p> <p>(In case Meetup messes up the location,
   it''s in the shops next to the Wegmans parking lot, next door to the UPS Store.)</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-09-26 01:00:00+00:00
 extensions:
@@ -10,7 +10,7 @@ extensions:
 group_slug: frederick-web-tech
 id: 9TtnKuhX
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/fredwebtech/events/303431688/
 name: Web Tech Social

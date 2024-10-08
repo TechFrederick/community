@@ -1,9 +1,0 @@
-broadcasts:
-- scheduled_for: 2024-07-17 23:00:00+00:00
-  sent_on: 2024-07-18 13:21:26.689767+00:00
-- scheduled_for: 2024-07-23 23:00:00+00:00
-  sent_on: 2024-07-24 13:22:14.770131+00:00
-event_id: gWe2Mhxi
-event_start_at: 2024-07-24 23:00:00+00:00
-status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
-- done

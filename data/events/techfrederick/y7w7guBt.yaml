@@ -8,14 +8,14 @@ description: "<div class=\"flex flex-grow flex-col max-w-full\">\n<div class=\"m
   \ a full day of team building, groove to 90\u2019s hits, and relive the iconic era\
   \ with outrageously fun games that will transport you back to the unforgettable\
   \ 90\u2019s.</p>\n</div>\n</div>\n</div>"
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-10-04 22:00:00+00:00
 extensions: null
 group_slug: techfrederick
 id: y7w7guBt
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/9th-annual-techfrederick-games/
 name: 9th Annual techfrederick Games

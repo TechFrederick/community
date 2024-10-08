@@ -6,7 +6,7 @@ description: "<p>\U0001F31F Code and Coffee: After Dark \U0001F31F</p> <p>Join u
   \ in software development and cloud computing. Whether you're a seasoned coder,\
   \ a curious beginner, or simply interested in the tech (or beer) scene, this event\
   \ offers something for you.</p> "
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-03-22 01:00:00+00:00
 extensions:
@@ -16,7 +16,7 @@ group_slug: frederick-code-and-coffee
 id: 5MRj8MvC
 joint_with:
 - 4IRdahxT
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/frederick-code-and-coffee/events/298848273/
 name: 'Frederick Code and Coffee: After Dark - Featuring AWS Frederick'

@@ -12,14 +12,14 @@ description: "<p><img loading=\"lazy\" decoding=\"async\" class=\"alignleft wp-i
   \ drive innovation and success from the trenches. We recognize the invaluable contributions\
   \ of the everyday workers who keep the tech industry running smoothly and continuously\
   \ push the boundaries of what\u2019s possible.</p>"
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-12-05 01:00:00+00:00
 extensions: null
 group_slug: techfrederick
 id: dyG3mdOb
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/the-techie-awards/
 name: The Techie Awards

@@ -1,5 +1,0 @@
-broadcasts: []
-event_id: 0c9JHdXk
-event_start_at: 2024-04-20 14:00:00+00:00
-status: !!python/object/apply:techcity.models.BroadcastScheduleStatus
-- done

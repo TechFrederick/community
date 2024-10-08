@@ -2,7 +2,7 @@ description: "<p>Join us for an insightful discussion on the latest methods and 
   \ for securely connecting to your server instances without relying on traditional\
   \ SSH. We\u2019ll delve into innovative solutions that enhance security, improve\
   \ reliability, and simplify the management of remote connections.</p> "
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-05-24 01:00:00+00:00
 extensions:
@@ -11,7 +11,7 @@ extensions:
 group_slug: aws-frederick
 id: kZ0RmX9B
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/awsfrederick/events/300825933/
 name: 'Beyond SSH: Exploring Modern Alternatives for Secure Instance Connectivity'

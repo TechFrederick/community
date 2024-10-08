@@ -8,14 +8,14 @@ description: '<p><img loading="lazy" decoding="async" class="alignleft wp-image-
   600w, https://techfrederick.org/wp-content/uploads/2024/02/JavaScript-Training-1-100x100.png
   100w, https://techfrederick.org/wp-content/uploads/2024/02/JavaScript-Training-1.png
   1080w" sizes="(max-width: 300px) 100vw, 300px" /></p>'
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-03-08 04:59:59+00:00
 extensions: null
 group_slug: techfrederick
 id: lIvIL63q
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/jumpstart-to-using-modern-javascript/
 name: Jumpstart to Using Modern JavaScript

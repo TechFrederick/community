@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ group.name }} Events - techfrederick Community{% endblock %}
+
+{% block content %}
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-3xl sm:text-5xl text-center text-slate-700 font-extralight tracking-widest leading-relaxed mb-4 py-8 border-b-4 border-{{ group.color }} flex flex-row justify-center items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 sm:w-12 sm:h-12">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+      </svg>
+      <span class="ml-2">{{ group.name }}</span>
+    </h1>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+      {% for event in events %}
+        {% include "groups/event_card.html" %}
+      {% endfor %}
+    </div>
+    <div class="p-4 mb-8 bg-tfgreen text-lg font-normal text-white border-b-2 border-tfdarkblue">
+      Visit the <a class="underline hover:text-tflightblue" href="{{ group.url }}" target="_blank">{{ group.name }} website</a> for all the latest news and information.
+    </div>
+  </div>
+{% endblock %}

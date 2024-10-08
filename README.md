@@ -49,7 +49,7 @@ make bootstrap
 
 ### Developing
 
-To run the tools that watch and build changes:
+To run the tools that start the local development server:
 
 ```bash
 make

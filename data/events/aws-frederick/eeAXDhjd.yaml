@@ -1,5 +1,5 @@
 description: '<p>Come hang out with us</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-09-21 16:00:00+00:00
 extensions:
@@ -8,7 +8,7 @@ extensions:
 group_slug: aws-frederick
 id: eeAXDhjd
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/awsfrederick/events/303562089/
 name: Frederick Tech Open Workshop - 3rd Saturday

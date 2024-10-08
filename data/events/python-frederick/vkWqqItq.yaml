@@ -9,7 +9,7 @@ description: '<p>In this session, we will explore how to use Python to enhance y
   to have another "after hour." After the presentation is over, anyone who wants to
   stay and do a bit of coding or chatting is welcome to hang out. Think of it like
   a mini open workshop.</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-06-13 01:00:00+00:00
 extensions:
@@ -18,7 +18,7 @@ extensions:
 group_slug: python-frederick
 id: vkWqqItq
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/python-frederick/events/298531530/
 name: 'Boosting AI with Python: Using Click, Jinja2, and GPT Libraries'

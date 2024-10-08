@@ -3,7 +3,7 @@ description: '<p>Let''s meet to chat and work on WordPress projects! If you''re 
   <p>We''re meeting at Orases in Frederick. Parking is available in front of the building
   and you''ll see the conference room straight ahead on your way in the front door.</p>
   <p>[<a href="https://orases.com](https://orases.com" class="linkified">https://orases.com](https://orases.com</a>)</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2025-09-13 16:00:00+00:00
 extensions:
@@ -12,7 +12,7 @@ extensions:
 group_slug: wordpress-frederick
 id: DqWP9ui7
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/wordpress-frederick/events/dkhzgtyhcmbrb/
 name: WordPress Casual Discussion and Troubleshooting

@@ -1,0 +1,10 @@
+.coverage
+.devcontainer
+.git
+.github
+.pytest_cache
+.ruff_cache
+.venv
+cache/
+db.sqlite3
+frontend/node_modules

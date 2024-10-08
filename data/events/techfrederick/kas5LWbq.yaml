@@ -1,12 +1,12 @@
 description: ''
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-04-18 21:00:00+00:00
 extensions: null
 group_slug: techfrederick
 id: kas5LWbq
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/microsoft-azure-fundamentals/
 name: Microsoft Azure Fundamentals

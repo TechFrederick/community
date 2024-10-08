@@ -10,7 +10,7 @@ description: '<p>Join us for a relaxed and enjoyable evening of networking at Jo
   Parking (No meter cost after 5 PM)</p> <p>We hope to see you there! If you have
   any questions or ideas for future meetups, please feel free to contact us through
   [Discord](<a href="https://discord.gg/9Ne7Bar2CB" class="linkified">https://discord.gg/9Ne7Bar2CB</a>)</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-01-25 02:00:00+00:00
 extensions:
@@ -20,7 +20,7 @@ group_slug: aws-frederick
 id: bAca3UI7
 joint_with:
 - Ub4afitF
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/awsfrederick/events/298585615/
 name: 'AWS Social: Co-Host with Webtech at JoJo''s'
