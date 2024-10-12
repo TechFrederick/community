@@ -15,6 +15,11 @@ proxy:
   app_port: 8000
   host: community.techfrederick.org
   ssl: true
+  healthcheck:
+    # The db migration might make the app take longer to boot up
+    # so provide more time before failing the health check.
+    timeout: 60
+
 
 registry:
   username: mblayman
