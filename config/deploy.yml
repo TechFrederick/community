@@ -8,7 +8,8 @@ servers:
     hosts:
       - 45.55.106.163
     cmd:
-      python /app/manage.py run_huey
+      # Don't waste time running the system checks.
+      python /app/manage.py run_huey --skip-checks
 
 proxy:
   app_port: 8000
@@ -25,9 +26,6 @@ builder:
 
 env:
   clear:
-    # FIXME: This should be updated when there is an actual host and not just an IP.
-    # What does the value need to be for this work with the healthcheck?
-    # What host does the healthcheck use in its request?
     ALLOWED_HOSTS: '*'
     DB_DIR: /var/db
     # Make sure we never accidentally set DEBUG to True for production.
