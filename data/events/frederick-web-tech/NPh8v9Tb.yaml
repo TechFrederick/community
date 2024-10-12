@@ -3,7 +3,7 @@ description: '<p>Once upon a time, CSS was used for styling your website''s colo
   and adapt to different screen sizes (all without JavaScript)! We''ll examine simple
   and complex ways of making CSS animations, CSS media queries, and even make a playable
   video game, using only CSS.</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-04-25 01:00:00+00:00
 extensions:
@@ -12,7 +12,7 @@ extensions:
 group_slug: frederick-web-tech
 id: NPh8v9Tb
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/fredwebtech/events/300357609/
 name: 'CSS: animation and more'

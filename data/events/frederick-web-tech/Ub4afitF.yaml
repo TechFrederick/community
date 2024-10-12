@@ -1,7 +1,7 @@
 description: '<p>Come meet up for dinner and drinks at JoJo''s in downtown Frederick
   as we kick off a new year of Web Tech events!</p> <p>This event will be co-hosted
   by the Frederick AWS Meetup.</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-01-25 02:00:00+00:00
 extensions:
@@ -11,7 +11,7 @@ group_slug: frederick-web-tech
 id: Ub4afitF
 joint_with:
 - bAca3UI7
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/fredwebtech/events/298576953/
 name: Web Tech Social

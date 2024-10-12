@@ -5,7 +5,7 @@ description: '<p>How much can you build in Go with **zero** extra packages? What
   language that lets you avoid memory management. This combination can create a impressive
   systems.</p> <p>Using only the standard library, we will explore how far you can
   get with Go for building an app to put on the web.</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-08-29 01:00:00+00:00
 extensions:
@@ -14,7 +14,7 @@ extensions:
 group_slug: frederick-web-tech
 id: TS2ijkAr
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/fredwebtech/events/302609882/
 name: 'No Frills, Just Go: Standard Library Only Web Apps'

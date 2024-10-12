@@ -1,6 +1,5 @@
 .DS_Store
 node_modules
-/out/
 
 venv
 __pycache__
@@ -8,4 +7,6 @@ cache
 .coverage
 
 .env
-*.jsonl
+*.sqlite3
+static/site.css
+staticfiles

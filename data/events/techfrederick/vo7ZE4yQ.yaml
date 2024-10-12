@@ -15,14 +15,14 @@ description: '<h2><a href="https://techfrederick.org/networking/" target="_blank
   height="118" srcset="https://techfrederick.org/wp-content/uploads/2018/04/Yakabod.png
   500w, https://techfrederick.org/wp-content/uploads/2018/04/Yakabod-300x296.png 300w"
   sizes="(max-width: 120px) 100vw, 120px" /></a></p>'
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-05-08 23:00:00+00:00
 extensions: null
 group_slug: techfrederick
 id: vo7ZE4yQ
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/quarterly-networking-event-7/
 name: Quarterly Networking Event

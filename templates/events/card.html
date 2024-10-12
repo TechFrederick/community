@@ -1,0 +1,41 @@
+<div class="w-full border-y sm:border border-tflightblue {% if event.start_at < now %}saturate-50{% endif %} flex flex-col">
+  <div class="flex flex-row text-4xl sm:text-5xl font-extralight tracking-widest border-b-4
+  {% if event.joint_with %}
+    border-tfgreen
+  {% else %}
+    border-{{ event.group.color }}
+  {% endif %}
+  ">
+    <div class="p-2 bg-tflightblue basis-1/2 text-center text-white uppercase">{{ event.start_at|date:"j M" }}</div>
+    <div class="p-2 basis-1/2 text-center bg-slate-50 text-slate-700">
+      {% if event.is_all_day %}
+        All Day
+      {% else %}
+        {{ event.start_at|date:"gA"|lower }}
+      {% endif %}
+    </div>
+  </div>
+  <div class="bg-white text-slate-700 flex-grow">
+    <div class="p-2 text-xl font-light bg-slate-100">{{ event.name }}</div>
+    <div class="p-2">
+      {% if event.is_joint %}
+        Hosted jointly by multiple groups
+      {% else %}
+        Hosted by <a href="{% url "groups:detail" event.group.slug %}" class="underline text-tflightblue hover:text-tfdarkblue">{{ event.group.name }}</a>
+      {% endif %}
+    </div>
+    <div class="px-2 pb-4">
+      <a href="{% url "events:detail" event.sqid %}" class="underline text-tflightblue hover:text-tfdarkblue">See event details&hellip;</a>
+      {% if event.start_at < now %}
+        <div class="mt-2 flex flex-row items-center text-tflightblue">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+          </svg>
+          <div class="pl-1">
+            Event finished
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

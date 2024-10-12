@@ -1,41 +1,45 @@
 [project]
 name = "techcity"
-version = "2024.02"
+version = "2024.09"
 requires-python = ">=3.12"
 dependencies = [
-    "jinja2>=3.1.4",
+    "django-debug-toolbar>=4.4.6",
+    "django>=5.1.1",
+    "environs>=11.0.0",
+    "gunicorn>=23.0.0",
+    "huey>=2.5.2",
     "markdown>=3.7",
     "pydantic>=2.9.1",
     "python-frontmatter>=1.1.0",
     "pyyaml>=6.0.2",
     "requests>=2.32.3",
-    "techcity",
-    "typer>=0.12.5",
+    "sqids>=0.5.0",
     "urllib3>=2.2.3",
+    "whitenoise[brotli]>=6.7.0",
 ]
-
-[tool.uv.sources]
-techcity = { workspace = true }
 
 [tool.uv]
 dev-dependencies = [
     "honcho>=1.1.0",
-    "polyfactory>=2.16.2",
     "pytest>=8.3.3",
     "pytest-cov>=5.0.0",
-    "scrapy>=2.11.2",
-    "time-machine>=2.15.0",
-    "watchdog[watchmedo]>=5.0.2",
+    # setuptools is needed because of a bug in honcho with Python 3.12.
+    # See https://github.com/nickstenning/honcho/issues/247 for details.
+    "setuptools>=75.1.0",
+    "pytest-django>=4.9.0",
+    "factory-boy>=3.3.1",
 ]
-
-[project.scripts]
-techcity = "techcity.cli:app"
 
 [tool.coverage.report]
 show_missing = true
 skip_covered = true
+omit = [
+    "*/migrations/*",
+]
 
 [tool.pytest.ini_options]
+addopts = "--nomigrations"
+DJANGO_SETTINGS_MODULE = "project.testing_settings"
 testpaths = [
     "techcity",
 ]
@@ -62,7 +66,3 @@ ignore = [
     # bandit: Use of `assert` detected
     "S101",
 ]
-
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"

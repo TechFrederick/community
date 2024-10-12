@@ -14,7 +14,7 @@ description: '<p>Join us for an immersive experience as we delve into the fascin
   and be part of the AI revolution. Seats are limited, so register now and secure
   your spot in this exciting journey through the world of Artificial Intelligence
   and Generative AI on AWS.</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-08-23 00:30:00+00:00
 extensions:
@@ -23,7 +23,7 @@ extensions:
 group_slug: aws-frederick
 id: OVuLHuJV
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/awsfrederick/events/302273224/
 name: 'Unlock the Power of AI: Exploring Machine Learning and Generative AI on AWS'

@@ -1,6 +1,6 @@
 description: '<p>Join us at Rockwell Riverside with our friends from Code and Coffee
   to talk about tech!</p> '
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-03-22 01:00:00+00:00
 extensions:
@@ -10,7 +10,7 @@ group_slug: aws-frederick
 id: 4IRdahxT
 joint_with:
 - 5MRj8MvC
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://www.meetup.com/awsfrederick/events/299696348/
 name: 'Joint meetup with Code and Coffee at Rockwell Riverside '

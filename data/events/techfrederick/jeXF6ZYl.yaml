@@ -4,14 +4,14 @@ description: '<p><a href="http://www.techfrederick.org/sql" target="_blank" rel=
   300w, https://techfrederick.org/wp-content/uploads/2024/04/SQL-768x644.jpg 768w,
   https://techfrederick.org/wp-content/uploads/2024/04/SQL-600x503.jpg 600w, https://techfrederick.org/wp-content/uploads/2024/04/SQL.jpg
   940w" sizes="(max-width: 300px) 100vw, 300px" />REGISTER HERE</a></p>'
-description_type: !!python/object/apply:techcity.models.EventDescriptionType
+description_type: !!python/object/apply:techcity.core.management.commands.static_models.EventDescriptionType
 - html
 end_at: 2024-05-15 21:00:00+00:00
 extensions: null
 group_slug: techfrederick
 id: jeXF6ZYl
 joint_with: []
-kind: !!python/object/apply:techcity.models.EventKind
+kind: !!python/object/apply:techcity.core.management.commands.static_models.EventKind
 - unspecified
 link: https://techfrederick.org/event/introduction-to-sql/
 name: Introduction to SQL
