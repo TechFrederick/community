@@ -1,5 +1,8 @@
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
+from icalendar import Calendar
+from icalendar import Event as CalendarEvent
 
 from techcity.events.models import Event
 
@@ -25,3 +28,25 @@ def group_events(request, slug):
         "events": Event.objects.filter(group=group).order_by("-start_at"),
     }
     return render(request, "groups/events.html", context)
+
+
+def group_ical(request, slug):
+    group = get_object_or_404(Group, slug=slug)
+    calendar = Calendar()
+    calendar.add("prodid", "-//techfrederick Community//Community Website//EN")
+    calendar.add("version", "2.0")
+
+    for event in Event.objects.filter(group=group).order_by("-start_at"):
+        calendar_event = CalendarEvent()
+        calendar_event.add("summary", event.name)
+        calendar_event.add("uid", event.id)
+        # FIXME: We don't currently track a created or last modified datetime
+        # on an event, but dtstamp is required. Use the start time has a stand-in.
+        # The impact of this is that calendar clients won't really update an event
+        # unless the start time changes, which isn't great.
+        calendar_event.add("dtstamp", event.start_at)
+        calendar_event.start = event.start_at
+        calendar_event.end = event.end_at
+        calendar.add_component(calendar_event)
+
+    return HttpResponse(calendar.to_ical(), content_type="text/calendar")

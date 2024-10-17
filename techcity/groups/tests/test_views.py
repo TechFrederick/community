@@ -20,3 +20,12 @@ class TestGroupEvents:
         response = client.get(reverse("groups:events", args=[event.group.slug]))
 
         assert response.status_code == 200
+
+
+class TestGroupIcal:
+    def test_ok(self, client):
+        event = EventFactory()
+
+        response = client.get(reverse("groups:ical", args=[event.group.slug]))
+
+        assert response.status_code == 200

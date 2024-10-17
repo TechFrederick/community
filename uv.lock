@@ -209,6 +209,19 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/9c/fe/2e063984cdd512aa71e9c9c2a9200b58a830c532d25ca2c6cbc8e44bf7b7/huey-2.5.2.tar.gz", hash = "sha256:df33db474c05414ed40ee2110e9df692369871734da22d74ffb035a4bd74047f", size = 889357 }
 
 [[package]]
+name = "icalendar"
+version = "6.0.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-dateutil" },
+    { name = "tzdata" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2f/c8/517de527ddd5acf8dfb4da1b0faf27ceba30526f481680f56e7c5b91dd83/icalendar-6.0.1.tar.gz", hash = "sha256:1ff44825d7b41c3f77eac9e09cc67a770dd3c2377430c23b0eb7d91603088892", size = 98425 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/76/c5/d10fc932f7fcc770180b4bf3c63df79d518086a51548422101f4a7c8fdfa/icalendar-6.0.1-py3-none-any.whl", hash = "sha256:9bf3d69203bd0366a9a29a8b0e220574580b86d7918afcb628fc6920287922f3", size = 131316 },
+]
+
+[[package]]
 name = "idna"
 version = "3.9"
 source = { registry = "https://pypi.org/simple" }
@@ -378,6 +391,7 @@ dependencies = [
     { name = "environs" },
     { name = "gunicorn" },
     { name = "huey" },
+    { name = "icalendar" },
     { name = "requests" },
     { name = "sqids" },
     { name = "urllib3" },
@@ -401,6 +415,7 @@ requires-dist = [
     { name = "environs", specifier = ">=11.0.0" },
     { name = "gunicorn", specifier = ">=23.0.0" },
     { name = "huey", specifier = ">=2.5.2" },
+    { name = "icalendar", specifier = ">=6.0.1" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "sqids", specifier = ">=0.5.0" },
     { name = "urllib3", specifier = ">=2.2.3" },
