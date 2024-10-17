@@ -35,6 +35,7 @@ def group_ical(request, slug):
     calendar = Calendar()
     calendar.add("prodid", "-//techfrederick Community//Community Website//EN")
     calendar.add("version", "2.0")
+    calendar.add("x-wr-calname", f"{group.name} Events")
 
     for event in Event.objects.filter(group=group).order_by("-start_at"):
         calendar_event = CalendarEvent()
