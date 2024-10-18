@@ -32,6 +32,7 @@ builder:
 env:
   clear:
     ALLOWED_HOSTS: '*'
+    CSRF_TRUSTED_ORIGIN: 'https://community.techfrederick.org'
     DB_DIR: /var/db
     # Make sure we never accidentally set DEBUG to True for production.
     DEBUG: "False"
