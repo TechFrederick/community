@@ -132,6 +132,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Security
 CSRF_COOKIE_SECURE = env.bool("CSRF_COOKIE_SECURE", True)
 CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", [])
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 SESSION_COOKIE_SECURE = env.bool("SESSION_COOKIE_SECURE", True)
 
 # Third party packages
