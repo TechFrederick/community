@@ -129,6 +129,10 @@ STORAGES = {
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# Security
+CSRF_COOKIE_SECURE = env.bool("CSRF_COOKIE_SECURE", True)
+SESSION_COOKIE_SECURE = env.bool("SESSION_COOKIE_SECURE", True)
+
 # Third party packages
 
 # Huey - background task processing
