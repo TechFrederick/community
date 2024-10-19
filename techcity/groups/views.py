@@ -1,3 +1,5 @@
+from datetime import timedelta
+
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.utils import timezone
@@ -23,9 +25,15 @@ def group_detail(request, slug):
 
 def group_events(request, slug):
     group = get_object_or_404(Group, slug=slug)
+    to_datetime = timezone.now() + timedelta(days=45)
+    events = (
+        Event.objects.filter_timeframe(to_datetime=to_datetime)
+        .filter(group=group)
+        .order_by("-start_at")
+    )
     context = {
         "group": group,
-        "events": Event.objects.filter(group=group).order_by("-start_at"),
+        "events": events,
     }
     return render(request, "groups/events.html", context)
 

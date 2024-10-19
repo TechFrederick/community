@@ -35,9 +35,19 @@ class EventQuerySet(models.QuerySet):
     def filter_around(self, when: datetime) -> EventQuerySet:
         from_datetime = when - timedelta(days=30)
         to_datetime = when + timedelta(days=45)
-        return self.filter(
-            start_at__gt=from_datetime, start_at__lt=to_datetime
-        ).order_by("start_at")
+        return self.filter_timeframe(from_datetime, to_datetime)
+
+    def filter_timeframe(
+        self,
+        from_datetime: datetime | None = None,
+        to_datetime: datetime | None = None,
+    ) -> EventQuerySet:
+        q = models.Q()
+        if from_datetime:
+            q = q & models.Q(start_at__gt=from_datetime)
+        if to_datetime:
+            q = q & models.Q(start_at__lt=to_datetime)
+        return self.filter(q).order_by("start_at")
 
     def from_sqid(self, sqid: str) -> Event:
         decoded = sqids.decode(sqid)
