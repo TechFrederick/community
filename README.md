@@ -38,7 +38,7 @@ on the technology usage within their city.
 #### Local
 
 * Install [uv](https://docs.astral.sh/uv/getting-started/installation/)
-* Install Node.js
+* Install [Node.js](https://nodejs.org/en) for `npm`
 
 If you have questions about installing those things,
 join us on the TechFrederick Discord to chat about the setup process.

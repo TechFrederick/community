@@ -4,8 +4,7 @@ run:
 	@uv run honcho start
 
 bootstrap:
-	uv sync
-	npm --prefix frontend install
+	bin/bootstrap
 
 serve:
 	uv run manage.py runserver
