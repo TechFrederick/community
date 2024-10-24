@@ -7,6 +7,26 @@
     <title>{% block title %}techfrederick Community{% endblock %}</title>
     <link rel="shortcut icon" href="{% static "favicon.ico" %}">
     <link href="{% static "site.css" %}" rel="stylesheet">
+
+    {% block meta %}
+      <meta name="description" content="The techfrederick community connects technologists, professionals, and hobbyists in Frederick, MD to advance technology use in the city and surrounding county.">
+
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://community.techfrederick.org/">
+      <meta property="og:title" content="techfrederick Community">
+      <meta property="og:description" content="The techfrederick community connects technologists, professionals, and hobbyists in Frederick, MD to advance technology use in the city and surrounding county.">
+      <meta property="og:image" content="https://community.techfrederick.org{% static "images/og/techfrederick-community.png" %}">
+      <meta property="og:image:alt" content="Join tech-minded people from the Frederick area">
+
+      <!-- TODO -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta property="twitter:domain" content="community.techfrederick.org">
+      <meta property="twitter:url" content="https://community.techfrederick.org/">
+      <meta name="twitter:title" content="techfrederick Community">
+      <meta name="twitter:description" content="The techfrederick community connects technologists, professionals, and hobbyists in Frederick, MD to advance technology use in the city and surrounding county.">
+      <meta name="twitter:image" content="">
+    {% endblock %}
+
   </head>
   <body class="antialiased min-h-screen flex flex-col">
     <nav class="flex flex-col sm:flex-row justify-center items-center bg-tfgreen text-white text-lg tracking-wider font-normal">
