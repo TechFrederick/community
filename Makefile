@@ -4,7 +4,7 @@ run:
 	@uv run honcho start
 
 bootstrap:
-	bin/bootstrap
+	@bin/bootstrap
 
 serve:
 	uv run manage.py runserver
