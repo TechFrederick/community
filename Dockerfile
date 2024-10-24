@@ -39,6 +39,8 @@ COPY --from=nodejs /app/static/site.css static/
 
 RUN \
     SECRET_KEY=builder-secret \
+    SENTRY_DSN=dsn-dummy \
+    SENTRY_ENABLED=False \
     python manage.py collectstatic --noinput
 
 USER app
