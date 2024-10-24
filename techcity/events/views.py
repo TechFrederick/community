@@ -25,4 +25,4 @@ def events_ical(request):
         Event.objects.filter_timeframe(from_datetime, to_datetime)
     )
     calendar = make_calendar("techfrederick Community Events", events)
-    return HttpResponse(calendar.to_ical())  # , content_type="text/calendar")
+    return HttpResponse(calendar.to_ical(), content_type="text/calendar")
