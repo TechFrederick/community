@@ -9,6 +9,7 @@ jobs:
     # Add required configuration with dummy values.
     env:
       SECRET_KEY: 'a secret to everybody'
+      SENTRY_SDN: 'dsn_example'
 
     steps:
       - name: Checkout

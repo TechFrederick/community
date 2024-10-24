@@ -37,6 +37,10 @@ env:
     # Make sure we never accidentally set DEBUG to True for production.
     DEBUG: "False"
     PYTHONUNBUFFERED: "1"
+    # The Sentry DSN is not a secret. It can be used in browser contexts,
+    # so it doesn't need to be hidden. We store it here rather than hardcoding
+    # it so that local development will not trigger Sentry tracking accidentally.
+    SENTRY_DSN: https://757e25a7c4e445e972d5febde9ff89a0@o4508175311962112.ingest.us.sentry.io/4508175314845696
     TIME_ZONE: America/New_York
   secret:
     - SECRET_KEY

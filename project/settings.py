@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "techcity.core",
     "techcity.events",
     "techcity.groups",
+    "techcity.sentry",
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,7 @@ HUEY = {
     "filename": env.path("DB_DIR", BASE_DIR) / "huey.sqlite3",
     "immediate": False,
 }
+
+# Sentry
+SENTRY_ENABLED = env.bool("SENTRY_ENABLED", True)
+SENTRY_DSN = env.str("SENTRY_DSN")
