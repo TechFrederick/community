@@ -3,6 +3,24 @@
 
 {% block title %}{{ group.name }} - techfrederick Community{% endblock %}
 
+{% block meta %}
+  <meta name="description" content="{{ group.name }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://community.techfrederick.org{% url "groups:detail" group.slug %}">
+  <meta property="og:title" content="{{ group.name }}">
+  <meta property="og:description" content="{{ group.name }}">
+  <meta property="og:image" content="https://community.techfrederick.org{% static group.hero_image %}">
+  <meta property="og:image:alt" content="{{ group.name }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="community.techfrederick.org">
+  <meta property="twitter:url" content="https://community.techfrederick.org{% url "groups:detail" group.slug %}">
+  <meta name="twitter:title" content="{{ group.name }}">
+  <meta name="twitter:description" content="{{ group.name }}">
+  <meta name="twitter:image" content="https://community.techfrederick.org{% static group.hero_image %}">
+{% endblock %}
+
 {% block content %}
   <div class="max-w-5xl mx-auto">
     <h1 class="text-3xl sm:text-5xl text-center text-slate-700 font-extralight tracking-widest leading-relaxed mb-4 py-4 sm:py-8 border-b-4 border-{{ group.color }}">{{ group.name }}</h1>

@@ -1,6 +1,25 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}{{ event.name }} - techfrederick Community{% endblock %}
+
+{% block meta %}
+  <meta name="description" content="{{ event.name }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://community.techfrederick.org{% url "events:detail" event.sqid %}">
+  <meta property="og:title" content="{{ event.name }}">
+  <meta property="og:description" content="{{ event.name }}">
+  <meta property="og:image" content="https://community.techfrederick.org{% static "images/og/techfrederick-community.png" %}">
+  <meta property="og:image:alt" content="{{ event.name }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="community.techfrederick.org">
+  <meta property="twitter:url" content="https://community.techfrederick.org{% url "events:detail" event.sqid %}">
+  <meta name="twitter:title" content="{{ event.name }}">
+  <meta name="twitter:description" content="{{ event.name }}">
+  <meta name="twitter:image" content="https://community.techfrederick.org{% static "images/og/techfrederick-community.png" %}">
+{% endblock %}
 
 {% block content %}
   <div class="max-w-3xl mx-auto">
