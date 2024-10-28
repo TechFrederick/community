@@ -7,6 +7,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("events/", include("techcity.events.urls")),
     path("groups/", include("techcity.groups.urls")),
+    path("api/", include("techcity.api.urls")),
 ]
 
 # Enable the debug toolbar only in DEBUG mode.
