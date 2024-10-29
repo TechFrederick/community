@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd "$(dirname "$0")"
+cd ..
+PROJECT_ROOT="$(pwd)"
+
 info() {
   echo "==> $1"
 }
@@ -27,7 +31,7 @@ if ! command -v npm >/dev/null 2>&1; then
 fi
 
 info 'Checking for `.env` environment variables file.'
-if [ ! -e ".env" ]; then
+if [ ! -e "$PROJECT_ROOT/.env" ]; then
     error 'No environment variable file found at `.env`.'
     info 'Creating initial `.env` file from `.env.example`.'
     cp .env.example .env
@@ -39,5 +43,11 @@ uv sync -q
 
 info 'Fetching Node.js packages.'
 npm --prefix frontend install --silent
+
+info 'Run migrations'
+python $PROJECT_ROOT/manage.py migrate 
+
+info 'Populate groups'
+python $PROJECT_ROOT/manage.py populate_groups
 
 success 'Ready! Use `make` to start the local development server.'
