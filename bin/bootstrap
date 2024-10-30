@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd "$(dirname "$0"/..)"
-PROJECT_ROOT="$(pwd)"
+PROJECT_ROOT="$(realpath "$(dirname "$0")/..")"
+cd $PROJECT_ROOT
 
 info() {
   echo "==> $1"
@@ -43,16 +43,16 @@ uv sync -q
 info 'Fetching Node.js packages.'
 npm --prefix frontend install --silent
 
-info 'Installing pre commit hooks'
-pre-commit install
+info 'Installing pre-commit hooks.'
+uv run pre-commit install
 
-info 'Running migrations'
+info 'Running migrations.'
 uv run manage.py migrate 
 
-info 'Populating groups'
+info 'Populating groups.'
 uv run manage.py populate_groups
 
-info 'Fetching events for groups'
+info 'Fetching events for groups.'
 make fetch
 
 success 'Ready! Use `make` to start the local development server.'
