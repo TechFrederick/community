@@ -30,15 +30,7 @@ class Command(BaseCommand):
             return
 
         groups = groups_response.json()
-        if not groups:
-            self.stdout.write(
-                self.style.NOTICE(
-                    f"No records returned from {groups_endpoint}, "
-                    "no records to add to db"
-                )
-            )
-            return
-        else:
+        if groups:
             group_instances = [Group(**item) for item in groups]
             update_fields = [
                 field.name
@@ -52,3 +44,11 @@ class Command(BaseCommand):
                 update_fields=update_fields,
             )
             self.stdout.write(self.style.SUCCESS("Successfully upserted groups table"))
+        else:
+            self.stdout.write(
+                self.style.NOTICE(
+                    f"No records returned from {groups_endpoint}, "
+                    "no records to add to db"
+                )
+            )
+            return

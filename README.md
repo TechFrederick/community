@@ -54,8 +54,3 @@ To run the tools that start the local development server:
 ```bash
 make
 ```
-
-To install pre-commit to help with pull requests
-```bash
-pre-commit install
-```

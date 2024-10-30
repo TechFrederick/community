@@ -5,7 +5,6 @@ run:
 
 bootstrap:
 	@bin/bootstrap
-	make fetch
 
 serve:
 	uv run manage.py runserver
