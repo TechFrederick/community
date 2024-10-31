@@ -33,6 +33,7 @@ class Group(models.Model):
     kind = models.CharField(
         max_length=16,
         default=Kind.UNKNOWN,
+        choices=Kind.choices,
         db_index=True,
         help_text="The broad category of a group",
     )
