@@ -23,7 +23,19 @@ class Group(models.Model):
         MEETUP = "meetup"
         WORDPRESS = "wordpress"
 
+    class Kind(models.TextChoices):
+        UNKNOWN = "unknown", "Unknown"
+        COMMUNITY = "community", "Community"
+        NONPROFIT = "nonprofit", "Nonprofit"
+        COMPANY = "company", "Company"
+
     name = models.CharField(max_length=128)
+    kind = models.CharField(
+        max_length=16,
+        default=Kind.UNKNOWN,
+        db_index=True,
+        help_text="The broad category of a group",
+    )
     slug = models.SlugField()
     url = models.URLField(max_length=256)
     description = models.TextField()
