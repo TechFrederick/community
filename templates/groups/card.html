@@ -1,5 +1,5 @@
 {% load static %}
-<div class="rounded-lg py-px sm:p-px bg-gradient-to-r from-tfgreen from-50% via-cyan-400 via-60% to-tflightblue">
+<div class="rounded-lg py-px pb-0.5 sm:p-px sm:pb-0.5 bg-gradient-to-r from-tfgreen from-50% via-cyan-400 via-60% to-tflightblue">
   <div class="rounded-lg min-h-48 bg-slate-50 hover:brightness-105 hover:saturate-150 hover:transition-all">
     <div class="rounded-lg p-2 text-xl text-tfdarkblue font-light">{{ group.name }}</div>
     <div class="h-px bg-gradient-to-r from-tfgreen from-50% via-cyan-400 via-60% to-tflightblue"></div>
@@ -9,10 +9,30 @@
       </a>
     </div>
     <div class="p-2 text-slate-700">{{ group.teaser }}</div>
-    <div class="px-2 pb-4">
+    <div class="px-2 pb-4 flex flex-row">
       <a class="text-tflightblue hover:text-tfdarkblue font-medium" href="{% url "groups:detail" group.slug %}">
         Learn more <span class="ml-1">&rarr;</span>
       </a>
+      <div class="flex-grow"></div>
+      <div class="mx-2">
+        {% if group.kind == group.Kind.COMMUNITY %}
+          <div class="text-sm leading-6 rounded-full px-2 text-xs font-semibold leading-7 bg-tfgreen text-white">
+            {{ group.Kind.COMMUNITY.label }}
+          </div>
+        {% elif group.kind == group.Kind.NONPROFIT %}
+          <div class="text-sm leading-6 rounded-full px-2 text-xs font-semibold leading-7 bg-tflightblue text-white">
+            {{ group.Kind.NONPROFIT.label }}
+          </div>
+        {% elif group.kind == group.Kind.COMPANY %}
+          <div class="text-sm leading-6 rounded-full px-2 text-xs font-semibold leading-7 bg-tfdarkblue text-white">
+            {{ group.Kind.COMPANY.label }}
+          </div>
+        {% else %}
+          <div class="text-sm leading-6 rounded-full px-2 text-xs font-semibold leading-7 bg-slate-400 text-white">
+            {{ group.Kind.UNKNOWN.label }}
+          </div>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
