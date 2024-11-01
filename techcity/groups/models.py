@@ -78,3 +78,12 @@ class Group(models.Model):
     def html_description(self):
         # Wrap in a div because a root node is expected to format properly.
         return tailwindify_html(f"<div>{self.description}</div>")
+
+    @property
+    def has_events(self) -> bool:
+        """Does the group have any events?
+
+        Rather than querying the events table, assume that a group with
+        no event source has no events.
+        """
+        return self.event_source != self.EventSource.UNSPECIFIED

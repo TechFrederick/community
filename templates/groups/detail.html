@@ -25,49 +25,55 @@
   <div class="max-w-5xl mx-auto">
     <h1 class="text-3xl sm:text-5xl text-center text-slate-700 font-extralight tracking-widest leading-relaxed mb-4 py-4 sm:py-8 border-b-4 border-{{ group.color }}">{{ group.name }}</h1>
     <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-4 mb-4">
-      <div class="col-span-2">
+      <div class="{% if group.has_events %}col-span-2{% else %}col-span-3 max-w-prose mx-auto{% endif %}">
         <img class="w-full pb-4 bg-white" src="{% static group.hero_image %}">
 
         <div class="px-4 sm:px-0">
           {{ group.html_description|safe }}
         </div>
 
-        <h2 class="text-3xl text-slate-700 font-extralight tracking-wider px-4 sm:px-0 py-4 mb-4 border-b-4 border-{{ group.color }} w-full flex flex-row items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-          </svg>
-          <span class="ml-2">More Info</span>
-        </h2>
+        {% if group.has_events %}
+          <h2 class="text-3xl text-slate-700 font-extralight tracking-wider px-4 sm:px-0 py-4 mb-4 border-b-4 border-{{ group.color }} w-full flex flex-row items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+            </svg>
+            <span class="ml-2">More Info</span>
+          </h2>
 
-        <div class="px-4 pb-4 sm:px-0 text-base sm:text-lg font-light flex flex-row gap-2 items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
-          </svg>
+          <div class="px-4 pb-4 sm:px-0 text-base sm:text-lg font-light flex flex-row gap-2 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+            </svg>
+            <div>
+              <a href="{% url "groups:ical" group.slug %}" class="underline text-tflightblue hover:text-tfdarkblue">{{ group.name }} iCalendar Events (ics)</a>
+            </div>
+          </div>
+
+          <hr class="sm:hidden">
+        {% endif %}
+      </div>
+
+      {% if group.has_events %}
+        <div class="flex flex-col gap-4">
+          <h2 class="text-3xl text-slate-700 font-extralight tracking-wider px-4 sm:px-0 py-4 border-b-4 border-{{ group.color }} w-full flex flex-row sm:justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+            </svg>
+            <span class="ml-2">Recent Events</span>
+          </h2>
+          {% if events %}
+            {% for event in events %}
+              {% include "groups/event_card.html" %}
+            {% endfor %}
+          {% else %}
+            <p>This group does that have any events to show currently.</p>
+          {% endif %}
           <div>
-            <a href="{% url "groups:ical" group.slug %}" class="underline text-tflightblue hover:text-tfdarkblue">{{ group.name }} iCalendar Events (ics)</a>
+          <a href="{% url "groups:events" group.slug %}" class="underline text-tflightblue hover:text-tfdarkblue">See all events</a>
           </div>
         </div>
-        <hr class="sm:hidden">
+      {% endif %}
 
-      </div>
-      <div class="flex flex-col gap-4">
-        <h2 class="text-3xl text-slate-700 font-extralight tracking-wider px-4 sm:px-0 py-4 border-b-4 border-{{ group.color }} w-full flex flex-row sm:justify-center items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
-          </svg>
-          <span class="ml-2">Recent Events</span>
-        </h2>
-        {% if events %}
-          {% for event in events %}
-            {% include "groups/event_card.html" %}
-          {% endfor %}
-        {% else %}
-          <p>This group does that have any events to show currently.</p>
-        {% endif %}
-        <div>
-        <a href="{% url "groups:events" group.slug %}" class="underline text-tflightblue hover:text-tfdarkblue">See all events</a>
-        </div>
-      </div>
     </div>
     <div class="p-4 mb-8 bg-tfgreen text-lg font-normal text-white border-b-2 border-tfdarkblue">
       Visit the <a class="underline hover:text-tflightblue" href="{{ group.url }}" target="_blank">{{ group.name }} website</a> for all the latest news and information.
