@@ -20,6 +20,7 @@ class Group(models.Model):
     """
 
     class EventSource(models.TextChoices):
+        UNSPECIFIED = "unspecified"
         MEETUP = "meetup"
         WORDPRESS = "wordpress"
 
@@ -50,10 +51,13 @@ class Group(models.Model):
     )
     event_source = models.CharField(
         max_length=16,
+        default=EventSource.UNSPECIFIED,
+        choices=EventSource.choices,
         help_text="What is the source of event information for this group",
     )
     event_source_id = models.CharField(
         max_length=32,
+        blank=True,
         help_text="An optional ID to use when checking an event source",
     )
 
