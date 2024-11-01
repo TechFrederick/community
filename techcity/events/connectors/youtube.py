@@ -135,6 +135,7 @@ class YouTubeConnector:
             defaults={
                 "title": snippet["title"],
                 "description": snippet["description"],
+                "published_at": snippet["publishedAt"],
                 "url": f"https://www.youtube.com/watch?v={content_details['videoId']}&list={playlist_id}",
                 "external_id": content_details["videoId"],
                 "external_playlist_id": playlist_id,

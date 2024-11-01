@@ -148,6 +148,9 @@ class EventRecording(models.Model):
     description = models.TextField(
         help_text="A description of the recording",
     )
+    published_at = models.DateTimeField(
+        null=True, blank=True, help_text="The date and time the recording was published"
+    )
     # Including the URL here allows for more flexibility in the future,
     # such as linking to a podcast feed.
     # But for YouTube this is redundant with the external_id.
@@ -158,14 +161,17 @@ class EventRecording(models.Model):
         max_length=256,
         help_text="The ID of the playlist on the platform (i.e. list=<...> on YouTube)",
         null=True,
+        blank=True,
     )
     external_id = models.CharField(
         max_length=256,
         help_text="The ID of the recording on the platform (i.e. v=<...> on YouTube)",
         null=True,
+        blank=True,
     )
     metadata = models.JSONField(
         null=False,
+        blank=True,
         default=dict,
         help_text="Misc metadata about the recording",
     )
