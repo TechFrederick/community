@@ -67,11 +67,13 @@ class Group(models.Model):
         return self.name
 
     @property
-    def card_image(self):
+    def card_image_static(self):
+        """TODO: remove this. Using `_static` to deconflict with the field name."""
         return f"images/group-card/{self.slug}.png"
 
     @property
-    def hero_image(self):
+    def hero_image_static(self):
+        """TODO: remove this. Using `_static` to deconflict with the field name."""
         return f"images/group-hero/{self.slug}.png"
 
     @property
