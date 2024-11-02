@@ -9,6 +9,9 @@ DATABASES = {
 }
 
 STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.InMemoryStorage",
+    },
     "staticfiles": {
         # Whitenoise does not play well with tests
         # because tests don't run collectstatic.
