@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import requests
 from django.core.management.base import BaseCommand
 from requests.adapters import HTTPAdapter
@@ -43,6 +45,7 @@ class Command(BaseCommand):
                 unique_fields=["id"],
                 update_fields=update_fields,
             )
+            self.fetch_images(group_instances, session)
             self.stdout.write(self.style.SUCCESS("Successfully upserted groups table"))
         else:
             self.stdout.write(
@@ -52,3 +55,25 @@ class Command(BaseCommand):
                 )
             )
             return
+
+    def fetch_images(self, groups, session):
+        """Fetch image data from the live site for each image field."""
+        for group in groups:
+            self.stdout.write(f"Fetching {group.name} card image...")
+            self.fetch_image(group.card_image, session)
+
+            self.stdout.write(f"Fetching {group.name} hero image...")
+            self.fetch_image(group.hero_image, session)
+
+    def fetch_image(self, image, session):
+        image_path = Path(image.path)
+        # Ensure that the right directory structure exists in the local destination.
+        image_dir = image_path.parent
+        image_dir.mkdir(exist_ok=True, parents=True)
+
+        origin_domain = "https://community.techfrederick.org"
+        response = session.get(f"{origin_domain}{image.url}", stream=True)
+        response.raise_for_status()
+        with open(image_path, "wb") as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)

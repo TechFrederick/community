@@ -1,11 +1,10 @@
-{% load static %}
 <div class="rounded-lg py-px pb-0.5 sm:p-px sm:pb-0.5 bg-gradient-to-r from-tfgreen from-50% via-cyan-400 via-60% to-tflightblue">
   <div class="rounded-lg min-h-48 bg-slate-50 hover:brightness-105 hover:saturate-150 hover:transition-all">
     <div class="rounded-lg p-2 text-xl text-tfdarkblue font-light">{{ group.name }}</div>
     <div class="h-px bg-gradient-to-r from-tfgreen from-50% via-cyan-400 via-60% to-tflightblue"></div>
     <div class="bg-white border-b-4 border-{{ group.color }}">
       <a href="{% url "groups:detail" group.slug %}">
-        <img class="w-full h-48 object-scale-down object-center" src="{% static group.card_image_static %}">
+        <img class="w-full h-48 object-scale-down object-center" src="{{ group.card_image.url }}">
       </a>
     </div>
     <div class="p-2 text-slate-700">{{ group.teaser }}</div>
