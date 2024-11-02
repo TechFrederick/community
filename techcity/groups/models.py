@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 from django.db import models
 
 from techcity.core.frontend import tailwindify_html
@@ -11,6 +13,16 @@ class GroupQuerySet(models.QuerySet):
 
 
 GroupManager = models.Manager.from_queryset(GroupQuerySet)
+
+
+def card_image_path(instance, filename):
+    path = Path(filename)
+    return f"groups/card-image/{instance.slug}{path.suffix}"
+
+
+def hero_image_path(instance, filename):
+    path = Path(filename)
+    return f"groups/hero-image/{instance.slug}{path.suffix}"
 
 
 class Group(models.Model):
@@ -60,6 +72,14 @@ class Group(models.Model):
         blank=True,
         help_text="An optional ID to use when checking an event source",
     )
+    card_image = models.FileField(
+        upload_to=card_image_path,
+        help_text="The small image format used when displaying a card",
+    )
+    hero_image = models.FileField(
+        upload_to=hero_image_path,
+        help_text="The large image format used when displaying the group detail page",
+    )
 
     objects = GroupManager()
 
@@ -67,11 +87,13 @@ class Group(models.Model):
         return self.name
 
     @property
-    def card_image(self):
+    def card_image_static(self):
+        """TODO: remove this. Using `_static` to deconflict with the field name."""
         return f"images/group-card/{self.slug}.png"
 
     @property
-    def hero_image(self):
+    def hero_image_static(self):
+        """TODO: remove this. Using `_static` to deconflict with the field name."""
         return f"images/group-hero/{self.slug}.png"
 
     @property

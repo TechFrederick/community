@@ -36,6 +36,7 @@ env:
     DB_DIR: /var/db
     # Make sure we never accidentally set DEBUG to True for production.
     DEBUG: "False"
+    MEDIA_ROOT: /var/media
     PYTHONUNBUFFERED: "1"
     # The Sentry DSN is not a secret. It can be used in browser contexts,
     # so it doesn't need to be hidden. We store it here rather than hardcoding
@@ -51,3 +52,4 @@ aliases:
 
 volumes:
  - "/var/db:/var/db"
+ - "/var/media:/var/media"

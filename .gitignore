@@ -10,5 +10,6 @@ cache
 *.sqlite3*
 static/site.css
 staticfiles
+media/
 
 .vscode

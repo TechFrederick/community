@@ -24,5 +24,10 @@ for HOST in "${HOSTS[@]}"; do
 
     chown --recursive app:app /var/db
     echo '/var/db ownership changed to app:app'
+
+    mkdir --parents /var/media
+
+    chown --recursive app:app /var/media
+    echo '/var/media ownership changed to app:app'
   "
 done
