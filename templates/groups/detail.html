@@ -8,7 +8,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://community.techfrederick.org{% url "groups:detail" group.slug %}">
   <meta property="og:title" content="{{ group.name }}">
-  <meta property="og:description" content="{{ group.name }}">
+  <meta property="og:description" content="{{ group.teaser }}">
   <meta property="og:image" content="https://community.techfrederick.org{{ group.hero_image.url }}">
   <meta property="og:image:alt" content="{{ group.name }}">
 
@@ -16,7 +16,7 @@
   <meta property="twitter:domain" content="community.techfrederick.org">
   <meta property="twitter:url" content="https://community.techfrederick.org{% url "groups:detail" group.slug %}">
   <meta name="twitter:title" content="{{ group.name }}">
-  <meta name="twitter:description" content="{{ group.name }}">
+  <meta name="twitter:description" content="{{ group.teaser }}">
   <meta name="twitter:image" content="https://community.techfrederick.org{{ group.hero_image.url }}">
 {% endblock %}
 
