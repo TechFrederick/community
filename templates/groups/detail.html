@@ -25,9 +25,9 @@
     <h1 class="text-3xl sm:text-5xl text-center text-slate-700 font-extralight tracking-widest leading-relaxed mb-4 py-4 sm:py-8 border-b-4 border-{{ group.color }}">{{ group.name }}</h1>
     <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-4 mb-4">
       <div class="{% if group.has_events %}col-span-2{% else %}col-span-3 max-w-prose mx-auto{% endif %}">
-        <img class="w-full pb-4 bg-white" src="{{ group.hero_image.url }}">
+        <img class="w-full mb-4 bg-white drop-shadow" src="{{ group.hero_image.url }}">
 
-        <div class="px-4 sm:px-0">
+        <div class="px-4 sm:px-0 {% if not group.has_events %}pb-4{% endif %}">
           {{ group.html_description|safe }}
         </div>
 

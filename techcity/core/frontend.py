@@ -3,9 +3,8 @@ from xml.etree import ElementTree
 classes = {
     "a": "underline text-tflightblue hover:text-tfdarkblue",
     "p": "pb-4 text-normal",
-    # TODO: Fix the heading styles when a group uses that in the description.
-    "h1": "text-lg",
-    "h2": "text-lg",
+    "h2": "text-2xl pb-2",
+    "ul": "list-disc px-4",
 }
 
 
