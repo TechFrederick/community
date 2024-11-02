@@ -3,7 +3,8 @@ services:
     build: .
     volumes:
       - .:/app
-      # Keep this specific volume mount, even if commenting out the rest.
+      # Keep these specific volume mounts, even if commenting out the rest.
       - ./db.sqlite3:/app/db.sqlite3
+      - ./media:/var/media
     ports:
       - 8000:8000
