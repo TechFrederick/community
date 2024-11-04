@@ -108,3 +108,86 @@ class Venue(models.Model):
 
     def __str__(self):
         return f"{self.address}, {self.city}, {self.state}"
+
+
+class EventRecordingType(models.TextChoices):
+    YOUTUBE = "YOUTUBE", "YouTube"
+
+
+class EventRecording(models.Model):
+    """
+    A recording of an event, such as a video or podcast.
+    """
+
+    # Related Models
+    group = models.ForeignKey(
+        "groups.Group",
+        on_delete=models.CASCADE,
+        help_text="The group that recorded the event",
+    )
+    event = models.ForeignKey(
+        Event,
+        on_delete=models.SET_NULL,
+        # Nullable, b/c there requires manual work to match the event
+        # after the recording is ingested.
+        null=True,
+        blank=True,
+        help_text="The event that was recorded",
+    )
+
+    # Recording Details
+    recording_type = models.CharField(
+        max_length=16,
+        choices=EventRecordingType.choices,
+        help_text="The type of recording",
+    )
+    title = models.CharField(
+        max_length=256,
+        help_text="The title of the recording",
+    )
+    description = models.TextField(
+        help_text="A description of the recording",
+    )
+    published_at = models.DateTimeField(
+        null=True, blank=True, help_text="The date and time the recording was published"
+    )
+    # Including the URL here allows for more flexibility in the future,
+    # such as linking to a podcast feed.
+    # But for YouTube this is redundant with the external_id.
+    url = models.URLField(
+        help_text="The URL to the recording",
+    )
+    external_playlist_id = models.CharField(
+        max_length=256,
+        help_text="The ID of the playlist on the platform (i.e. list=<...> on YouTube)",
+        null=True,
+        blank=True,
+    )
+    external_id = models.CharField(
+        max_length=256,
+        help_text="The ID of the recording on the platform (i.e. v=<...> on YouTube)",
+        null=True,
+        blank=True,
+    )
+    metadata = models.JSONField(
+        null=False,
+        blank=True,
+        default=dict,
+        help_text="Misc metadata about the recording",
+    )
+
+    # Timestamps
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def get_embed_url(self) -> str | None:
+        if self.recording_type == EventRecordingType.YOUTUBE:
+            return f"https://www.youtube.com/embed/{self.external_id}" + (
+                f"?list={self.external_playlist_id}"
+                if self.external_playlist_id
+                else ""
+            )
+        return None
+
+    def __str__(self):
+        return self.title

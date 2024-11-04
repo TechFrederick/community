@@ -32,3 +32,6 @@ build:
 
 shell:
 	docker compose run --rm web bash
+
+django_shell:
+	uv run manage.py shell_plus
