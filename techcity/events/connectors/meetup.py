@@ -2,8 +2,7 @@ import datetime
 import json
 
 import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util import Retry
+import stamina
 
 from techcity.events.models import Event, Venue
 from techcity.groups.models import Group
@@ -28,23 +27,19 @@ class MeetupConnector:
 
     def fetch_to_cache(self, groups: list[Group]):
         """Fetch the data from Meetup for each group and store it in the local cache."""
-        retries = Retry(
-            total=3,
-            allowed_methods={"GET"},
-            status_forcelist=[502, 503, 504],
-            backoff_factor=0.1,
-        )
-        session = requests.Session()
-        session.mount("https://", HTTPAdapter(max_retries=retries))
-
         for group in groups:
-            response = session.get(
-                f"https://api.meetup.com/{group.event_source_id}/events",
-                timeout=5,
-            )
-            response.raise_for_status()
+            response = self.fetch_events(group)
             with open(self.cache_dir / f"{group.slug}.json", "wb") as f:
                 f.write(response.content)
+
+    @stamina.retry(on=requests.RequestException)
+    def fetch_events(self, group):
+        response = requests.get(
+            f"https://api.meetup.com/{group.event_source_id}/events",
+            timeout=5,
+        )
+        response.raise_for_status()
+        return response
 
     def generate_events(self, groups: list[Group]) -> None:
         """Generate any events found in API data."""

@@ -514,6 +514,18 @@ wheels = [
 ]
 
 [[package]]
+name = "stamina"
+version = "24.3.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "tenacity" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c8/35/afe1f3467e840f414cfea90993c5a94490a6360eb3653236c3a7de099cf6/stamina-24.3.0.tar.gz", hash = "sha256:1d763c98962ca11f1729c357422926a750a138e803e7beb9f9d6c99d33d9997d", size = 558536 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7d/81/818b0b93812cc0a69a0b17c591dca1a3779aeab7f0ff094dee51f4a6bcd3/stamina-24.3.0-py3-none-any.whl", hash = "sha256:28caf1a5db514256d86e32b60621630552fa9a60dace4e6fb5c78ba15f26236e", size = 16445 },
+]
+
+[[package]]
 name = "techcity"
 version = "2024.9"
 source = { virtual = "." }
@@ -527,7 +539,7 @@ dependencies = [
     { name = "requests" },
     { name = "sentry-sdk", extra = ["django"] },
     { name = "sqids" },
-    { name = "urllib3" },
+    { name = "stamina" },
     { name = "whitenoise", extra = ["brotli"] },
 ]
 
@@ -553,7 +565,7 @@ requires-dist = [
     { name = "requests", specifier = ">=2.32.3" },
     { name = "sentry-sdk", extras = ["django"], specifier = ">=2.17.0" },
     { name = "sqids", specifier = ">=0.5.0" },
-    { name = "urllib3", specifier = ">=2.2.3" },
+    { name = "stamina", specifier = ">=24.3.0" },
     { name = "whitenoise", extras = ["brotli"], specifier = ">=6.7.0" },
 ]
 
@@ -566,6 +578,15 @@ dev = [
     { name = "pytest-cov", specifier = ">=5.0.0" },
     { name = "pytest-django", specifier = ">=4.9.0" },
     { name = "setuptools", specifier = ">=75.1.0" },
+]
+
+[[package]]
+name = "tenacity"
+version = "9.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/cd/94/91fccdb4b8110642462e653d5dcb27e7b674742ad68efd146367da7bdb10/tenacity-9.0.0.tar.gz", hash = "sha256:807f37ca97d62aa361264d497b0e31e92b8027044942bfa756160d908320d73b", size = 47421 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b6/cb/b86984bed139586d01532a587464b5805f12e397594f19f931c4c2fbfa61/tenacity-9.0.0-py3-none-any.whl", hash = "sha256:93de0c98785b27fcf659856aa9f54bfbd399e29969b0621bc7f762bd441b4539", size = 28169 },
 ]
 
 [[package]]
