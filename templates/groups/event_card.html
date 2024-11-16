@@ -1,22 +1,24 @@
-<div class="rounded-lg overflow-hidden w-full border-y sm:border border-tflightblue">
-  <div class="flex flex-row text-3xl sm:text-4xl font-extralight tracking-widest uppercase border-b-4 border-{{ group.color }}">
-    <div class="p-2 bg-tflightblue basis-1/2 text-center text-white">{{ event.start_at|date:"j M" }}</div>
-    <div class="p-2 basis-1/2 text-center bg-slate-50 text-slate-700">{{ event.start_at|date:"gA"|lower }}</div>
-  </div>
-  <div class="bg-white text-slate-700">
-    <div class="p-2 text-lg font-light bg-slate-100">{{ event.name }}</div>
-    <div class="p-2">
-      <a href="{% url "events:detail" event.sqid %}" class="underline text-tflightblue hover:text-tfdarkblue">See event details&hellip;</a>
-      {% if now and event.start_at < now %}
-        <div class="mt-2 flex flex-row items-center text-tflightblue">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-          </svg>
-          <div class="pl-1">
-            Event finished
+<div class="rounded-lg py-px pb-0.5 sm:p-px sm:pb-0.5 bg-gradient-to-r from-tfgreen from-50% via-cyan-400 via-60% to-tflightblue">
+  <div class="rounded-lg overflow-hidden w-full h-full">
+    <div class="flex flex-row text-3xl sm:text-4xl font-extralight tracking-widest uppercase border-b-4 border-{{ group.color }}">
+      <div class="p-2 bg-tflightblue basis-1/2 text-center text-white">{{ event.start_at|date:"j M" }}</div>
+      <div class="p-2 basis-1/2 text-center bg-slate-50 text-slate-700">{{ event.start_at|date:"gA"|lower }}</div>
+    </div>
+    <div class="bg-white text-slate-700">
+      <div class="p-2 text-lg font-light bg-slate-100">{{ event.name }}</div>
+      <div class="p-2">
+        <a href="{% url "events:detail" event.sqid %}" class="underline text-tflightblue hover:text-tfdarkblue">See event details&hellip;</a>
+        {% if now and event.start_at < now %}
+          <div class="mt-2 flex flex-row items-center text-tflightblue">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+            </svg>
+            <div class="pl-1">
+              Event finished
+            </div>
           </div>
-        </div>
-      {% endif %}
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
