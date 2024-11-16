@@ -59,6 +59,29 @@ class EventQuerySet(models.QuerySet):
 EventManager = models.Manager.from_queryset(EventQuerySet)
 
 
+class BoundingBox:
+    """A bounding box for OpenStreetMap embedding"""
+
+    # A constant offset to define a reasonable looking bounding box.
+    offset = 0.0012
+
+    def __init__(self, lat, long):
+        self.lat = lat
+        self.long = long
+
+    @property
+    def top_left(self):
+        lat = float(self.lat) + self.offset
+        long = float(self.long) - self.offset
+        return f"{long}%2C{lat}"
+
+    @property
+    def bottom_right(self):
+        lat = float(self.lat) - self.offset
+        long = float(self.long) + self.offset
+        return f"{long}%2C{lat}"
+
+
 class Event(models.Model):
     """An event is the meeting of a group of people at a time and place."""
 
@@ -94,6 +117,14 @@ class Event(models.Model):
     def html_description(self):
         # Wrap in a div because a root node is expected to format properly.
         return tailwindify_html(f"<div>{self.description}</div>")
+
+    @property
+    def has_map(self):
+        return self.venue and self.venue.lat and self.venue.long
+
+    @property
+    def bbox(self):
+        return BoundingBox(self.venue.lat, self.venue.long)
 
 
 class Venue(models.Model):

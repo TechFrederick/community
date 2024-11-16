@@ -73,6 +73,11 @@
     <div class="px-4 pb-4 sm:px-0">
       {{ event.html_description|safe }}
     </div>
+
+    {% if event.has_map %}
+      <iframe class="container border mb-8" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox={{ event.bbox.top_left }}%2C{{ event.bbox.bottom_right }}&amp;layer=mapnik&amp;marker={{ event.venue.lat }}%2C{{ event.venue.long }}"></iframe>
+    {% endif %}
+
     <div class="p-4 mb-8 bg-tfgreen text-lg font-normal text-white border-b-2 border-tfdarkblue">
       Visit the <a class="underline hover:text-tflightblue" href="{{ event.url }}" target="_blank">event scheduling website</a> for all other details and how to RSVP.
     </div>
