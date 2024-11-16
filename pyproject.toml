@@ -4,6 +4,7 @@ version = "2024.09"
 requires-python = ">=3.12"
 dependencies = [
     "django-debug-toolbar>=4.4.6",
+    "django-prose-editor>=0.9.0",
     "django>=5.1.1",
     "environs>=11.0.0",
     "gunicorn>=23.0.0",

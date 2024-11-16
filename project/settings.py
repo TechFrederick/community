@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_prose_editor",
     "huey.contrib.djhuey",
     "techcity.core",
     "techcity.events",

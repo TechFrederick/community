@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from django.db import models
+from django_prose_editor.fields import ProseEditorField
 
 from techcity.core.frontend import tailwindify_html
 
@@ -52,7 +53,7 @@ class Group(models.Model):
     )
     slug = models.SlugField()
     url = models.URLField(max_length=256)
-    description = models.TextField()
+    description = ProseEditorField()
     teaser = models.TextField()
     color = models.CharField(
         max_length=32,
