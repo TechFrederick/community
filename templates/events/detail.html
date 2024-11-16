@@ -39,7 +39,19 @@
       <div>
         On <span class="font-medium">{{ event.start_at|date:"D., M. j, Y" }}</span>
         {% if not event.is_all_day %}
-          from <span class="font-medium">{{ event.start_at|date:"gA"|lower }} to {{ event.end_at|date:"gA"|lower }}</span>
+          from <span class="font-medium">
+          {% if event.start_at.minute == 0 %}
+            {{ event.start_at|date:"gA"|lower }}
+          {% else %}
+            {{ event.start_at|date:"g:iA"|lower }}
+          {% endif %}
+          to
+          {% if event.end_at.minute == 0 %}
+            {{ event.end_at|date:"gA"|lower }}
+          {% else %}
+            {{ event.end_at|date:"g:iA"|lower }}
+          {% endif %}
+          </span>
         {% endif %}
       </div>
     </div>

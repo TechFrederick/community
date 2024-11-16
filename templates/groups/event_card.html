@@ -2,7 +2,11 @@
   <div class="rounded-lg overflow-hidden w-full h-full">
     <div class="flex flex-row text-3xl sm:text-4xl font-extralight tracking-widest uppercase border-b-4 border-{{ group.color }}">
       <div class="p-2 bg-tflightblue basis-1/2 text-center text-white">{{ event.start_at|date:"j M" }}</div>
-      <div class="p-2 basis-1/2 text-center bg-slate-50 text-slate-700">{{ event.start_at|date:"gA"|lower }}</div>
+      {% if event.start_at.minute == 0 %}
+        <div class="p-2 basis-1/2 text-center bg-slate-50 text-slate-700">{{ event.start_at|date:"gA"|lower }}</div>
+      {% else %}
+        <div class="p-2 basis-1/2 text-center bg-slate-50 text-slate-700">{{ event.start_at|date:"g:iA"|lower }}</div>
+      {% endif %}
     </div>
     <div class="bg-white text-slate-700">
       <div class="p-2 text-lg font-light bg-slate-100">{{ event.name }}</div>

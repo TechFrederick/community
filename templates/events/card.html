@@ -12,7 +12,11 @@
         {% if event.is_all_day %}
           All Day
         {% else %}
-          {{ event.start_at|date:"gA"|lower }}
+          {% if event.start_at.minute == 0 %}
+            {{ event.start_at|date:"gA"|lower }}
+          {% else %}
+            {{ event.start_at|date:"g:iA"|lower }}
+          {% endif %}
         {% endif %}
       </div>
     </div>
