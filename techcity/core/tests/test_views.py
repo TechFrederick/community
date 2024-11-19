@@ -12,6 +12,13 @@ class TestIndex:
         assert response.status_code == 200
 
 
+class TestManifest:
+    def test_ok(self, client):
+        response = client.get(reverse("core:manifest"))
+
+        assert response.status_code == 200
+
+
 class TestUp:
     def test_ok(self, client):
         response = client.get(reverse("core:up"))

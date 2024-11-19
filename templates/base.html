@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}techfrederick Community{% endblock %}</title>
     <link rel="shortcut icon" href="{% static "favicon.ico" %}">
-    <link href="{% static "site.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "site.css" %}">
+    <link rel="manifest" href="{% url "core:manifest" %}">
 
     {% block meta %}
       <meta name="description" content="The techfrederick community connects technologists, professionals, and hobbyists in Frederick, MD to advance technology use in the city and surrounding county.">
