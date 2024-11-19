@@ -35,8 +35,8 @@ def manifest(request):
         "description": "Join tech-minded people from the Frederick area",  # max of 132
         "start_url": reverse("core:index"),
         "icons": [
-            {"src": "/static/300x300.webp", "size": "192x192"},
-            {"src": "/static/300x300.webp", "size": "512x512"},
+            {"src": "/static/300x300.webp", "sizes": "192x192"},
+            {"src": "/static/300x300.webp", "sizes": "512x512"},
         ],
         "background_color": "#1f92c9",  # A light blue
         "theme_color": "#143962",  # A dark blue
