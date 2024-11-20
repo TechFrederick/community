@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.utils import timezone
 
+from techcity.core.models import Brand
 from techcity.events.models import Event, combine_joint_events
 from techcity.groups.models import Group
 
@@ -25,18 +26,18 @@ def index(request):
 
 
 def manifest(request):
-    # TODO: This should be made generic and not reference techfrederick directly.
-    # Limits and details at
+    brand = Brand.objects.active()
+    # Details at
     # https://developer.chrome.com/docs/extensions/reference/manifest#minimal-manifest
     data = {
         "manifest_version": 3,
         "display": "standalone",
-        "name": "techfrederick Community",  # max of 75
-        "description": "Join tech-minded people from the Frederick area",  # max of 132
+        "name": brand.name,
+        "description": brand.tagline,
         "start_url": reverse("core:index"),
         "icons": [
-            {"src": "/static/300x300.webp", "sizes": "192x192"},
-            {"src": "/static/300x300.webp", "sizes": "512x512"},
+            {"src": brand.icon_192x192_url, "sizes": "192x192"},
+            {"src": brand.icon_512x512_url, "sizes": "512x512"},
         ],
         "background_color": "#1f92c9",  # A light blue
         "theme_color": "#143962",  # A dark blue
