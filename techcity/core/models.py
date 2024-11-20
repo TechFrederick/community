@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from pathlib import Path
 
 from django.db import models
@@ -21,6 +23,24 @@ def icon_512x512_image_path(instance, filename):
 def social_image_path(instance, filename):
     path = Path(filename)
     return f"images/social{path.suffix}"
+
+
+class BrandQuerySet(models.QuerySet):
+    def active(self) -> Brand:
+        """Get the active brand instance"""
+        brand = self.last()
+        if brand:
+            return brand
+        return Brand(
+            # city
+            # url
+            name="techcity Community",
+            tagline="Join tech-minded people from your local area",
+            # description
+        )
+
+
+BrandManager = models.Manager.from_queryset(BrandQuerySet)
 
 
 class Brand(models.Model):
@@ -55,7 +75,25 @@ class Brand(models.Model):
         upload_to=icon_512x512_image_path,
         help_text="An icon file to use for large contexts and progressive web apps",
     )
-    socia_image = models.FileField(
+    social_image = models.FileField(
         upload_to=social_image_path,
         help_text="A social image file to use with social network embedding",
     )
+
+    objects = BrandManager()
+
+    @property
+    def icon_192x192_url(self):
+        """Get the URL to the 192x192 icon with a safe static fallback."""
+        if self.icon_192x192:
+            return self.icon_192x192.url
+        # TODO: do a call to `static`
+        return "/static/300x300.webp"
+
+    @property
+    def icon_512x512_url(self):
+        """Get the URL to the 512x512 icon with a safe static fallback."""
+        if self.icon_512x512:
+            return self.icon_512x512.url
+        # TODO: do a call to `static`
+        return "/static/300x300.webp"

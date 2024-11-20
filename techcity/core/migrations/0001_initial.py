@@ -72,7 +72,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    "socia_image",
+                    "social_image",
                     models.FileField(
                         help_text="A social image file to use with social network embedding",  # noqa
                         upload_to=techcity.core.models.social_image_path,
