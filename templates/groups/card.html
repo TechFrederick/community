@@ -1,28 +1,28 @@
 <a class="block" href="{% url "groups:detail" group.slug %}">
-  <div class="rounded-lg py-px pb-0.5 sm:p-px sm:pb-0.5 bg-gradient-to-r from-tfgreen from-50% via-cyan-400 via-60% to-tflightblue">
+  <div class="rounded-lg py-px pb-0.5 sm:p-px sm:pb-0.5 bg-gradient-to-r from-tcgreen from-50% via-cyan-400 via-60% to-tclightblue">
     <div class="rounded-lg min-h-48 bg-slate-50 hover:brightness-105 hover:saturate-150 hover:transition-all h-full">
-      <div class="rounded-lg p-2 text-xl text-tfdarkblue font-light">{{ group.name }}</div>
-      <div class="h-px bg-gradient-to-r from-tfgreen from-50% via-cyan-400 via-60% to-tflightblue"></div>
+      <div class="rounded-lg p-2 text-xl text-tcdarkblue font-light">{{ group.name }}</div>
+      <div class="h-px bg-gradient-to-r from-tcgreen from-50% via-cyan-400 via-60% to-tclightblue"></div>
       <div class="bg-white border-b-4 border-{{ group.color }}">
         <img class="w-full h-48 object-scale-down object-center" src="{{ group.card_image.url }}">
       </div>
       <div class="p-2 text-slate-700">{{ group.teaser }}</div>
       <div class="px-2 pb-4 flex flex-row">
-        <span class="text-tflightblue hover:text-tfdarkblue font-medium">
+        <span class="text-tclightblue hover:text-tcdarkblue font-medium">
           Learn more <span class="ml-1">&rarr;</span>
         </span>
         <div class="flex-grow"></div>
         <div class="mx-2">
           {% if group.kind == group.Kind.COMMUNITY %}
-            <div class="text-sm leading-6 rounded-full px-2 text-xs font-semibold leading-7 bg-tfgreen text-white">
+            <div class="text-sm leading-6 rounded-full px-2 text-xs font-semibold leading-7 bg-tcgreen text-white">
               {{ group.Kind.COMMUNITY.label }}
             </div>
           {% elif group.kind == group.Kind.NONPROFIT %}
-            <div class="text-sm leading-6 rounded-full px-2 text-xs font-semibold leading-7 bg-tflightblue text-white">
+            <div class="text-sm leading-6 rounded-full px-2 text-xs font-semibold leading-7 bg-tclightblue text-white">
               {{ group.Kind.NONPROFIT.label }}
             </div>
           {% elif group.kind == group.Kind.COMPANY %}
-            <div class="text-sm leading-6 rounded-full px-2 text-xs font-semibold leading-7 bg-tfdarkblue text-white">
+            <div class="text-sm leading-6 rounded-full px-2 text-xs font-semibold leading-7 bg-tcdarkblue text-white">
               {{ group.Kind.COMPANY.label }}
             </div>
           {% else %}

@@ -29,20 +29,20 @@
 
   </head>
   <body class="antialiased min-h-screen flex flex-col">
-    <nav class="flex flex-col sm:flex-row justify-center items-center bg-tfgreen text-white text-lg tracking-wider font-normal">
-      <a class="pt-2 pb-1 px-2 sm:mr-8 border-b-4 border-tfgreen hover:border-tfdarkblue flex flex-row items-center" href="/">
+    <nav class="flex flex-col sm:flex-row justify-center items-center bg-tcgreen text-white text-lg tracking-wider font-normal">
+      <a class="pt-2 pb-1 px-2 sm:mr-8 border-b-4 border-tcgreen hover:border-tcdarkblue flex flex-row items-center" href="/">
         <img class="bg-white rounded-full mr-3 p-1 h-12 w-12 block" src="{{ brand.icon_192x192_url }}">
         <span>{{ brand.name }}</span>
       </a>
-      <a class="pt-4 pb-3 px-2 border-b-4 border-tfgreen hover:border-tfdarkblue hidden sm:block" href="/#events">Events</a>
-      <a class="pt-4 pb-3 px-2 border-b-4 border-tfgreen hover:border-tfdarkblue hidden sm:block" href="/#groups">Groups</a>
+      <a class="pt-4 pb-3 px-2 border-b-4 border-tcgreen hover:border-tcdarkblue hidden sm:block" href="/#events">Events</a>
+      <a class="pt-4 pb-3 px-2 border-b-4 border-tcgreen hover:border-tcdarkblue hidden sm:block" href="/#groups">Groups</a>
     </nav>
     <main class="grow">
       <div class="container mx-auto">
         {% block content %}{% endblock %}
       </div>
     </main>
-    <footer class="py-4 px-2 bg-tfdarkblue text-white">
+    <footer class="py-4 px-2 bg-tcdarkblue text-white">
       <div class="mx-auto container">
         Maintained by the Frederick, MD community on <a href="https://github.com/TechFrederick/community" class="underline">GitHub</a>
       </div>
