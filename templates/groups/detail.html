@@ -1,23 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %}{{ group.name }} - techfrederick Community{% endblock %}
+{% block title %}{{ group.name }} - {{ brand.name }}{% endblock %}
 
 {% block meta %}
   <meta name="description" content="{{ group.name }}">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://community.techfrederick.org{% url "groups:detail" group.slug %}">
+  <meta property="og:url" content="{{ brand.url }}{% url "groups:detail" group.slug %}">
   <meta property="og:title" content="{{ group.name }}">
   <meta property="og:description" content="{{ group.teaser }}">
-  <meta property="og:image" content="https://community.techfrederick.org{{ group.hero_image.url }}">
+  <meta property="og:image" content="{{ brand.url }}{{ group.hero_image.url }}">
   <meta property="og:image:alt" content="{{ group.name }}">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="community.techfrederick.org">
-  <meta property="twitter:url" content="https://community.techfrederick.org{% url "groups:detail" group.slug %}">
+  <meta property="twitter:domain" content="{{ brand.domain }}">
+  <meta property="twitter:url" content="{{ brand.url }}{% url "groups:detail" group.slug %}">
   <meta name="twitter:title" content="{{ group.name }}">
   <meta name="twitter:description" content="{{ group.teaser }}">
-  <meta name="twitter:image" content="https://community.techfrederick.org{{ group.hero_image.url }}">
+  <meta name="twitter:image" content="{{ brand.url }}{{ group.hero_image.url }}">
 {% endblock %}
 
 {% block content %}

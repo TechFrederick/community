@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1 class="text-2xl sm:text-5xl text-center text-slate-700 font-extralight tracking-widest leading-relaxed mx-4 sm:mx-36 py-4 my-4 sm:my-8 border-b-4 border-tfgreen">Join tech-minded people <br class="hidden sm:block"> from the Frederick area</h1>
+  <h1 class="text-2xl sm:text-5xl text-center text-slate-700 font-extralight tracking-widest leading-relaxed mx-4 sm:mx-48 py-4 my-4 sm:my-8 border-b-4 border-tfgreen">{{ brand.tagline }}</h1>
 
   <div class="mb-8">
     <a name="events"></a>
@@ -14,7 +14,7 @@
 
     <div class="max-w-3xl sm:mx-auto px-2 sm:px-0 sm:text-lg text-slate-700 sm:font-light pt-4 pb-8">
       <p class="pb-2">
-        Every month, Frederick groups host many events from all different parts of our tech community.
+        Every month, {{ brand.city }} groups host many events from all different parts of our tech community.
         Check out what is coming up soon!
       </p>
       <p>
@@ -61,7 +61,7 @@
 
     <div class="max-w-3xl sm:mx-auto px-2 sm:px-0 sm:text-lg text-slate-700 sm:font-light pt-4 pb-8">
       <p>
-        Frederick is home to many groups of interested technologists.
+        {{ brand.city }} is home to many groups of interested technologists.
         These groups cover a wide range of topics, technologies, and industries
         all aimed at embracing technology.
       </p>

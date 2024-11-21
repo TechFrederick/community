@@ -34,7 +34,7 @@ class BrandQuerySet(models.QuerySet):
         if brand:
             return brand
         return Brand(
-            # city
+            city="Techcity",
             url="https://github.com/TechFrederick/community",
             name="techcity Community",
             tagline="Join tech-minded people from your local area",
