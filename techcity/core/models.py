@@ -48,7 +48,7 @@ class Brand(models.Model):
 
     city = models.CharField(max_length=64)
     url = models.URLField(
-        help_text="The full URL to the site (including the trailing slash)"
+        help_text="The full URL to the site (excluding the trailing slash)"
     )
     name = models.CharField(
         max_length=64, help_text="The name to use to describe the community"
