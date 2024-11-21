@@ -4,35 +4,38 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}techfrederick Community{% endblock %}</title>
-    <link rel="shortcut icon" href="{% static "favicon.ico" %}">
+    <title>{% block title %}{{ brand.name }}{% endblock %}</title>
+    <link rel="shortcut icon" href="{{ brand.favicon_url }}">
     <link rel="stylesheet" href="{% static "site.css" %}">
     <link rel="manifest" href="{% url "core:manifest" %}">
 
     {% block meta %}
-      <meta name="description" content="The techfrederick community connects technologists, professionals, and hobbyists in Frederick, MD to advance technology use in the city and surrounding county.">
+      <meta name="description" content="{{ brand.description }}">
 
       <meta property="og:type" content="website">
-      <meta property="og:url" content="https://community.techfrederick.org/">
-      <meta property="og:title" content="techfrederick Community">
-      <meta property="og:description" content="The techfrederick community connects technologists, professionals, and hobbyists in Frederick, MD to advance technology use in the city and surrounding county.">
-      <meta property="og:image" content="https://community.techfrederick.org{% static "images/og/techfrederick-community.png" %}">
-      <meta property="og:image:alt" content="Join tech-minded people from the Frederick area">
+      <meta property="og:url" content="{{ brand.url }}">
+      <meta property="og:title" content="{{ brand.name }}">
+      <meta property="og:description" content="{{ brand.description }}">
+      <meta property="og:image" content="{{ brand.url }}{{ brand.social_image_url }}">
+      <meta property="og:image:alt" content="{{ brand.tagline }}">
 
       <meta name="twitter:card" content="summary_large_image">
-      <meta property="twitter:domain" content="community.techfrederick.org">
-      <meta property="twitter:url" content="https://community.techfrederick.org/">
-      <meta name="twitter:title" content="techfrederick Community">
-      <meta name="twitter:description" content="The techfrederick community connects technologists, professionals, and hobbyists in Frederick, MD to advance technology use in the city and surrounding county.">
-      <meta name="twitter:image" content="https://community.techfrederick.org{% static "images/og/techfrederick-community.png" %}">
+      <meta property="twitter:domain" content="{{ brand.domain }}">
+      <meta property="twitter:url" content="{{ brand.url }}">
+      <meta name="twitter:title" content="{{ brand.name }}">
+      <meta name="twitter:description" content="{{ brand.description }}">
+      <meta name="twitter:image" content="{{ brand.url }}{{ brand.social_image_url }}">
     {% endblock %}
 
   </head>
   <body class="antialiased min-h-screen flex flex-col">
     <nav class="flex flex-col sm:flex-row justify-center items-center bg-tfgreen text-white text-lg tracking-wider font-normal">
-      <a class="py-4 px-2 sm:mr-8 text-tfdarkblue font-semibold border-b-4 border-tfgreen hover:border-tfdarkblue" href="/"><span class="text-tflightblue">tech</span>frederick Community</a>
-      <a class="py-4 px-2 border-b-4 border-tfgreen hover:border-tfdarkblue hidden sm:block" href="/#events">Events</a>
-      <a class="py-4 px-2 border-b-4 border-tfgreen hover:border-tfdarkblue hidden sm:block" href="/#groups">Groups</a>
+      <a class="pt-2 pb-1 px-2 sm:mr-8 border-b-4 border-tfgreen hover:border-tfdarkblue flex flex-row items-center" href="/">
+        <img class="bg-white rounded-full mr-3 p-1 h-12 w-12 block" src="{{ brand.icon_192x192_url }}">
+        <span>{{ brand.name }}<span>
+      </a>
+      <a class="pt-4 pb-3 px-2 border-b-4 border-tfgreen hover:border-tfdarkblue hidden sm:block" href="/#events">Events</a>
+      <a class="pt-4 pb-3 px-2 border-b-4 border-tfgreen hover:border-tfdarkblue hidden sm:block" href="/#groups">Groups</a>
     </nav>
     <main class="grow">
       <div class="container mx-auto">
@@ -41,7 +44,7 @@
     </main>
     <footer class="py-4 px-2 bg-tfdarkblue text-white">
       <div class="mx-auto container">
-        Maintained by the Frederick community on <a href="https://github.com/TechFrederick/community" class="underline">GitHub</a>
+        Maintained by the Frederick, MD community on <a href="https://github.com/TechFrederick/community" class="underline">GitHub</a>
       </div>
     </footer>
   </body>

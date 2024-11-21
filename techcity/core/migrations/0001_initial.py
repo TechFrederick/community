@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 (
                     "url",
                     models.URLField(
-                        help_text="The full URL to the site (including the trailing slash)"  # noqa
+                        help_text="The full URL to the site (excluding the trailing slash)"  # noqa
                     ),
                 ),
                 (
