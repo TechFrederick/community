@@ -6,6 +6,7 @@ from django.urls import reverse
 from django.utils import timezone
 
 from techcity.core.models import Brand
+from techcity.core.serializers import BrandSerializer
 from techcity.events.models import Event, combine_joint_events
 from techcity.groups.models import Group
 
@@ -48,3 +49,9 @@ def manifest(request):
 def up(request):
     """A healthcheck to show when the app is up and able to respond to requests."""
     return render(request, "core/up.html", {})
+
+
+def get_brand(request):
+    brand = Brand.objects.active()
+    serializer = BrandSerializer(brand)
+    return JsonResponse(serializer.data)
