@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from django.db import models
+from django.templatetags.static import static
 
 
 def favicon_image_path(instance, filename):
@@ -32,11 +34,13 @@ class BrandQuerySet(models.QuerySet):
         if brand:
             return brand
         return Brand(
-            # city
-            # url
+            city="Techcity",
+            url="https://github.com/TechFrederick/community",
             name="techcity Community",
             tagline="Join tech-minded people from your local area",
-            # description
+            description=(
+                "techcity is a tool for connecting a technical community in a city."
+            ),
         )
 
 
@@ -83,17 +87,37 @@ class Brand(models.Model):
     objects = BrandManager()
 
     @property
+    def domain(self):
+        return urlsplit(self.url).netloc
+
+    @property
+    def favicon_url(self):
+        """Get the URL to the favicon with a safe static fallback."""
+        if self.favicon:
+            return self.favicon.url
+        # TODO: replace with a default static file.
+        return static("favicon.ico")
+
+    @property
     def icon_192x192_url(self):
         """Get the URL to the 192x192 icon with a safe static fallback."""
         if self.icon_192x192:
             return self.icon_192x192.url
-        # TODO: do a call to `static`
-        return "/static/300x300.webp"
+        # TODO: replace with a default static file.
+        return static("300x300.webp")
 
     @property
     def icon_512x512_url(self):
         """Get the URL to the 512x512 icon with a safe static fallback."""
         if self.icon_512x512:
             return self.icon_512x512.url
-        # TODO: do a call to `static`
-        return "/static/300x300.webp"
+        # TODO: replace with a default static file.
+        return static("300x300.webp")
+
+    @property
+    def social_image_url(self):
+        """Get the URL to the social iamge with a safe static fallback."""
+        if self.social_image:
+            return self.social_image.url
+        # TODO: replace with a default static file.
+        return static("images/og/techfrederick-community.png")

@@ -24,3 +24,10 @@ class TestUp:
         response = client.get(reverse("core:up"))
 
         assert response.status_code == 200
+
+
+class TestGetBrand:
+    def test_ok(self, client):
+        response = client.get(reverse("api:brand"))
+
+        assert response.status_code == 200

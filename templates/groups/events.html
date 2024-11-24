@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ group.name }} Events - techfrederick Community{% endblock %}
+{% block title %}{{ group.name }} Events - {{ brand.name }}{% endblock %}
 
 {% block content %}
   <div class="max-w-5xl mx-auto">
@@ -15,8 +15,8 @@
         {% include "groups/event_card.html" %}
       {% endfor %}
     </div>
-    <div class="p-4 mb-8 bg-tfgreen text-lg font-normal text-white border-b-2 border-tfdarkblue">
-      Visit the <a class="underline hover:text-tflightblue" href="{{ group.url }}" target="_blank">{{ group.name }} website</a> for all the latest news and information.
+    <div class="p-4 mb-8 bg-tcgreen text-lg font-normal text-white border-b-2 border-tcdarkblue">
+      Visit the <a class="underline hover:text-tclightblue" href="{{ group.url }}" target="_blank">{{ group.name }} website</a> for all the latest news and information.
     </div>
   </div>
 {% endblock %}

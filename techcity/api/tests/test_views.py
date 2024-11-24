@@ -7,7 +7,7 @@ class TestGetGroups:
     def test_ok(self, client):
         GroupFactory()
 
-        response = client.get(reverse("api:get_groups"))
+        response = client.get(reverse("api:groups"))
 
         assert response.status_code == 200
 

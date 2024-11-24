@@ -1,7 +1,7 @@
 from xml.etree import ElementTree
 
 classes = {
-    "a": "underline text-tflightblue hover:text-tfdarkblue",
+    "a": "underline text-tclightblue hover:text-tcdarkblue",
     "p": "pb-4 text-normal",
     "h2": "text-2xl pb-2",
     "ul": "list-disc px-4",

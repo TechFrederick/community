@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        tfdarkblue: '#143962',
-        tflightblue: '#1f92c9',
-        tfgreen: '#a0cf60',
+        tcdarkblue: '#143962',
+        tclightblue: '#1f92c9',
+        tcgreen: '#a0cf60',
       },
     },
   },
