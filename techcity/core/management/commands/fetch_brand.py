@@ -11,10 +11,12 @@ class Command(BaseCommand):
     help = "Fetch and upsert the brand from the deployed API"
 
     def handle(self, *args, **kwargs):
+        self.stdout.write("Fetching brand...")
         response = self.fetch_brand()
         brand_data = response.json()
         city = brand_data.pop("city", "techcity")
         brand, _ = Brand.objects.update_or_create(city=city, defaults=brand_data)
+        self.fetch_images(brand)
 
     @stamina.retry(on=requests.RequestException)
     def fetch_brand(self):

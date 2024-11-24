@@ -49,6 +49,9 @@ uv run pre-commit install
 info 'Running migrations.'
 uv run manage.py migrate 
 
+info 'Fetching the branding information.'
+uv run manage.py fetch_brand
+
 info 'Populating groups.'
 uv run manage.py populate_groups
 
