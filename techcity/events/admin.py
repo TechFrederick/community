@@ -5,7 +5,7 @@ from .models import Event, Venue
 
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ["name", "group"]
+    list_display = ["name", "start_at", "group"]
     list_filter = ["group"]
 
 
