@@ -20,6 +20,12 @@ proxy:
     # so provide more time before failing the health check.
     timeout: 60
 
+accessories:
+  prometheus:
+    image: prom/prometheus:v3.2.1
+    port: "9090:9090"
+    roles:
+      - web
 
 registry:
   username: mblayman
