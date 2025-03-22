@@ -23,7 +23,15 @@ proxy:
 accessories:
   prometheus:
     image: prom/prometheus:v3.2.1
+    cmd: >
+      --config.file=/etc/prometheus/prometheus.yml
+      --storage.tsdb.path=/prometheus
+      --storage.tsdb.retention.time=30d
     port: "9090:9090"
+    files:
+      - config/prometheus.yml:/etc/prometheus/prometheus.yml
+    directories:
+      - prometheus-data:/prometheus
     roles:
       - web
 
