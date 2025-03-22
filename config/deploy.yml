@@ -30,8 +30,8 @@ accessories:
     port: "9090:9090"
     files:
       - config/prometheus.yml:/etc/prometheus/prometheus.yml
-    directories:
-      - prometheus-data:/prometheus
+    volumes:
+      - /var/prometheus:/prometheus
     roles:
       - web
 
